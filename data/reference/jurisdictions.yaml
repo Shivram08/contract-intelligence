@@ -1,0 +1,216 @@
+# Closed vocabulary of governing-law jurisdictions.
+#
+# Feeds the `governing_law_resolves_to_known_jurisdiction` rule in
+# src/docintel/validation/rules.py. A governing-law extraction that does not
+# resolve to an `id` here is a rule violation, not a silent pass.
+#
+# Scope was set from the data, not from imagination: every `aliases` entry
+# marked "(observed)" is a literal string that appears in the CUAD
+# `Governing Law-Answer` column. See docs/DATA_AUDIT.md. CUAD's 434 labeled
+# contracts use 77 distinct answer strings, and the long tail is almost entirely
+# spelling variation -- England alone appears five different ways.
+#
+# Matching is expected to be case-insensitive with whitespace collapsed; the
+# aliases below therefore vary only in wording, not in case or spacing.
+
+version: 1
+
+# Values that are NOT jurisdictions but appear in the governing-law field.
+# The extractor must map to one of these rather than inventing a jurisdiction,
+# so that "unparseable" is distinguishable from "wrong".
+sentinels:
+  - id: UNSPECIFIED
+    description: No governing law clause, or the clause is present but names no forum.
+    aliases:
+      - "[]" # (observed) CUAD's empty-answer marker
+      - "[* * *]" # (observed) redacted in the source filing
+  - id: DEFERRED
+    description: >-
+      Governing law is determined by a condition rather than stated outright.
+      Cannot be normalized to a jurisdiction and must route to review.
+    aliases:
+      - the state in which the breach occurs # (observed)
+      - the state in which the franchised restaurant is located # (observed)
+  - id: NON_JURISDICTIONAL_BODY_OF_LAW
+    description: >-
+      A named statute or treaty rather than a forum. Legitimate in the clause
+      text but not a governing-law answer on its own.
+    aliases:
+      - united nations convention on contract for the international sale of goods # (observed)
+      - the united states trademark act of 1946 # (observed)
+
+jurisdictions:
+  # ---------------------------------------------------------------- US federal
+  - id: US
+    canonical: United States
+    type: country
+    aliases:
+      - united states # (observed)
+      - usa
+      - u.s.
+      - united states of america
+
+  # ------------------------------------------------------------------ US states
+  # All 50 plus DC. Delaware and New York dominate commercial contracts;
+  # the rest are here so the closed set is genuinely closed.
+  - { id: US-AL, canonical: Alabama, type: us_state } # (observed)
+  - { id: US-AK, canonical: Alaska, type: us_state }
+  - { id: US-AZ, canonical: Arizona, type: us_state } # (observed)
+  - { id: US-AR, canonical: Arkansas, type: us_state } # (observed)
+  - { id: US-CA, canonical: California, type: us_state } # (observed)
+  - { id: US-CO, canonical: Colorado, type: us_state } # (observed)
+  - { id: US-CT, canonical: Connecticut, type: us_state } # (observed)
+  - { id: US-DE, canonical: Delaware, type: us_state } # (observed)
+  - { id: US-FL, canonical: Florida, type: us_state } # (observed)
+  - { id: US-GA, canonical: Georgia, type: us_state } # (observed)
+  - { id: US-HI, canonical: Hawaii, type: us_state }
+  - { id: US-ID, canonical: Idaho, type: us_state }
+  - { id: US-IL, canonical: Illinois, type: us_state } # (observed)
+  - { id: US-IN, canonical: Indiana, type: us_state } # (observed)
+  - { id: US-IA, canonical: Iowa, type: us_state } # (observed)
+  - { id: US-KS, canonical: Kansas, type: us_state } # (observed)
+  - { id: US-KY, canonical: Kentucky, type: us_state } # (observed)
+  - { id: US-LA, canonical: Louisiana, type: us_state } # (observed)
+  - { id: US-ME, canonical: Maine, type: us_state }
+  - { id: US-MD, canonical: Maryland, type: us_state } # (observed)
+  - id: US-MA
+    canonical: Massachusetts
+    type: us_state # (observed)
+    aliases:
+      - massachussets # (observed) misspelled in the CUAD label itself
+  - { id: US-MI, canonical: Michigan, type: us_state } # (observed)
+  - { id: US-MN, canonical: Minnesota, type: us_state } # (observed)
+  - { id: US-MS, canonical: Mississippi, type: us_state }
+  - { id: US-MO, canonical: Missouri, type: us_state } # (observed)
+  - { id: US-MT, canonical: Montana, type: us_state }
+  - { id: US-NE, canonical: Nebraska, type: us_state }
+  - { id: US-NV, canonical: Nevada, type: us_state } # (observed)
+  - { id: US-NH, canonical: New Hampshire, type: us_state }
+  - { id: US-NJ, canonical: New Jersey, type: us_state } # (observed)
+  - { id: US-NM, canonical: New Mexico, type: us_state }
+  - { id: US-NY, canonical: New York, type: us_state } # (observed) most common
+  - { id: US-NC, canonical: North Carolina, type: us_state } # (observed)
+  - { id: US-ND, canonical: North Dakota, type: us_state }
+  - { id: US-OH, canonical: Ohio, type: us_state } # (observed)
+  - { id: US-OK, canonical: Oklahoma, type: us_state } # (observed)
+  - { id: US-OR, canonical: Oregon, type: us_state }
+  - { id: US-PA, canonical: Pennsylvania, type: us_state } # (observed)
+  - { id: US-RI, canonical: Rhode Island, type: us_state }
+  - { id: US-SC, canonical: South Carolina, type: us_state }
+  - { id: US-SD, canonical: South Dakota, type: us_state } # (observed)
+  - { id: US-TN, canonical: Tennessee, type: us_state } # (observed)
+  - { id: US-TX, canonical: Texas, type: us_state } # (observed)
+  - { id: US-UT, canonical: Utah, type: us_state }
+  - { id: US-VT, canonical: Vermont, type: us_state }
+  - { id: US-VA, canonical: Virginia, type: us_state } # (observed)
+  - { id: US-WA, canonical: Washington, type: us_state } # (observed)
+  - { id: US-WV, canonical: West Virginia, type: us_state }
+  - { id: US-WI, canonical: Wisconsin, type: us_state } # (observed)
+  - { id: US-WY, canonical: Wyoming, type: us_state }
+  - id: US-DC
+    canonical: District of Columbia
+    type: us_federal_district # (observed)
+    aliases:
+      - washington, d.c.
+      - washington dc
+
+  # -------------------------------------------------------------- UK and Ireland
+  # England appears five ways in CUAD. "England and Wales" is the legally correct
+  # single jurisdiction; the others all collapse into it.
+  - id: GB-EAW
+    canonical: England and Wales
+    type: country_subdivision
+    aliases:
+      - england # (observed)
+      - england; wales # (observed)
+      - england, united kingdom; wales, united kingdom # (observed)
+      - england and wales, uk # (observed)
+      - wales # (observed) appears as a component of "England; Wales"
+      - england, united kingdom # (observed) component
+      - wales, united kingdom # (observed) component
+      - english law
+      - laws of england
+  - { id: GB-SCT, canonical: Scotland, type: country_subdivision }
+  - { id: GB-NIR, canonical: Northern Ireland, type: country_subdivision }
+  - id: GB
+    canonical: United Kingdom
+    type: country
+    aliases: [uk, great britain]
+  - { id: IE, canonical: Ireland, type: country, aliases: [republic of ireland] }
+
+  # ---------------------------------------------------------------------- Canada
+  # Canadian provinces are the governing law; "Canada" alone is not a forum for
+  # contract law, so provinces are first-class entries.
+  - id: CA-ON
+    canonical: Ontario
+    type: country_subdivision
+    aliases:
+      - ontario, canada # (observed)
+      - province of ontario, canada # (observed)
+      - province of ontario
+  - id: CA-BC
+    canonical: British Columbia
+    type: country_subdivision # (observed)
+    aliases:
+      - british columbia, canada # (observed)
+      - british columbia,canada # (observed) missing space in the source label
+  - { id: CA-QC, canonical: Quebec, type: country_subdivision }
+  - { id: CA-AB, canonical: Alberta, type: country_subdivision }
+  - id: CA-NS
+    canonical: Nova Scotia
+    type: country_subdivision
+    aliases: ["nova scotia, canada"] # (observed)
+  - { id: CA, canonical: Canada, type: country }
+
+  # ------------------------------------------------------------ Asia and Pacific
+  - id: CN
+    canonical: People's Republic of China
+    type: country
+    aliases:
+      - china # (observed)
+      - prc
+      - beijing # (observed) a city, but used as a stand-in for PRC law
+  - { id: HK, canonical: Hong Kong, type: country_subdivision } # (observed)
+  - { id: TW, canonical: Taiwan, type: country } # (observed)
+  - { id: JP, canonical: Japan, type: country } # (observed)
+  - { id: KR, canonical: South Korea, type: country, aliases: [republic of korea] }
+  - { id: IN, canonical: India, type: country } # (observed)
+  - { id: SG, canonical: Singapore, type: country } # (observed)
+  - { id: PG, canonical: Papua New Guinea, type: country } # (observed)
+  - id: AU-VIC
+    canonical: Victoria
+    type: country_subdivision
+    aliases: ["victoria, australia"] # (observed)
+  - { id: AU-NSW, canonical: New South Wales, type: country_subdivision }
+  - { id: AU, canonical: Australia, type: country }
+  - { id: NZ, canonical: New Zealand, type: country }
+
+  # ------------------------------------------------------------ Europe and other
+  - id: DE
+    canonical: Germany
+    type: country
+    aliases:
+      - federal republic of germany # (observed)
+  - { id: NL, canonical: Netherlands, type: country } # (observed)
+  - { id: CH, canonical: Switzerland, type: country } # (observed)
+  - { id: FR, canonical: France, type: country }
+  - { id: ES, canonical: Spain, type: country } # (observed)
+  - { id: IT, canonical: Italy, type: country } # (observed)
+  - { id: SE, canonical: Sweden, type: country }
+  - { id: BE, canonical: Belgium, type: country } # (observed)
+  - { id: LU, canonical: Luxembourg, type: country }
+  - { id: IL, canonical: Israel, type: country } # (observed)
+  - id: KZ
+    canonical: Kazakhstan
+    type: country
+    aliases: [republic of kazakhstan] # (observed)
+  - id: ZA
+    canonical: South Africa
+    type: country
+    aliases: [republic of south africa] # (observed)
+  - { id: CO, canonical: Colombia, type: country } # (observed)
+  - { id: BR, canonical: Brazil, type: country }
+  - { id: MX, canonical: Mexico, type: country }
+  - { id: BM, canonical: Bermuda, type: country }
+  - { id: KY, canonical: Cayman Islands, type: country }
+  - { id: VG, canonical: British Virgin Islands, type: country }

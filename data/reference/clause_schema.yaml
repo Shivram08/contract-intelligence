@@ -1,0 +1,201 @@
+# The 12 clause types for v1, locked from the audit counts.
+#
+# STATUS: locked. Eleven of these are the provisional list in CLAUDE.md
+# section 2.2. One substitution was made and signed off -- Most Favored Nation
+# out, Exclusivity in. See `substitutions` below; nothing was substituted
+# silently.
+#
+# `description` is quoted VERBATIM from CUAD's own question text (the string
+# after "Details:" in CUAD_v1.json). Per CLAUDE.md section 2.1 these are the
+# lawyer-written definitions the annotators worked from; paraphrasing them means
+# extracting against a different standard than the ground truth was labeled
+# against, which costs F1 for reasons that have nothing to do with the model.
+#
+# NOTE: CLAUDE.md section 2.1 lists `category_descriptions.csv` as a download.
+# It is not in data/raw/, but it is not needed -- the same definitions are
+# embedded in the CUAD_v1.json question strings, which is where these came from.
+#
+# Counts are from docs/DATA_AUDIT.md over all 510 contracts.
+
+version: 1
+selection_rule: ">= 40 positive contracts corpus-wide (CLAUDE.md section 2.2, check 1)"
+
+substitutions:
+  - dropped: Most Favored Nation
+    tier: 3
+    positives: 28
+    base_rate: 0.055
+    reason: >-
+      Fails the >=40-positive bar. At 28 positives across 510 contracts, a
+      100-contract golden split contains roughly 5 instances, so a single
+      extraction flipping moves per-clause F1 by ~20 points. That is noise, not
+      a measurement.
+    replacement: Exclusivity
+    approved: true
+    replacement_rationale: >-
+      Keeps Tier 3 at four clause types and stays judgment-heavy -- deciding
+      whether a "preferred supplier" or "requirements" commitment counts as
+      exclusivity is genuinely contestable, which is the point of the tier. At
+      180 positives (35.3%) it is comfortably measurable, and it enables a
+      cross-field rule against Non-Compete and Competitive Restriction Exception.
+    alternatives_considered:
+      - name: Covenant Not To Sue
+        positives: 100
+        note: Harder and legally subtler; lower base rate. Pick this for a stiffer Tier 3.
+      - name: Minimum Commitment
+        positives: 165
+        note: Closest in commercial flavor to MFN (pricing/volume terms), but more mechanical.
+
+clauses:
+  # ---------------------------------------------------------------------------
+  # Tier 1 -- near-deterministic. Short, conventional, usually in a named section.
+  # ---------------------------------------------------------------------------
+  - id: governing_law
+    cuad_category: Governing Law
+    tier: 1
+    positives: 437
+    base_rate: 0.857
+    description: "Which state/country's law governs the interpretation of the contract?"
+    value_type: jurisdiction_id # resolves against jurisdictions.yaml
+    notes: >-
+      The only clause with a genuinely closed answer vocabulary, which is why it
+      carries the strongest deterministic rule.
+
+  - id: parties
+    cuad_category: Parties
+    tier: 1
+    positives: 509
+    base_rate: 0.998
+    description: The two or more parties who signed the contract
+    value_type: party_list
+    notes: >-
+      Base rate 99.8%: presence F1 is meaningless here (an always-yes classifier
+      scores 0.999). Span F1 is the reported metric. Also the most multi-span
+      category in the corpus -- 2,554 gold spans over 509 contracts -- because
+      each party is annotated at every place it is named.
+
+  - id: effective_date
+    cuad_category: Effective Date
+    tier: 1
+    positives: 390
+    base_rate: 0.765
+    description: The date when the contract is effective
+    value_type: partial_date
+
+  - id: expiration_date
+    cuad_category: Expiration Date
+    tier: 1
+    positives: 413
+    base_rate: 0.810
+    description: On what date will the contract's initial term expire?
+    value_type: partial_date_or_perpetual
+    notes: >-
+      `perpetual` is the single most common gold value (66 of 329). The value
+      type must admit an open-ended sentinel or the date-ordering rule breaks.
+
+  # ---------------------------------------------------------------------------
+  # Tier 2 -- requires reading. The answer is in the text but needs the whole
+  # clause, not a keyword match.
+  # ---------------------------------------------------------------------------
+  - id: renewal_term
+    cuad_category: Renewal Term
+    tier: 2
+    positives: 176
+    base_rate: 0.345
+    description: >-
+      What is the renewal term after the initial term expires? This includes
+      automatic extensions and unilateral extensions with prior notice.
+    value_type: duration
+    notes: >-
+      CLAUDE.md calls this "Auto-Renewal". CUAD has no such category; Renewal
+      Term is the corresponding one and its definition explicitly covers
+      automatic extensions.
+
+  - id: notice_period_to_terminate_renewal
+    cuad_category: Notice Period To Terminate Renewal
+    tier: 2
+    positives: 111
+    base_rate: 0.218
+    description: What is the notice period required to terminate renewal?
+    value_type: duration_days
+
+  - id: change_of_control
+    cuad_category: Change Of Control
+    tier: 2
+    positives: 121
+    base_rate: 0.237
+    description: >-
+      Does one party have the right to terminate or is consent or notice required
+      of the counterparty if such party undergoes a change of control, such as a
+      merger, stock sale, transfer of all or substantially all of its assets or
+      business, or assignment by operation of law?
+    value_type: null
+
+  - id: anti_assignment
+    cuad_category: Anti-Assignment
+    tier: 2
+    positives: 374
+    base_rate: 0.733
+    description: Is consent or notice required of a party if the contract is assigned to a third party?
+    value_type: null
+    notes: CLAUDE.md calls this "Assignment"; Anti-Assignment is CUAD's name for it.
+
+  # ---------------------------------------------------------------------------
+  # Tier 3 -- requires judgment. Reasonable annotators disagree; this is where
+  # the system is expected to fail and where the interesting analysis lives.
+  # ---------------------------------------------------------------------------
+  - id: cap_on_liability
+    cuad_category: Cap On Liability
+    tier: 3
+    positives: 275
+    base_rate: 0.539
+    description: >-
+      Does the contract include a cap on liability upon the breach of a party's
+      obligation? This includes time limitation for the counterparty to bring
+      claims or maximum amount for recovery.
+    value_type: null
+
+  - id: uncapped_liability
+    cuad_category: Uncapped Liability
+    tier: 3
+    positives: 111
+    base_rate: 0.218
+    description: >-
+      Is a party's liability uncapped upon the breach of its obligation in the
+      contract? This also includes uncap liability for a particular type of breach
+      such as IP infringement or breach of confidentiality obligation.
+    value_type: null
+    notes: >-
+      CLAUDE.md proposes that cap_on_liability and uncapped_liability cannot both
+      be present. Measured against the gold labels this is exactly backwards: all
+      111 contracts with uncapped liability also carry a cap on liability, and
+      there are zero uncapped-only contracts. It is a subset relation -- a general
+      cap with specific carve-outs -- so the rule ships INVERTED, as
+      `uncapped_liability => cap_on_liability`, which holds 111/111.
+      See docs/DATA_AUDIT.md.
+
+  - id: non_compete
+    cuad_category: Non-Compete
+    tier: 3
+    positives: 119
+    base_rate: 0.233
+    description: >-
+      Is there a restriction on the ability of a party to compete with the
+      counterparty or operate in a certain geography or business or technology
+      sector?
+    value_type: null
+
+  - id: exclusivity
+    cuad_category: Exclusivity
+    tier: 3
+    positives: 180
+    base_rate: 0.353
+    description: >-
+      Is there an exclusive dealing commitment with the counterparty? This includes
+      a commitment to procure all "requirements" from one party of certain
+      technology, goods, or services or a prohibition on licensing or selling
+      technology, goods or services to third parties, or a prohibition on
+      collaborating or working with other parties), whether during the contract or
+      after the contract ends (or both).
+    value_type: null
+    notes: Replaces Most Favored Nation, which fell below the bar. See `substitutions` above.
