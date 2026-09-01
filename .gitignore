@@ -1,0 +1,58 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# --- Environments ---
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+
+# --- Tooling caches ---
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# --- Data ---
+# CUAD is ~165 MB and redistributable from atticusprojectai.org; not vendored here.
+# Ignore contents but keep the directories in the tree.
+data/raw/*
+data/interim/*
+data/cache/*
+!data/raw/.gitkeep
+!data/interim/.gitkeep
+!data/cache/.gitkeep
+# Hand-authored reference data IS tracked.
+!data/reference/
+!data/reference/**
+
+# --- Model caches ---
+# BAAI/bge-base-en-v1.5 + bge-reranker-v2-m3, ~1.5 GB
+.cache/
+models/
+*.safetensors
+*.bin
+*.pt
+*.onnx
+huggingface/
+.hf_home/
+.torch/
+
+# --- Eval artifacts ---
+# Frozen baselines under evals/baselines/ are tracked; scratch runs are not.
+evals/runs/
+*.local.json
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
