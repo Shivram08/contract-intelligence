@@ -82,8 +82,8 @@ select = [
 
 [tool.mypy]
 python_version = "3.11"
-# Extended as directories gain modules: scripts/ at M0.5, experiments/ at M5.
-files = ["src", "evals", "tests"]
+# Extended as directories gain modules: experiments/ at M5.
+files = ["src", "evals", "scripts", "tests"]
 strict = true
 disallow_untyped_defs = true
 disallow_any_generics = true
@@ -100,6 +100,8 @@ ignore_missing_imports = true
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+# scripts/ is not a package; audit_data is imported directly by its unit tests.
+pythonpath = ["scripts"]
 addopts = "-q --strict-markers --strict-config"
 asyncio_mode = "auto"
 markers = [
