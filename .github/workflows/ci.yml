@@ -1,0 +1,50 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+# A newer push to the same branch cancels the older run.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  # Keeps `uv sync` reproducible: fail rather than silently re-resolving.
+  UV_FROZEN: "1"
+
+jobs:
+  lint-type-test:
+    name: lint / types / tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          version: "0.12.9"
+          enable-cache: true
+          cache-dependency-glob: "uv.lock"
+
+      - name: Set up Python
+        run: uv python install 3.11
+
+      - name: Install dependencies
+        run: uv sync --all-groups
+
+      - name: ruff check
+        run: uv run ruff check .
+
+      - name: ruff format --check
+        run: uv run ruff format --check .
+
+      - name: mypy
+        run: uv run mypy
+
+      - name: pytest
+        # Integration tests need a live Postgres; they run in their own job later.
+        run: uv run pytest -m "not integration"
