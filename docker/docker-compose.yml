@@ -1,0 +1,38 @@
+# M0: Postgres only. The api / jaeger / prometheus / grafana services land in M4.
+name: contract-intelligence
+
+services:
+  postgres:
+    # pgvector's official image tracks upstream Postgres; pg16 + vector 0.8.x.
+    image: pgvector/pgvector:pg16
+    container_name: docintel-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-docintel}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-docintel}
+      POSTGRES_DB: ${POSTGRES_DB:-docintel}
+      # Deterministic collation so FTS ranking does not drift with the host locale.
+      POSTGRES_INITDB_ARGS: "--encoding=UTF8 --locale=C"
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      # Runs once, on an empty data directory only.
+      - ./initdb:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      # `pg_isready` alone returns true before initdb scripts finish, so also
+      # confirm the vector extension is actually registered.
+      test:
+        - CMD-SHELL
+        - >-
+          pg_isready -U "$${POSTGRES_USER}" -d "$${POSTGRES_DB}" -q &&
+          psql -U "$${POSTGRES_USER}" -d "$${POSTGRES_DB}" -tAc
+          "select 1 from pg_extension where extname='vector'" | grep -q 1
+      interval: 5s
+      timeout: 5s
+      retries: 12
+      start_period: 20s
+
+volumes:
+  pgdata:
+    name: docintel-pgdata
