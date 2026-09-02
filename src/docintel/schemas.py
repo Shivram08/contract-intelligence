@@ -58,7 +58,7 @@ class Chunk(BaseModel):
     ordinal: int = Field(ge=0)
     #: The section heading this chunk sits under, when one was detected.
     #: None for preamble text and for documents with no detectable structure --
-    #: 41 of CUAD's 510 contracts have no numbered headings at all.
+    #: 57 of CUAD's 510 contracts have no numbered headings at all.
     heading: str | None = None
     token_count: int = Field(ge=0)
 

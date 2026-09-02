@@ -10,8 +10,8 @@ Three facts from ``docs/DATA_AUDIT.md`` drive the design:
    run-on text with a mean line length of 340 characters (p90 1,453); section
    numbers appear mid-line after runs of spaces. A ``^``-anchored regex finds
    almost nothing on the majority of the corpus.
-2. **Some contracts have no headings at all.** 41 of 510 have zero numbered or
-   article headings and 94 have fewer than five, so the token-count fallback is a
+2. **Some contracts have no headings at all.** 57 of 510 have zero numbered or
+   article headings and 108 have fewer than five, so the token-count fallback is a
    primary path rather than an edge case.
 3. **Offsets index into raw text.** Chunks are pure slices -- never stripped,
    reflowed, or normalized -- so an evidence quote traces back to an exact
@@ -200,7 +200,7 @@ def find_headings(text: str) -> list[Heading]:
     """Locate section headings, in document order.
 
     Returns an empty list for unstructured text, which is the correct answer for
-    41 of CUAD's 510 contracts rather than a failure.
+    57 of CUAD's 510 contracts rather than a failure.
 
     There is deliberately no separate "is this a citation" filter. Cross-
     references like "pursuant to Section 13 of the Exchange Act" are excluded

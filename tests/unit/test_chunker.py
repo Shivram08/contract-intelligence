@@ -9,7 +9,7 @@ failure `docs/DATA_AUDIT.md` check 4 exists to prevent.
 The corpus profile these tests encode (from the audit):
   - 59% of contracts are run-on, mean line length 340 chars, p90 1,453.
     Headings therefore appear mid-line after whitespace runs, not at line starts.
-  - 41 of 510 contracts have no numbered headings at all, and 94 have fewer
+  - 57 of 510 contracts have no numbered headings at all, and 108 have fewer
     than five. The token-count fallback is a primary path, not an edge case.
 """
 
@@ -147,7 +147,7 @@ class TestHeadingDetection:
         assert find_headings("the party shall pay 5 dollars per unit") == []
 
     def test_returns_empty_for_unstructured_text(self) -> None:
-        """41 of 510 CUAD contracts land here."""
+        """57 of 510 CUAD contracts land here."""
         assert find_headings("This joint filing agreement is entered into by the parties.") == []
 
     def test_headings_are_returned_in_document_order(self) -> None:
