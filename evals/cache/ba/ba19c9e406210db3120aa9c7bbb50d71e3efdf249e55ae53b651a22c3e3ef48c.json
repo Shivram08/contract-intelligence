@@ -1,0 +1,43 @@
+{
+  "meta": {
+    "model": "claude-sonnet-5",
+    "turns_in_history": 9
+  },
+  "response": {
+    "content": [
+      {
+        "text": "Confirmed the full document is 2298 characters. This is a short joint filing agreement for a Schedule 13D. Let me now determine parties and effective date precisely, then check schema for parties role definitions.",
+        "type": "text"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01PjmhfVn2QcbK8YqNXoUErB",
+        "input": {},
+        "name": "get_schema",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefHhf4F7yQpXpA41hzCy",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 176
+      },
+      "cache_creation_input_tokens": 176,
+      "cache_read_input_tokens": 4987,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 93,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard"
+    }
+  }
+}

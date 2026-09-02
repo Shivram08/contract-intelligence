@@ -1,0 +1,79 @@
+{
+  "meta": {
+    "model": "claude-sonnet-5",
+    "turns_in_history": 1
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "Ep4CCpABCBEYAipAbM6x65ta40PLVgB3mLxmO9/mA/+H5sYDG4OTYKZLCCSY/q2SVKGtQhaYV+5ocL9b1OngyPGBDayE7PpBTo17JzIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAc6P4tQGEgy6fNOlhU3OH00jIUMaDJuQHSC24bMl9SUw6yIwhLpTPzVIzzWAesHgQIBKzNHg+tCovFyvMiqe4pGUzBqu3PdXR9c1SUE9FReFfc2/KjtxGcXuFN/B3dxBLRjJsyzP0u3Tw6RMMZwSD0DGYp0QGDC5xDocNs8F9vEA6910iaGYl5/UspvY134Z/hgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01HY5cqjbkiX6qU7RzAqyKeF",
+        "input": {
+          "query": "governing law construed in accordance with the laws of"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01Xt1bEF4Gs1eFrgabS5g6pR",
+        "input": {
+          "query": "This Agreement is entered into by and between parties"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_013dKYpUK4M9W1ZSyhq6XD4b",
+        "input": {
+          "query": "effective date of this Agreement"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_0185effgZq6BJdShWyhpdX96",
+        "input": {
+          "query": "term of this Agreement shall expire"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefFPVpPQiqYyWq2LGhp4",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 183
+      },
+      "cache_creation_input_tokens": 183,
+      "cache_read_input_tokens": 3149,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 242,
+      "output_tokens_details": {
+        "thinking_tokens": 14
+      },
+      "service_tier": "standard"
+    }
+  }
+}

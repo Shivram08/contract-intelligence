@@ -1,0 +1,196 @@
+{
+  "meta": {
+    "model": "claude-sonnet-5",
+    "turns_in_history": 15
+  },
+  "response": {
+    "content": [
+      {
+        "text": "Offsets were auto-corrected; all quotes verified. Now I'll submit the final extraction.",
+        "type": "text"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01Nr2nx6TmU5rKQUCK9XMqJP",
+        "input": {
+          "clauses": [
+            {
+              "clause_type": "governing_law",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 149757,
+                  "char_start": 149481,
+                  "quote": "This Agreement shall be governed by and construed in accordance with the internal laws of the State of California applicable to agreements made and to be performed entirely within such state, without regard to the conflicts of law principles of such state"
+                }
+              ],
+              "present": true,
+              "raw_text": "This Agreement shall be governed by and construed in accordance with the internal laws of the State of California applicable to agreements made and to be performed entirely within such state, without regard to the conflicts of law principles of such state",
+              "value": "US-CA"
+            },
+            {
+              "clause_type": "parties",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 2295,
+                  "char_start": 2200,
+                  "quote": "is made by and between Xencor, Inc. (\"Xencor\"), and Aimmune Therapeutics, Inc. (\"Aimmune\")."
+                }
+              ],
+              "present": true,
+              "raw_text": "This License, Development and Commercialization Agreement (this \"Agreement\"), dated as of February 4, 2020 (the \"Effective Date\"), is made by and between Xencor, Inc. (\"Xencor\"), and Aimmune Therapeutics, Inc. (\"Aimmune\").",
+              "value": "Xencor, Inc. (Licensor); Aimmune Therapeutics, Inc. (Licensee)"
+            },
+            {
+              "clause_type": "effective_date",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 2128,
+                  "char_start": 2077,
+                  "quote": "dated as of February 4, 2020 (the \"Effective Date\")"
+                }
+              ],
+              "present": true,
+              "raw_text": "This License, Development and Commercialization Agreement (this \"Agreement\"), dated as of February 4, 2020 (the \"Effective Date\")",
+              "value": "2020-02-04"
+            },
+            {
+              "clause_type": "expiration_date",
+              "confidence": 0.5,
+              "evidence": [
+                {
+                  "char_end": 124812,
+                  "char_start": 124639,
+                  "quote": "shall remain in effect on a Product-by-Product and country-by-country basis until the expiration of the Royalty Term applicable to such Product and country (the \"Term\")"
+                }
+              ],
+              "present": true,
+              "raw_text": "This Agreement shall become effective on the Effective Date and, unless earlier terminated pursuant to this ARTICLE 13, shall remain in effect on a Product-by-Product and country-by-country basis until the expiration of the Royalty Term applicable to such Product and country (the \"Term\").",
+              "value": "UNSPECIFIED"
+            },
+            {
+              "clause_type": "renewal_term",
+              "confidence": 0.8,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "notice_period_to_terminate_renewal",
+              "confidence": 0.8,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "change_of_control",
+              "confidence": 0.65,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "anti_assignment",
+              "confidence": 0.92,
+              "evidence": [
+                {
+                  "char_end": 143243,
+                  "char_start": 142802,
+                  "quote": "Neither Party may assign or transfer this Agreement or any rights or obligations hereunder without the prior written consent of the other Party, except that a Party may make such an assignment or transfer without the other Party's written consent to (a) any of its Affiliates, in whole or in part, or (b) any Third Party in connection with (i) the acquisition of such Party by or merger or consolidation of such Party with another entity"
+                }
+              ],
+              "present": true,
+              "raw_text": "Neither Party may assign or transfer this Agreement or any rights or obligations hereunder without the prior written consent of the other Party, except that a Party may make such an assignment or transfer without the other Party's written consent to (a) any of its Affiliates, in whole or in part, or (b) any Third Party in connection with (i) the acquisition of such Party by or merger or consolidation of such Party with another entity or (ii) a merger, consolidation, sale of stock, sale of all or substantially all of such Party's assets or other similar transaction",
+              "value": null
+            },
+            {
+              "clause_type": "cap_on_liability",
+              "confidence": 0.75,
+              "evidence": [
+                {
+                  "char_end": 111865,
+                  "char_start": 111611,
+                  "quote": "NEITHER PARTY SHALL BE LIABLE TO THE OTHER PARTY FOR ANY LOST PROFITS, OR ANY SPECIAL, CONSEQUENTIAL, INCIDENTAL, OR INDIRECT DAMAGES ARISING FROM OR RELATING TO ANY BREACH OF THIS AGREEMENT, REGARDLESS OF ANY NOTICE OF THE POSSIBILITY OF SUCH DAMAGES."
+                }
+              ],
+              "present": true,
+              "raw_text": "NEITHER PARTY SHALL BE LIABLE TO THE OTHER PARTY FOR ANY LOST PROFITS, OR ANY SPECIAL, CONSEQUENTIAL, INCIDENTAL, OR INDIRECT DAMAGES ARISING FROM OR RELATING TO ANY BREACH OF THIS AGREEMENT, REGARDLESS OF ANY NOTICE OF THE POSSIBILITY OF SUCH DAMAGES.",
+              "value": null
+            },
+            {
+              "clause_type": "uncapped_liability",
+              "confidence": 0.75,
+              "evidence": [
+                {
+                  "char_end": 112106,
+                  "char_start": 111865,
+                  "quote": "NOTHING IN THIS SECTION 11.4 IS INTENDED TO OR SHALL LIMIT OR RESTRICT THE INDEMNIFICATION RIGHTS OR OBLIGATIONS OF ANY PARTY UNDER SECTION 11.1 or 11.2, OR DAMAGES AVAILABLE FOR A PARTY'S BREACH OF CONFIDENTIALITY OBLIGATIONS UNDER ARTICLE 12."
+                }
+              ],
+              "present": true,
+              "raw_text": "NOTWITHSTANDING THE FOREGOING, NOTHING IN THIS SECTION 11.4 IS INTENDED TO OR SHALL LIMIT OR RESTRICT THE INDEMNIFICATION RIGHTS OR OBLIGATIONS OF ANY PARTY UNDER SECTION 11.1 or 11.2, OR DAMAGES AVAILABLE FOR A PARTY'S BREACH OF CONFIDENTIALITY OBLIGATIONS UNDER ARTICLE 12.",
+              "value": null
+            },
+            {
+              "clause_type": "non_compete",
+              "confidence": 0.8,
+              "evidence": [
+                {
+                  "char_end": 45309,
+                  "char_start": 45015,
+                  "quote": "Xencor hereby covenants and agrees that it shall not (and shall cause its Affiliates not to), either directly or through granting a license or other right to, or otherwise facilitating, a Third Party to (a) Develop, Manufacture or Commercialize the Antibody or the Product during the Term"
+                }
+              ],
+              "present": true,
+              "raw_text": "Xencor hereby covenants and agrees that it shall not (and shall cause its Affiliates not to), either directly or through granting a license or other right to, or otherwise facilitating, a Third Party to (a) Develop, Manufacture or Commercialize the Antibody or the Product during the Term",
+              "value": null
+            },
+            {
+              "clause_type": "exclusivity",
+              "confidence": 0.8,
+              "evidence": [
+                {
+                  "char_end": 39093,
+                  "char_start": 38897,
+                  "quote": "Xencor hereby grants to Aimmune during the Term an exclusive, worldwide, payment-bearing license under and with respect to Xencor Patents and Xencor's interest in Joint Collaboration Patents"
+                }
+              ],
+              "present": true,
+              "raw_text": "Xencor hereby grants to Aimmune during the Term an exclusive, worldwide, payment-bearing license under and with respect to Xencor Patents and Xencor's interest in Joint Collaboration Patents",
+              "value": null
+            }
+          ]
+        },
+        "name": "submit_extraction",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefEzEvYuBQzbc9nZbWVA",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 2846
+      },
+      "cache_creation_input_tokens": 2846,
+      "cache_read_input_tokens": 51097,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 2807,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard"
+    }
+  }
+}

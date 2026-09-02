@@ -1,0 +1,159 @@
+{
+  "meta": {
+    "model": "claude-sonnet-5",
+    "turns_in_history": 17
+  },
+  "response": {
+    "content": [
+      {
+        "text": "All confirmed absent (search tool returns nothing for this short document, consistent with the full text already read containing no such provisions). Now let's build the extraction and validate.",
+        "type": "text"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01Thmu3AEZfZSxJYpN3obDLf",
+        "input": {
+          "clauses": [
+            {
+              "clause_type": "governing_law",
+              "confidence": 0.9,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "parties",
+              "confidence": 0.75,
+              "evidence": [
+                {
+                  "char_end": 767,
+                  "char_start": 739,
+                  "quote": "HPS INVESTMENT PARTNERS, LLC"
+                },
+                {
+                  "char_end": 860,
+                  "char_start": 830,
+                  "quote": "HPS MEZZANINE PARTNERS II, LLC"
+                }
+              ],
+              "present": true,
+              "raw_text": "HPS INVESTMENT PARTNERS, LLC /s/ John Madden Name: John Madden Title: Authorized Signatory HPS MEZZANINE PARTNERS II, LLC By: HPS Investment Partners, LLC, its sole member /s/ John Madden Name: John Madden Title: Authorized Signatory",
+              "value": "HPS INVESTMENT PARTNERS, LLC (Filer); HPS MEZZANINE PARTNERS II, LLC (Filer); HPS MEZZANINE PARTNERS II OFFSHORE GP, L.P. (Filer); MEZZANINE PARTNERS - OFFSHORE INVESTMENT MASTER FUND II, L.P. (Filer); MEZZANINE PARTNERS II OFFSHORE LUX S.\u00c0 R.L (Filer); MEZZANINE PARTNERS II OFFSHORE LUX S.\u00c0 R.L II (Filer); HPS MEZZANINE PARTNERS II GP, L.P. (Filer); MEZZANINE PARTNERS II, L.P. (Filer); MEZZANINE PARTNERS II ONSHORE LUX S.\u00c0 R.L (Filer); MEZZANINE PARTNERS II ONSHORE LUX S.\u00c0 R.L II (Filer)"
+            },
+            {
+              "clause_type": "effective_date",
+              "confidence": 0.85,
+              "evidence": [
+                {
+                  "char_end": 737,
+                  "char_start": 718,
+                  "quote": "Dated: July 6, 2020"
+                }
+              ],
+              "present": true,
+              "raw_text": "Dated: July 6, 2020",
+              "value": "2020-07-06"
+            },
+            {
+              "clause_type": "expiration_date",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "renewal_term",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "notice_period_to_terminate_renewal",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "change_of_control",
+              "confidence": 0.9,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "anti_assignment",
+              "confidence": 0.9,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "cap_on_liability",
+              "confidence": 0.9,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "uncapped_liability",
+              "confidence": 0.9,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "non_compete",
+              "confidence": 0.92,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "exclusivity",
+              "confidence": 0.92,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            }
+          ]
+        },
+        "name": "submit_extraction",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefHoKALkRM5zKfxQFwu3",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 3192
+      },
+      "cache_creation_input_tokens": 3192,
+      "cache_read_input_tokens": 12386,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 1241,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard"
+    }
+  }
+}

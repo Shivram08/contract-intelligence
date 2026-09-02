@@ -42,6 +42,7 @@ __all__ = [
     "CachingClient",
     "ResponseCache",
     "cache_key",
+    "fingerprint",
 ]
 
 REPO_ROOT: Final = Path(__file__).resolve().parents[1]
@@ -126,11 +127,41 @@ def _canonical(value: Any) -> Any:
     return repr(value)
 
 
+def _serialize(request: dict[str, Any]) -> str:
+    keyed = {field: _canonical(request[field]) for field in KEYED_FIELDS if field in request}
+    return json.dumps(keyed, sort_keys=True, separators=(",", ":"), ensure_ascii=True)
+
+
 def cache_key(request: dict[str, Any]) -> str:
     """Stable hash of the parts of a request that determine its response."""
-    keyed = {field: _canonical(request[field]) for field in KEYED_FIELDS if field in request}
-    payload = json.dumps(keyed, sort_keys=True, separators=(",", ":"), ensure_ascii=True)
-    return hashlib.sha256(payload.encode("utf-8")).hexdigest()
+    return hashlib.sha256(_serialize(request).encode("utf-8")).hexdigest()
+
+
+def fingerprint(request: dict[str, Any]) -> dict[str, Any]:
+    """Per-component hashes, stored on every entry.
+
+    Recorded so that a future replay divergence can be *diffed* rather than
+    guessed at. Diagnosing the one above meant reasoning from response bodies
+    because nothing recorded what the request had looked like.
+    """
+
+    def digest(value: Any) -> str:
+        return hashlib.sha256(
+            json.dumps(_canonical(value), sort_keys=True, separators=(",", ":")).encode()
+        ).hexdigest()[:16]
+
+    messages = request.get("messages") or []
+    return {
+        "model": request.get("model"),
+        "temperature": request.get("temperature"),
+        "top_p": request.get("top_p"),
+        "max_tokens": request.get("max_tokens"),
+        "system_sha": digest(request.get("system")),
+        "tools_sha": digest(request.get("tools")),
+        "messages_sha": digest(messages),
+        "message_count": len(messages),
+        "per_message_sha": [digest(m) for m in messages],
+    }
 
 
 @dataclass(slots=True)
@@ -301,7 +332,32 @@ def _dehydrate(response: Any) -> dict[str, Any]:
     }
 
 
-class _Block:
+class _Replayed:
+    """Base for objects read back from cache.
+
+    ``model_dump`` exists so ``_canonical`` takes the *same* branch for a
+    replayed object as for a live SDK model. Without it the slots fallback
+    emitted every attribute including unset ones, so a replayed ``tool_use``
+    block serialized with ``text: None, thinking: None`` while the live SDK
+    block -- ``model_dump(exclude_none=True)`` -- omitted them.
+
+    The consequence was subtle and total: turn 1 replayed fine, then the loop
+    echoed the replayed assistant content into turn 2's request, the
+    serialization differed, the key differed, and every turn after the first
+    missed. Multi-turn replay was impossible, which would have left the CI gate
+    unsound for both agent baselines while appearing to work.
+    """
+
+    __slots__: tuple[str, ...] = ()
+
+    def model_dump(self, exclude_none: bool = False) -> dict[str, Any]:
+        payload: dict[str, Any] = {name: getattr(self, name, None) for name in self.__slots__}
+        if not exclude_none:
+            return payload
+        return {key: value for key, value in payload.items() if value is not None}
+
+
+class _Block(_Replayed):
     """A content block read back from cache."""
 
     __slots__ = ("id", "input", "name", "text", "thinking", "type")
@@ -312,12 +368,13 @@ class _Block:
         self.type = payload.get("type")
         self.text = payload.get("text")
         self.name = payload.get("name")
-        self.input = payload.get("input") or {}
+        # {} is a valid tool input and must survive; only None is dropped.
+        self.input = payload.get("input") if payload.get("input") is not None else {}
         self.id = payload.get("id")
         self.thinking = payload.get("thinking")
 
 
-class _Usage:
+class _Usage(_Replayed):
     """Usage read back from cache."""
 
     __slots__ = (
@@ -339,7 +396,7 @@ class _Usage:
         self.cache_creation_input_tokens = payload.get("cache_creation_input_tokens", 0) or 0
 
 
-class _Response:
+class _Response(_Replayed):
     """A response read back from cache, quacking like the SDK's Message."""
 
     __slots__ = ("content", "model", "stop_details", "stop_reason", "usage")

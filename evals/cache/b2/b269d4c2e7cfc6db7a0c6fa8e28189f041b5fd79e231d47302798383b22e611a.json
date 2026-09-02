@@ -1,0 +1,79 @@
+{
+  "meta": {
+    "model": "claude-sonnet-5",
+    "turns_in_history": 1
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "EpUCCpABCBEYAipAnCrnfE+mqL7EaT8VMCMGb2dHnJRSiB6+JEZYT11jojjviZCkHWfCmo2lLoK4FGN/QB2xB83IT9lwikjj2N2CyjIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAeWb4tQGEgwSWwDyysIgHk5UMaIaDLXAY4Nc0V29hFUP0iIwiwRAKu8MMWJarEfelToqv1ir4uGqhjmpSHHAISCnkDKB6wpWquh2VoU1kcsCCLwlKjLVbrBkCNiPUbIhyrPdYQfV8tkaGkN4Hr9QqoDdxvjUJjV5fdEjgVl16qSbvkrKuUQmGBgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01MGK9BQcyKKHyKd8LUfEtuN",
+        "input": {
+          "query": "governing law construed in accordance with"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01FigsXVeSpoaTUUwJzF11Yt",
+        "input": {
+          "query": "this agreement is entered into by and between parties"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01H12uwi6yMUXFumXeVWznH5",
+        "input": {
+          "query": "effective date of this agreement"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01TU7ffxE2D8tK8Ypfa9ayi1",
+        "input": {
+          "query": "term of agreement shall expire terminate"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefHNR1sSoNgERb8ExGaa",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 3330
+      },
+      "cache_creation_input_tokens": 3330,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 235,
+      "output_tokens_details": {
+        "thinking_tokens": 12
+      },
+      "service_tier": "standard"
+    }
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "model": "claude-sonnet-5",
+    "turns_in_history": 1
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "EpQCCpABCBEYAipA5Xvx3mRmIpyDch+9BQaWoH3UOfgGVTaxpC3f43sO7axfpjTU+J9ugOvlBL/VU4RpgsCmnCrSsSueN4gi4kDl9zIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAdaM4tQGEgwCU1n4ZY94F4omCLsaDDJsIa6WulnGt38kqiIw+oVBzHcJHlYDaEyMa2XYWxc2giaeD1tkb5imZ9eOJfrIbs+HcLaOTK+T2wI+S/GIKjGtBDDTkE2VWv4QyIPOTC2wKU5r5BMyWUR9/9Qcbs7tzHBNZCEjcXHmovsZyXOUFVhDGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01Lhrj8EEfWoJ7qgG6B1nnXg",
+        "input": {
+          "query": "governing law, construed in accordance with the laws of"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01CFjuBUvPYv75MRE7cSwX8m",
+        "input": {
+          "query": "This Agreement is entered into between and effective as of"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01Rq7mzM3Cdmkj31Ar2BTULH",
+        "input": {
+          "query": "term of this agreement shall commence and expire"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_015BiRixkXbaPyTjTgvFLiUP",
+        "input": {
+          "query": "renewal term automatically renew"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01K9gNiXEGmB99mUey9kWZiU",
+        "input": {
+          "query": "notice of termination prior to expiration"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01UnY2byJC2zMCz5xuu2kHVr",
+        "input": {
+          "query": "change of control"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefEukYt3MrVZejLZZiK5",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 183
+      },
+      "cache_creation_input_tokens": 183,
+      "cache_read_input_tokens": 4132,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 346,
+      "output_tokens_details": {
+        "thinking_tokens": 12
+      },
+      "service_tier": "standard"
+    }
+  }
+}

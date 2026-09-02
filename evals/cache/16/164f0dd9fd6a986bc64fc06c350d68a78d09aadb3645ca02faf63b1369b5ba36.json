@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "model": "claude-sonnet-5",
+    "turns_in_history": 11
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "Eo8JCpABCBEYAipA1PsVZxqroCYuQthw6I4Ke47SUW6AWjoAN4CDJjQ+CemagiyYCvQlvef8ZFI5ViexAWdTHANM2dvaR5gGOp9nUTIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAf2M4tQGEgzHd4hSAd+jrZr6gl8aDDXi4n09IvrWrVEACCIwXGqu6LSrGn9xtTLHzEImEyRR2F500DYJixT358UnQ3pr/+6k7ip8ve7t9PenPOI2KqsHXtjvqvGuRLrqNFLRvsA3KOQqzcCoY6hUtsnziim4C5iS0Ly6bhKNXmrM1BVF+0qIuK4Mip+3p/CQMzkD0QkPVAiVu/BW+dxLcxmOcCIDP8MYRMltzQdEt2HBCY+FZGSOVSGZnQ633DN1mEVrhA2N+ikFVnCsVNSxppjHupQH82TDWurCoCgSJclSwEZ0KYRrYaa4rnE/39U25XuTZeXPbEWrMZqGHqrXXUEUEzb5OAjKhW6Tf/yLPFyf9yguS4EwN4OaNKdwH8XmseMJo4elazaDJYFCRbV5cOWKz6lB1b/WeFsNyUQLp9zmSjWB3dIMtcG1BS+5P8210uim99NuPPLV5+781dqc93tii0REZfBhI9hgDjOJCPBB/ZrvtrZ+1U+bv57g4bJZo0i8my5j3AQey9sprfLjJuQ2FoUXrIROQauVKHyAUmLnvpiB18KENmGWg1DWt3kAqpXjf3+HftHcEgWXecmSBWhCJfeD+aXe4pDat4b/7Im/f4YScNs+ONqH7mhU8Rjb4RTuaKmwH/c5iQAeOM0lKYflGqPnRxN3cc2gM4+UgVRTYIxXNBZARBp6asYemLNbQTQkptYMur7g81pEf3p/v9Eu4x8hNHdD26j/RFO9xO47dI460RA6z8BIdUEXMZ6invjv+0oc4ZJW3BG3W1W6XiKnBMU6xJOPrFPJYSYp4DM/G7Q3sotEcG1t1uA/HVghHZqjPLTBHbOS5N6v/vEkA4AZZiUN1oDRbmFZnrhiUN8YYbKjW8Jss4tgM//LV73ZUjEmEf9s5MEzKBwu1emeDSc7mlKySO0xTWYK311teSIpXsCKfRmNw+w+bc+BcQsTN9WIavpqlZSgB37d0Z8tzSZaTFXXqFv98bZ/sa5LS5Z5ag75SZgEAIvv2YeXgbfs9xPpL1v6T7DBA+jnttYMq2cznpsCH83R7HvKqzWICLw9t5k1TVDsZZnPZY5tiOFjkF6OplSx+Z5ZDjVwzlD3ho8tUnn1PiIsskVIWD3z/t0LBcS6mDrkEqC2VQg/Tt3JGFA0GBsPRqaejdgG5NqxIfwbetOGoN5NDuWYY9Pk8lX5wdOt3wmkE/929T/x3gsbUg6IhGtWnbCYA8N6b12tCJbPT90DJYgYrpYFKS+daSiQ5RPFRD0tMGfrUpEu8E32lfvW8Ok083NqfjqNJIAZJE750k+Js+pECrhJilJU0FAwGdGdCaFp0O7GT5ByX3zuDpLUyLwqdPpbYW1YdajKi4UIGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_013dhSTmxS5LjCTPebw7aMLe",
+        "input": {
+          "query": "automatically renewed for successive periods unless either party provides notice"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01W9EdxSgJWsKDjSEe3mXaWM",
+        "input": {
+          "query": "extend the term for an additional period"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefExMCGu6FJ5E1cXbnuz",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 2353
+      },
+      "cache_creation_input_tokens": 2353,
+      "cache_read_input_tokens": 44524,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 413,
+      "output_tokens_details": {
+        "thinking_tokens": 293
+      },
+      "service_tier": "standard"
+    }
+  }
+}

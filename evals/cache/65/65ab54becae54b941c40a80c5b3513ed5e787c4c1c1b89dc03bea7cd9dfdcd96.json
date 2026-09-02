@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "model": "claude-sonnet-5",
+    "turns_in_history": 9
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "EpMFCpABCBEYAipAmmLQjlTR7zIeI2oIljInSfpcgkV/1oNNaLkwHrcZHVxBJToL9UAuCfaOjdkLBmkcsM7l0ZIaiITySdq7O8jlIDIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAb+L4tQGEgyP0xP9xOLJNE48AvcaDL7GFGK+XU6y8ajxMiIwd7Fk2PAJ4w386PWrvfB0tDwAHIvs7hB6afXr1w+zeQqgdwquu0rysadg/OLpILFGKq8DteiKLhH74at6wCPqTtWxkmKQrxyeO7sTiAvxaugZlgw4EjNiKEvBhFlJMqmB56XkxrC5uj4Khc7fyVHcaLauSljd8T3qXfkCCSRvWprrN5URULFImrZ0bSC+j1Ef0L9cAJS2C1rC3rt9Td6AFN41oR/V5m8I0SAXHV+bOx6oSGzSfPU8MYSJPXVJCVy8SBhTF2kBxGsgDfeQkgyCpA+0TAR1TZXBkw6LzGwtKYmYY0GkXeG5l0UWRt/adi2ich3HYrbTtPzQvE5yp3u1ypjCpH+f9GeVOUqm3Qw4b6Wi37PrwO1ynG8xspFDPodnONLMBXyVU4l/8L6F5L9lUbhy782jWnXhQWlrcMRI8h2GgadtmSjwmUWjxUtiuCgC6BcNYUFthqVY7m8wb1uK+CNohGufD2ZVkRdWahXnLhETUNk1+UpRONUi34oKOxiYfk5cF5e4bOpCTq1GeDvagcKy5+jIZycvM0s2I7L2RFLAqpkpMTGYSYWJYGhML46CFACkEf2koPILL4a0ugPbDgKX6nqEAKe8OU108+odoAbzAA9S0PYEtm9hOIpBiV4N4VMYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01TZhoHkDi77ysgJ6nRXMvqN",
+        "input": {
+          "clause_types": [
+            "anti_assignment",
+            "exclusivity",
+            "non_compete",
+            "change_of_control",
+            "cap_on_liability",
+            "uncapped_liability"
+          ]
+        },
+        "name": "get_schema",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01XNPCGS1PULSYbCvhDQU1QN",
+        "input": {
+          "query": "2TheMart agrees that i-Escrow will be the exclusive provider of escrow services"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01Y58krTbrN37hCkSQm9Whw2",
+        "input": {
+          "query": "during the term neither party shall"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefEiZ6zYBQaXxtovRspa",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 3519
+      },
+      "cache_creation_input_tokens": 3519,
+      "cache_read_input_tokens": 31241,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 358,
+      "output_tokens_details": {
+        "thinking_tokens": 135
+      },
+      "service_tier": "standard"
+    }
+  }
+}

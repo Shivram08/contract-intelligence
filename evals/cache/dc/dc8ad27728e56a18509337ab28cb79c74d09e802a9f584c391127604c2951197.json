@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "model": "claude-sonnet-5",
+    "turns_in_history": 1
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "EpcCCpABCBEYAipAWwSyISq1i5la6YwPxtA0Mc1tHF4zB7vBGfDyz9xz3UKoFs+D1WJkz8KZ8YPKeSCifHqXkDcgIyESOCpJCB32RjIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAYWP4tQGEgyEIwh1w+S3VBB36jMaDFcOVmpKt3oBGFA/fiIwneutao89+uRjLx90tK+tITmKCCFJRhmiF5qcM5SWCkiCVKXyP50CQmgI5fvzqtZrKjRWjXFYo8BiMX9mI83+TEVk+6VyQqfeU6C/A7cpSopIv0kZEeRZk7WiZvbnhf/O1VdVMrzLGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01GoAH1B1HjF1Lj5VjRCmNUq",
+        "input": {
+          "query": "This Agreement is made and entered into by and between"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_013G8yMvpnc5Bv8i3RwpVJUF",
+        "input": {
+          "query": "governing law construed in accordance with the laws of"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefFJ5cxUesmnpcfm4YkW",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 3340
+      },
+      "cache_creation_input_tokens": 3340,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 134,
+      "output_tokens_details": {
+        "thinking_tokens": 14
+      },
+      "service_tier": "standard"
+    }
+  }
+}

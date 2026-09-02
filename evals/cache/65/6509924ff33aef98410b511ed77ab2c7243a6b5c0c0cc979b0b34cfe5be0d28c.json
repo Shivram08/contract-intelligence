@@ -1,0 +1,79 @@
+{
+  "meta": {
+    "model": "claude-sonnet-5",
+    "turns_in_history": 5
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "EuYCCpABCBEYAipA+lYPw9gKVcSff5HGsOzMWqt3NXb1uQh+5l3ZuMUINW+v0LRCdh3CSPs17ELgju6M/NrQRiHKJalu7ENnr2oGlzIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAYyP4tQGEgw7VM6rTND20agkNbkaDG9FtZAVDh1zwnZidyIwUMKAV3BZzqrW2erdNfvXt8eUFpHNsaX8yE2W+MUkQXC58vs64abstTa3qlmYfTYEKoIBtOS9yvFy0qPSxdO8/4l+1iZwMC28L499bZY/hW+ZLLzd/S4J4bYZ4TSwGNNkD76kIw9DEO+o6K48L47fsYBmScYPcaBwVM1y1EosUqXQL6x/doCS1xxAv1jiJqXITyElblguZN8hMjVSMHcrsEU7NdEGFu0FLCP4FE7Gy+jReE2axxgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01UypWFwTwtVod64RtttS3zo",
+        "input": {
+          "query": "This Agreement is entered into as of the ___ day between i-Escrow, Inc. and 2TheMart.com"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_0184fgjAHgrXcRe5feRbMKCL",
+        "input": {
+          "query": "assignment of this agreement shall not be assigned"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01HTzeQHKKXx11U9xohLoEJS",
+        "input": {
+          "query": "limitation of liability in no event shall damages exceed"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01X4ekYxSNS8jxx28Rq6g4Gm",
+        "input": {
+          "query": "exclusive right exclusivity sole provider"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefFJdsSGdjp7Q6qYeiru",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 6727
+      },
+      "cache_creation_input_tokens": 6727,
+      "cache_read_input_tokens": 6524,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 296,
+      "output_tokens_details": {
+        "thinking_tokens": 34
+      },
+      "service_tier": "standard"
+    }
+  }
+}

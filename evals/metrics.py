@@ -353,10 +353,31 @@ class MetricSummary:
     #: Documents tripping at least one ERROR-severity rule.
     documents_with_errors: int = 0
     documents: int = 0
+    #: Runs attempted and runs that finished. Accuracy metrics are computed
+    #: over the completed ones only -- scoring an incomplete run as all-absent
+    #: measures the turn ceiling, not the model.
+    attempted: int = 0
+    completed: int = 0
+    #: document_id -> terminal state, for the runs that were excluded.
+    excluded: dict[str, str] = field(default_factory=dict)
     #: Per-document cost and latency, for mean and p95.
     costs_usd: list[float] = field(default_factory=list)
     latencies_ms: list[float] = field(default_factory=list)
+    #: Per-stage, so section 6's "latency per stage" is answerable.
+    retrieval_ms: list[float] = field(default_factory=list)
+    validation_ms: list[float] = field(default_factory=list)
     cases_scored: int = 0
+
+    @property
+    def completion_rate(self) -> float:
+        """Share of attempted runs that finished and can be scored.
+
+        Reported beside F1, with its denominator, because an arm that completes
+        60% of the time and scores well on those is not comparable to one that
+        completes always -- and averaging the failures in as zeros hides which
+        of the two you have.
+        """
+        return self.completed / self.attempted if self.attempted else 0.0
 
     @property
     def grounding_violation_rate(self) -> float:
@@ -410,6 +431,12 @@ class MetricSummary:
             "baseline": self.baseline,
             "documents": self.documents,
             "cases_scored": self.cases_scored,
+            "completion": {
+                "rate": round(self.completion_rate, 4),
+                "completed": self.completed,
+                "attempted": self.attempted,
+                "excluded": self.excluded,
+            },
             "presence": {
                 "f1": round(overall.f1, 4),
                 "precision": round(overall.precision, 4),
@@ -469,6 +496,8 @@ class MetricSummary:
             "latency_ms": {
                 "p50": round(self.p50_latency_ms, 1),
                 "p95": round(self.p95_latency_ms, 1),
+                "retrieval_p50": round(self.percentile(self.retrieval_ms, 50), 1),
+                "validation_p50": round(self.percentile(self.validation_ms, 50), 1),
             },
         }
 
@@ -477,18 +506,27 @@ def score_cases(
     baseline: str,
     cases: Sequence[GoldenCase],
     predictions: dict[str, list[ClauseExtraction]],
+    scoreable: set[str] | None = None,
 ) -> MetricSummary:
     """Score one baseline's predictions against the gold cases.
 
     ``predictions`` maps ``document_id`` to that document's clause extractions.
-    A document absent from ``predictions`` is scored as all-absent rather than
-    skipped: a run that crashed on a contract should show up as recall loss, not
-    quietly shrink the denominator and inflate the score.
+    ``scoreable`` names the documents whose run actually completed; cases from
+    any other document are **excluded**, not scored.
+
+    That exclusion is the point. An earlier version scored a missing document as
+    all-absent, reasoning that a crashed run should surface as recall loss. On
+    real data that was wrong: three of five smoke-test contracts hit the turn
+    ceiling and returned nothing, and scoring them as zeros would have reported
+    a presence F1 that was mostly a measurement of ``max_turns``. Incomplete
+    runs belong in the completion rate, not in the accuracy numerator.
     """
     summary = MetricSummary(baseline=baseline)
     summary.documents = len({case.document_id for case in cases})
 
     for case in cases:
+        if scoreable is not None and case.document_id not in scoreable:
+            continue
         by_type = {clause.clause_type: clause for clause in predictions.get(case.document_id, [])}
         predicted = by_type.get(case.clause_type)
 

@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "model": "claude-sonnet-5",
+    "turns_in_history": 11
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01Pb5QY9xmw47ivovDxjFv5j",
+        "input": {
+          "query": "This Agreement shall be interpreted under the laws of the State of Nevada"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01ULVAw26XEPnJ877QVFZW8U",
+        "input": {
+          "query": "exclusive appointment of Agency by MICOA to sell its professional liability products"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01VQSu2bGyMwS8qnr8fW8SYD",
+        "input": {
+          "query": "Agency will not directly or indirectly sell any professional liability insurance"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01GToA1PgLxZQEM2bmjoFhdZ",
+        "input": {
+          "query": "Agency may not assign this Agreement without the written permission"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01CaY7zC4UxtRUBqZEi6Bve2",
+        "input": {
+          "query": "giving at least one hundred twenty days advance written notice"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefHWpdANgqNbFCGBp5GK",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 4964
+      },
+      "cache_creation_input_tokens": 4964,
+      "cache_read_input_tokens": 7679,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 1551,
+      "output_tokens_details": {
+        "thinking_tokens": 1222
+      },
+      "service_tier": "standard"
+    }
+  }
+}

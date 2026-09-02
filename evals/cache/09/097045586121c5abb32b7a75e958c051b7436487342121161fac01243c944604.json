@@ -1,0 +1,79 @@
+{
+  "meta": {
+    "model": "claude-sonnet-5",
+    "turns_in_history": 17
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "EpQLCpABCBEYAipAbxFSE++aNDT6hnU7rFltc1JebVL4TgDKkgjtExVWcCIfdzZ07Xz4zNruUoHZjRYrtnXVMsMxlcXgSZUoNheaBzIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAcOd4tQGEgzSawMNJjGLU4KMKFcaDLyZ/huOV6RDHBYZiiIwulBdZEy6iU7goT1BSzlsygreDsMqvDgW0UzrN8mqgPAeRzPip4wQ2eTO2QjI56zKKrAJnCxJXulpUuQ9cmthGCXF5kQHzAHP4Gsypu3shtkTNPxq9u+6QBBR59TMYk8HOPoHCfZllS+d9lhdMyoK5H/LbBWSrymh0c+HON9wVKtbdHk4GOBRbHss1UV3q1v1T9WgWL7xdhXPyvvq4fvNHwc8cuKfac7F8brBMMw3/eYJlimvQBmV/mtBf1USAT859/g8dJ4SoUWy6B8XuecJrKxLwlbPrCu7mry8zlmMwCD0CkxD1+sON9y3wjwpbNXkZEfAVWrt1VU4mclsbbZt5AR7orlumV1xfAsP6oASO3IHqql5p29ydiRl5MOEjaHPznXa+/4myP6WKOCTa8qNM1PGiHopu9sR5RZAr60GCkyNBtSlalodBVuEYgvHobjppvxbHRE6nxzh9b24Q5AGGuDbtLteHKl1Tez+Nxs15qKNuHi5BSdeVOv4XuGe9u4Qxk32zmboBjyXofG9B9oYu5yxwC38MmLd7CT2nVAFI000A6MuYwJVFv/UPkIhgxZlwsI0ac1dTVSTEyfxMK6VrStnPG17mLdvD3Xh/RReeBGPgVdMZKe7G4iBkHVMqEFnFcdZlMewpxXzN+gtJbKGXK/LapbNcpWLcRlKO8TAdYzG9+BjiCRlGeu1/ynW5zqs80eLCpCaBjOEhhI3BJ3ui7ZuLRNvjcjiai8UnsN2qtNPbpgup0jTKg5G7n4XRqT9+l++MeiYFQ5rDbA2Z/Q8ywHtGGlrpCxchk4Jj/9MMvF3yzp5VvdvFzsTKXGzIp1Ohp9USu2Vy4RiSujtO37+YzSeVpkLejtd5OCNjXn7Uxio7mX3SRNIALLCzLkEwxbfT9qi4We+dQZ600xXOpn00V4A9HXfdgvBidwSfff+moeUH1Q0+7OMtt/UznM8wpVr055JwojQV8NGSTXgOc2UFNQU4SLfHZelL85pX4DBVmy6dx1Kqaf/4nXEyj2Rh9m3JWovmt94YYxAUJ54zwNcIXOcgOvCm8HCyKjmvjtYaDIekYEIyaIsLFNxs5gk2u/YprMygqDmi5RmOhZ9CUyAPxSo14f3EhRTVfgFtVfIihfhlY9NUkh0NeBRHNGUDl+Bb4Ly0+BoP88CIUz9SijitoPJbuRtzaysx266rBYgsFAh6zepf9PjvF9gipfLRgJAIojcSRwplzbf2ecf7t5BmqoF74dy5IKfLYDpkWlkqDO0htx1CdfWmqVTQBg1gMdydfPs1k7czqofiMHkCRgc7pCmUpVKBVr2N1ls5w9MCDM2Cx2AbKQ5Cqbl2oyf+JzWVDJFBMRNqbX64CKV1+NG2yOn1dfyS0etKTCLCaJkdqCKW0yHTfHL44OpWmaLRMx29/2d37xqm4zK1CxgwLRbnKksBg40x2TE7+lNHo/TKzt8O/t3OS8gkw7b7gLzxMIR2aFCuPommBIeJrz9dhvuih8lhBTvZbLGZ9NLIeiDkLwV8Xzy6LH86QggVUDRtCWq6swZMpTz9P2adgAi1a1b5vv55BxiWiODUqojkgXFrQf8sV7t7XSog6VJvx2DKuaAzJ/ZuO3OpcunCBgzuwkPoAy8nUMLYU5iQbJFb7H++opDbmJe+PnqkbbXx2prq+UugpELGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01XjnNkWQSbBsd3bPbVu9R5Q",
+        "input": {
+          "query": "change of control merger acquisition assignment"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01DEQiNW5AqjdcbkVBNFZGWn",
+        "input": {
+          "query": "in no event shall either party be liable for consequential damages"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01HpE9FThp7ovNAB5Uj72uv8",
+        "input": {
+          "query": "non-compete restrict from engaging in competing business"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01PE6e7Vsh5kzQXtZ2fpgAb1",
+        "input": {
+          "query": "renewal term automatically renew"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefHeWZvzKf5Z7Kd58REw",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 2960
+      },
+      "cache_creation_input_tokens": 2960,
+      "cache_read_input_tokens": 21257,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 636,
+      "output_tokens_details": {
+        "thinking_tokens": 404
+      },
+      "service_tier": "standard"
+    }
+  }
+}

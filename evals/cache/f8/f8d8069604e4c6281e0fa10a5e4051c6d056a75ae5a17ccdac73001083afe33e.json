@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "model": "claude-sonnet-5",
+    "turns_in_history": 9
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "EvMFCpABCBEYAipAFxmES+enxhWxCzY48Jn0LNkHLcrk5Dmy340GF+y1jqBBfH7OGqrZko4PteHCo6vD06qyr++xn7TzyALHkelz4jIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAfWP4tQGEgzY/0MuiHbTSYLVri4aDOBT5EidjdOZN+rWICIwtwHEA/y5ENkPQlrIdbQ/Ga0QvwMckXOhNsMIqvW74ZVfRtROxV/3lYjw9n4C4xUlKo8E3CkG41JjCBVfySfM6mcI6GDPis+u/BQR3Im37UoJGNkhpqfUaQ7Egrq3hmZh/mo5EXlTupf1tkoF4ykG5RahEtp7P6y30W4v8b4sp4XJ9ehUVh44S8Y/RjmENN5FtYHChWfwjg4cq+dHc9HvWt/GxIWpu2h8UrR7XxQi4n3kwQjzKMU1mZlUDmeEwHVvBbkbcb/PClCUCicmcomH4Tcefyo/Lhdtb/ownjJ4Yx0s5zoUf48PzwbQqA0fpsniWNRFyjhNTwT8KYSV35d34pwtaEgU/jMdmUSTnLvVVnTj0S6K42epv85YV0TiNzlJ2vS+9Kwh+037VlCr+tTZ9zuBAxsApeSm3mgO0f/iI0GekiPesUI4JLrLSCX1XrZAqN5ByEnErJedSpT8oNOiFoQrgOtsssiDdxjS++g3y6sPiXa8O/ZhLWsjnaoX78eaWZBpPmY0YVl5PTIMDYKEGtz30QZfnrdFx4sTstaVs8JLxlshocLnBmay4u87Rp7FgUgEXfx6Fi0VewuVP6VNvezTnWPkDegGC3QlDcF7qOH3FNnl/+1rNlRcF5TBTAA6buv5mx4AoxRKMqymsQDVgt8J+ef7PBCUZNlUnRdop8fJiSW9l7Rs+Gx/DQ4zxRxzKOTlYgOMQhlkKrVdajLAtmTOjCqvGVzyM4ds2OsvmD2rOuKEqWy4FIPDlYuGc5HEFxgYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01EsQext6K2yEq4RPjyigHMm",
+        "input": {
+          "query": "extend this Agreement for an additional term"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_019Uq1Xzd5qH9Wo9Z6ADCVzi",
+        "input": {
+          "query": "successor by merger or acquisition shall notify the other party within"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefFSE4BgEqvHsUmrzcKU",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 7095
+      },
+      "cache_creation_input_tokens": 7095,
+      "cache_read_input_tokens": 34341,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 274,
+      "output_tokens_details": {
+        "thinking_tokens": 152
+      },
+      "service_tier": "standard"
+    }
+  }
+}

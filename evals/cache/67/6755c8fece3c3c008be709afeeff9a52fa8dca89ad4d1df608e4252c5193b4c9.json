@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "model": "claude-sonnet-5",
+    "turns_in_history": 1
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "Eo0DCpABCBEYAipAPm7szDr9Gb92XlVEWLdVCI/JJ3SpJN4srOzYTWpNY0m/LH6fnVwWn7PkZkb0GX9HCjSwNokzucRnJLLH4302ijIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAd+d4tQGEgwAEAO+vq3lTLfPtBsaDC33GmPZusdOqmethSIwIn9j9+ufD4zyuIY8xHcLjUL7eFD+jqQHT4ofBdEuqz7X//o/FEFXQdGS4/YA8nqQKqkB398LkBGHFI/tGHphefrm4KwuIfKYi655pwY4GH7gfoKHfxRtcT15ocO+/riOGGUifJsrdRQH8+V/GCAipq17nbojCW/3ZUtIbeyKuXG3/BtAkXlTNmCvmxDAqoHMP6p/oRcLXB7VgVDRVquR1HtC4yqbiCyTZCZsuggwOvxG7ghFL8Yw2wiFOWUeeaXMlS/6/yfqce/II/BRZ7kv9/JSxPbR7pVGH6/KQBgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_017FRjuVKnjqoLrLZEHx6L8n",
+        "input": {
+          "query": "parties to this agreement joint filing"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_016ryZQU2ryzdxwxfuKPpS58",
+        "input": {
+          "query": "governing law construed in accordance with"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefHgng7aAtkcZJ3PwKbF",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 172
+      },
+      "cache_creation_input_tokens": 172,
+      "cache_read_input_tokens": 3149,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 170,
+      "output_tokens_details": {
+        "thinking_tokens": 56
+      },
+      "service_tier": "standard"
+    }
+  }
+}

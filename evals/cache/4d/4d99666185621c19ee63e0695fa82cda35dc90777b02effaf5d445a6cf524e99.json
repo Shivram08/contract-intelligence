@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "model": "claude-sonnet-5",
+    "turns_in_history": 11
+  },
+  "response": {
+    "content": [
+      {
+        "text": "No renewal term or change of control clause found. Now let me validate the draft extraction.",
+        "type": "text"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_011pEsVSLJ37cTyv91Tjs5DQ",
+        "input": {
+          "char_end": 44635,
+          "char_start": 44300
+        },
+        "name": "read_span",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefFSZzzcEfLLiXexYHUi",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 5799
+      },
+      "cache_creation_input_tokens": 5799,
+      "cache_read_input_tokens": 41436,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 101,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard"
+    }
+  }
+}

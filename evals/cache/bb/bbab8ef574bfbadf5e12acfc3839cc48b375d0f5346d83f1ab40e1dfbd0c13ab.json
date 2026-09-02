@@ -1,0 +1,123 @@
+{
+  "meta": {
+    "model": "claude-sonnet-5",
+    "turns_in_history": 3
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "EsgGCpABCBEYAipAIibkaIykudSxBzMvGPrLCAvGTgJfL1lDTa0fMlsYnFWYPnxRFEJ4gZp9MG/DLbAN/VgI2MReDjuVRxI5CBka9DIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAdSP4tQGEgw3WjI8u97eow3rp/oaDFll5JQh8BhOAufiuSIwNUdCjqotOE8F1hbKHjbiPSJ4So0hFlbJQNd5MHDITGfvJGpHazrTi85XJ+utQ9duKuQE7/EdCR/uMNeyj1fjTz4YRDrsjP7E4h1ZtzF1iVsFsxpFjEPHQ2XcMfsMd4TaHtiX+BncoQsEXYGsWCtTL1nyIO+QDzkguTclomvQ5Mhrk7SdyykvEDqp83bFH1Rm1iS5jESPWA2W/w1npcPx+yiyOEiXZw7dU6hfwPOQ4/3QASofofZuZ84/m/pGYUgeFbxUqn/gEC4POIcOU9ZBRfugSHHFSA3qVOXyZsYAqG0Q9KAhryurOI2j3CDnIVtN4khPCxwVJqbjjw6DEoA4ZZ6kKeIHCOPjPkC9QOEfY32gIIgBCvoVMEwJ8KpK+ZSqYzpn1wvxCwyBNoN6YEGn3i1+0XhPgDiNgygl5Nt+G9baWGtVJCrtuiYrPcZWlGDj8O6bReRA4S2IVV/IbCHUDEYXhKsmKg3yNH5ui/P5pNvD+aKljhHzIsSJEruz0gFgqvbp3FtwoT6rO+1WjocAWlfGNlgttc2IUPC4tjIJ9R/h/NeVUFL4XiQ3kkimyXJ2mCPvUWMuYeNKR2RcSGFCbGE+GSybuEPQQLcv663W1/pnNl/NsehuFLEEXpfhbA8fa7lw2gYthlhTHOmXFCHg+lgV6t+q620Zv4l93WTlWTTiA6ayLJnX/MVQAkmfyxT9V1RO0M7OAlvodpflgp4r8suPsmF81aMimbg+PUa5dX6hUsAMMDsrJsZtg52C1QgMZOXkdidm8t6DbmEmoUAFiq+dZjflfCPe+3V5EJJdzuazAXFopMsJiRnawQ9E+viYmaXTImewJRLDW5cfvI1n8v1sbGImVH1UMiQDZzJDtB7wljM0OKxnGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_016fX23QNBek9o15A8WWaYMf",
+        "input": {
+          "query": "Royalty Term means"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01Ejdi7puQSFecBgrzhtsjGr",
+        "input": {
+          "query": "renewal term automatically renew"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01Lf35R51Ph8RQnxJRt2q2gE",
+        "input": {
+          "query": "notice of termination days prior written notice"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01J1HPUfTkBzHZPZu7qmfU3s",
+        "input": {
+          "query": "change of control"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01BhwDS5upfpL9NpYmX4Bcjs",
+        "input": {
+          "query": "limitation of liability in no event shall either party be liable"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01YFwjrzCZvakKv1kszgMVPW",
+        "input": {
+          "query": "consequential damages exclusion liability arising from"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01D1UARbQYaZk8xSerLzvptV",
+        "input": {
+          "query": "non-compete restriction on competing products"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_014GkcYN3AQHC8sxVSTD7MMU",
+        "input": {
+          "query": "exclusive license exclusivity"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefFPnDNPCt6ythXxRfGj",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 9830
+      },
+      "cache_creation_input_tokens": 9830,
+      "cache_read_input_tokens": 3332,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 673,
+      "output_tokens_details": {
+        "thinking_tokens": 236
+      },
+      "service_tier": "standard"
+    }
+  }
+}

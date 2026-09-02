@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "model": "claude-sonnet-5",
+    "turns_in_history": 11
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "EuQICpABCBEYAipAzcr/zFVBW7JSxsquwHnGKLfj78bporlMs9uRPKDsDT7cKzL/vH6ftRN1KTs1kSy9IfZY4jvCzW9h/HQjmgybnjIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAcaL4tQGEgwRUoD2pBxgRe/BbRQaDK/jZHFu/kRuMRl45SIwJVMWky4ZZndC7kbQ+rdnBgbAq98YvuD6yg9rZPW0OrFS7Y1PXNdVX8OGC24qRKwrKoAHuXz3ZNeQCqPHjGlgeZ7KRET/dN9QaWlnqldFj2qDHxgTLvS01YI3ZO3ubeAqYD1/8JgQMgYidInacNl58/ajnyF4QYB7SgOAEI8Yz0WPo8Oke6Ne4eQ78ymyPWSrS7vaGmvCUOa6YzsrSMsjPV3XYU9MnkchPuvEOYKGVR7fJ0DsJlTHUur+9vlzcQILjodsYdqyLwwjhRrGahnc35tIEdN5tlYkbojpVI/oAIkBmwYu1K3PWM5BOQ4MRNt+jGXmV3j96Q6M6jLuJdGxpvtzSTTuNtuFf3XQ0T0vuGSasRkD5BOyzmbX1oNz+yAqxMuPoYY5C0Rbgv/bHF0C2FWyO4zMn5XG7t19SwqUvI7lMBp8v2JMbLhmg9YEPF39TAxLk2xDUhFw+msKBhgr/UIKQtvsx197tlY6ItPLpYkN/xuOdh+f285I/qq1tblUJhNOaEyAh2SjuOEgPw/M6hOFA5c+vTO+I4xKvBsZomax8yamzKGSfrz6DS6m8mXhecxQz1uiTCeLe+zb7w5+gnaWXqMCbOl4AkdVhF2RfUJuth41Pa3mQ9XAwFe9mvT8SJLDueIRIajuiSKOv6R3LD2qKx5IrOct8lPmxfniziB6g7s81JjZ+EF5a50MKwnQhlvGn0dW/Uj9y7pPUHDpqe4iWiDj8fcwknBopahOd8udOShI4M5oYGl5YbL3dXTiYzL2jNtjZmvuZhNSTTbahr3Ik4NBWDok3QTakm38NjujFtKxBNzqlq1Xvz35RusljKzH4kKij54dbkm26dHr89jiVcskCcZmfqX+9mAmRkqFdW2ohnechrAaJmm/q13mcJHztpTAktF59sGstmNj+MYSgfbYdB4hDW2S3idgT1XHtLWIwSX99570QbOpjIvzR/MGcH8yK7zYfs13o3CCeXeVTIpVQGoFmE2ngU4w8kND0o6YXZcRWZX/UaGWnqnsy8NVBmg/d7V9k8X9l3jXFCVbrD0/9ZTJE10/RGpTrel03bNI6e2BlzqeBwJcHt6ElP7N/de95lOokL/wzDg0yJcvY2t/jxpjkdcEcTQ6n0bzUqw0t5q8rmn2ZwB1Rys2oQFykCao3K/wTc6Up3WmV4id8ke86xfeI18omphFuGOOLGPAiLtOq/s1qMebX2DhWQ5l7U/RlT/hweOC8IihJXwIRoF031mSKdSlGK+2IYEoZP4YAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_0144dyhJcwPgbbHUJWfo5KwK",
+        "input": {
+          "query": "successors and assigns binding upon"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01CzM77To2e96BgGK111zb81",
+        "input": {
+          "query": "SEVERABILITY ARBITRATION dispute resolution"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefEiuNPwxnFgB3KKV7RR",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 4993
+      },
+      "cache_creation_input_tokens": 4993,
+      "cache_read_input_tokens": 34760,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 424,
+      "output_tokens_details": {
+        "thinking_tokens": 301
+      },
+      "service_tier": "standard"
+    }
+  }
+}

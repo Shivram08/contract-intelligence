@@ -30,6 +30,7 @@ import re
 import time
 from collections.abc import Callable, Sequence
 from dataclasses import dataclass, field
+from enum import StrEnum
 from typing import Any, Final, Protocol
 
 from docintel.agent.loop import (
@@ -60,6 +61,7 @@ __all__ = [
     "AgentBaseline",
     "BaselineOutcome",
     "RegexBaseline",
+    "RunStatus",
     "SingleCallBaseline",
 ]
 
@@ -81,6 +83,52 @@ TRUNCATE_TOKENS: Final = 8_192
 CHARS_PER_TOKEN: Final = 4
 
 
+class RunStatus(StrEnum):
+    """How a run ended, and therefore whether it may be scored.
+
+    A budget-exhausted run used to be scored as 0/12 present -- total recall
+    loss -- which is a harness defect: it silently contaminates every downstream
+    metric with a number that measures the turn ceiling rather than the model.
+    Only COMPLETED runs enter accuracy scoring; the rest are excluded and
+    reported as a completion rate instead.
+    """
+
+    COMPLETED = "completed"
+    INCOMPLETE_MAX_TURNS = "incomplete_max_turns"
+    INCOMPLETE_MAX_COST = "incomplete_max_cost"
+    INCOMPLETE_TIMEOUT = "incomplete_timeout"
+    INCOMPLETE_MAX_RETRIES = "incomplete_max_retries"
+    ERROR = "error"
+
+    @property
+    def is_scoreable(self) -> bool:
+        return self is RunStatus.COMPLETED
+
+
+_STOP_TO_STATUS: Final[dict[str, RunStatus]] = {
+    StopReason.SUBMITTED.value: RunStatus.COMPLETED,
+    StopReason.MAX_TURNS.value: RunStatus.INCOMPLETE_MAX_TURNS,
+    StopReason.MAX_COST.value: RunStatus.INCOMPLETE_MAX_COST,
+    StopReason.TIMEOUT.value: RunStatus.INCOMPLETE_TIMEOUT,
+    StopReason.MAX_RETRIES.value: RunStatus.INCOMPLETE_MAX_RETRIES,
+    StopReason.API_ERROR.value: RunStatus.ERROR,
+    StopReason.REFUSAL.value: RunStatus.ERROR,
+    StopReason.END_TURN.value: RunStatus.ERROR,
+}
+
+
+def status_for(stop_reason: str, clauses: Sequence[Any]) -> RunStatus:
+    """Terminal state from a stop reason.
+
+    END_TURN maps to ERROR unless clauses were actually submitted: ending the
+    turn without calling submit_extraction is a failure, not a completion.
+    """
+    status = _STOP_TO_STATUS.get(stop_reason, RunStatus.ERROR)
+    if status is RunStatus.ERROR and clauses:
+        return RunStatus.COMPLETED
+    return status
+
+
 @dataclass(slots=True)
 class BaselineOutcome:
     """One baseline's result for one document, ready to score."""
@@ -91,13 +139,26 @@ class BaselineOutcome:
     violations: list[Any] = field(default_factory=list)
     usage: TokenUsage = field(default_factory=TokenUsage)
     latency_ms: float = 0.0
+    #: Per-stage wall clock, required by CLAUDE.md section 6. retrieval is time
+    #: inside search calls, validation is grounding plus the rules, and model is
+    #: what is left -- which is where nearly all of it goes.
+    retrieval_ms: float = 0.0
+    validation_ms: float = 0.0
+    search_calls: int = 0
     turns: int = 0
     #: Whether the first submission parsed without a retry. The schema validity
     #: rate in CLAUDE.md section 6.
     schema_ok: bool = True
     stop_reason: str = "submitted"
+    status: RunStatus = RunStatus.COMPLETED
     prompt_version: str = ""
     error: str | None = None
+    #: Turn-by-turn tool calls, for diagnosing a loop without re-running it.
+    tool_calls: list[dict[str, Any]] = field(default_factory=list)
+
+    @property
+    def is_scoreable(self) -> bool:
+        return self.status.is_scoreable
 
     @property
     def has_errors(self) -> bool:
@@ -124,10 +185,12 @@ def _finalize(
     spans, which leaves ``present=True`` with no evidence, and that is what the
     ``presence_requires_evidence`` rule rejects.
     """
+    started = time.perf_counter()
     grounding = check_extractions(document, clauses)
     violations = apply_rules(
         grounding.repaired_clauses, document=document, jurisdictions=jurisdictions
     )
+    kwargs["validation_ms"] = (time.perf_counter() - started) * 1000
     return BaselineOutcome(
         document_id=document.document_id,
         clauses=grounding.repaired_clauses,
@@ -351,6 +414,7 @@ class SingleCallBaseline:
                 latency_ms=(time.perf_counter() - started) * 1000,
                 schema_ok=False,
                 stop_reason=StopReason.API_ERROR,
+                status=RunStatus.ERROR,
                 error=f"{type(exc).__name__}: {exc}",
             )
 
@@ -393,6 +457,7 @@ class SingleCallBaseline:
             error=error,
         )
         outcome.stop_reason = "submitted" if schema_ok else "schema_error"
+        outcome.status = RunStatus.COMPLETED if schema_ok else RunStatus.ERROR
         return outcome
 
 
@@ -416,9 +481,17 @@ class AgentBaseline:
 
     def run(self, document: Document) -> BaselineOutcome:
         started = time.perf_counter()
+        retrieval_ms = 0.0
+        search_calls = 0
 
         def search(query: str, top_k: int) -> Sequence[RetrievalHit]:
-            return self.search(document.document_id, query, top_k)
+            nonlocal retrieval_ms, search_calls
+            call_started = time.perf_counter()
+            try:
+                return self.search(document.document_id, query, top_k)
+            finally:
+                retrieval_ms += (time.perf_counter() - call_started) * 1000
+                search_calls += 1
 
         ctx = ToolContext(document=document, search=search, jurisdictions=self.jurisdictions)
         agent = run_extraction(
@@ -434,9 +507,13 @@ class AgentBaseline:
             self.jurisdictions,
             usage=agent.usage,
             latency_ms=(time.perf_counter() - started) * 1000,
+            retrieval_ms=retrieval_ms,
+            search_calls=search_calls,
             turns=agent.turns,
             schema_ok=agent.retries == 0,
             stop_reason=str(agent.stop_reason),
+            status=status_for(str(agent.stop_reason), agent.clauses),
             prompt_version=agent.prompt_version,
             error=agent.error,
+            tool_calls=list(ctx.calls),
         )

@@ -310,6 +310,7 @@ def run_extraction(
             return finish(StopReason.API_ERROR, f"{type(exc).__name__}: {exc}")
 
         run.turns += 1
+        ctx.turn = run.turns
         turn = _usage_from_response(model, response)
         run.turn_usage.append(turn)
         run.usage = run.usage + turn

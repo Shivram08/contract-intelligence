@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "model": "claude-sonnet-5",
+    "turns_in_history": 3
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "Es4CCpABCBEYAipA503SMivB/6OC/grte47N57fiZ0UH3Z/Yii1Z9Y7ZXOUG83r4lnCn4x0Koy2SxuA6VFE85VTabYtkbTY3seShXTIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAZ2c4tQGEgxBPDIdPnBNICZddsQaDMV13x6/XWpFz6yiBCIw0g5Ncu3FHQb8iX8h3NeraOPuGwxdpvr46vRVIRNj3+v9qULRkP6GFZuFL4S2lUx3KmsrRwVuP7TkYnd5fsKRXcj8J+O4WZDNYkWLUVZ33T+8QURonlPo8FxH27MLTfbSUWChi11/278IYW+q2f092HnZAtwLhTm4NHfACiTyO6cOZcDowy/8wxI+YBoDLmxILBElEkLG7xz+GuTJwxgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_012yVNo1ijWRnbJW2SJsX9eA",
+        "input": {
+          "query": "Agency Agreement"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01SxCCc91akaSFEMqTNaPUsF",
+        "input": {
+          "query": "this agreement is entered into by and between"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefHSX6r37ihHppAhMqda",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 531
+      },
+      "cache_creation_input_tokens": 531,
+      "cache_read_input_tokens": 3338,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 141,
+      "output_tokens_details": {
+        "thinking_tokens": 30
+      },
+      "service_tier": "standard"
+    }
+  }
+}

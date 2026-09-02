@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "model": "claude-sonnet-5",
+    "turns_in_history": 11
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "EswGCpABCBEYAipAEJCZiU31PT/sMxWt/PQ+ovEUn9pq7pRtkjFtxhYarNsar4rlffmJV00vOg3mnJ4lQzP2goBmRS6jW3s0YVAZxTIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAaaP4tQGEgwue5kpWMU1vhehC44aDJxPLz/kBX2+Pl5yiiIwa86AVDUGVaiH3GhlXaL7a4J5LHcx6BSo8Qxgip53b8hw/RSHvZoZC2fBgn90r1T3KugENS7w4/RcalEj3K/jyseY1y5b7ceE9l0JfhnsRC4IPdES7nBChMEsuD+0SsTVA2ufM7r33NgySOTojuH1D11H8BQ0djsbIdJSOHYNcKkSsJgJeXqv/KnY9Y+9K58DTDiBZlS3VDNX/2QKXSt1JG8RZ88pRf7FM96eq4bnTpsr8FSu+Gj2LFr9Ly13AjuQIof7R3KF6nUmeMbFJit+jz77fjbzZNAa5iOhdXwSlqg5uW8oBlFRPJ+B+BwtJAwUXQHvqqfeqtDexRtta9IbOp1rLLkZ+J2HGgrjjKNJ36zyXXThkHfRfEVoMkLsy9pyeGv8eFDMoFoegxeWqGfa3PiA/wArJubJGKhIU8qq8eJ2KFXLQFH30JmAInuE1Y2+GmbpxN/poMwR5k7NxrGskL63QAOv8702mqMPH2bOR2vt8lGZ0fQ98O+YIEQfHvi4wOAn5M90to+2EBFRfvUBxJ/rpSm8r9/2rayaOptynjYkdNdyujhHOjZhP0eqtzyTRWZeJEu2si8TxlByJxeghasNxyb5Zpe09+sgh8Xsb2K0crylkARKx/CMEJ8n2DVTd2vEqiA6Bjhf7DR3XhtstJLE8L+cRDafwB0BmYB3+ivi7OrG7rm/ZoR4mVkmBfy9Zc36lEM3sYVNcMaNfVnUa1zBLZYtK6cBqHiTxpO+pXr3j2+q9IXS0HxpBJGivUj7T3uMQrXusctzL4ZcUXktTBZeVnNjj1lheb6/bvD2hs7SwJEKPe7B0v+FNrkdaIL0fevbA8qKWoBn8v5SZg51ssWeMn3fQJtejnxd7OxwgfM6JE+LCzCHWRFK9RgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01XKzfD41zMgniDr2HYxPLrW",
+        "input": {
+          "query": "assign",
+          "top_k": 10
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01Tc7MJHjHbcM7Y6sZLX2rqr",
+        "input": {
+          "query": "liability shall not exceed the amount paid"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefFLMh9fnXup8kMN8uUf",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 1750
+      },
+      "cache_creation_input_tokens": 1750,
+      "cache_read_input_tokens": 28021,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 315,
+      "output_tokens_details": {
+        "thinking_tokens": 185
+      },
+      "service_tier": "standard"
+    }
+  }
+}

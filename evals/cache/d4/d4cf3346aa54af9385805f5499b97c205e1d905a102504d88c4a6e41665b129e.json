@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "model": "claude-sonnet-5",
+    "turns_in_history": 3
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "EtsCCpABCBEYAipA13gjylB5rkSa1bo3fa0fuV+jnkvEA6XG0LZKw8rlubZ2xlyRjhyQQsMnqKo2PZgOY/zezvu3h78yurDgVian4DIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAaid4tQGEgwoJ5vjWlw65Lp3uOgaDESE1lm5lgv+wsS9WCIwZOviuFrNNC6cP+s9Clm9Uy2KSnfeZds/Xw90H/JEvPLp+jQ2NOpt/P3Jh+a1a65lKnhqzUU1o46VHdmnQjIsQWHjIpZ170+kNRGfNayAhTLPSwSuyEfzEGpnUxFZ11BAiW4KnzJSjUIGkoj5QogLnDx0K37X31a0BJgTRh1XoxAfDFASJd7fpxn5P92og1Znf2qISSE94c1owS+5Otc2mLf1FCXejW3UhkwYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01RWFvF1vxdgET6QChqrxdCh",
+        "input": {
+          "query": "Agreement"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_019T88qg68yoizzrZ5ZGeYdi",
+        "input": {
+          "query": "outsourcing services provider"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefHckCvGNsKa5uPSA6Vz",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 432
+      },
+      "cache_creation_input_tokens": 432,
+      "cache_read_input_tokens": 3332,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 137,
+      "output_tokens_details": {
+        "thinking_tokens": 32
+      },
+      "service_tier": "standard"
+    }
+  }
+}

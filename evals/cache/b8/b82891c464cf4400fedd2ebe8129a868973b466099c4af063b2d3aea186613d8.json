@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "model": "claude-sonnet-5",
+    "turns_in_history": 21
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "ErsICpABCBEYAipAF17YJxf/EA3asEjvl18amh847SReSQ1Yn1Rnv893R+3Xpo+5ZV4uCDSgjANeQUFDYYf6CWe4qV7tvd4SbvaAljIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAb+c4tQGEgz0giaft7VnYePRXRcaDHItBVWqQmBt6mZ23SIwD/ygf8ZI7jUT2JhXsYsDS27Wiq1R5bnGZbMz3ARI0yaqp8bDhzvX18VAAr1LnL1lKtcGwaymXA9BIweo7cubUIUhkv5mtRb/sPFpInAN2uxNsciLM4fqoEJRQmvH7fG9ic5Ez0WEPGi2yVbH7dejPfsWdEzgIHK/XgiI2DpOpgqY+FAPd7o+tlVIwXFwFAXBp6mXqXka+lTEH05QCe3ph83Ofu9H1NZv6Qt5gP+YeSwYwGTLniMeEi2JsyQKn+w7uzwoF0tvlStHOxLSitSQp73CXRFPX8VlzXpZ+ovFFAjG7BHwf4odwebrF50t+qkk0kTSkP2LMq9TRX9AZ/I3m2H6E8oS8xbWTS+o572F5m1TGUwQNcPa+P8UFrOyR4OAGwtt1Em+EZJmqkrhV8uhLgZHNEmNi9e7zSI/35XV3fr4DnqsZ/rcfcU/wUqAHzMgRsT9MXvmX1ZSCkukH1fM7ecEqqU/vJNS0DpOqM2yRqoOZ3xwJsY05r3cbQ+nIdwLlzuDIU+U7OP8NDFcppfr+WOOgTlFOFtXdKcD4EXhkeEbGSMUTJSPRRifZ1xXVGJffyWbdKba4EQD3SW8xP84PYpN6bNtZ0DcD2yz0bcxwi/aUzsYzWMUguRwZwa3wKILwSbYqQ/1GDgV4FhH47zBr3lapH5FptXBbLStYvUryp3QxA3hENlORGOvWgN3sb8qogKEbGI6qSrAJJ8Y+CjLO2ubUlFhqUAJxVP3Ooz62RPrvpwWzZY6SisTcQ+fZ9xOUU9swYiamYJrYDWVMOCELiknk0eSQRG2oY5UZum7WwpJWxGqNvzgY2fpcBODQzxTOEGFXVyjuo801BS2dZgVq7iNGz27n43LxM3t3QaIQUc4F7kEzu+TxUrQkQJRY/a/KOhhyG0CW4qeirRSJLwcf9PNKVPcsJc0PKV1XP6iEXNl06S7GWJUBd5Ha7g4q6Tcp8SewyKrcA3HpHTHuHT+OU57mgo1NSY6gQ/63O9TXfube068zCfWZ9XAHhUdzh6o8BVple76ZrWocoGhJiW8EVuW8UlIE/u3kHLQXeswbRNLtb6XQHfhmDLh+NF5rR3RxuZtDYOLgtgHydI5oj6OOQRw4r1diSCTxd8Ip2aiacpJOUdAV35GTcthpnGQ/wuoGwDhm/vm/TdQ1Y+jITvhYxOYLR6w4GOwWwEZ9QOeBkScdu4Y992pS8uDGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01U9MEFizZ94zQKvsddQ1DEr",
+        "input": {
+          "query": "assign"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_015WTb67PrKwY3hDjx9D5wQt",
+        "input": {
+          "query": "exclusive"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01TLdLR79Kf1JERcRLiFJt1J",
+        "input": {
+          "query": "liability"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefHUpd6uQASpzzHxu723",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 3025
+      },
+      "cache_creation_input_tokens": 3025,
+      "cache_read_input_tokens": 9462,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 397,
+      "output_tokens_details": {
+        "thinking_tokens": 253
+      },
+      "service_tier": "standard"
+    }
+  }
+}

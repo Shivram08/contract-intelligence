@@ -1,0 +1,208 @@
+{
+  "meta": {
+    "model": "claude-sonnet-5",
+    "turns_in_history": 13
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01FA63pM1fVDiSZZFtym2Xqi",
+        "input": {
+          "clauses": [
+            {
+              "clause_type": "governing_law",
+              "confidence": 0.96,
+              "evidence": [
+                {
+                  "char_end": 22292,
+                  "char_start": 22012,
+                  "quote": "This Agreement will be governed and construed in accordance with the laws of the State of California without giving effect to conflict of laws principles.  Both parties submit to personal jurisdiction in California and further agree that any cause of action arising under this Agreement shall be brought in a court in Orange County, California."
+                }
+              ],
+              "present": true,
+              "raw_text": "This Agreement will be governed and construed in accordance with the laws of the State of California without giving effect to conflict of laws principles.  Both parties submit to personal jurisdiction in California and further agree that any cause of action arising under this Agreement shall be brought in a court in Orange County, California.",
+              "value": "US-CA"
+            },
+            {
+              "clause_type": "parties",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 438,
+                  "char_start": 0,
+                  "quote": "THIS CO-BRANDING AND ADVERTISING AGREEMENT (the \"Agreement\") is made as of June 21, 1999 (the \"Effective Date\") by and between I-ESCROW, INC., with its principal place of business at 1730 S. Amphlett Blvd., Suite 233, San Mateo, California 94402 (\"i-Escrow\"), and 2THEMART.COM, INC. having its principal place of business at 18301 Von Karman Avenue, 7th Floor, Irvine, California 92612 (\"2TheMart\")."
+                }
+              ],
+              "present": true,
+              "raw_text": "THIS CO-BRANDING AND ADVERTISING AGREEMENT (the \"Agreement\") is made as of June 21, 1999 (the \"Effective Date\") by and between I-ESCROW, INC., with its principal place of business at 1730 S. Amphlett Blvd., Suite 233, San Mateo, California 94402 (\"i-Escrow\"), and 2THEMART.COM, INC. having its principal place of business at 18301 Von Karman Avenue, 7th Floor, Irvine, California 92612 (\"2TheMart\").",
+              "value": "I-ESCROW, INC. (i-Escrow); 2THEMART.COM, INC. (2TheMart)"
+            },
+            {
+              "clause_type": "effective_date",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 101,
+                  "char_start": 50,
+                  "quote": "is made as of June 21, 1999 (the \"Effective Date\")"
+                }
+              ],
+              "present": true,
+              "raw_text": "THIS CO-BRANDING AND ADVERTISING AGREEMENT (the \"Agreement\") is made as of June 21, 1999 (the \"Effective Date\") by and between I-ESCROW, INC.",
+              "value": "1999-06-21"
+            },
+            {
+              "clause_type": "expiration_date",
+              "confidence": 0.45,
+              "evidence": [
+                {
+                  "char_end": 15196,
+                  "char_start": 15062,
+                  "quote": "The term of this Agreement shall continue for one (1) year following the Launch Date, unless earlier terminated as provided herein."
+                }
+              ],
+              "present": true,
+              "raw_text": "The term of this Agreement shall continue for one (1) year following the Launch Date, unless earlier terminated as provided herein. This Agreement may be renewed for any number of successive one (1) year terms by mutual written agreement of the parties prior to the conclusion of the term of this Agreement.",
+              "value": "UNSPECIFIED"
+            },
+            {
+              "clause_type": "renewal_term",
+              "confidence": 0.85,
+              "evidence": [
+                {
+                  "char_end": 15375,
+                  "char_start": 15196,
+                  "quote": "This Agreement may be renewed for any number of successive one (1) year terms by mutual written agreement of the parties prior to the conclusion of the term of this Agreement."
+                },
+                {
+                  "char_end": 15710,
+                  "char_start": 15565,
+                  "quote": "In the event that either party does not give such notice, the term of this Agreement shall be automatically renewed for another one (1) year."
+                }
+              ],
+              "present": true,
+              "raw_text": "This Agreement may be renewed for any number of successive one (1) year terms by mutual written agreement of the parties prior to the conclusion of the term of this Agreement. ... In the event that either party does not give such notice, the term of this Agreement shall be automatically renewed for another one (1) year.",
+              "value": "365 recurring"
+            },
+            {
+              "clause_type": "notice_period_to_terminate_renewal",
+              "confidence": 0.88,
+              "evidence": [
+                {
+                  "char_end": 15544,
+                  "char_start": 15376,
+                  "quote": "A party wishing to renew this Agreement shall give the other party notice thereof no less than thirty (30) days before the expiration of the term then in effect."
+                }
+              ],
+              "present": true,
+              "raw_text": "A party wishing to renew this Agreement shall give the other party notice thereof no less than thirty (30) days before the expiration of the term then in effect.",
+              "value": "30"
+            },
+            {
+              "clause_type": "change_of_control",
+              "confidence": 0.9,
+              "evidence": [
+                {
+                  "char_end": 16771,
+                  "char_start": 16181,
+                  "quote": "If a majority of the equity securities of either 2TheMart or i-Escrow, Inc. ... are acquired by another company during the term of this Agreement either company may terminate this Agreement, without liability, by giving a thirty (30) days written notice to the other party."
+                }
+              ],
+              "present": true,
+              "raw_text": "8.3 TERMINATION FOR CHANGE IN COMPANY STRUCTURE.  If a majority of the equity securities of either 2TheMart or i-Escrow, Inc. (except that i-Escrow may sell all or a majority of its equity securities or voting interests to i-Escrow.com, and i-Escrow.com may sell all or a majority of its equity securities or voting interests to i-Escrow's existing shareholders, without triggering the foregoing) are acquired by another company during the term of this Agreement either company may terminate this Agreement, without liability, by giving a thirty (30) days written notice to the other party.",
+              "value": null
+            },
+            {
+              "clause_type": "anti_assignment",
+              "confidence": 0.6,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "cap_on_liability",
+              "confidence": 0.6,
+              "evidence": [
+                {
+                  "char_end": 20490,
+                  "char_start": 20160,
+                  "quote": "NEITHER PARTY SHALL BE LIABLE FOR SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES OR LOST PROFITS (HOWEVER ARISING, INCLUDING NEGLIGENCE) ARISING OUT OF OR IN CONNECTION WITH THIS AGREEMENT, EVEN IF THE PARTIES ARE AWARE OF THE POSSIBILITY OF SUCH DAMAGES."
+                }
+              ],
+              "present": true,
+              "raw_text": "10. LIMITATION ON LIABILITY.  EXCEPT IN THE EVENT OF A BREACH OF SECTION 11, NEITHER PARTY SHALL BE LIABLE FOR SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES OR LOST PROFITS (HOWEVER ARISING, INCLUDING NEGLIGENCE) ARISING OUT OF OR IN CONNECTION WITH THIS AGREEMENT, EVEN IF THE PARTIES ARE AWARE OF THE POSSIBILITY OF SUCH DAMAGES.",
+              "value": null
+            },
+            {
+              "clause_type": "uncapped_liability",
+              "confidence": 0.55,
+              "evidence": [
+                {
+                  "char_end": 20305,
+                  "char_start": 20160,
+                  "quote": "EXCEPT IN THE EVENT OF A BREACH OF SECTION 11, NEITHER PARTY SHALL BE LIABLE FOR SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES OR LOST PROFITS"
+                }
+              ],
+              "present": true,
+              "raw_text": "10. LIMITATION ON LIABILITY.  EXCEPT IN THE EVENT OF A BREACH OF SECTION 11, NEITHER PARTY SHALL BE LIABLE FOR SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES OR LOST PROFITS (HOWEVER ARISING, INCLUDING NEGLIGENCE) ARISING OUT OF OR IN CONNECTION WITH THIS AGREEMENT, EVEN IF THE PARTIES ARE AWARE OF THE POSSIBILITY OF SUCH DAMAGES.",
+              "value": null
+            },
+            {
+              "clause_type": "non_compete",
+              "confidence": 0.75,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "exclusivity",
+              "confidence": 0.55,
+              "evidence": [
+                {
+                  "char_end": 6019,
+                  "char_start": 5515,
+                  "quote": "i-Escrow shall not run banner advertisements on the Co-Branded Site for any of 2TheMart's competitors."
+                }
+              ],
+              "present": true,
+              "raw_text": "2.4 RESTRICTIONS ON COMMUNICATIONS.  i-Escrow may place banner advertising on the Co-Branded Site upon prior written approval of 2TheMart, which shall be at the discretion of 2TheMart.  All advertising revenue arising from the banner ads shall be solely i-Escrow's.  i-Escrow shall not run banner advertisements on the Co-Branded Site for any of 2TheMart's competitors. 2TheMart shall provide in writing, a list of companies they would like to exclude, including every time they wish to change this list.",
+              "value": null
+            }
+          ]
+        },
+        "name": "submit_extraction",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefFLmHjGZfPv2zxvWkLd",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 5196
+      },
+      "cache_creation_input_tokens": 5196,
+      "cache_read_input_tokens": 29771,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 4731,
+      "output_tokens_details": {
+        "thinking_tokens": 1516
+      },
+      "service_tier": "standard"
+    }
+  }
+}

@@ -187,25 +187,36 @@ def run_baseline(
         outcomes.append(outcome)
         if verbose:
             present = sum(1 for c in outcome.clauses if c.present)
+            model_ms = outcome.latency_ms - outcome.retrieval_ms - outcome.validation_ms
             print(
-                f"  [{index:>3}/{len(documents)}] {document.document_id[:44]:<44} "
-                f"{present:>2}/12  ${outcome.usage.cost_usd:.4f}  "
-                f"{outcome.latency_ms / 1000:>5.1f}s"
-                + ("" if outcome.error is None else f"  ! {outcome.error[:40]}"),
+                f"  [{index:>3}/{len(documents)}] {document.document_id[:40]:<40} "
+                f"{present:>2}/12 {outcome.turns:>2}t "
+                f"${outcome.usage.cost_usd:.4f}  "
+                f"tot {outcome.latency_ms / 1000:>5.1f}s "
+                f"(model {model_ms / 1000:>5.1f} retr {outcome.retrieval_ms / 1000:>4.1f}"
+                f"/{outcome.search_calls}c val {outcome.validation_ms:>4.0f}ms)"
+                + ("" if outcome.error is None else f"  ! {outcome.error[:36]}"),
                 flush=True,
             )
 
-    summary = score_cases(baseline.name, cases, predictions)
+    scoreable = {o.document_id for o in outcomes if o.is_scoreable}
+    summary = score_cases(baseline.name, cases, predictions, scoreable=scoreable)
+    summary.attempted = len(outcomes)
+    summary.completed = len(scoreable)
+    summary.excluded = {o.document_id: o.status.value for o in outcomes if not o.is_scoreable}
     for outcome in outcomes:
         summary.costs_usd.append(outcome.usage.cost_usd)
         summary.latencies_ms.append(outcome.latency_ms)
+        summary.retrieval_ms.append(outcome.retrieval_ms)
+        summary.validation_ms.append(outcome.validation_ms)
+        if not outcome.is_scoreable:
+            continue
         summary.schema_attempts += 1
         summary.schema_first_try += int(outcome.schema_ok)
         summary.documents_with_errors += int(outcome.has_errors)
         if outcome.grounding is not None:
             summary.grounding_checked += outcome.grounding.total
             summary.grounding_violations += len(outcome.grounding.ungrounded)
-    summary.documents = len(outcomes)
     return summary
 
 
@@ -214,7 +225,7 @@ def print_table(summaries: Sequence[MetricSummary]) -> None:
     if not summaries:
         return
     header = (
-        f"{'baseline':<24}{'F1':>7}{'triv':>7}{'P':>7}{'R':>7}"
+        f"{'baseline':<24}{'done':>10}{'F1':>7}{'triv':>7}{'P':>7}{'R':>7}"
         f"{'spanF1':>8}{'ground':>8}{'schema':>8}{'rules':>7}"
         f"{'$/doc':>9}{'$p95':>9}{'p50 ms':>9}{'p95 ms':>9}"
     )
@@ -222,8 +233,9 @@ def print_table(summaries: Sequence[MetricSummary]) -> None:
     print("-" * len(header))
     for summary in summaries:
         overall = summary.presence.overall
+        done = f"{summary.completed}/{summary.attempted}"
         print(
-            f"{summary.baseline:<24}"
+            f"{summary.baseline:<24}{done:>10}"
             f"{overall.f1:>7.3f}{overall.trivial_f1:>7.3f}"
             f"{overall.precision:>7.3f}{overall.recall:>7.3f}"
             f"{summary.spans.mean:>8.3f}"

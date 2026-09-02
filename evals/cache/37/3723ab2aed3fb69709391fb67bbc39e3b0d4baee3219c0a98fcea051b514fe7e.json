@@ -1,0 +1,42 @@
+{
+  "meta": {
+    "model": "claude-sonnet-5",
+    "turns_in_history": 9
+  },
+  "response": {
+    "content": [
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01LNjgf2k7NENijUrWYR3Hpx",
+        "input": {
+          "char_end": 11000,
+          "char_start": 7000
+        },
+        "name": "read_span",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefHPGc8Fj8uGxsCjVJq8",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 1807
+      },
+      "cache_creation_input_tokens": 1807,
+      "cache_read_input_tokens": 5464,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 74,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard"
+    }
+  }
+}

@@ -279,7 +279,12 @@ class ToolContext:
     search: Any = None
     jurisdictions: JurisdictionIndex = field(default_factory=load_jurisdictions)
     #: Populated as the agent calls tools, for tracing and for the eval harness.
+    #: Each entry carries the turn, the tool, its arguments, whether it errored,
+    #: and a truncated result -- enough to tell a re-search loop from a stuck
+    #: read from silent tool errors without spending anything to reproduce.
     calls: list[dict[str, Any]] = field(default_factory=list)
+    #: Stamped by the agent loop before each turn's tool batch.
+    turn: int = 0
 
 
 def _format_hits(hits: Sequence[RetrievalHit]) -> str:
@@ -484,18 +489,25 @@ def execute_tool(ctx: ToolContext, name: str, args: dict[str, Any]) -> tuple[str
     turn -- killing the extraction over a bad ``top_k`` wastes everything spent
     so far.
     """
-    ctx.calls.append({"tool": name, "input": args})
+    record: dict[str, Any] = {"turn": ctx.turn, "tool": name, "input": args}
+    ctx.calls.append(record)
+
     handler = _HANDLERS.get(name)
     if handler is None:
+        record.update(is_error=True, result="unknown tool")
         return f"Unknown tool {name!r}. Available: {', '.join(TOOL_NAMES)}", True
     try:
-        return handler(ctx, args), False
+        result = handler(ctx, args)
     except ToolError as exc:
+        record.update(is_error=True, result=str(exc)[:300])
         return f"Error: {exc}", True
     except Exception as exc:
         # Deliberately broad: a bug in one tool must not abort an extraction
         # that has already spent real tokens. The model gets the error and retries.
+        record.update(is_error=True, result=f"{type(exc).__name__}: {exc}"[:300])
         return f"Error: {type(exc).__name__}: {exc}", True
+    record.update(is_error=False, result=result[:300], result_chars=len(result))
+    return result, False
 
 
 def parse_submission(args: dict[str, Any]) -> list[ClauseExtraction]:

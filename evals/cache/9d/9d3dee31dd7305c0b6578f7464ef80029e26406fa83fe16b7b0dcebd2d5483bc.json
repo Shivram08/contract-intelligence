@@ -1,0 +1,54 @@
+{
+  "meta": {
+    "model": "claude-sonnet-5",
+    "turns_in_history": 21
+  },
+  "response": {
+    "content": [
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_017pumo3XcCunovVQxfo6LSW",
+        "input": {
+          "char_end": 29000,
+          "char_start": 22000
+        },
+        "name": "read_span",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_016zYfpPVUteqcTNAweFjzau",
+        "input": {
+          "char_end": 36000,
+          "char_start": 29000
+        },
+        "name": "read_span",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefHfPXYkphevmCtzExXc",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 263
+      },
+      "cache_creation_input_tokens": 263,
+      "cache_read_input_tokens": 25047,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 145,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard"
+    }
+  }
+}

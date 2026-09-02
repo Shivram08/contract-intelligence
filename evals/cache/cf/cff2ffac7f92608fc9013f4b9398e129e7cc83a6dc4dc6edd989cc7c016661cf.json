@@ -1,0 +1,54 @@
+{
+  "meta": {
+    "model": "claude-sonnet-5",
+    "turns_in_history": 5
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01RRZwsj6u3CXNgazCaELP3d",
+        "input": {
+          "clause_types": [
+            "change_of_control",
+            "cap_on_liability",
+            "uncapped_liability",
+            "non_compete",
+            "exclusivity",
+            "renewal_term",
+            "expiration_date"
+          ]
+        },
+        "name": "get_schema",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefFQNtwZhcG1C4RiVZSf",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 19687
+      },
+      "cache_creation_input_tokens": 19687,
+      "cache_read_input_tokens": 13162,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 861,
+      "output_tokens_details": {
+        "thinking_tokens": 763
+      },
+      "service_tier": "standard"
+    }
+  }
+}

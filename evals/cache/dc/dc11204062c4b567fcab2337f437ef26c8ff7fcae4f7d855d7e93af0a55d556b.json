@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "model": "claude-sonnet-5",
+    "turns_in_history": 11
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "EoMLCpABCBEYAipA7OkCip4OmkX1lp9M+NHhLik9g5RqdOoE4ZF9tdfjFMuY4qFyETJNov2jTbzXe5J59O/Go2hEwCfWN4R+vqullDIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAfKd4tQGEgxFvFRdgqRRyRYd0U4aDFDJceF84BvWU6GWiSIwNw3honx3F3B8a9rzch91c8XiCVu3uVG7wiFp2NccFMwPwv54NjHvySCG/aJcT8KgKp8JXWcygzVRowt4adh37rmcpvUJJXn04QAM31mExtiI0z35ky9+beiwHm8PYFghJmpb1MuUQLUn46lRf9xiUQtpXUqJkD7N4M8MUpWqurq33dSsoNdPLJfnh2pH6IqcQoCYvQKlhVq92Suhtuxc9OKPkSkbcN0utzfsIKRjvmWMZf+sLZMrN7E3Z2YW1APBjy4gnMkGlYLKE+fe7juwnRSWs7ydZg6StyRk5nZeD4tgWkw9ltnzH71fFPx1wITZBTOgpWb7NJuJAuZhtMfaISu3yeAL+Bm0FXsDrWOirs7rl0NaW0A1dd9dpGz13gnbB4g9T4KBqkQcV83fRqYNFQnW+7zOcgF/Qj1gEUD66HoiyblpBeDvZl9QDnadLTs7rSAP6n93Zi2WXYZ/wbrnjqu7RUEE/Z9eSBv8cMUTMD8S3zJaBHY+jCk/gdePc0CuEAdmVBTI1hUgzIfB0CjadGewtwpEXwulAxRPFN6J/Rlq1mt2P3Rgv3wNux4wKnnP0gLE8X/zIddVHCb4OBJ9o1Ql1asRve7eUb2BYsF6RK+fQk0uUPTmjxrUfWpQJrZUfqEtHYB1T7wjWr2Ry5ERMolxONedx7+bbzjjKNAM5XTaL3QwwGWKBfLzdH9/GJRXj9YLsyTDmIMbi4b3Qnua1AM3JwBzXl3nwsgMlYCj58dD/h6ZRy/OWPeZmrxZw9j4SxKqclbu/UezwungDz9dpVLvjdg90IkVxiPdZNADEmpgfCoUMO0H/hXvKBe0kuI56o02aVJ/vHu3+PD25P/Aa3wLWdD766mLVzLe45RET3YnmF6VdrI3n+e5ZvazdBvTo+eou5wmggLr/B9bwu31xTwuT3RgjB913/A8uFVhBOtA6BmucTIZT3p5WvKDRQEtgndXEyKruttcY7QKrxpiyKol3p2A6rhuvk5SkkKVfqFAUU+Hi3cdyumewFc7491b1x4FaSgEQw1aaPqS0U5XKINMfN4FkT9vEwjs7olUMPYUaY1gfllYgc2baa8EYRJmZuGiOKahKxe73vMkxMFkToypZCk8EdsdgwUrpytubisbTMYHTsEZp+HLrLRcSkovWHL9ZdfRWu2YOjJjmut8MLWQbPVUj8tQxYyt7KReQ67LWXHMwwtUY+/mX+a1AGKGbuAIi5l1H9QJXhXZLcOKZnWiMC2XG59cqASJoTN+AD9Obg+7czKSqF6zDRCHOUcZ2aZJ6fq71ugN5p4c2L0guAWBYtSO1eF+B8pHLc8ty2uktziZFDK8UoXcZPbQMvDiFjkXviAUJZ4mkoYr1M1ia8UWwE2z4GjWWgegAiSH4ozzk0F65xPnzBaUjZjdJLO4xkJ2NATfVsuXvr3/fEOjnEaG8Sp/W+pCozf2K5znrw/ErFiVDbJEX3siBPFBVHsLC+UtL+aEjlYMQgwcFRtmxGfmKIbMuAAvfAzFDLIV3wS8Q4duaUjix1WzTBC6j3cLtx+FRKJzhlZFEnV7R0lhhe/iELla8QmqYwFzlVEplbOQ2Twdt9BYIMgdcG68r/Fgur0sOxtCCPEiFSpGofeMCDp+b3PlKAS90vtu1Vh9CSm15xgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01PEvcfgCS7CdJmevsbTMMBq",
+        "input": {
+          "query": "Rule 13d-1(k)(1) Securities Exchange Act"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_016WU59PNeCDADyR9BtEBqbg",
+        "input": {
+          "query": "terminate this agreement"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefHhsX6czS6GcgrSgTdC",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 1458
+      },
+      "cache_creation_input_tokens": 1458,
+      "cache_read_input_tokens": 5163,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 663,
+      "output_tokens_details": {
+        "thinking_tokens": 542
+      },
+      "service_tier": "standard"
+    }
+  }
+}
