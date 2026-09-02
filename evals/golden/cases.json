@@ -1,0 +1,2274 @@
+{
+  "seed": 42,
+  "split": "golden",
+  "generator": "evals/cases.py",
+  "unit": "one (contract, clause_type) pair with a CUAD gold label",
+  "stratification": "(clause_type, length_quartile), 48 strata, largest-remainder allocation. Tier balance follows because each tier holds four clause types.",
+  "caveat": "~12 cases per clause type, of which ~7 are positive. Per-clause presence F1 therefore carries wide error bars; the tier-level aggregate (50 cases each) is the figure to trust.",
+  "summary": {
+    "total": 150,
+    "documents": 81,
+    "positives": 84,
+    "by_clause_type": {
+      "anti_assignment": 13,
+      "cap_on_liability": 13,
+      "change_of_control": 12,
+      "effective_date": 13,
+      "exclusivity": 13,
+      "expiration_date": 12,
+      "governing_law": 12,
+      "non_compete": 12,
+      "notice_period_to_terminate_renewal": 12,
+      "parties": 12,
+      "renewal_term": 13,
+      "uncapped_liability": 13
+    },
+    "positives_by_clause_type": {
+      "anti_assignment": 9,
+      "cap_on_liability": 7,
+      "change_of_control": 3,
+      "effective_date": 11,
+      "exclusivity": 7,
+      "expiration_date": 11,
+      "governing_law": 10,
+      "non_compete": 4,
+      "notice_period_to_terminate_renewal": 5,
+      "parties": 12,
+      "renewal_term": 4,
+      "uncapped_liability": 1
+    },
+    "by_tier": {
+      "1": 49,
+      "2": 50,
+      "3": 51
+    },
+    "by_length_quartile": {
+      "1": 40,
+      "2": 37,
+      "3": 36,
+      "4": 37
+    }
+  },
+  "cases": [
+    {
+      "case_id": "ALLIANCEBANCORPINCOFPENNSYLVANIA_10_18_2006-EX-1.2-AGENCY AGREEMENT::change_of_control",
+      "document_id": "ALLIANCEBANCORPINCOFPENNSYLVANIA_10_18_2006-EX-1.2-AGENCY AGREEMENT",
+      "clause_type": "change_of_control",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 4,
+      "document_chars": 130256,
+      "tier": 2
+    },
+    {
+      "case_id": "AMERICANPHYSICIANSCAPITALINC_03_31_2003-EX-10.26-AGENCY AGREEMENT::anti_assignment",
+      "document_id": "AMERICANPHYSICIANSCAPITALINC_03_31_2003-EX-10.26-AGENCY AGREEMENT",
+      "clause_type": "anti_assignment",
+      "present": true,
+      "gold_spans": [
+        [
+          15562,
+          15704
+        ]
+      ],
+      "length_quartile": 2,
+      "document_chars": 23999,
+      "tier": 2
+    },
+    {
+      "case_id": "AMERICANPHYSICIANSCAPITALINC_03_31_2003-EX-10.26-AGENCY AGREEMENT::cap_on_liability",
+      "document_id": "AMERICANPHYSICIANSCAPITALINC_03_31_2003-EX-10.26-AGENCY AGREEMENT",
+      "clause_type": "cap_on_liability",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 2,
+      "document_chars": 23999,
+      "tier": 3
+    },
+    {
+      "case_id": "ASPIRITYHOLDINGSLLC_05_07_2012-EX-10.6-OUTSOURCING AGREEMENT::effective_date",
+      "document_id": "ASPIRITYHOLDINGSLLC_05_07_2012-EX-10.6-OUTSOURCING AGREEMENT",
+      "clause_type": "effective_date",
+      "present": true,
+      "gold_spans": [
+        [
+          3037,
+          3056
+        ],
+        [
+          52773,
+          52929
+        ]
+      ],
+      "length_quartile": 4,
+      "document_chars": 67111,
+      "tier": 1
+    },
+    {
+      "case_id": "ASPIRITYHOLDINGSLLC_05_07_2012-EX-10.6-OUTSOURCING AGREEMENT::parties",
+      "document_id": "ASPIRITYHOLDINGSLLC_05_07_2012-EX-10.6-OUTSOURCING AGREEMENT",
+      "clause_type": "parties",
+      "present": true,
+      "gold_spans": [
+        [
+          654,
+          664
+        ],
+        [
+          1065,
+          1072
+        ],
+        [
+          3072,
+          3103
+        ],
+        [
+          3165,
+          3177
+        ]
+      ],
+      "length_quartile": 4,
+      "document_chars": 67111,
+      "tier": 1
+    },
+    {
+      "case_id": "ATENTOSA_07_06_2020-EX-99.1-JOINT FILING AGREEMENT::uncapped_liability",
+      "document_id": "ATENTOSA_07_06_2020-EX-99.1-JOINT FILING AGREEMENT",
+      "clause_type": "uncapped_liability",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 1,
+      "document_chars": 2298,
+      "tier": 3
+    },
+    {
+      "case_id": "ATMOSENERGYCORP_11_22_2002-EX-10.17-TRANSPORTATION SERVICE AGREEMENT::non_compete",
+      "document_id": "ATMOSENERGYCORP_11_22_2002-EX-10.17-TRANSPORTATION SERVICE AGREEMENT",
+      "clause_type": "non_compete",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 2,
+      "document_chars": 24151,
+      "tier": 3
+    },
+    {
+      "case_id": "AgapeAtpCorp_20191202_10-KA_EX-10.1_11911128_EX-10.1_Supply Agreement::change_of_control",
+      "document_id": "AgapeAtpCorp_20191202_10-KA_EX-10.1_11911128_EX-10.1_Supply Agreement",
+      "clause_type": "change_of_control",
+      "present": true,
+      "gold_spans": [
+        [
+          10014,
+          10201
+        ],
+        [
+          10206,
+          10413
+        ]
+      ],
+      "length_quartile": 2,
+      "document_chars": 20693,
+      "tier": 2
+    },
+    {
+      "case_id": "AgapeAtpCorp_20191202_10-KA_EX-10.1_11911128_EX-10.1_Supply Agreement::exclusivity",
+      "document_id": "AgapeAtpCorp_20191202_10-KA_EX-10.1_11911128_EX-10.1_Supply Agreement",
+      "clause_type": "exclusivity",
+      "present": true,
+      "gold_spans": [
+        [
+          4273,
+          4475
+        ],
+        [
+          12332,
+          12633
+        ],
+        [
+          12639,
+          12915
+        ],
+        [
+          16803,
+          16978
+        ]
+      ],
+      "length_quartile": 2,
+      "document_chars": 20693,
+      "tier": 3
+    },
+    {
+      "case_id": "BLUEHILLSBANCORP,INC_05_20_2014-EX-1.1-AGENCY AGREEMENT::cap_on_liability",
+      "document_id": "BLUEHILLSBANCORP,INC_05_20_2014-EX-1.1-AGENCY AGREEMENT",
+      "clause_type": "cap_on_liability",
+      "present": true,
+      "gold_spans": [
+        [
+          118964,
+          119271
+        ]
+      ],
+      "length_quartile": 4,
+      "document_chars": 130742,
+      "tier": 3
+    },
+    {
+      "case_id": "BLUEHILLSBANCORP,INC_05_20_2014-EX-1.1-AGENCY AGREEMENT::notice_period_to_terminate_renewal",
+      "document_id": "BLUEHILLSBANCORP,INC_05_20_2014-EX-1.1-AGENCY AGREEMENT",
+      "clause_type": "notice_period_to_terminate_renewal",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 4,
+      "document_chars": 130742,
+      "tier": 2
+    },
+    {
+      "case_id": "BLUEROCKRESIDENTIALGROWTHREIT,INC_06_01_2016-EX-1.1-AGENCY AGREEMENT::expiration_date",
+      "document_id": "BLUEROCKRESIDENTIALGROWTHREIT,INC_06_01_2016-EX-1.1-AGENCY AGREEMENT",
+      "clause_type": "expiration_date",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 4,
+      "document_chars": 134179,
+      "tier": 1
+    },
+    {
+      "case_id": "BNLFINANCIALCORP_03_30_2007-EX-10.8-OUTSOURCING AGREEMENT::expiration_date",
+      "document_id": "BNLFINANCIALCORP_03_30_2007-EX-10.8-OUTSOURCING AGREEMENT",
+      "clause_type": "expiration_date",
+      "present": true,
+      "gold_spans": [
+        [
+          28301,
+          28433
+        ]
+      ],
+      "length_quartile": 3,
+      "document_chars": 39863,
+      "tier": 1
+    },
+    {
+      "case_id": "BNLFINANCIALCORP_03_30_2007-EX-10.8-OUTSOURCING AGREEMENT::non_compete",
+      "document_id": "BNLFINANCIALCORP_03_30_2007-EX-10.8-OUTSOURCING AGREEMENT",
+      "clause_type": "non_compete",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 3,
+      "document_chars": 39863,
+      "tier": 3
+    },
+    {
+      "case_id": "BNLFINANCIALCORP_03_30_2007-EX-10.8-OUTSOURCING AGREEMENT::renewal_term",
+      "document_id": "BNLFINANCIALCORP_03_30_2007-EX-10.8-OUTSOURCING AGREEMENT",
+      "clause_type": "renewal_term",
+      "present": true,
+      "gold_spans": [
+        [
+          28529,
+          28911
+        ]
+      ],
+      "length_quartile": 3,
+      "document_chars": 39863,
+      "tier": 2
+    },
+    {
+      "case_id": "BellringBrandsInc_20190920_S-1_EX-10.12_11817081_EX-10.12_Manufacturing Agreement2::exclusivity",
+      "document_id": "BellringBrandsInc_20190920_S-1_EX-10.12_11817081_EX-10.12_Manufacturing Agreement2",
+      "clause_type": "exclusivity",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 1,
+      "document_chars": 2274,
+      "tier": 3
+    },
+    {
+      "case_id": "BellringBrandsInc_20190920_S-1_EX-10.12_11817081_EX-10.12_Manufacturing Agreement2::non_compete",
+      "document_id": "BellringBrandsInc_20190920_S-1_EX-10.12_11817081_EX-10.12_Manufacturing Agreement2",
+      "clause_type": "non_compete",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 1,
+      "document_chars": 2274,
+      "tier": 3
+    },
+    {
+      "case_id": "BellringBrandsInc_20190920_S-1_EX-10.12_11817081_EX-10.12_Manufacturing Agreement2::renewal_term",
+      "document_id": "BellringBrandsInc_20190920_S-1_EX-10.12_11817081_EX-10.12_Manufacturing Agreement2",
+      "clause_type": "renewal_term",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 1,
+      "document_chars": 2274,
+      "tier": 2
+    },
+    {
+      "case_id": "BellringBrandsInc_20190920_S-1_EX-10.12_11817081_EX-10.12_Manufacturing Agreement3::anti_assignment",
+      "document_id": "BellringBrandsInc_20190920_S-1_EX-10.12_11817081_EX-10.12_Manufacturing Agreement3",
+      "clause_type": "anti_assignment",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 1,
+      "document_chars": 8024,
+      "tier": 2
+    },
+    {
+      "case_id": "BellringBrandsInc_20190920_S-1_EX-10.12_11817081_EX-10.12_Manufacturing Agreement3::effective_date",
+      "document_id": "BellringBrandsInc_20190920_S-1_EX-10.12_11817081_EX-10.12_Manufacturing Agreement3",
+      "clause_type": "effective_date",
+      "present": true,
+      "gold_spans": [
+        [
+          288,
+          303
+        ]
+      ],
+      "length_quartile": 1,
+      "document_chars": 8024,
+      "tier": 1
+    },
+    {
+      "case_id": "BellringBrandsInc_20190920_S-1_EX-10.12_11817081_EX-10.12_Manufacturing Agreement4::change_of_control",
+      "document_id": "BellringBrandsInc_20190920_S-1_EX-10.12_11817081_EX-10.12_Manufacturing Agreement4",
+      "clause_type": "change_of_control",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 1,
+      "document_chars": 1742,
+      "tier": 2
+    },
+    {
+      "case_id": "BellringBrandsInc_20190920_S-1_EX-10.12_11817081_EX-10.12_Manufacturing Agreement4::effective_date",
+      "document_id": "BellringBrandsInc_20190920_S-1_EX-10.12_11817081_EX-10.12_Manufacturing Agreement4",
+      "clause_type": "effective_date",
+      "present": true,
+      "gold_spans": [
+        [
+          287,
+          299
+        ]
+      ],
+      "length_quartile": 1,
+      "document_chars": 1742,
+      "tier": 1
+    },
+    {
+      "case_id": "BellringBrandsInc_20190920_S-1_EX-10.12_11817081_EX-10.12_Manufacturing Agreement4::renewal_term",
+      "document_id": "BellringBrandsInc_20190920_S-1_EX-10.12_11817081_EX-10.12_Manufacturing Agreement4",
+      "clause_type": "renewal_term",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 1,
+      "document_chars": 1742,
+      "tier": 2
+    },
+    {
+      "case_id": "CANOPETROLEUM,INC_12_13_2007-EX-10.1-Sponsorship Agreement::renewal_term",
+      "document_id": "CANOPETROLEUM,INC_12_13_2007-EX-10.1-Sponsorship Agreement",
+      "clause_type": "renewal_term",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 1,
+      "document_chars": 8852,
+      "tier": 2
+    },
+    {
+      "case_id": "CORALGOLDRESOURCES,LTD_05_28_2020-EX-4.1-CONSULTING AGREEMENT::change_of_control",
+      "document_id": "CORALGOLDRESOURCES,LTD_05_28_2020-EX-4.1-CONSULTING AGREEMENT",
+      "clause_type": "change_of_control",
+      "present": true,
+      "gold_spans": [
+        [
+          4039,
+          4128
+        ],
+        [
+          4401,
+          4757
+        ]
+      ],
+      "length_quartile": 2,
+      "document_chars": 29749,
+      "tier": 2
+    },
+    {
+      "case_id": "CORALGOLDRESOURCES,LTD_05_28_2020-EX-4.1-CONSULTING AGREEMENT::uncapped_liability",
+      "document_id": "CORALGOLDRESOURCES,LTD_05_28_2020-EX-4.1-CONSULTING AGREEMENT",
+      "clause_type": "uncapped_liability",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 2,
+      "document_chars": 29749,
+      "tier": 3
+    },
+    {
+      "case_id": "DRAGONSYSTEMSINC_01_08_1999-EX-10.17-OUTSOURCING AGREEMENT::expiration_date",
+      "document_id": "DRAGONSYSTEMSINC_01_08_1999-EX-10.17-OUTSOURCING AGREEMENT",
+      "clause_type": "expiration_date",
+      "present": true,
+      "gold_spans": [
+        [
+          5958,
+          6013
+        ]
+      ],
+      "length_quartile": 1,
+      "document_chars": 8599,
+      "tier": 1
+    },
+    {
+      "case_id": "DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT::exclusivity",
+      "document_id": "DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT",
+      "clause_type": "exclusivity",
+      "present": true,
+      "gold_spans": [
+        [
+          5690,
+          6079
+        ],
+        [
+          6537,
+          7080
+        ]
+      ],
+      "length_quartile": 3,
+      "document_chars": 46298,
+      "tier": 3
+    },
+    {
+      "case_id": "DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT::notice_period_to_terminate_renewal",
+      "document_id": "DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT",
+      "clause_type": "notice_period_to_terminate_renewal",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 3,
+      "document_chars": 49218,
+      "tier": 2
+    },
+    {
+      "case_id": "DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT::parties",
+      "document_id": "DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT",
+      "clause_type": "parties",
+      "present": true,
+      "gold_spans": [
+        [
+          254,
+          276
+        ],
+        [
+          311,
+          320
+        ],
+        [
+          464,
+          501
+        ],
+        [
+          527,
+          555
+        ],
+        [
+          543,
+          550
+        ]
+      ],
+      "length_quartile": 3,
+      "document_chars": 49218,
+      "tier": 1
+    },
+    {
+      "case_id": "EMERALDHEALTHTHERAPEUTICSINC_06_10_2020-EX-4.5-CONSULTING AGREEMENT - DR. GAETANO MORELLO N.D. INC.::cap_on_liability",
+      "document_id": "EMERALDHEALTHTHERAPEUTICSINC_06_10_2020-EX-4.5-CONSULTING AGREEMENT - DR. GAETANO MORELLO N.D. INC.",
+      "clause_type": "cap_on_liability",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 2,
+      "document_chars": 20637,
+      "tier": 3
+    },
+    {
+      "case_id": "EMERALDHEALTHTHERAPEUTICSINC_06_10_2020-EX-4.5-CONSULTING AGREEMENT - DR. GAETANO MORELLO N.D. INC.::governing_law",
+      "document_id": "EMERALDHEALTHTHERAPEUTICSINC_06_10_2020-EX-4.5-CONSULTING AGREEMENT - DR. GAETANO MORELLO N.D. INC.",
+      "clause_type": "governing_law",
+      "present": true,
+      "gold_spans": [
+        [
+          10840,
+          11175
+        ]
+      ],
+      "length_quartile": 2,
+      "document_chars": 20637,
+      "tier": 1
+    },
+    {
+      "case_id": "EMERALDHEALTHTHERAPEUTICSINC_06_10_2020-EX-4.5-CONSULTING AGREEMENT - DR. GAETANO MORELLO N.D. INC.::renewal_term",
+      "document_id": "EMERALDHEALTHTHERAPEUTICSINC_06_10_2020-EX-4.5-CONSULTING AGREEMENT - DR. GAETANO MORELLO N.D. INC.",
+      "clause_type": "renewal_term",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 2,
+      "document_chars": 20637,
+      "tier": 2
+    },
+    {
+      "case_id": "ENERGOUSCORP_03_16_2017-EX-10.24-STRATEGIC ALLIANCE AGREEMENT::cap_on_liability",
+      "document_id": "ENERGOUSCORP_03_16_2017-EX-10.24-STRATEGIC ALLIANCE AGREEMENT",
+      "clause_type": "cap_on_liability",
+      "present": true,
+      "gold_spans": [
+        [
+          47231,
+          47760
+        ],
+        [
+          56075,
+          56781
+        ],
+        [
+          56782,
+          56900
+        ]
+      ],
+      "length_quartile": 4,
+      "document_chars": 81926,
+      "tier": 3
+    },
+    {
+      "case_id": "ENERGOUSCORP_03_16_2017-EX-10.24-STRATEGIC ALLIANCE AGREEMENT::effective_date",
+      "document_id": "ENERGOUSCORP_03_16_2017-EX-10.24-STRATEGIC ALLIANCE AGREEMENT",
+      "clause_type": "effective_date",
+      "present": true,
+      "gold_spans": [
+        [
+          394,
+          410
+        ]
+      ],
+      "length_quartile": 4,
+      "document_chars": 81926,
+      "tier": 1
+    },
+    {
+      "case_id": "ENERGOUSCORP_03_16_2017-EX-10.24-STRATEGIC ALLIANCE AGREEMENT::non_compete",
+      "document_id": "ENERGOUSCORP_03_16_2017-EX-10.24-STRATEGIC ALLIANCE AGREEMENT",
+      "clause_type": "non_compete",
+      "present": true,
+      "gold_spans": [
+        [
+          32022,
+          32540
+        ],
+        [
+          60794,
+          61198
+        ],
+        [
+          62175,
+          62766
+        ]
+      ],
+      "length_quartile": 4,
+      "document_chars": 81926,
+      "tier": 3
+    },
+    {
+      "case_id": "ENTRUSTINC_07_24_1998-EX-10.5-STRATEGIC ALLIANCE AGREEMENT::anti_assignment",
+      "document_id": "ENTRUSTINC_07_24_1998-EX-10.5-STRATEGIC ALLIANCE AGREEMENT",
+      "clause_type": "anti_assignment",
+      "present": true,
+      "gold_spans": [
+        [
+          44597,
+          44954
+        ]
+      ],
+      "length_quartile": 3,
+      "document_chars": 45879,
+      "tier": 2
+    },
+    {
+      "case_id": "EcoScienceSolutionsInc_20171117_8-K_EX-10.1_10956472_EX-10.1_Endorsement Agreement::non_compete",
+      "document_id": "EcoScienceSolutionsInc_20171117_8-K_EX-10.1_10956472_EX-10.1_Endorsement Agreement",
+      "clause_type": "non_compete",
+      "present": true,
+      "gold_spans": [
+        [
+          5374,
+          5596
+        ]
+      ],
+      "length_quartile": 2,
+      "document_chars": 18104,
+      "tier": 3
+    },
+    {
+      "case_id": "EhaveInc_20190515_20-F_EX-4.44_11678816_EX-4.44_License Agreement_ Reseller Agreement::governing_law",
+      "document_id": "EhaveInc_20190515_20-F_EX-4.44_11678816_EX-4.44_License Agreement_ Reseller Agreement",
+      "clause_type": "governing_law",
+      "present": true,
+      "gold_spans": [
+        [
+          13838,
+          14090
+        ]
+      ],
+      "length_quartile": 4,
+      "document_chars": 87070,
+      "tier": 1
+    },
+    {
+      "case_id": "EhaveInc_20190515_20-F_EX-4.44_11678816_EX-4.44_License Agreement_ Reseller Agreement::notice_period_to_terminate_renewal",
+      "document_id": "EhaveInc_20190515_20-F_EX-4.44_11678816_EX-4.44_License Agreement_ Reseller Agreement",
+      "clause_type": "notice_period_to_terminate_renewal",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 4,
+      "document_chars": 87070,
+      "tier": 2
+    },
+    {
+      "case_id": "EmmisCommunicationsCorp_20191125_8-K_EX-10.6_11906433_EX-10.6_Marketing Agreement::expiration_date",
+      "document_id": "EmmisCommunicationsCorp_20191125_8-K_EX-10.6_11906433_EX-10.6_Marketing Agreement",
+      "clause_type": "expiration_date",
+      "present": true,
+      "gold_spans": [
+        [
+          1351,
+          1803
+        ]
+      ],
+      "length_quartile": 2,
+      "document_chars": 17300,
+      "tier": 1
+    },
+    {
+      "case_id": "FreezeTagInc_20180411_8-K_EX-10.1_11139603_EX-10.1_Sponsorship Agreement::effective_date",
+      "document_id": "FreezeTagInc_20180411_8-K_EX-10.1_11139603_EX-10.1_Sponsorship Agreement",
+      "clause_type": "effective_date",
+      "present": true,
+      "gold_spans": [
+        [
+          2113,
+          2274
+        ]
+      ],
+      "length_quartile": 2,
+      "document_chars": 26753,
+      "tier": 1
+    },
+    {
+      "case_id": "FreezeTagInc_20180411_8-K_EX-10.1_11139603_EX-10.1_Sponsorship Agreement::exclusivity",
+      "document_id": "FreezeTagInc_20180411_8-K_EX-10.1_11139603_EX-10.1_Sponsorship Agreement",
+      "clause_type": "exclusivity",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 2,
+      "document_chars": 26753,
+      "tier": 3
+    },
+    {
+      "case_id": "GAINSCOINC_01_21_2010-EX-10.41-SPONSORSHIP AGREEMENT::anti_assignment",
+      "document_id": "GAINSCOINC_01_21_2010-EX-10.41-SPONSORSHIP AGREEMENT",
+      "clause_type": "anti_assignment",
+      "present": true,
+      "gold_spans": [
+        [
+          12758,
+          12881
+        ]
+      ],
+      "length_quartile": 1,
+      "document_chars": 15696,
+      "tier": 2
+    },
+    {
+      "case_id": "GAINSCOINC_01_21_2010-EX-10.41-SPONSORSHIP AGREEMENT::expiration_date",
+      "document_id": "GAINSCOINC_01_21_2010-EX-10.41-SPONSORSHIP AGREEMENT",
+      "clause_type": "expiration_date",
+      "present": true,
+      "gold_spans": [
+        [
+          1041,
+          1225
+        ]
+      ],
+      "length_quartile": 1,
+      "document_chars": 15696,
+      "tier": 1
+    },
+    {
+      "case_id": "GAINSCOINC_01_21_2010-EX-10.41-SPONSORSHIP AGREEMENT::notice_period_to_terminate_renewal",
+      "document_id": "GAINSCOINC_01_21_2010-EX-10.41-SPONSORSHIP AGREEMENT",
+      "clause_type": "notice_period_to_terminate_renewal",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 1,
+      "document_chars": 15696,
+      "tier": 2
+    },
+    {
+      "case_id": "GULFSOUTHMEDICALSUPPLYINC_12_24_1997-EX-4-AFFILIATE AGREEMENT::non_compete",
+      "document_id": "GULFSOUTHMEDICALSUPPLYINC_12_24_1997-EX-4-AFFILIATE AGREEMENT",
+      "clause_type": "non_compete",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 2,
+      "document_chars": 27015,
+      "tier": 3
+    },
+    {
+      "case_id": "GluMobileInc_20070319_S-1A_EX-10.09_436630_EX-10.09_Content License Agreement2::anti_assignment",
+      "document_id": "GluMobileInc_20070319_S-1A_EX-10.09_436630_EX-10.09_Content License Agreement2",
+      "clause_type": "anti_assignment",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 1,
+      "document_chars": 11954,
+      "tier": 2
+    },
+    {
+      "case_id": "GluMobileInc_20070319_S-1A_EX-10.09_436630_EX-10.09_Content License Agreement2::cap_on_liability",
+      "document_id": "GluMobileInc_20070319_S-1A_EX-10.09_436630_EX-10.09_Content License Agreement2",
+      "clause_type": "cap_on_liability",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 1,
+      "document_chars": 11954,
+      "tier": 3
+    },
+    {
+      "case_id": "GluMobileInc_20070319_S-1A_EX-10.09_436630_EX-10.09_Content License Agreement2::exclusivity",
+      "document_id": "GluMobileInc_20070319_S-1A_EX-10.09_436630_EX-10.09_Content License Agreement2",
+      "clause_type": "exclusivity",
+      "present": true,
+      "gold_spans": [
+        [
+          4341,
+          4672
+        ],
+        [
+          4673,
+          4860
+        ],
+        [
+          6689,
+          6964
+        ]
+      ],
+      "length_quartile": 1,
+      "document_chars": 11954,
+      "tier": 3
+    },
+    {
+      "case_id": "GluMobileInc_20070319_S-1A_EX-10.09_436630_EX-10.09_Content License Agreement2::governing_law",
+      "document_id": "GluMobileInc_20070319_S-1A_EX-10.09_436630_EX-10.09_Content License Agreement2",
+      "clause_type": "governing_law",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 1,
+      "document_chars": 11954,
+      "tier": 1
+    },
+    {
+      "case_id": "GopageCorp_20140221_10-K_EX-10.1_8432966_EX-10.1_Content License Agreement::exclusivity",
+      "document_id": "GopageCorp_20140221_10-K_EX-10.1_8432966_EX-10.1_Content License Agreement",
+      "clause_type": "exclusivity",
+      "present": true,
+      "gold_spans": [
+        [
+          5472,
+          6080
+        ]
+      ],
+      "length_quartile": 3,
+      "document_chars": 39622,
+      "tier": 3
+    },
+    {
+      "case_id": "GopageCorp_20140221_10-K_EX-10.1_8432966_EX-10.1_Content License Agreement::parties",
+      "document_id": "GopageCorp_20140221_10-K_EX-10.1_8432966_EX-10.1_Content License Agreement",
+      "clause_type": "parties",
+      "present": true,
+      "gold_spans": [
+        [
+          188,
+          207
+        ],
+        [
+          318,
+          326
+        ],
+        [
+          334,
+          358
+        ],
+        [
+          445,
+          453
+        ]
+      ],
+      "length_quartile": 3,
+      "document_chars": 39622,
+      "tier": 1
+    },
+    {
+      "case_id": "HUBEIMINKANGPHARMACEUTICALLTD_09_19_2006-EX-10.1-OUTSOURCING AGREEMENT::cap_on_liability",
+      "document_id": "HUBEIMINKANGPHARMACEUTICALLTD_09_19_2006-EX-10.1-OUTSOURCING AGREEMENT",
+      "clause_type": "cap_on_liability",
+      "present": true,
+      "gold_spans": [
+        [
+          2968,
+          3390
+        ],
+        [
+          3393,
+          3519
+        ],
+        [
+          3522,
+          3737
+        ]
+      ],
+      "length_quartile": 1,
+      "document_chars": 11322,
+      "tier": 3
+    },
+    {
+      "case_id": "HUBEIMINKANGPHARMACEUTICALLTD_09_19_2006-EX-10.1-OUTSOURCING AGREEMENT::parties",
+      "document_id": "HUBEIMINKANGPHARMACEUTICALLTD_09_19_2006-EX-10.1-OUTSOURCING AGREEMENT",
+      "clause_type": "parties",
+      "present": true,
+      "gold_spans": [
+        [
+          49,
+          52
+        ],
+        [
+          49,
+          58
+        ],
+        [
+          176,
+          183
+        ],
+        [
+          176,
+          202
+        ]
+      ],
+      "length_quartile": 1,
+      "document_chars": 11322,
+      "tier": 1
+    },
+    {
+      "case_id": "HUBEIMINKANGPHARMACEUTICALLTD_09_19_2006-EX-10.1-OUTSOURCING AGREEMENT::uncapped_liability",
+      "document_id": "HUBEIMINKANGPHARMACEUTICALLTD_09_19_2006-EX-10.1-OUTSOURCING AGREEMENT",
+      "clause_type": "uncapped_liability",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 1,
+      "document_chars": 11322,
+      "tier": 3
+    },
+    {
+      "case_id": "HYPERIONSOFTWARECORP_09_28_1994-EX-10.47-EXCLUSIVE DISTRIBUTOR AGREEMENT::change_of_control",
+      "document_id": "HYPERIONSOFTWARECORP_09_28_1994-EX-10.47-EXCLUSIVE DISTRIBUTOR AGREEMENT",
+      "clause_type": "change_of_control",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 3,
+      "document_chars": 37682,
+      "tier": 2
+    },
+    {
+      "case_id": "HYPERIONSOFTWARECORP_09_28_1994-EX-10.47-EXCLUSIVE DISTRIBUTOR AGREEMENT::governing_law",
+      "document_id": "HYPERIONSOFTWARECORP_09_28_1994-EX-10.47-EXCLUSIVE DISTRIBUTOR AGREEMENT",
+      "clause_type": "governing_law",
+      "present": true,
+      "gold_spans": [
+        [
+          34415,
+          34578
+        ]
+      ],
+      "length_quartile": 3,
+      "document_chars": 37682,
+      "tier": 1
+    },
+    {
+      "case_id": "HYPERIONSOFTWARECORP_09_28_1994-EX-10.47-EXCLUSIVE DISTRIBUTOR AGREEMENT::non_compete",
+      "document_id": "HYPERIONSOFTWARECORP_09_28_1994-EX-10.47-EXCLUSIVE DISTRIBUTOR AGREEMENT",
+      "clause_type": "non_compete",
+      "present": true,
+      "gold_spans": [
+        [
+          23259,
+          23812
+        ]
+      ],
+      "length_quartile": 3,
+      "document_chars": 37682,
+      "tier": 3
+    },
+    {
+      "case_id": "HYPERIONSOFTWARECORP_09_28_1994-EX-10.47-EXCLUSIVE DISTRIBUTOR AGREEMENT::notice_period_to_terminate_renewal",
+      "document_id": "HYPERIONSOFTWARECORP_09_28_1994-EX-10.47-EXCLUSIVE DISTRIBUTOR AGREEMENT",
+      "clause_type": "notice_period_to_terminate_renewal",
+      "present": true,
+      "gold_spans": [
+        [
+          27451,
+          27740
+        ],
+        [
+          28032,
+          28120
+        ],
+        [
+          28170,
+          28355
+        ]
+      ],
+      "length_quartile": 3,
+      "document_chars": 37682,
+      "tier": 2
+    },
+    {
+      "case_id": "HealthcareIntegratedTechnologiesInc_20190812_8-K_EX-10.1_11776966_EX-10.1_Reseller Agreement::change_of_control",
+      "document_id": "HealthcareIntegratedTechnologiesInc_20190812_8-K_EX-10.1_11776966_EX-10.1_Reseller Agreement",
+      "clause_type": "change_of_control",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 2,
+      "document_chars": 22288,
+      "tier": 2
+    },
+    {
+      "case_id": "HealthcareIntegratedTechnologiesInc_20190812_8-K_EX-10.1_11776966_EX-10.1_Reseller Agreement::governing_law",
+      "document_id": "HealthcareIntegratedTechnologiesInc_20190812_8-K_EX-10.1_11776966_EX-10.1_Reseller Agreement",
+      "clause_type": "governing_law",
+      "present": true,
+      "gold_spans": [
+        [
+          19144,
+          19603
+        ]
+      ],
+      "length_quartile": 2,
+      "document_chars": 22288,
+      "tier": 1
+    },
+    {
+      "case_id": "HealthcareIntegratedTechnologiesInc_20190812_8-K_EX-10.1_11776966_EX-10.1_Reseller Agreement::notice_period_to_terminate_renewal",
+      "document_id": "HealthcareIntegratedTechnologiesInc_20190812_8-K_EX-10.1_11776966_EX-10.1_Reseller Agreement",
+      "clause_type": "notice_period_to_terminate_renewal",
+      "present": true,
+      "gold_spans": [
+        [
+          13593,
+          13737
+        ]
+      ],
+      "length_quartile": 2,
+      "document_chars": 22288,
+      "tier": 2
+    },
+    {
+      "case_id": "HealthcareIntegratedTechnologiesInc_20190812_8-K_EX-10.1_11776966_EX-10.1_Reseller Agreement::parties",
+      "document_id": "HealthcareIntegratedTechnologiesInc_20190812_8-K_EX-10.1_11776966_EX-10.1_Reseller Agreement",
+      "clause_type": "parties",
+      "present": true,
+      "gold_spans": [
+        [
+          50,
+          58
+        ],
+        [
+          173,
+          192
+        ],
+        [
+          291,
+          299
+        ],
+        [
+          307,
+          333
+        ],
+        [
+          429,
+          524
+        ]
+      ],
+      "length_quartile": 2,
+      "document_chars": 22288,
+      "tier": 1
+    },
+    {
+      "case_id": "INNOVIVA,INC_08_07_2014-EX-10.1-COLLABORATION AGREEMENT::cap_on_liability",
+      "document_id": "INNOVIVA,INC_08_07_2014-EX-10.1-COLLABORATION AGREEMENT",
+      "clause_type": "cap_on_liability",
+      "present": true,
+      "gold_spans": [
+        [
+          181053,
+          181506
+        ]
+      ],
+      "length_quartile": 4,
+      "document_chars": 191775,
+      "tier": 3
+    },
+    {
+      "case_id": "INNOVIVA,INC_08_07_2014-EX-10.1-COLLABORATION AGREEMENT::exclusivity",
+      "document_id": "INNOVIVA,INC_08_07_2014-EX-10.1-COLLABORATION AGREEMENT",
+      "clause_type": "exclusivity",
+      "present": true,
+      "gold_spans": [
+        [
+          39737,
+          40137
+        ],
+        [
+          40173,
+          40533
+        ],
+        [
+          40565,
+          40892
+        ]
+      ],
+      "length_quartile": 4,
+      "document_chars": 191775,
+      "tier": 3
+    },
+    {
+      "case_id": "INNOVIVA,INC_08_07_2014-EX-10.1-COLLABORATION AGREEMENT::uncapped_liability",
+      "document_id": "INNOVIVA,INC_08_07_2014-EX-10.1-COLLABORATION AGREEMENT",
+      "clause_type": "uncapped_liability",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 4,
+      "document_chars": 191775,
+      "tier": 3
+    },
+    {
+      "case_id": "INTELLIGENTHIGHWAYSOLUTIONS,INC_01_18_2018-EX-10.1-Strategic Alliance Agreement::change_of_control",
+      "document_id": "INTELLIGENTHIGHWAYSOLUTIONS,INC_01_18_2018-EX-10.1-Strategic Alliance Agreement",
+      "clause_type": "change_of_control",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 1,
+      "document_chars": 8288,
+      "tier": 2
+    },
+    {
+      "case_id": "INTELLIGENTHIGHWAYSOLUTIONS,INC_01_18_2018-EX-10.1-Strategic Alliance Agreement::non_compete",
+      "document_id": "INTELLIGENTHIGHWAYSOLUTIONS,INC_01_18_2018-EX-10.1-Strategic Alliance Agreement",
+      "clause_type": "non_compete",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 1,
+      "document_chars": 8288,
+      "tier": 3
+    },
+    {
+      "case_id": "INTELLIGENTHIGHWAYSOLUTIONS,INC_01_18_2018-EX-10.1-Strategic Alliance Agreement::notice_period_to_terminate_renewal",
+      "document_id": "INTELLIGENTHIGHWAYSOLUTIONS,INC_01_18_2018-EX-10.1-Strategic Alliance Agreement",
+      "clause_type": "notice_period_to_terminate_renewal",
+      "present": true,
+      "gold_spans": [
+        [
+          5788,
+          6105
+        ]
+      ],
+      "length_quartile": 1,
+      "document_chars": 8288,
+      "tier": 2
+    },
+    {
+      "case_id": "INTERSECTENT,INC_05_11_2020-EX-10.1-SUPPLY AGREEMENT::cap_on_liability",
+      "document_id": "INTERSECTENT,INC_05_11_2020-EX-10.1-SUPPLY AGREEMENT",
+      "clause_type": "cap_on_liability",
+      "present": true,
+      "gold_spans": [
+        [
+          22201,
+          22441
+        ],
+        [
+          22809,
+          23010
+        ]
+      ],
+      "length_quartile": 3,
+      "document_chars": 37970,
+      "tier": 3
+    },
+    {
+      "case_id": "ImineCorp_20180725_S-1_EX-10.5_11275970_EX-10.5_Distributor Agreement::change_of_control",
+      "document_id": "ImineCorp_20180725_S-1_EX-10.5_11275970_EX-10.5_Distributor Agreement",
+      "clause_type": "change_of_control",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 3,
+      "document_chars": 34461,
+      "tier": 2
+    },
+    {
+      "case_id": "ImineCorp_20180725_S-1_EX-10.5_11275970_EX-10.5_Distributor Agreement::effective_date",
+      "document_id": "ImineCorp_20180725_S-1_EX-10.5_11275970_EX-10.5_Distributor Agreement",
+      "clause_type": "effective_date",
+      "present": true,
+      "gold_spans": [
+        [
+          22480,
+          22696
+        ]
+      ],
+      "length_quartile": 3,
+      "document_chars": 34461,
+      "tier": 1
+    },
+    {
+      "case_id": "ImineCorp_20180725_S-1_EX-10.5_11275970_EX-10.5_Distributor Agreement::parties",
+      "document_id": "ImineCorp_20180725_S-1_EX-10.5_11275970_EX-10.5_Distributor Agreement",
+      "clause_type": "parties",
+      "present": true,
+      "gold_spans": [
+        [
+          68,
+          79
+        ],
+        [
+          182,
+          199
+        ],
+        [
+          230,
+          234
+        ],
+        [
+          241,
+          258
+        ]
+      ],
+      "length_quartile": 3,
+      "document_chars": 34461,
+      "tier": 1
+    },
+    {
+      "case_id": "InnerscopeHearingTechnologiesInc_20181109_8-K_EX-10.6_11419704_EX-10.6_Distributor Agreement::parties",
+      "document_id": "InnerscopeHearingTechnologiesInc_20181109_8-K_EX-10.6_11419704_EX-10.6_Distributor Agreement",
+      "clause_type": "parties",
+      "present": true,
+      "gold_spans": [
+        [
+          132,
+          140
+        ],
+        [
+          132,
+          152
+        ],
+        [
+          237,
+          272
+        ],
+        [
+          276,
+          287
+        ]
+      ],
+      "length_quartile": 2,
+      "document_chars": 22396,
+      "tier": 1
+    },
+    {
+      "case_id": "LOGANSROADHOUSEINC_03_27_1998-EX-10.17-SPONSORSHIP AGREEMENT::governing_law",
+      "document_id": "LOGANSROADHOUSEINC_03_27_1998-EX-10.17-SPONSORSHIP AGREEMENT",
+      "clause_type": "governing_law",
+      "present": true,
+      "gold_spans": [
+        [
+          16601,
+          16695
+        ]
+      ],
+      "length_quartile": 2,
+      "document_chars": 19171,
+      "tier": 1
+    },
+    {
+      "case_id": "LeadersonlineInc_20000427_S-1A_EX-10.8_4991089_EX-10.8_Co-Branding Agreement::exclusivity",
+      "document_id": "LeadersonlineInc_20000427_S-1A_EX-10.8_4991089_EX-10.8_Co-Branding Agreement",
+      "clause_type": "exclusivity",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 3,
+      "document_chars": 55296,
+      "tier": 3
+    },
+    {
+      "case_id": "LeadersonlineInc_20000427_S-1A_EX-10.8_4991089_EX-10.8_Co-Branding Agreement::non_compete",
+      "document_id": "LeadersonlineInc_20000427_S-1A_EX-10.8_4991089_EX-10.8_Co-Branding Agreement",
+      "clause_type": "non_compete",
+      "present": true,
+      "gold_spans": [
+        [
+          45434,
+          45766
+        ]
+      ],
+      "length_quartile": 3,
+      "document_chars": 55296,
+      "tier": 3
+    },
+    {
+      "case_id": "LejuHoldingsLtd_20140121_DRS (on F-1)_EX-10.26_8473102_EX-10.26_Content License Agreement1::cap_on_liability",
+      "document_id": "LejuHoldingsLtd_20140121_DRS (on F-1)_EX-10.26_8473102_EX-10.26_Content License Agreement1",
+      "clause_type": "cap_on_liability",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 3,
+      "document_chars": 46696,
+      "tier": 3
+    },
+    {
+      "case_id": "LejuHoldingsLtd_20140121_DRS (on F-1)_EX-10.26_8473102_EX-10.26_Content License Agreement1::renewal_term",
+      "document_id": "LejuHoldingsLtd_20140121_DRS (on F-1)_EX-10.26_8473102_EX-10.26_Content License Agreement1",
+      "clause_type": "renewal_term",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 3,
+      "document_chars": 46696,
+      "tier": 2
+    },
+    {
+      "case_id": "LohaCompanyltd_20191209_F-1_EX-10.16_11917878_EX-10.16_Supply Agreement::expiration_date",
+      "document_id": "LohaCompanyltd_20191209_F-1_EX-10.16_11917878_EX-10.16_Supply Agreement",
+      "clause_type": "expiration_date",
+      "present": true,
+      "gold_spans": [
+        [
+          10985,
+          11049
+        ]
+      ],
+      "length_quartile": 1,
+      "document_chars": 11475,
+      "tier": 1
+    },
+    {
+      "case_id": "MACROGENICSINC_08_02_2013-EX-10-COLLABORATION AGREEMENT::exclusivity",
+      "document_id": "MACROGENICSINC_08_02_2013-EX-10-COLLABORATION AGREEMENT",
+      "clause_type": "exclusivity",
+      "present": true,
+      "gold_spans": [
+        [
+          83762,
+          84440
+        ],
+        [
+          88777,
+          88928
+        ]
+      ],
+      "length_quartile": 4,
+      "document_chars": 163199,
+      "tier": 3
+    },
+    {
+      "case_id": "MANAKOASERVICESCORP_11_21_2007-EX-7.5-STRATEGIC ALLIANCE AGREEMENT::effective_date",
+      "document_id": "MANAKOASERVICESCORP_11_21_2007-EX-7.5-STRATEGIC ALLIANCE AGREEMENT",
+      "clause_type": "effective_date",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 1,
+      "document_chars": 14879,
+      "tier": 1
+    },
+    {
+      "case_id": "MEETGROUP,INC_06_29_2017-EX-10.1-COOPERATION AGREEMENT::notice_period_to_terminate_renewal",
+      "document_id": "MEETGROUP,INC_06_29_2017-EX-10.1-COOPERATION AGREEMENT",
+      "clause_type": "notice_period_to_terminate_renewal",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 3,
+      "document_chars": 59532,
+      "tier": 2
+    },
+    {
+      "case_id": "MSCIINC_02_28_2008-EX-10.10-::cap_on_liability",
+      "document_id": "MSCIINC_02_28_2008-EX-10.10-",
+      "clause_type": "cap_on_liability",
+      "present": true,
+      "gold_spans": [
+        [
+          4363,
+          4873
+        ],
+        [
+          4881,
+          5137
+        ],
+        [
+          5149,
+          5374
+        ],
+        [
+          5382,
+          5776
+        ],
+        [
+          5777,
+          6160
+        ]
+      ],
+      "length_quartile": 1,
+      "document_chars": 11770,
+      "tier": 3
+    },
+    {
+      "case_id": "NATIONALPROCESSINGINC_07_18_1996-EX-10.4-SPONSORSHIP AGREEMENT::notice_period_to_terminate_renewal",
+      "document_id": "NATIONALPROCESSINGINC_07_18_1996-EX-10.4-SPONSORSHIP AGREEMENT",
+      "clause_type": "notice_period_to_terminate_renewal",
+      "present": true,
+      "gold_spans": [
+        [
+          21374,
+          21561
+        ]
+      ],
+      "length_quartile": 2,
+      "document_chars": 32860,
+      "tier": 2
+    },
+    {
+      "case_id": "NICELTD_06_26_2003-EX-4.5-OUTSOURCING AGREEMENT::renewal_term",
+      "document_id": "NICELTD_06_26_2003-EX-4.5-OUTSOURCING AGREEMENT",
+      "clause_type": "renewal_term",
+      "present": true,
+      "gold_spans": [
+        [
+          125352,
+          125679
+        ]
+      ],
+      "length_quartile": 4,
+      "document_chars": 148163,
+      "tier": 2
+    },
+    {
+      "case_id": "NUVEEN - REMARKETING AGREEMENT::anti_assignment",
+      "document_id": "NUVEEN - REMARKETING AGREEMENT",
+      "clause_type": "anti_assignment",
+      "present": true,
+      "gold_spans": [
+        [
+          47115,
+          47303
+        ],
+        [
+          47304,
+          47465
+        ]
+      ],
+      "length_quartile": 4,
+      "document_chars": 70631,
+      "tier": 2
+    },
+    {
+      "case_id": "NeuroboPharmaceuticalsInc_20190903_S-4_EX-10.36_11802165_EX-10.36_Manufacturing Agreement_ Supply Agreement::anti_assignment",
+      "document_id": "NeuroboPharmaceuticalsInc_20190903_S-4_EX-10.36_11802165_EX-10.36_Manufacturing Agreement_ Supply Agreement",
+      "clause_type": "anti_assignment",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 2,
+      "document_chars": 20000,
+      "tier": 2
+    },
+    {
+      "case_id": "NlsPharmaceuticsLtd_20200228_F-1_EX-10.14_12029046_EX-10.14_Development Agreement::change_of_control",
+      "document_id": "NlsPharmaceuticsLtd_20200228_F-1_EX-10.14_12029046_EX-10.14_Development Agreement",
+      "clause_type": "change_of_control",
+      "present": true,
+      "gold_spans": [
+        [
+          54887,
+          55067
+        ],
+        [
+          55068,
+          55164
+        ]
+      ],
+      "length_quartile": 4,
+      "document_chars": 67932,
+      "tier": 2
+    },
+    {
+      "case_id": "NlsPharmaceuticsLtd_20200228_F-1_EX-10.14_12029046_EX-10.14_Development Agreement::exclusivity",
+      "document_id": "NlsPharmaceuticsLtd_20200228_F-1_EX-10.14_12029046_EX-10.14_Development Agreement",
+      "clause_type": "exclusivity",
+      "present": true,
+      "gold_spans": [
+        [
+          11351,
+          12662
+        ],
+        [
+          27760,
+          27898
+        ]
+      ],
+      "length_quartile": 4,
+      "document_chars": 67932,
+      "tier": 3
+    },
+    {
+      "case_id": "NlsPharmaceuticsLtd_20200228_F-1_EX-10.14_12029046_EX-10.14_Development Agreement::renewal_term",
+      "document_id": "NlsPharmaceuticsLtd_20200228_F-1_EX-10.14_12029046_EX-10.14_Development Agreement",
+      "clause_type": "renewal_term",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 4,
+      "document_chars": 67932,
+      "tier": 2
+    },
+    {
+      "case_id": "NmfSlfIInc_20200115_10-12GA_EX-10.5_11946987_EX-10.5_Trademark License Agreement::anti_assignment",
+      "document_id": "NmfSlfIInc_20200115_10-12GA_EX-10.5_11946987_EX-10.5_Trademark License Agreement",
+      "clause_type": "anti_assignment",
+      "present": true,
+      "gold_spans": [
+        [
+          3998,
+          4027
+        ],
+        [
+          10541,
+          10575
+        ],
+        [
+          10862,
+          11085
+        ],
+        [
+          12441,
+          12756
+        ],
+        [
+          12840,
+          12929
+        ]
+      ],
+      "length_quartile": 2,
+      "document_chars": 17064,
+      "tier": 2
+    },
+    {
+      "case_id": "NmfSlfIInc_20200115_10-12GA_EX-10.5_11946987_EX-10.5_Trademark License Agreement::effective_date",
+      "document_id": "NmfSlfIInc_20200115_10-12GA_EX-10.5_11946987_EX-10.5_Trademark License Agreement",
+      "clause_type": "effective_date",
+      "present": true,
+      "gold_spans": [
+        [
+          121,
+          130
+        ]
+      ],
+      "length_quartile": 2,
+      "document_chars": 17064,
+      "tier": 1
+    },
+    {
+      "case_id": "ParatekPharmaceuticalsInc_20170505_10-KA_EX-10.29_10323872_EX-10.29_Outsourcing Agreement::parties",
+      "document_id": "ParatekPharmaceuticalsInc_20170505_10-KA_EX-10.29_10323872_EX-10.29_Outsourcing Agreement",
+      "clause_type": "parties",
+      "present": true,
+      "gold_spans": [
+        [
+          270,
+          299
+        ],
+        [
+          306,
+          323
+        ],
+        [
+          1019,
+          1027
+        ],
+        [
+          6356,
+          6433
+        ]
+      ],
+      "length_quartile": 4,
+      "document_chars": 114893,
+      "tier": 1
+    },
+    {
+      "case_id": "PelicanDeliversInc_20200211_S-1_EX-10.3_11975895_EX-10.3_Development Agreement2::parties",
+      "document_id": "PelicanDeliversInc_20200211_S-1_EX-10.3_11975895_EX-10.3_Development Agreement2",
+      "clause_type": "parties",
+      "present": true,
+      "gold_spans": [
+        [
+          143,
+          187
+        ],
+        [
+          177,
+          186
+        ],
+        [
+          245,
+          251
+        ],
+        [
+          253,
+          274
+        ],
+        [
+          367,
+          468
+        ]
+      ],
+      "length_quartile": 2,
+      "document_chars": 32093,
+      "tier": 1
+    },
+    {
+      "case_id": "Quaker Chemical Corporation - NON COMPETITION AND NON SOLICITATION AGREEMENT::anti_assignment",
+      "document_id": "Quaker Chemical Corporation - NON COMPETITION AND NON SOLICITATION AGREEMENT",
+      "clause_type": "anti_assignment",
+      "present": true,
+      "gold_spans": [
+        [
+          12847,
+          13271
+        ]
+      ],
+      "length_quartile": 2,
+      "document_chars": 22700,
+      "tier": 2
+    },
+    {
+      "case_id": "QuantumGroupIncFl_20090120_8-K_EX-99.2_3672910_EX-99.2_Hosting Agreement::parties",
+      "document_id": "QuantumGroupIncFl_20090120_8-K_EX-99.2_3672910_EX-99.2_Hosting Agreement",
+      "clause_type": "parties",
+      "present": true,
+      "gold_spans": [
+        [
+          116,
+          159
+        ],
+        [
+          162,
+          165
+        ],
+        [
+          173,
+          195
+        ],
+        [
+          199,
+          207
+        ]
+      ],
+      "length_quartile": 4,
+      "document_chars": 116298,
+      "tier": 1
+    },
+    {
+      "case_id": "RUBIOSRESTAURANTSINC_03_31_2008-EX-10.75-SPONSORSHIP AGREEMENT::uncapped_liability",
+      "document_id": "RUBIOSRESTAURANTSINC_03_31_2008-EX-10.75-SPONSORSHIP AGREEMENT",
+      "clause_type": "uncapped_liability",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 3,
+      "document_chars": 37103,
+      "tier": 3
+    },
+    {
+      "case_id": "RaeSystemsInc_20001114_10-Q_EX-10.57_2631790_EX-10.57_Co-Branding Agreement::effective_date",
+      "document_id": "RaeSystemsInc_20001114_10-Q_EX-10.57_2631790_EX-10.57_Co-Branding Agreement",
+      "clause_type": "effective_date",
+      "present": true,
+      "gold_spans": [
+        [
+          148,
+          161
+        ]
+      ],
+      "length_quartile": 3,
+      "document_chars": 43179,
+      "tier": 1
+    },
+    {
+      "case_id": "ReedsInc_20191113_10-Q_EX-10.4_11888303_EX-10.4_Development Agreement::effective_date",
+      "document_id": "ReedsInc_20191113_10-Q_EX-10.4_11888303_EX-10.4_Development Agreement",
+      "clause_type": "effective_date",
+      "present": true,
+      "gold_spans": [
+        [
+          261,
+          277
+        ]
+      ],
+      "length_quartile": 2,
+      "document_chars": 28331,
+      "tier": 1
+    },
+    {
+      "case_id": "ReedsInc_20191113_10-Q_EX-10.4_11888303_EX-10.4_Development Agreement::notice_period_to_terminate_renewal",
+      "document_id": "ReedsInc_20191113_10-Q_EX-10.4_11888303_EX-10.4_Development Agreement",
+      "clause_type": "notice_period_to_terminate_renewal",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 2,
+      "document_chars": 28331,
+      "tier": 2
+    },
+    {
+      "case_id": "ReedsInc_20191113_10-Q_EX-10.4_11888303_EX-10.4_Development Agreement::renewal_term",
+      "document_id": "ReedsInc_20191113_10-Q_EX-10.4_11888303_EX-10.4_Development Agreement",
+      "clause_type": "renewal_term",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 2,
+      "document_chars": 28331,
+      "tier": 2
+    },
+    {
+      "case_id": "Reinsurance Group of America, Incorporated - A_R REMARKETING  AGREEMENT::anti_assignment",
+      "document_id": "Reinsurance Group of America, Incorporated - A_R REMARKETING  AGREEMENT",
+      "clause_type": "anti_assignment",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 4,
+      "document_chars": 102071,
+      "tier": 2
+    },
+    {
+      "case_id": "Reinsurance Group of America, Incorporated - A_R REMARKETING  AGREEMENT::governing_law",
+      "document_id": "Reinsurance Group of America, Incorporated - A_R REMARKETING  AGREEMENT",
+      "clause_type": "governing_law",
+      "present": true,
+      "gold_spans": [
+        [
+          94171,
+          94276
+        ]
+      ],
+      "length_quartile": 4,
+      "document_chars": 102071,
+      "tier": 1
+    },
+    {
+      "case_id": "SEASPINEHOLDINGSCORP_10_10_2018-EX-10.1-SUPPLY AGREEMENT::non_compete",
+      "document_id": "SEASPINEHOLDINGSCORP_10_10_2018-EX-10.1-SUPPLY AGREEMENT",
+      "clause_type": "non_compete",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 4,
+      "document_chars": 70898,
+      "tier": 3
+    },
+    {
+      "case_id": "SIBANNAC,INC_12_04_2017-EX-2.1-Strategic Alliance Agreement::uncapped_liability",
+      "document_id": "SIBANNAC,INC_12_04_2017-EX-2.1-Strategic Alliance Agreement",
+      "clause_type": "uncapped_liability",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 1,
+      "document_chars": 8380,
+      "tier": 3
+    },
+    {
+      "case_id": "SPORTHALEYINC_09_29_1997-EX-10.2-10-ENDORSEMENT AGREEMENT::effective_date",
+      "document_id": "SPORTHALEYINC_09_29_1997-EX-10.2-10-ENDORSEMENT AGREEMENT",
+      "clause_type": "effective_date",
+      "present": true,
+      "gold_spans": [
+        [
+          89,
+          126
+        ]
+      ],
+      "length_quartile": 1,
+      "document_chars": 11930,
+      "tier": 1
+    },
+    {
+      "case_id": "SPORTHALEYINC_09_29_1997-EX-10.2-10-ENDORSEMENT AGREEMENT::governing_law",
+      "document_id": "SPORTHALEYINC_09_29_1997-EX-10.2-10-ENDORSEMENT AGREEMENT",
+      "clause_type": "governing_law",
+      "present": true,
+      "gold_spans": [
+        [
+          9909,
+          10094
+        ]
+      ],
+      "length_quartile": 1,
+      "document_chars": 11930,
+      "tier": 1
+    },
+    {
+      "case_id": "SPORTHALEYINC_09_29_1997-EX-10.2-10-ENDORSEMENT AGREEMENT::parties",
+      "document_id": "SPORTHALEYINC_09_29_1997-EX-10.2-10-ENDORSEMENT AGREEMENT",
+      "clause_type": "parties",
+      "present": true,
+      "gold_spans": [
+        [
+          101,
+          118
+        ],
+        [
+          144,
+          161
+        ],
+        [
+          193,
+          200
+        ],
+        [
+          259,
+          271
+        ]
+      ],
+      "length_quartile": 1,
+      "document_chars": 11930,
+      "tier": 1
+    },
+    {
+      "case_id": "SPORTHALEYINC_09_29_1997-EX-10.2-10-ENDORSEMENT AGREEMENT::uncapped_liability",
+      "document_id": "SPORTHALEYINC_09_29_1997-EX-10.2-10-ENDORSEMENT AGREEMENT",
+      "clause_type": "uncapped_liability",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 1,
+      "document_chars": 11930,
+      "tier": 3
+    },
+    {
+      "case_id": "SPRINGBANKPHARMACEUTICALS,INC_04_08_2020-EX-99.A-JOINT FILING AGREEMENT::cap_on_liability",
+      "document_id": "SPRINGBANKPHARMACEUTICALS,INC_04_08_2020-EX-99.A-JOINT FILING AGREEMENT",
+      "clause_type": "cap_on_liability",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 1,
+      "document_chars": 1556,
+      "tier": 3
+    },
+    {
+      "case_id": "ScansourceInc_20190509_10-Q_EX-10.2_11661422_EX-10.2_Distributor Agreement::notice_period_to_terminate_renewal",
+      "document_id": "ScansourceInc_20190509_10-Q_EX-10.2_11661422_EX-10.2_Distributor Agreement",
+      "clause_type": "notice_period_to_terminate_renewal",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 1,
+      "document_chars": 14149,
+      "tier": 2
+    },
+    {
+      "case_id": "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor Agreement1::expiration_date",
+      "document_id": "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor Agreement1",
+      "clause_type": "expiration_date",
+      "present": true,
+      "gold_spans": [
+        [
+          35436,
+          35636
+        ]
+      ],
+      "length_quartile": 4,
+      "document_chars": 84384,
+      "tier": 1
+    },
+    {
+      "case_id": "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor Agreement1::renewal_term",
+      "document_id": "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor Agreement1",
+      "clause_type": "renewal_term",
+      "present": true,
+      "gold_spans": [
+        [
+          35637,
+          36041
+        ]
+      ],
+      "length_quartile": 4,
+      "document_chars": 84384,
+      "tier": 2
+    },
+    {
+      "case_id": "ScansourceInc_20190822_10-K_EX-10.39_11793959_EX-10.39_Distributor Agreement::exclusivity",
+      "document_id": "ScansourceInc_20190822_10-K_EX-10.39_11793959_EX-10.39_Distributor Agreement",
+      "clause_type": "exclusivity",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 1,
+      "document_chars": 10891,
+      "tier": 3
+    },
+    {
+      "case_id": "SightLife Surgical, Inc. - STRATEGIC SALES _ MARKETING AGREEMENT::expiration_date",
+      "document_id": "SightLife Surgical, Inc. - STRATEGIC SALES _ MARKETING AGREEMENT",
+      "clause_type": "expiration_date",
+      "present": true,
+      "gold_spans": [
+        [
+          2260,
+          2454
+        ],
+        [
+          23291,
+          23547
+        ]
+      ],
+      "length_quartile": 2,
+      "document_chars": 23895,
+      "tier": 1
+    },
+    {
+      "case_id": "SightLife Surgical, Inc. - STRATEGIC SALES _ MARKETING AGREEMENT::renewal_term",
+      "document_id": "SightLife Surgical, Inc. - STRATEGIC SALES _ MARKETING AGREEMENT",
+      "clause_type": "renewal_term",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 2,
+      "document_chars": 23895,
+      "tier": 2
+    },
+    {
+      "case_id": "SightLife Surgical, Inc. - STRATEGIC SALES _ MARKETING AGREEMENT::uncapped_liability",
+      "document_id": "SightLife Surgical, Inc. - STRATEGIC SALES _ MARKETING AGREEMENT",
+      "clause_type": "uncapped_liability",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 2,
+      "document_chars": 23895,
+      "tier": 3
+    },
+    {
+      "case_id": "StaarSurgicalCompany_20180801_10-Q_EX-10.37_11289449_EX-10.37_Distributor Agreement::change_of_control",
+      "document_id": "StaarSurgicalCompany_20180801_10-Q_EX-10.37_11289449_EX-10.37_Distributor Agreement",
+      "clause_type": "change_of_control",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 3,
+      "document_chars": 49760,
+      "tier": 2
+    },
+    {
+      "case_id": "StaarSurgicalCompany_20180801_10-Q_EX-10.37_11289449_EX-10.37_Distributor Agreement::effective_date",
+      "document_id": "StaarSurgicalCompany_20180801_10-Q_EX-10.37_11289449_EX-10.37_Distributor Agreement",
+      "clause_type": "effective_date",
+      "present": true,
+      "gold_spans": [
+        [
+          130,
+          142
+        ]
+      ],
+      "length_quartile": 3,
+      "document_chars": 49760,
+      "tier": 1
+    },
+    {
+      "case_id": "StaarSurgicalCompany_20180801_10-Q_EX-10.37_11289449_EX-10.37_Distributor Agreement::renewal_term",
+      "document_id": "StaarSurgicalCompany_20180801_10-Q_EX-10.37_11289449_EX-10.37_Distributor Agreement",
+      "clause_type": "renewal_term",
+      "present": true,
+      "gold_spans": [
+        [
+          6771,
+          7218
+        ]
+      ],
+      "length_quartile": 3,
+      "document_chars": 49760,
+      "tier": 2
+    },
+    {
+      "case_id": "TELEGLOBEINTERNATIONALHOLDINGSLTD_03_29_2004-EX-10.10-CONSTRUCTION AND MAINTENANCE AGREEMENT::exclusivity",
+      "document_id": "TELEGLOBEINTERNATIONALHOLDINGSLTD_03_29_2004-EX-10.10-CONSTRUCTION AND MAINTENANCE AGREEMENT",
+      "clause_type": "exclusivity",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 4,
+      "document_chars": 94266,
+      "tier": 3
+    },
+    {
+      "case_id": "TELEGLOBEINTERNATIONALHOLDINGSLTD_03_29_2004-EX-10.10-CONSTRUCTION AND MAINTENANCE AGREEMENT::expiration_date",
+      "document_id": "TELEGLOBEINTERNATIONALHOLDINGSLTD_03_29_2004-EX-10.10-CONSTRUCTION AND MAINTENANCE AGREEMENT",
+      "clause_type": "expiration_date",
+      "present": true,
+      "gold_spans": [
+        [
+          68953,
+          69253
+        ]
+      ],
+      "length_quartile": 4,
+      "document_chars": 94266,
+      "tier": 1
+    },
+    {
+      "case_id": "TELEGLOBEINTERNATIONALHOLDINGSLTD_03_29_2004-EX-10.10-CONSTRUCTION AND MAINTENANCE AGREEMENT::uncapped_liability",
+      "document_id": "TELEGLOBEINTERNATIONALHOLDINGSLTD_03_29_2004-EX-10.10-CONSTRUCTION AND MAINTENANCE AGREEMENT",
+      "clause_type": "uncapped_liability",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 4,
+      "document_chars": 94266,
+      "tier": 3
+    },
+    {
+      "case_id": "TheglobeComInc_19990503_S-1A_EX-10.20_5416126_EX-10.20_Co-Branding Agreement::anti_assignment",
+      "document_id": "TheglobeComInc_19990503_S-1A_EX-10.20_5416126_EX-10.20_Co-Branding Agreement",
+      "clause_type": "anti_assignment",
+      "present": true,
+      "gold_spans": [
+        [
+          28085,
+          28430
+        ]
+      ],
+      "length_quartile": 3,
+      "document_chars": 48004,
+      "tier": 2
+    },
+    {
+      "case_id": "TheglobeComInc_19990503_S-1A_EX-10.20_5416126_EX-10.20_Co-Branding Agreement::expiration_date",
+      "document_id": "TheglobeComInc_19990503_S-1A_EX-10.20_5416126_EX-10.20_Co-Branding Agreement",
+      "clause_type": "expiration_date",
+      "present": true,
+      "gold_spans": [
+        [
+          1524,
+          1607
+        ],
+        [
+          19589,
+          19714
+        ]
+      ],
+      "length_quartile": 3,
+      "document_chars": 48004,
+      "tier": 1
+    },
+    {
+      "case_id": "TheglobeComInc_19990503_S-1A_EX-10.20_5416126_EX-10.20_Co-Branding Agreement::governing_law",
+      "document_id": "TheglobeComInc_19990503_S-1A_EX-10.20_5416126_EX-10.20_Co-Branding Agreement",
+      "clause_type": "governing_law",
+      "present": true,
+      "gold_spans": [
+        [
+          26931,
+          27262
+        ]
+      ],
+      "length_quartile": 3,
+      "document_chars": 48004,
+      "tier": 1
+    },
+    {
+      "case_id": "UnionDentalHoldingsInc_20050204_8-KA_EX-10_3345577_EX-10_Affiliate Agreement::governing_law",
+      "document_id": "UnionDentalHoldingsInc_20050204_8-KA_EX-10_3345577_EX-10_Affiliate Agreement",
+      "clause_type": "governing_law",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 1,
+      "document_chars": 14083,
+      "tier": 1
+    },
+    {
+      "case_id": "UnionDentalHoldingsInc_20050204_8-KA_EX-10_3345577_EX-10_Affiliate Agreement::parties",
+      "document_id": "UnionDentalHoldingsInc_20050204_8-KA_EX-10_3345577_EX-10_Affiliate Agreement",
+      "clause_type": "parties",
+      "present": true,
+      "gold_spans": [
+        [
+          240,
+          259
+        ],
+        [
+          266,
+          284
+        ],
+        [
+          291,
+          309
+        ],
+        [
+          337,
+          340
+        ],
+        [
+          345,
+          465
+        ]
+      ],
+      "length_quartile": 1,
+      "document_chars": 14083,
+      "tier": 1
+    },
+    {
+      "case_id": "UsioInc_20040428_SB-2_EX-10.11_1723988_EX-10.11_Affiliate Agreement 2::expiration_date",
+      "document_id": "UsioInc_20040428_SB-2_EX-10.11_1723988_EX-10.11_Affiliate Agreement 2",
+      "clause_type": "expiration_date",
+      "present": true,
+      "gold_spans": [
+        [
+          15857,
+          16120
+        ]
+      ],
+      "length_quartile": 2,
+      "document_chars": 26115,
+      "tier": 1
+    },
+    {
+      "case_id": "VALENCETECHNOLOGYINC_02_14_2003-EX-10-JOINT VENTURE CONTRACT::governing_law",
+      "document_id": "VALENCETECHNOLOGYINC_02_14_2003-EX-10-JOINT VENTURE CONTRACT",
+      "clause_type": "governing_law",
+      "present": true,
+      "gold_spans": [
+        [
+          67710,
+          67907
+        ]
+      ],
+      "length_quartile": 4,
+      "document_chars": 73698,
+      "tier": 1
+    },
+    {
+      "case_id": "VAPOTHERM, INC. - Manufacturing and Supply Agreement::anti_assignment",
+      "document_id": "VAPOTHERM, INC. - Manufacturing and Supply Agreement",
+      "clause_type": "anti_assignment",
+      "present": true,
+      "gold_spans": [
+        [
+          70114,
+          70535
+        ]
+      ],
+      "length_quartile": 4,
+      "document_chars": 75632,
+      "tier": 2
+    },
+    {
+      "case_id": "VAPOTHERM, INC. - Manufacturing and Supply Agreement::effective_date",
+      "document_id": "VAPOTHERM, INC. - Manufacturing and Supply Agreement",
+      "clause_type": "effective_date",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 4,
+      "document_chars": 75632,
+      "tier": 1
+    },
+    {
+      "case_id": "VAPOTHERM, INC. - Manufacturing and Supply Agreement::non_compete",
+      "document_id": "VAPOTHERM, INC. - Manufacturing and Supply Agreement",
+      "clause_type": "non_compete",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 4,
+      "document_chars": 75632,
+      "tier": 3
+    },
+    {
+      "case_id": "VERICELCORP_08_06_2019-EX-10.10-SUPPLY AGREEMENT::change_of_control",
+      "document_id": "VERICELCORP_08_06_2019-EX-10.10-SUPPLY AGREEMENT",
+      "clause_type": "change_of_control",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 4,
+      "document_chars": 102006,
+      "tier": 2
+    },
+    {
+      "case_id": "VERICELCORP_08_06_2019-EX-10.10-SUPPLY AGREEMENT::notice_period_to_terminate_renewal",
+      "document_id": "VERICELCORP_08_06_2019-EX-10.10-SUPPLY AGREEMENT",
+      "clause_type": "notice_period_to_terminate_renewal",
+      "present": true,
+      "gold_spans": [
+        [
+          77094,
+          77736
+        ]
+      ],
+      "length_quartile": 4,
+      "document_chars": 102006,
+      "tier": 2
+    },
+    {
+      "case_id": "VIRTUALSCOPICS,INC_11_12_2010-EX-10.1-STRATEGIC ALLIANCE AGREEMENT::expiration_date",
+      "document_id": "VIRTUALSCOPICS,INC_11_12_2010-EX-10.1-STRATEGIC ALLIANCE AGREEMENT",
+      "clause_type": "expiration_date",
+      "present": true,
+      "gold_spans": [
+        [
+          1861,
+          2062
+        ]
+      ],
+      "length_quartile": 3,
+      "document_chars": 46057,
+      "tier": 1
+    },
+    {
+      "case_id": "VIRTUALSCOPICS,INC_11_12_2010-EX-10.1-STRATEGIC ALLIANCE AGREEMENT::uncapped_liability",
+      "document_id": "VIRTUALSCOPICS,INC_11_12_2010-EX-10.1-STRATEGIC ALLIANCE AGREEMENT",
+      "clause_type": "uncapped_liability",
+      "present": true,
+      "gold_spans": [
+        [
+          33252,
+          33582
+        ]
+      ],
+      "length_quartile": 3,
+      "document_chars": 46057,
+      "tier": 3
+    },
+    {
+      "case_id": "VirtuosoSurgicalInc_20191227_1-A_EX1A-6 MAT CTRCT_11933379_EX1A-6 MAT CTRCT_License Agreement::anti_assignment",
+      "document_id": "VirtuosoSurgicalInc_20191227_1-A_EX1A-6 MAT CTRCT_11933379_EX1A-6 MAT CTRCT_License Agreement",
+      "clause_type": "anti_assignment",
+      "present": true,
+      "gold_spans": [
+        [
+          4536,
+          4663
+        ],
+        [
+          14426,
+          14844
+        ]
+      ],
+      "length_quartile": 3,
+      "document_chars": 35902,
+      "tier": 2
+    },
+    {
+      "case_id": "VirtuosoSurgicalInc_20191227_1-A_EX1A-6 MAT CTRCT_11933379_EX1A-6 MAT CTRCT_License Agreement::cap_on_liability",
+      "document_id": "VirtuosoSurgicalInc_20191227_1-A_EX1A-6 MAT CTRCT_11933379_EX1A-6 MAT CTRCT_License Agreement",
+      "clause_type": "cap_on_liability",
+      "present": true,
+      "gold_spans": [
+        [
+          17352,
+          17861
+        ]
+      ],
+      "length_quartile": 3,
+      "document_chars": 35902,
+      "tier": 3
+    },
+    {
+      "case_id": "VirtuosoSurgicalInc_20191227_1-A_EX1A-6 MAT CTRCT_11933379_EX1A-6 MAT CTRCT_License Agreement::governing_law",
+      "document_id": "VirtuosoSurgicalInc_20191227_1-A_EX1A-6 MAT CTRCT_11933379_EX1A-6 MAT CTRCT_License Agreement",
+      "clause_type": "governing_law",
+      "present": true,
+      "gold_spans": [
+        [
+          22414,
+          22727
+        ]
+      ],
+      "length_quartile": 3,
+      "document_chars": 35902,
+      "tier": 1
+    },
+    {
+      "case_id": "WOMENSGOLFUNLIMITEDINC_03_29_2000-EX-10.13-ENDORSEMENT AGREEMENT::uncapped_liability",
+      "document_id": "WOMENSGOLFUNLIMITEDINC_03_29_2000-EX-10.13-ENDORSEMENT AGREEMENT",
+      "clause_type": "uncapped_liability",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 2,
+      "document_chars": 32371,
+      "tier": 3
+    },
+    {
+      "case_id": "WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content License Agreement::change_of_control",
+      "document_id": "WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content License Agreement",
+      "clause_type": "change_of_control",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 1,
+      "document_chars": 14993,
+      "tier": 2
+    },
+    {
+      "case_id": "WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content License Agreement::non_compete",
+      "document_id": "WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content License Agreement",
+      "clause_type": "non_compete",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 1,
+      "document_chars": 14993,
+      "tier": 3
+    },
+    {
+      "case_id": "WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content License Agreement::renewal_term",
+      "document_id": "WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content License Agreement",
+      "clause_type": "renewal_term",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 1,
+      "document_chars": 14993,
+      "tier": 2
+    },
+    {
+      "case_id": "WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply Agreement::uncapped_liability",
+      "document_id": "WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply Agreement",
+      "clause_type": "uncapped_liability",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 4,
+      "document_chars": 82898,
+      "tier": 3
+    },
+    {
+      "case_id": "XYBERNAUTCORP_07_12_2002-EX-4-SPONSORSHIP AGREEMENT::uncapped_liability",
+      "document_id": "XYBERNAUTCORP_07_12_2002-EX-4-SPONSORSHIP AGREEMENT",
+      "clause_type": "uncapped_liability",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 3,
+      "document_chars": 48489,
+      "tier": 3
+    },
+    {
+      "case_id": "ZONDWINDSYSTEMPARTNERSLTDSERIES85-B_04_03_2006-EX-10-MANAGEMENT AND MAINTENANCE AGREEMENT::cap_on_liability",
+      "document_id": "ZONDWINDSYSTEMPARTNERSLTDSERIES85-B_04_03_2006-EX-10-MANAGEMENT AND MAINTENANCE AGREEMENT",
+      "clause_type": "cap_on_liability",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 2,
+      "document_chars": 17712,
+      "tier": 3
+    },
+    {
+      "case_id": "ZONDWINDSYSTEMPARTNERSLTDSERIES85-B_04_03_2006-EX-10-MANAGEMENT AND MAINTENANCE AGREEMENT::exclusivity",
+      "document_id": "ZONDWINDSYSTEMPARTNERSLTDSERIES85-B_04_03_2006-EX-10-MANAGEMENT AND MAINTENANCE AGREEMENT",
+      "clause_type": "exclusivity",
+      "present": false,
+      "gold_spans": [],
+      "length_quartile": 2,
+      "document_chars": 17712,
+      "tier": 3
+    }
+  ]
+}
