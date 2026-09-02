@@ -3,6 +3,7 @@
     uv run python -m docintel.cli index  --split dev --limit 20
     uv run python -m docintel.cli search "who are the parties to this agreement"
     uv run python -m docintel.cli search "liability cap" --arm lexical --no-rerank
+    uv run python -m docintel.cli extract --split dev --limit 10
 
 ``search`` prints the per-retriever ranks alongside each hit, because the
 interesting question about hybrid retrieval is which arm found a chunk, and that
@@ -18,7 +19,9 @@ from collections.abc import Sequence
 from pathlib import Path
 from typing import Any, Protocol
 
+from docintel.agent.loop import DEFAULT_MODEL, AgentBudget
 from docintel.config import get_settings
+from docintel.extract import extract_document
 from docintel.ingest.chunker import ChunkingConfig, TiktokenCounter, chunk_document
 from docintel.ingest.index import create_tables, create_vector_index, index_document
 from docintel.ingest.loader import iter_documents, load_split
@@ -170,6 +173,106 @@ def command_search(args: argparse.Namespace) -> int:
     return 0
 
 
+def command_extract(args: argparse.Namespace) -> int:
+    """Run the full pipeline over indexed contracts."""
+    import anthropic
+
+    settings = get_settings()
+    embedder = _build_embedder(args.fake_embeddings, settings.retrieval.embedding_dim)
+
+    client = anthropic.Anthropic()
+    # Construction never fails on missing credentials -- the SDK resolves them
+    # lazily and raises on the first request. Without this check the run would
+    # iterate every document and produce one identical auth error per contract.
+    if not (getattr(client, "api_key", None) or getattr(client, "auth_token", None)):
+        print("no Anthropic credentials found.", file=sys.stderr)
+        print(
+            "Set ANTHROPIC_API_KEY, or run `ant auth login` to store a profile "
+            "that the SDK picks up automatically.",
+            file=sys.stderr,
+        )
+        return 2
+
+    document_ids: set[str] | None = None
+    if args.split:
+        document_ids = load_split(args.split_file, args.split)
+
+    connection = _connect(str(settings.database_url))
+    budget = AgentBudget(
+        max_turns=args.max_turns,
+        max_cost_usd=args.max_cost,
+        timeout_s=args.timeout,
+    )
+
+    totals = {"documents": 0, "reviewed": 0, "spans": 0, "ungrounded": 0}
+    spend = 0.0
+
+    try:
+        retriever = HybridRetriever(
+            connection=connection,
+            embedder=embedder,
+            candidates_per_retriever=settings.retrieval.candidates_per_retriever,
+            rrf_k=settings.retrieval.rrf_k,
+        )
+
+        for document in iter_documents(args.cuad_dir, document_ids):
+            if args.limit and totals["documents"] >= args.limit:
+                break
+            if spend >= args.budget:
+                print(f"stopping: spent ${spend:.4f} of ${args.budget:.2f}", flush=True)
+                break
+
+            # Retrieval is scoped to this document, so the agent cannot cite a
+            # clause from a different contract.
+            def search(query: str, top_k: int, _doc_id: str = document.document_id) -> list[Any]:
+                return retriever.search(query, top_k=top_k, document_ids=[_doc_id])
+
+            outcome = extract_document(
+                client=client,
+                document=document,
+                search=search,
+                budget=budget,
+                model=args.model,
+            )
+            result = outcome.result
+            spend += result.usage.cost_usd
+            totals["documents"] += 1
+            totals["reviewed"] += int(result.needs_review)
+            totals["spans"] += outcome.grounding.total
+            totals["ungrounded"] += len(outcome.grounding.ungrounded)
+
+            present = [c for c in result.clauses if c.present]
+            flag = "REVIEW" if result.needs_review else "ok"
+            print(
+                f"[{flag:>6}] {document.document_id[:58]:<58} "
+                f"{len(present):>2}/12 present  "
+                f"{result.turns_used:>2} turns  "
+                f"${result.usage.cost_usd:.4f}  "
+                f"{result.latency_ms.get('total', 0) / 1000:.1f}s",
+                flush=True,
+            )
+            if outcome.review is not None:
+                for reason in outcome.review.reasons:
+                    print(f"           - {reason}", flush=True)
+            for violation in result.errors[:3]:
+                print(f"           ! {violation.rule_id}: {violation.message}", flush=True)
+    finally:
+        connection.close()
+
+    if not totals["documents"]:
+        print("no documents processed", file=sys.stderr)
+        return 1
+
+    rate = totals["ungrounded"] / totals["spans"] if totals["spans"] else 0.0
+    print(
+        f"\n{totals['documents']} documents | "
+        f"{totals['reviewed']} routed to review | "
+        f"grounding violations {totals['ungrounded']}/{totals['spans']} ({rate:.2%}) | "
+        f"total ${spend:.4f} (${spend / totals['documents']:.4f}/doc)"
+    )
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="docintel", description=__doc__)
     parser.add_argument(
@@ -202,6 +305,25 @@ def build_parser() -> argparse.ArgumentParser:
         help="Apply the cross-encoder. --no-rerank for the ablation arm.",
     )
     searcher.set_defaults(handler=command_search)
+
+    extractor = subparsers.add_parser(
+        "extract", help="Run the full extraction pipeline over indexed contracts."
+    )
+    extractor.add_argument("--cuad-dir", type=Path, default=DEFAULT_CUAD_DIR)
+    extractor.add_argument("--split-file", type=Path, default=DEFAULT_SPLIT)
+    extractor.add_argument("--split", choices=["dev", "golden", "reserve"], default="dev")
+    extractor.add_argument("--limit", type=int, default=10)
+    extractor.add_argument("--model", default=DEFAULT_MODEL)
+    extractor.add_argument("--max-turns", type=int, default=12)
+    extractor.add_argument("--max-cost", type=float, default=0.50, help="Per document.")
+    extractor.add_argument("--timeout", type=float, default=180.0, help="Per document.")
+    extractor.add_argument(
+        "--budget",
+        type=float,
+        default=2.00,
+        help="Hard ceiling for the whole run, in USD. Stops before exceeding it.",
+    )
+    extractor.set_defaults(handler=command_extract)
 
     return parser
 
