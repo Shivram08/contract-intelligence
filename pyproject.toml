@@ -98,6 +98,14 @@ show_error_codes = true
 module = ["matplotlib.*", "pgvector.*", "testcontainers.*", "tiktoken.*"]
 ignore_missing_imports = true
 
+[[tool.mypy.overrides]]
+# Optional `models` extra. CI type-checks without installing 1.5 GB of torch, so
+# these must resolve as Any rather than as a missing import -- otherwise mypy
+# passes locally (where the extra is installed) and fails in CI, which is the
+# worst way round.
+module = ["sentence_transformers.*", "torch.*"]
+ignore_missing_imports = true
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 # scripts/ is not a package; audit_data is imported directly by its unit tests.
