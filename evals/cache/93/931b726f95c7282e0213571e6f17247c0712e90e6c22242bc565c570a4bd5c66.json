@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "model": "claude-sonnet-5",
+    "turns_in_history": 7
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "EvoCCpABCBEYAipAB6iUWZs9F/U5IoIYLdUGdPXW9cmk3U5x94P86AXiB+zUZFig+cmVaEteQItYS5rX+GO7kGF84Mi+Ffp1trJugTIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAfay4tQGEgzWB40F5zYMGC6SSH8aDGUxqPhDEyv5OvFrsCIwthaN4PL8mWcPSrTTURyuKM4JU/8JVOltulzZBnG1Rj9HizQauUYKVzH4ITx2lPqsKpYBCuHHnRQORHUADyNntTLvzGy5l8PG47PakPuipREoynTrBjhZNe6q23SDzCMrO/U0aiM2RqmfPICgK40aQe2x/kPMYXxJfiCBV2YSddPgSgDoVVQH9tTZtIzLsLVzysbvsYUPqKIYdz80piIAkclxao/oGB71yVgDwaJPFXquNPfkI/oY1dbPNfvF/uCPsMqHg6Q7MEt9GAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01TJsqVDtrJHMnL3FodL81ZJ",
+        "input": {
+          "query": "exclusive agent for the promotion sales marketing"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01Bjfq5obyHfvREfCMkm9WKH",
+        "input": {
+          "char_end": 7000,
+          "char_start": 3000
+        },
+        "name": "read_span",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefM8gTdZvwUpNuswBBLy",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 5471
+      },
+      "cache_creation_input_tokens": 5471,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 179,
+      "output_tokens_details": {
+        "thinking_tokens": 44
+      },
+      "service_tier": "standard"
+    }
+  }
+}

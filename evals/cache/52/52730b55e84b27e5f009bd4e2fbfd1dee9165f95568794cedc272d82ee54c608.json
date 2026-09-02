@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "model": "claude-sonnet-5",
+    "turns_in_history": 23
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "ErYECpABCBEYAipAMXV0EEwDwhl9xHl3tFLIm3CNqNHlrxt0mXa2gMoNy+uvHsElr8cKbiefFDOosehyQyNfoUdxIhNEpleoR+sPEDIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAb204tQGEgykxmuLO9xWj37KIawaDGZ8FuAv0TNM6xt+4SIwLWqghxkxurpbi8i8P59cy5wGNuyXGT4BlYn4ehYTgsf/1iNIjCCa9e/l8pmqvzlWKtICV6dySDghkTME4Is2PfZXDZPnzd9M40p1af/7zB2SkC0ee0dlWdCz3/dwn7aaSRZnqO7epmKwiDQpmlqdx+tvqdllyNQMffVrC+7Pkoe6/e6QlS4DAk5BnUr0NTWx6xQyCUiZrRfC58zoQJeV0tHS+RPsHsnS9ekRZ5kDybdIBW4j7xrstIsEUk/VVNqh7/OPGlkMpAJaoG2UokgalA8jl58mTsvMRRn05/Bkl4Uihb/N+RnYJ8CcpKp3yrDe+dDUOn8UBBALWpy07frzeSBWyG11QspOpbphOK6MDGkzL4ePyDgicK2zivV1AOYARJNO3YtTHYmA/PDEthKC/NL5rhYBTF0jFZAbX4gBeC1WOeKZd4R2K/1q205kY0YbvBzY+6CUWK/sYG25QPgAcnu+so3L/AeakjtZKCbX/FX3ZGUNqP9CDGu61FJMwCuwo5dH2qkYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01F7CPaEdt9CcgwU7AP3Q4to",
+        "input": {
+          "query": "APPOINTMENT OF AGENT best efforts basis"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01J2DveR2MUDcJqcDkYS1BEZ",
+        "input": {
+          "query": "successors and assigns"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01RsPvpvhU3LY5ZLFnwAmYTX",
+        "input": {
+          "query": "indemnify and hold harmless"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01D6dh8LB7c9NCwo5nWP7Mxc",
+        "input": {
+          "query": "not compete"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_013cnzWZdPApojEq9FfcW9HJ",
+        "input": {
+          "query": "shall not be liable in excess of"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefMPGmmUuifsbRw7ziDj",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 3127
+      },
+      "cache_creation_input_tokens": 3127,
+      "cache_read_input_tokens": 15733,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 383,
+      "output_tokens_details": {
+        "thinking_tokens": 110
+      },
+      "service_tier": "standard"
+    }
+  }
+}

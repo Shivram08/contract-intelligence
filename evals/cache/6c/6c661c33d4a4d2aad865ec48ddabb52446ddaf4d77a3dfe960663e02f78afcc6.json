@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "model": "claude-sonnet-5",
+    "turns_in_history": 31
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "ErsFCpABCBEYAipAUqYZpCsh56xcJZz9FQX98y+fWN8RwvSTu/0da9GkH3ePU8OeZL52im3asAuBwmikiliv5283ssLuZND9S3OE8jIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAdC04tQGEgyy9da0ASqudSqKcigaDCTW40gqty71pgqnkiIwaIMOV/IsH8aBfQQ9y5+LPhx/wwkUg5vFQr6X4huEZTROVRhJVHPYmBL1Py4yORj5KtcDbc6cvMs0hzDBZMwdknbyma5/FnaICuUpHdquAf4EKyQ74LTL8nYOjd77/rp/kTYQQSdG48GgJwIb5nwJnr7SDwyR/y3gv1oDxszs/+spJR49O38+G81uPG/uuEBk+uRCDNBNDBcp0UQXXWeBO2BM9twigT6E/Lt6CPa7NNh52s67skQeqQa9xeyrG9MywrGLisA8ayxsgsIRewuepn1vrNQ8kKSHwR/69Odd2on+8gK9zu6RSRuwVCf7Dm+Rlms2ZCrSYv9UusUmqFpMxT2XHZ1Gq+/ogYoewZ1aioornsBtl3BMZvcszSdYGdBS7NoMXeQ9JkTFr4W1sX7xZSMe+wKpFlF9FryDh35sGBBuyTTLC3J04Jf8PTGX/vYUETBo8V3H09KQ88tPhbp6MI9CXnk4yBBjX0PvwS0MMTmJllB2JWVSydtjUyQl5DXeK76aGYRq0YHBQ2+yYXjcevpsZJQxFLR5pTMkN0t5uhu/Qhx3oh7rCAxYgjzTFmlKcXHOaKEWEEQJ0CaAso8PX6DdWoPUyfIRr0I3r3abJWxLXbe1v/yOMNk3dXxWrqOa1SrRdnjnbvrKEMHHpbVtpLwj3xtd3oQhGC/Gz0VTHLD+y2RJ4EnrMn3qGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01SxVaz3hFbV5EMnab1V75hK",
+        "input": {
+          "query": "merger consolidation sale of substantially all assets successor"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01M9etXKzUi9p9Uc1Zz9462J",
+        "input": {
+          "query": "Sandler O'Neill shall act as exclusive agent for the Company in connection with the Offerings"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01McjFrKNDWd8Azub6NHpbtL",
+        "input": {
+          "query": "no party may assign its rights or obligations"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01Q3iPhL4YJbAA59jpnHrZaX",
+        "input": {
+          "query": "liability of the agent shall not exceed"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01AGr8T325zj3BM5C5aGdkoz",
+        "input": {
+          "query": "Company agrees not to solicit or engage other agents during the term"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefMQdx1wB1ZBtNejGS3i",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 251
+      },
+      "cache_creation_input_tokens": 251,
+      "cache_read_input_tokens": 20194,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 462,
+      "output_tokens_details": {
+        "thinking_tokens": 146
+      },
+      "service_tier": "standard"
+    }
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "model": "claude-sonnet-5",
+    "turns_in_history": 15
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "Et8DCpABCBEYAipAZfmuG4DSqDpT/eMzP0vMws11dQJUA6bX49nSOvObN9W46phSJC/dCINAnWUsFuevTFK/w0Jcaw7NnxYOKLlqqjIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAfm14tQGEgwAn3SojZS4Fw0i6dwaDM8j4RP/3FritNV5QSIwZmUTJSbF8idyaepQGtpHoLise1u7B5sCMnsxX4O/VLhaTp+jZXpn2ftRV0Sd9Lc1KvsBCS556Hoep99H6XMs8dKyOM1gbBYet9hbifeKBkT8KS/b85TRbmnOlf+ZOutz8f74JMHE4DUToR5qe5C3UloaGlj3p0sX8D7CFs29Rb1zwZNDiSmHOPza7wG7q/udX0xVjxuKCtGYCAlT35mwWd8bW22+ioaNm3yvYs8vDexe1J6ILazcqANa8TvqmRh3BPjtGhZUB2LcL/nreT2F2dev7wz8Bsm7h5yAZYa8F+P7Bc9su3VanLiTB7A2UHEYzJrTG8SrPg5oCo+pIZOVrai97RgYr2E3tDfLl1/AwyLO6DXOCXbYyhKsdr9wPuOiZVD8Qp/iHASqcHJ466UYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01FAzyrJ4XgGCZKRBjrZ9ZZi",
+        "input": {
+          "query": "Section 2.01 Appointment; Exclusivity"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_011ZBUq7uaMWAZPM1vWgJhRR",
+        "input": {
+          "query": "Section 8.01 Effective Date of this Agreement"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01SMTH85MYPRxaxZ8vPm498Q",
+        "input": {
+          "query": "Section 8.02 Termination Prior to Initial Closing Date"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01SEPMrvWG5ZdqWpDW3eDmRm",
+        "input": {
+          "query": "liability shall not exceed limitation of liability"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_011FYrArwoDdwwZdo46VHemG",
+        "input": {
+          "query": "change of control assignment merger consolidation"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01Dab4zUdhdg89hZQ3FezGgY",
+        "input": {
+          "query": "non-compete competition restriction"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefMd6sqj5povaVARHMKB",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 1988
+      },
+      "cache_creation_input_tokens": 1988,
+      "cache_read_input_tokens": 13548,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 438,
+      "output_tokens_details": {
+        "thinking_tokens": 77
+      },
+      "service_tier": "standard"
+    }
+  }
+}

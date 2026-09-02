@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "model": "claude-sonnet-5",
+    "turns_in_history": 19
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "EuYICpABCBEYAipAgSXuki0dbTQxH7guIOzSEabNfAAynW6HnzlCyxFlXE0/j/uKnZFmmtMXF8ULsLcBlFHrUgq5qntWWZVYH6UiSjIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAYW24tQGEgyzsTzdgsjw5eofoesaDP757c9pOqiRTdkuACIws2njXQpZlOXC4SNx4QgCp6TFlMs/qtXXvNQMCwt07AhuV3rG0B3RGUIo5OLd8lU4KoIHz5zglsmReM9Rn6FOjrvOUrmuofRYbEDpUZaYDQ2NcKY7KOT8/c3pDdZWmzxTVBuaT9qPF1ePYRI0zyqe58p+QEe3lRvM9wUV3puXI/sSSpCGMxHjpKHcF4eYMK1l3JiNb2Ho1QYu/9bc2Ilw5aA3a+dRCSDwnCdmxzpHN8yRirlxsTWYOXh+eGnP5mWQEFnm9EDgW1Q6fbxihmmDntu9NoQRF+LqoYJpBloMeBDBiSh25pOu5rconWh481RpMhJ/NQ9A5MVgcM7zhumoQ1lBJMZXFTumqjYIT+4k7gWyVkag5JfH19UR19zgmwuT2xae0YBMF9HiGKLY1tRIndjlhKRlR5ztTt0suryoMFZMnm16jkwJRqnP4FTvxMt1R4XObqX4mz3xXdDF5nUrjDAymjKM/TOWXOGfDEvig6FOHIArLnCn1kG7ZuYJjoHK7x/jyt3LQppl2prC/3rHXyp81z6nYFjN+tepLFt/H1uNs6G8dMnZ7SAHWPycZUP3uQV4fP91fyuCLar2NY9uG5IZllyWrAUiAtdK7kMZYv8lQwVMIr2a9PBZs3+pq93hPHO7+tXPQJ/qDN7J4df1metgtw0DsQrLfdf9x/AGkjSa/YmhRd7eoHK6Ep0JGvJnPST9AiLvN2w4Sgu0W1hS14tj5c5MwiWE76RX+/hyZ+s30cTduEfc2eRmuqWyk/iEz+wfzNYrDYPx/IspxvqRnsg5gIzORfgQv83gOgT/Og9o2YrZTXAgoNLQ9xawJktOKTOEF/e1InQEKfU3OkiJDWupA1HqqhffTBg6R87h6d925gm3KrUNaYVixSon3XCw/qoGf0aJkldRJ4nhUavwfyVbOF4vB8p4Su7jHTwvy7gJUQ1u0gZvqomQmGxg9A6EbhCTnhqMfi12ly/pVg2ew/qSaYEEqyM5f1M6gmd7+0b1KD7O00GFWe0XHTgrrhVV6+iVtVlw2qIAQiTBz+OuxDUa/ANHH85PCZIaSmXgMugkAVetWtrFl6QckqAg+5fO0eoDUHt7oY8kMoMEVCkAkJxtetGVQNaZ/rcPGSz5KIHdFOygAMcDNhf0pCsTZbajGuCYU06t1bKTXeYGit+bkatpS0gVHpEN+NlI1fCEpvBcaoTsqCQfeoTDkZca91edE1sA6LVb9d9LajEX1083dZypHfek0AP0jQxfOmD1Kc8CdyV/+BgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_013y6tEX7F3miV42DHdHWXwq",
+        "input": {
+          "query": "exclusivity exclusive right to act as agent"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01AV6xksx88HG1XHXRt9Jm7V",
+        "input": {
+          "query": "Company appoints the Contractor as its exclusive agent"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01LbY3rXgkhFpaQfx4JNTRZo",
+        "input": {
+          "query": "indemnification limitation cap"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01UNxeqkWmXFaS9hoDFTjJ64",
+        "input": {
+          "query": "initial term shall continue in effect until"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_018kn1U3V7uWcLnopzT4Arvy",
+        "input": {
+          "query": "renewal automatically renew successive"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01Br6o5nf6n9DTx7ZynQnx5E",
+        "input": {
+          "query": "notice of termination days written notice"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefMdnZYYP1fDS4oYcE1f",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 232
+      },
+      "cache_creation_input_tokens": 232,
+      "cache_read_input_tokens": 16262,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 644,
+      "output_tokens_details": {
+        "thinking_tokens": 304
+      },
+      "service_tier": "standard"
+    }
+  }
+}

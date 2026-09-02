@@ -1,0 +1,44 @@
+{
+  "meta": {
+    "model": "claude-sonnet-5",
+    "turns_in_history": 33
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01LFbVgwWTcLpKW1LsL2yAgR",
+        "input": {},
+        "name": "get_schema",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefMR7PmLD15TcpzuDT7S",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 703
+      },
+      "cache_creation_input_tokens": 703,
+      "cache_read_input_tokens": 20445,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 1343,
+      "output_tokens_details": {
+        "thinking_tokens": 1314
+      },
+      "service_tier": "standard"
+    }
+  }
+}

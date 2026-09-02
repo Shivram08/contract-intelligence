@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "model": "claude-sonnet-5",
+    "turns_in_history": 23
+  },
+  "response": {
+    "content": [
+      {
+        "text": "I need to remove that empty evidence entry for anti_assignment.",
+        "type": "text"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01VFKXFV3ARYmhyC7yoDMGxz",
+        "input": {
+          "clauses": [
+            {
+              "clause_type": "governing_law",
+              "confidence": 0.93,
+              "evidence": [
+                {
+                  "char_end": 14010,
+                  "char_start": 13930,
+                  "quote": "This Agreement shall be interpreted under the                   laws of the State of Nevada."
+                }
+              ],
+              "present": true,
+              "raw_text": "This Agreement shall be interpreted under the laws of the State of Nevada.",
+              "value": "US-NV"
+            },
+            {
+              "clause_type": "parties",
+              "confidence": 0.9,
+              "evidence": [
+                {
+                  "char_end": 380,
+                  "char_start": 150,
+                  "quote": "Mutual Insurance Corporation of America, a Michigan insurance corporation (MICOA) and Stratton, Cheeseman & Walsh-Nevada, Inc., a Nevada corporation, (\"Agency\"), (sometimes commonly referred to as the Parties) agree as follows:"
+                }
+              ],
+              "present": true,
+              "raw_text": "Mutual Insurance Corporation of America, a Michigan insurance corporation (MICOA) and Stratton, Cheeseman & Walsh-Nevada, Inc., a Nevada corporation, (\"Agency\"), (sometimes commonly referred to as the Parties) agree as follows:",
+              "value": "Mutual Insurance Corporation of America (MICOA); Stratton, Cheeseman & Walsh-Nevada, Inc. (Agency)"
+            },
+            {
+              "clause_type": "effective_date",
+              "confidence": 0.9,
+              "evidence": [
+                {
+                  "char_end": 16650,
+                  "char_start": 16600,
+                  "quote": "Signed and effective this 25th day of May, 1999."
+                }
+              ],
+              "present": true,
+              "raw_text": "Signed and effective this 25th day of May, 1999.",
+              "value": "1999-05-25"
+            },
+            {
+              "clause_type": "expiration_date",
+              "confidence": 0.55,
+              "evidence": [
+                {
+                  "char_end": 9550,
+                  "char_start": 9200,
+                  "quote": "This Agreement shall terminate, subject to any automatic                   renewal or extension for one year as required by law, upon                   either party giving at least one hundred twenty (120) days                   advance written notice to the other, if not otherwise contrary                   to applicable law or this Agreement."
+                }
+              ],
+              "present": true,
+              "raw_text": "This Agreement shall terminate, subject to any automatic renewal or extension for one year as required by law, upon either party giving at least one hundred twenty (120) days advance written notice to the other, if not otherwise contrary to applicable law or this Agreement.",
+              "value": "PERPETUAL"
+            },
+            {
+              "clause_type": "renewal_term",
+              "confidence": 0.7,
+              "evidence": [
+                {
+                  "char_end": 9300,
+                  "char_start": 9230,
+                  "quote": "subject to any automatic                   renewal or extension for one year as required by law"
+                }
+              ],
+              "present": true,
+              "raw_text": "This Agreement shall terminate, subject to any automatic renewal or extension for one year as required by law, upon either party giving at least one hundred twenty (120) days advance written notice to the other, if not otherwise contrary to applicable law or this Agreement.",
+              "value": "365 recurring"
+            },
+            {
+              "clause_type": "notice_period_to_terminate_renewal",
+              "confidence": 0.85,
+              "evidence": [
+                {
+                  "char_end": 9400,
+                  "char_start": 9300,
+                  "quote": "upon                   either party giving at least one hundred twenty (120) days                   advance written notice to the other"
+                }
+              ],
+              "present": true,
+              "raw_text": "upon either party giving at least one hundred twenty (120) days advance written notice to the other",
+              "value": "120"
+            },
+            {
+              "clause_type": "change_of_control",
+              "confidence": 0.75,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "anti_assignment",
+              "confidence": 0.9,
+              "evidence": [
+                {
+                  "char_end": 15250,
+                  "char_start": 14980,
+                  "quote": "Assignment. MICOA may assign this Agreement to its parent,                   affiliate, or subsidiary corporations who are licensed                   insurers upon written notice to Agency. Agency may not assign                   this Agreement without the written permission of MICOA or its                   successors or assigns."
+                }
+              ],
+              "present": true,
+              "raw_text": "Assignment. MICOA may assign this Agreement to its parent, affiliate, or subsidiary corporations who are licensed insurers upon written notice to Agency. Agency may not assign this Agreement without the written permission of MICOA or its successors or assigns.",
+              "value": null
+            },
+            {
+              "clause_type": "cap_on_liability",
+              "confidence": 0.5,
+              "evidence": [
+                {
+                  "char_end": 15980,
+                  "char_start": 15900,
+                  "quote": "Neither MICOA nor the                            Agency shall be entitled to                            punitive and/or exemplary damages."
+                }
+              ],
+              "present": true,
+              "raw_text": "Neither MICOA nor the Agency shall be entitled to punitive and/or exemplary damages.",
+              "value": null
+            },
+            {
+              "clause_type": "uncapped_liability",
+              "confidence": 0.7,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "non_compete",
+              "confidence": 0.85,
+              "evidence": [
+                {
+                  "char_end": 7100,
+                  "char_start": 6800,
+                  "quote": "for a two-year period following                   the termination date, Agency will not directly or indirectly                   sell any professional liability insurance to any individuals                   or entities who were MICOA insureds in Nevada at the time of                   termination of this Agreement."
+                }
+              ],
+              "present": true,
+              "raw_text": "for a two-year period following the termination date, Agency will not directly or indirectly sell any professional liability insurance to any individuals or entities who were MICOA insureds in Nevada at the time of termination of this Agreement.",
+              "value": null
+            },
+            {
+              "clause_type": "exclusivity",
+              "confidence": 0.85,
+              "evidence": [
+                {
+                  "char_end": 1470,
+                  "char_start": 1180,
+                  "quote": "In return for the exclusive appointment of Agency by MICOA to                   sell its professional liability products listed on the                  &sbsp;attached Commission Schedule\n\n                  in Nevada, Agency agrees not to sell any competing                   professional liability products in Nevada, without the written                   consent of MICOA."
+                }
+              ],
+              "present": true,
+              "raw_text": "In return for the exclusive appointment of Agency by MICOA to sell its professional liability products listed on the attached Commission Schedule in Nevada, Agency agrees not to sell any competing professional liability products in Nevada, without the written consent of MICOA.",
+              "value": null
+            }
+          ]
+        },
+        "name": "submit_extraction",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefMaxEdgcZhH2CysaiJQ",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 2384
+      },
+      "cache_creation_input_tokens": 2384,
+      "cache_read_input_tokens": 15241,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 2203,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard"
+    }
+  }
+}

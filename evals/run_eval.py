@@ -26,6 +26,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import random
 import time
 from collections.abc import Sequence
 from dataclasses import dataclass
@@ -354,6 +355,15 @@ def main(argv: Sequence[str] | None = None) -> int:
     document_ids = set(grouped)
 
     documents = list(iter_documents(args.cuad_dir, document_ids))
+
+    if args.sample:
+        # Sorted before sampling: random.sample is order-sensitive, so an
+        # unsorted input would give a different subset per run even at a fixed
+        # seed. Same trap as the split builder in scripts/build_split.py.
+        ordered = sorted(documents, key=lambda d: d.document_id)
+        chosen = random.Random(args.sample_seed).sample(ordered, k=min(args.sample, len(ordered)))
+        documents = sorted(chosen, key=lambda d: d.document_id)[args.skip :]
+
     if args.limit:
         documents = documents[: args.limit]
         kept = {doc.document_id for doc in documents}
@@ -362,6 +372,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     print(
         f"{len(cases)} cases over {len(documents)} contracts | "
         f"baselines: {', '.join(args.baselines)}"
+        + (f" | sample seed {args.sample_seed}, skip {args.skip}" if args.sample else "")
     )
 
     # The gate never calls the API: read-only cache, and a miss is an error.

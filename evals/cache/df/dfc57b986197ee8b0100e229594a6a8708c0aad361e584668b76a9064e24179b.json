@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "model": "claude-sonnet-5",
+    "turns_in_history": 23
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "EsIECpABCBEYAipAT/XvDQa1Q0pd2e4i9okF9PMWQ8Bk58cRtoZWJyWBJv0JRG+qlFP663RwpR5tmdcomifB5ETEvsb/TKSfQuUyXjIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAY+24tQGEgxBtgFIFFDgAkpUY7QaDHrdueoRW7dU24YdBiIwu7YrSg0oqXm1fZ9uuwfmaOYHzgLeo42D80G1BSu4QZlNHMPK65jioM0ogoZ27Wj4Kt4CBWbVuCrs1l4vQtlDDl5inTwNiSsRbtwgQMQ52q5ETmEZRQoVL17icq1+CaQRsXmUL5f8Q9ALkxpNbnjyue2+RmxZ0srbJ1ajG9e9pmJkW+OOdZNzL3fy2/H1Hl+8TzlOlQzhuoEDGkoV7cjHtw2SPEHcxVE098Sos+nuU/s+SjKYi/rWFhWY5Epj5Zi4T3YR0/Ub72EMr9u3SLnwFyZgOJHQio7GKClZD+y16yTPKN05/SQNL3Zu5V7NuAqz8hMn4am8mfhVAHxNwBsIbYu5mTgBRPoZJDF5kr0xiMVh2g897rQSSuFuxfegKdnAfJQo2pKIA0jZBl1DefXrGxuM5RtJlQWhzSuruAy6OlM1ECVLEwUHw+JUKyk7yM3DoHRQWJuAwkIYnNMOhFF+PSwhJXMnZenS6/GW1ZSTeOp9YzhSRVqf2rLMvrYhGvO4vJMfRwr+KIQaoYfc7xE3FlMYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01CgtsKTq7Qbmz2tzarLmpzm",
+        "input": {
+          "query": "Appointment of the Agent and Related Agreements"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01JXxFC2fS5pDor7k1hgcxSh",
+        "input": {
+          "query": "Section 2.01"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_019CNBxybXKaNcSB5H5pgEmN",
+        "input": {
+          "query": "exclusive"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_011FypmFarNBoz9JLCqpGQhb",
+        "input": {
+          "query": "Contractor shall act as the exclusive"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01P4ux6TQeutpBVZLnBTYwBB",
+        "input": {
+          "query": "ARTICLE VIII TERM AND TERMINATION"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01JKTho7icpTdGxccXWtqC62",
+        "input": {
+          "query": "this Agreement shall become effective"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefMehago5wBYv69zSJ5f",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 263
+      },
+      "cache_creation_input_tokens": 263,
+      "cache_read_input_tokens": 17426,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 445,
+      "output_tokens_details": {
+        "thinking_tokens": 108
+      },
+      "service_tier": "standard"
+    }
+  }
+}

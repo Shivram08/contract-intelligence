@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "model": "claude-sonnet-5",
+    "turns_in_history": 17
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "EuECCpABCBEYAipArE5Hylt1LlBlNR8Hx7gVDwQ9xB+5HvypWm6mclOg7RIB+lcdriHrdgGmeSynXy/jkEQSBAyc44gMgCtBO9u0yzIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAf614tQGEgz9x/556xr+imj6zNEaDEjTn/oiSo7wyfS+tSIw3QufDTiiN7RpqGRSBDAVnpCQWZ0vf1sOTNjFeUTqKz7AEgjBaLAKRz7djXsHb9BMKn4SKijhPzQOdgWwCR6T0tVb+pLiqgXoYqJx35/rK+n+VkthOrn6DlsP1+RcOFSouEzKejmptlbyiuRbcfHq6Ck1R1o0kC4YtQtuGgCIbtTDho8vC4dKsYrrq64eyIWcnKqmNgvWPB70tPP/qa7s7EdwKZ9u7rVdboC3qpT1r7gYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_011t9V4Tbiwwr5eTkZ5Cbsid",
+        "input": {
+          "query": "termination"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01D91M2xFPkHXkiLpAC5uS1G",
+        "input": {
+          "query": "Minnesota"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefMdYvkWRuZqdApQfQLU",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 726
+      },
+      "cache_creation_input_tokens": 726,
+      "cache_read_input_tokens": 15536,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 132,
+      "output_tokens_details": {
+        "thinking_tokens": 33
+      },
+      "service_tier": "standard"
+    }
+  }
+}

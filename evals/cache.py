@@ -276,10 +276,7 @@ class _CachedMessages:
         self._cache.put(
             key,
             _dehydrate(response),
-            meta={
-                "model": kwargs.get("model"),
-                "turns_in_history": len(kwargs.get("messages", [])),
-            },
+            meta=fingerprint(kwargs),
         )
         return response
 
