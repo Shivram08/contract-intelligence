@@ -19,7 +19,14 @@ from typing import Any
 from docintel.schemas import Document
 from docintel.text import contract_key
 
-__all__ = ["GoldSpan", "load_document", "load_gold_spans", "load_split", "read_contract_text"]
+__all__ = [
+    "GoldSpan",
+    "iter_documents",
+    "load_document",
+    "load_gold_spans",
+    "load_split",
+    "read_contract_text",
+]
 
 
 @dataclass(frozen=True, slots=True)

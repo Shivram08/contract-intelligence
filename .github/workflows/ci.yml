@@ -48,3 +48,56 @@ jobs:
       - name: pytest
         # Integration tests need a live Postgres; they run in their own job later.
         run: uv run pytest -m "not integration"
+
+  integration:
+    name: integration (postgres + pgvector)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    services:
+      postgres:
+        image: pgvector/pgvector:pg16
+        env:
+          POSTGRES_USER: docintel
+          POSTGRES_PASSWORD: docintel
+          POSTGRES_DB: docintel
+        # 5432 is safe on a clean runner. Locally the compose stack uses 5433,
+        # because a developer machine often has a native Postgres on 5432 and
+        # the container healthcheck cannot detect that shadowing.
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U docintel -d docintel"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 12
+
+    env:
+      DOCINTEL_TEST_DATABASE_URL: postgresql://docintel:docintel@localhost:5432/docintel
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          version: "0.12.9"
+          enable-cache: true
+          cache-dependency-glob: "uv.lock"
+
+      - name: Set up Python
+        run: uv python install 3.11
+
+      # No --extra models: the integration tests use HashingEmbedder, so CI does
+      # not pay 1.5 GB of torch to exercise the SQL and the fusion.
+      - name: Install dependencies
+        run: uv sync --all-groups
+
+      - name: Create the vector extension
+        run: |
+          PGPASSWORD=docintel psql -h localhost -U docintel -d docintel \
+            -c "CREATE EXTENSION IF NOT EXISTS vector" \
+            -c "CREATE EXTENSION IF NOT EXISTS pg_trgm"
+
+      - name: pytest (integration)
+        run: uv run pytest -m integration -v
