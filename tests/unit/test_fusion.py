@@ -16,7 +16,7 @@ from __future__ import annotations
 
 import pytest
 
-from docintel.retrieval.hybrid import RRF_K, reciprocal_rank_fusion
+from docintel.retrieval.hybrid import RRF_K, or_tsquery, reciprocal_rank_fusion
 from docintel.schemas import Chunk, RetrievalHit
 
 
@@ -199,3 +199,56 @@ class TestTopK:
             top_k=1,
         )
         assert ids(result) == ["shared"]
+
+
+class TestOrTsquery:
+    """The AND-versus-OR decision in the lexical arm.
+
+    ``websearch_to_tsquery`` conjoins terms, so a sentence-length query matches
+    nothing and the lexical arm silently contributes an empty list -- degrading
+    "hybrid" retrieval to dense-only precisely for agent-phrased queries. These
+    tests pin the OR behaviour that replaced it.
+    """
+
+    def test_single_term(self) -> None:
+        assert or_tsquery("liability") == "liability"
+
+    def test_joins_terms_with_or(self) -> None:
+        assert or_tsquery("governing law") == "governing | law"
+
+    def test_lowercases(self) -> None:
+        assert or_tsquery("Governing LAW") == "governing | law"
+
+    def test_drops_punctuation_rather_than_escaping_it(self) -> None:
+        """Apostrophes and ampersands are to_tsquery syntax, not search terms.
+
+        Passing "party's" or "A & B" through unescaped is a syntax error, and
+        escaping them would search for punctuation.
+        """
+        assert or_tsquery("party's rights") == "party | s | rights"
+        assert or_tsquery("A & B") == "a | b"
+        assert or_tsquery("non-compete") == "non | compete"
+
+    def test_keeps_digits(self) -> None:
+        assert or_tsquery("section 4.2") == "section | 4 | 2"
+
+    def test_collapses_whitespace(self) -> None:
+        assert or_tsquery("  governing \n\t law  ") == "governing | law"
+
+    def test_empty_query_returns_none(self) -> None:
+        """None rather than "": to_tsquery raises on an empty string, so the
+        caller skips the round trip entirely."""
+        assert or_tsquery("") is None
+
+    def test_punctuation_only_query_returns_none(self) -> None:
+        assert or_tsquery("!!! ??? ---") is None
+
+    def test_whitespace_only_query_returns_none(self) -> None:
+        assert or_tsquery("   \n\t ") is None
+
+    def test_long_natural_language_query_produces_every_term(self) -> None:
+        """The case that motivated the change: 0 matches under AND."""
+        query = "if a third party receives more favorable pricing the buyer is entitled"
+        result = or_tsquery(query)
+        assert result is not None
+        assert result.count("|") == len(query.split()) - 1
