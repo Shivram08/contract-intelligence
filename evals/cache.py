@@ -357,21 +357,35 @@ class _Replayed:
         return {key: value for key, value in payload.items() if value is not None}
 
 
-class _Block(_Replayed):
-    """A content block read back from cache."""
+class _Block(dict):  # type: ignore[type-arg]
+    """A content block read back from cache.
 
-    __slots__ = ("id", "input", "name", "text", "thinking", "type")
+    A ``dict`` subclass with attribute access, and both halves are load-bearing.
+
+    The loop reads ``block.type`` / ``.name`` / ``.input`` / ``.id``, so
+    attribute access is required. But it also echoes the assistant turn back
+    into the next request, so the same object is handed to the SDK -- and a
+    custom object there raises ``TypeError: Object of type _Block is not JSON
+    serializable`` the first time a cache hit is followed by a miss. Being a
+    dict makes it serializable; the SDK accepts plain dicts as content blocks.
+
+    Only non-None keys are stored, which makes ``_canonical`` (dict branch)
+    produce exactly what a live block's ``model_dump(exclude_none=True)``
+    produces -- so a replayed turn and a live turn hash identically.
+    """
 
     def __init__(self, payload: Any) -> None:
         if not isinstance(payload, dict):
             payload = {}
-        self.type = payload.get("type")
-        self.text = payload.get("text")
-        self.name = payload.get("name")
-        # {} is a valid tool input and must survive; only None is dropped.
-        self.input = payload.get("input") if payload.get("input") is not None else {}
-        self.id = payload.get("id")
-        self.thinking = payload.get("thinking")
+        # `input` is legitimately {} on a no-argument tool call and must survive;
+        # only None is dropped.
+        cleaned = {key: value for key, value in payload.items() if value is not None}
+        if payload.get("type") == "tool_use":
+            cleaned.setdefault("input", {})
+        super().__init__(cleaned)
+
+    def __getattr__(self, name: str) -> Any:
+        return self.get(name)
 
 
 class _Usage(_Replayed):
