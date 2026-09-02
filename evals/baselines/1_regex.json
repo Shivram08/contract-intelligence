@@ -1,0 +1,193 @@
+{
+  "baseline": "1_regex",
+  "documents": 81,
+  "cases_scored": 150,
+  "presence": {
+    "f1": 0.1875,
+    "precision": 0.75,
+    "recall": 0.1071,
+    "base_rate": 0.56,
+    "trivial_f1": 0.7179,
+    "counts": {
+      "tp": 9,
+      "fp": 3,
+      "tn": 63,
+      "fn": 75
+    },
+    "by_tier": {
+      "1": {
+        "f1": 0.3214,
+        "base_rate": 0.898,
+        "n": 49
+      },
+      "2": {
+        "f1": 0.0,
+        "base_rate": 0.42,
+        "n": 50
+      },
+      "3": {
+        "f1": 0.0,
+        "base_rate": 0.3725,
+        "n": 51
+      }
+    },
+    "by_clause_type": {
+      "anti_assignment": {
+        "f1": 0.0,
+        "base_rate": 0.6923,
+        "n": 13,
+        "gold_positives": 9,
+        "recall_interval": [
+          0.0,
+          0.299
+        ],
+        "interpretable": false
+      },
+      "cap_on_liability": {
+        "f1": 0.0,
+        "base_rate": 0.5385,
+        "n": 13,
+        "gold_positives": 7,
+        "recall_interval": [
+          0.0,
+          0.354
+        ],
+        "interpretable": false
+      },
+      "change_of_control": {
+        "f1": 0.0,
+        "base_rate": 0.25,
+        "n": 12,
+        "gold_positives": 3,
+        "recall_interval": [
+          0.0,
+          0.562
+        ],
+        "interpretable": false
+      },
+      "effective_date": {
+        "f1": 0.4706,
+        "base_rate": 0.8462,
+        "n": 13,
+        "gold_positives": 11,
+        "recall_interval": [
+          0.152,
+          0.646
+        ],
+        "interpretable": true
+      },
+      "exclusivity": {
+        "f1": 0.0,
+        "base_rate": 0.5385,
+        "n": 13,
+        "gold_positives": 7,
+        "recall_interval": [
+          0.0,
+          0.354
+        ],
+        "interpretable": false
+      },
+      "expiration_date": {
+        "f1": 0.0,
+        "base_rate": 0.9167,
+        "n": 12,
+        "gold_positives": 11,
+        "recall_interval": [
+          0.0,
+          0.259
+        ],
+        "interpretable": true
+      },
+      "governing_law": {
+        "f1": 0.6667,
+        "base_rate": 0.8333,
+        "n": 12,
+        "gold_positives": 10,
+        "recall_interval": [
+          0.237,
+          0.763
+        ],
+        "interpretable": true
+      },
+      "non_compete": {
+        "f1": 0.0,
+        "base_rate": 0.3333,
+        "n": 12,
+        "gold_positives": 4,
+        "recall_interval": [
+          0.0,
+          0.49
+        ],
+        "interpretable": false
+      },
+      "notice_period_to_terminate_renewal": {
+        "f1": 0.0,
+        "base_rate": 0.4167,
+        "n": 12,
+        "gold_positives": 5,
+        "recall_interval": [
+          0.0,
+          0.434
+        ],
+        "interpretable": false
+      },
+      "parties": {
+        "f1": 0.0,
+        "base_rate": 1.0,
+        "n": 12,
+        "gold_positives": 12,
+        "recall_interval": [
+          0.0,
+          0.243
+        ],
+        "interpretable": true
+      },
+      "renewal_term": {
+        "f1": 0.0,
+        "base_rate": 0.3077,
+        "n": 13,
+        "gold_positives": 4,
+        "recall_interval": [
+          0.0,
+          0.49
+        ],
+        "interpretable": false
+      },
+      "uncapped_liability": {
+        "f1": 0.0,
+        "base_rate": 0.0769,
+        "n": 13,
+        "gold_positives": 1,
+        "recall_interval": [
+          0.0,
+          0.793
+        ],
+        "interpretable": false
+      }
+    }
+  },
+  "span_token_f1": {
+    "mean": 0.0739,
+    "by_tier": {
+      "1": 0.1411,
+      "2": 0.0,
+      "3": 0.0
+    }
+  },
+  "grounding": {
+    "violation_rate": 0.0,
+    "spans_checked": 109,
+    "violations": 0
+  },
+  "schema_validity_rate": 1.0,
+  "rule_violation_rate": 0.0988,
+  "cost_usd": {
+    "mean": 0.0,
+    "p95": 0.0,
+    "total": 0.0
+  },
+  "latency_ms": {
+    "p50": 4.7,
+    "p95": 22.8
+  }
+}

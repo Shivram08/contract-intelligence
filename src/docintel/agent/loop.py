@@ -187,6 +187,9 @@ class AgentOutcome:
     clauses: list[ClauseExtraction]
     stop_reason: StopReason
     turns: int
+    #: Submissions rejected before one was accepted. Zero means the first
+    #: attempt parsed, which is the schema validity rate in CLAUDE.md section 6.
+    retries: int
     usage: TokenUsage
     latency_ms: float
     model: str
@@ -264,6 +267,7 @@ def run_extraction(
             clauses=clauses,
             stop_reason=reason,
             turns=run.turns,
+            retries=run.retries,
             usage=run.usage,
             latency_ms=run.elapsed_s * 1000,
             model=model,

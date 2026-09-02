@@ -49,6 +49,14 @@ jobs:
         # Integration tests need a live Postgres; they run in their own job later.
         run: uv run pytest -m "not integration"
 
+      # Replays the golden set from the committed response cache and compares
+      # against evals/baselines/. Read-only, so a cache miss is a hard error
+      # rather than a silent live call -- no API key exists in CI and none is
+      # needed. Fails the build if presence F1 drops more than 2 points or the
+      # grounding violation rate exceeds 1%.
+      - name: eval gate
+        run: uv run python -m evals.run_eval --gate --quiet --baselines 1_regex
+
   integration:
     name: integration (postgres + pgvector)
     runs-on: ubuntu-latest
