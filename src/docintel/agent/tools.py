@@ -33,6 +33,7 @@ model's arithmetic about offsets.
 
 from __future__ import annotations
 
+import difflib
 import json
 from collections.abc import Sequence
 from dataclasses import dataclass, field
@@ -73,6 +74,26 @@ MAX_READ_CHARS: Final = 8_000
 #: Context added either side of a requested span, so a clause cut off at a chunk
 #: boundary can be recovered without a second call.
 READ_PADDING: Final = 400
+
+#: Context added either side of every *search* hit.
+#:
+#: Measured cause of a 60% incomplete rate. Chunks are small -- median 169
+#: tokens -- so top_k=5 returned roughly 845 tokens, too little to decide a
+#: clause on. The agent compensated by walking the document with read_span, and
+#: because reads are inherently serial (read, look, decide where next) its
+#: parallel tool use collapsed the moment they began: 4.1 calls per response on
+#: turns 1-2, 1.8 from turn 3 on, with the transition landing exactly on the
+#: first read. Widening the hit gives search the context the reads were for.
+SEARCH_PADDING: Final = 400
+
+#: Reads allowed per extraction. A ceiling, not a plan: on a 130k-character
+#: contract the agent issued sequential reads at 0-3000, 3000-7000, 7000-11000
+#: and so on, which cannot finish inside any sane turn budget.
+MAX_READ_CALLS: Final = 6
+
+#: Two queries this similar are the same search reworded. Measured: 114 of 131
+#: query pairs in the smoke run were near-duplicates at this threshold.
+DUPLICATE_SIMILARITY: Final = 0.90
 
 TOOL_NAMES: Final[tuple[str, ...]] = (
     "search_contract",
@@ -285,17 +306,34 @@ class ToolContext:
     calls: list[dict[str, Any]] = field(default_factory=list)
     #: Stamped by the agent loop before each turn's tool batch.
     turn: int = 0
+    #: Every search query issued, for near-duplicate detection.
+    queries: list[str] = field(default_factory=list)
+    #: Counters surfaced in the eval report, so the effect of each guard is
+    #: attributable rather than inferred.
+    read_calls: int = 0
+    duplicate_rejections: int = 0
+    clamped_reads: int = 0
 
 
-def _format_hits(hits: Sequence[RetrievalHit]) -> str:
+def _format_hits(document: Document, hits: Sequence[RetrievalHit]) -> str:
+    """Render hits with surrounding context.
+
+    Each hit is widened by ``SEARCH_PADDING`` either side. The chunk's own
+    offsets are still reported, because those are what an evidence span should
+    cite -- the padding exists to be read, not quoted.
+    """
     if not hits:
         return "No passages matched. Try different wording, or the clause may be absent."
+    length = len(document.text)
     lines: list[str] = []
     for position, hit in enumerate(hits, start=1):
         heading = f" | {hit.chunk.heading}" if hit.chunk.heading else ""
+        start = max(0, hit.chunk.char_start - SEARCH_PADDING)
+        end = min(length, hit.chunk.char_end + SEARCH_PADDING)
         lines.append(
-            f"[{position}] chars {hit.chunk.char_start}-{hit.chunk.char_end}{heading}\n"
-            f"{hit.chunk.text}"
+            f"[{position}] clause chars {hit.chunk.char_start}-{hit.chunk.char_end}{heading}\n"
+            f"(showing {start}-{end}, with context either side)\n"
+            f"{document.text[start:end]}"
         )
     return "\n\n".join(lines)
 
@@ -311,8 +349,22 @@ def _tool_search_contract(ctx: ToolContext, args: dict[str, Any]) -> str:
     if not isinstance(top_k, int) or not 1 <= top_k <= 20:
         raise ToolError("top_k must be an integer between 1 and 20")
 
+    # Re-searching was the largest single waste in the smoke run: 114 of 131
+    # query pairs were near-duplicates. Rejecting with the earlier query named
+    # turns a wasted turn into a cheap correction.
+    for earlier in ctx.queries:
+        ratio = difflib.SequenceMatcher(None, query.lower(), earlier.lower()).ratio()
+        if ratio >= DUPLICATE_SIMILARITY:
+            ctx.duplicate_rejections += 1
+            raise ToolError(
+                f"this query is {ratio:.0%} identical to one already run: "
+                f"{earlier!r}. Its results are above. Search for a clause type "
+                "you have not covered yet, or submit."
+            )
+
+    ctx.queries.append(query)
     hits = ctx.search(query, top_k)
-    return _format_hits(hits)
+    return _format_hits(ctx.document, hits)
 
 
 def _tool_read_span(ctx: ToolContext, args: dict[str, Any]) -> str:
@@ -325,17 +377,33 @@ def _tool_read_span(ctx: ToolContext, args: dict[str, Any]) -> str:
     length = len(ctx.document.text)
     if start >= length:
         raise ToolError(f"char_start {start} is past the end of a {length}-character document")
-    if end - start > MAX_READ_CHARS:
+
+    if ctx.read_calls >= MAX_READ_CALLS:
         raise ToolError(
-            f"requested {end - start} characters; the maximum is {MAX_READ_CHARS}. "
-            "Narrow the range or make several calls."
+            f"read budget exhausted ({MAX_READ_CALLS} reads). Reading the "
+            "contract span by span does not scale -- search_contract returns "
+            "passages with context already. Search for anything still "
+            "uncovered, then submit."
         )
+    ctx.read_calls += 1
+
+    # Clamped rather than rejected. An oversized read used to raise, which cost
+    # a whole turn to correct an argument the caller could fix itself.
+    note = ""
+    if end - start > MAX_READ_CHARS:
+        ctx.clamped_reads += 1
+        note = (
+            f"\n[You asked for {end - start:,} characters; the maximum is "
+            f"{MAX_READ_CHARS:,}, so this was clamped.]"
+        )
+        end = start + MAX_READ_CHARS
 
     padded_start = max(0, start - READ_PADDING)
     padded_end = min(length, end + READ_PADDING)
     return (
         f"chars {padded_start}-{padded_end} of {length}"
-        f" (you asked for {start}-{end}; context added either side)\n\n"
+        f" (you asked for {start}-{end}; context added either side)"
+        f" [read {ctx.read_calls}/{MAX_READ_CALLS}]{note}\n\n"
         f"{ctx.document.text[padded_start:padded_end]}"
     )
 
