@@ -135,8 +135,14 @@ class AgentBudget:
     """
 
     max_turns: int = 12
-    max_cost_usd: float = 0.50
-    timeout_s: float = 180.0
+    #: Measured on 10 dev contracts: mean $0.23, max $0.40. $0.50 was too tight
+    #: -- it cut off a run mid-extraction before the agent could submit.
+    max_cost_usd: float = 1.50
+    #: Also measured: median 73s, but one 2,958-token contract took 190s and was
+    #: killed by the previous 180s default. It was looping, not large, so the
+    #: budget was doing its job -- but losing 1 document in 10 to a default is
+    #: too aggressive when the turn limit already bounds the loop.
+    timeout_s: float = 300.0
     #: Retries for a submission that fails validation, not for API errors --
     #: the SDK already retries those.
     max_retries: int = 3

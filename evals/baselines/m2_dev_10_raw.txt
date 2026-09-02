@@ -1,0 +1,89 @@
+[REVIEW] 2ThemartComInc_19990826_10-12G_EX-10.10_6700288_EX-10.10_C 10/12 present   8 turns  $0.2345  101.0s
+           t1: in      2 cache_r   4078 cache_w      0 out   245  $0.0033
+           t2: in      2 cache_r   4078 cache_w   6412 out   433  $0.0212
+           t3: in      2 cache_r  10490 cache_w  11913 out   323  $0.0351
+           t4: in      2 cache_r  22403 cache_w   3131 out  1454  $0.0269
+           t5: in      2 cache_r  25534 cache_w   4487 out   394  $0.0203
+           t6: in      2 cache_r  30021 cache_w    822 out  1216  $0.0202
+           t7: in      2 cache_r  30843 cache_w   5144 out  3981  $0.0588
+           t8: in      2 cache_r  35987 cache_w   4244 out  3093  $0.0487
+           - 3 Tier-3 clause(s) below confidence 0.7
+[    ok] AimmuneTherapeuticsInc_20200205_8-K_EX-10.3_11967170_EX-10  9/12 present  10 turns  $0.4025  134.6s
+           t1: in      2 cache_r   3887 cache_w    183 out   234  $0.0036
+           t2: in      2 cache_r   4070 cache_w   8888 out   601  $0.0290
+           t3: in      2 cache_r  12958 cache_w  19159 out   831  $0.0588
+           t4: in      2 cache_r  32117 cache_w   1456 out   694  $0.0170
+           t5: in      2 cache_r  33573 cache_w  10573 out   556  $0.0387
+           t6: in      2 cache_r  44146 cache_w   8225 out  1544  $0.0448
+           t7: in      2 cache_r  52371 cache_w   8894 out   517  $0.0379
+           t8: in      2 cache_r  61265 cache_w   5287 out  3325  $0.0587
+           t9: in      2 cache_r  66552 cache_w   3621 out  3666  $0.0590
+           t10: in      2 cache_r  70173 cache_w   3715 out  3155  $0.0549
+[REVIEW] ArcaUsTreasuryFund_20200207_N-2_EX-99.K5_11971930_EX-99.K5  0/12 present   8 turns  $0.4023  190.1s
+           t1: in      2 cache_r   3887 cache_w    184 out   244  $0.0037
+           t2: in      2 cache_r   4071 cache_w  14845 out   814  $0.0461
+           t3: in      2 cache_r  18916 cache_w  25129 out   887  $0.0755
+           t4: in      2 cache_r  44045 cache_w   1131 out   931  $0.0210
+           t5: in      2 cache_r  45176 cache_w   1482 out  3597  $0.0487
+           t6: in      2 cache_r  46658 cache_w   6095 out   225  $0.0268
+           t7: in      2 cache_r  52753 cache_w    703 out  6823  $0.0805
+           t8: in      2 cache_r  53456 cache_w   7240 out  7120  $0.1000
+           - the agent loop stopped on a budget limit rather than finishing
+           - agent: budget exhausted: timeout
+[    ok] BANGIINC_05_25_2005-EX-10-Premium Managed Hosting Agreemen  3/12 present   4 turns  $0.0575  28.3s
+           t1: in      2 cache_r   3887 cache_w    169 out   293  $0.0041
+           t2: in      2 cache_r   4056 cache_w   4309 out   454  $0.0161
+           t3: in      2 cache_r   8365 cache_w   4469 out   951  $0.0224
+           t4: in      2 cache_r  12834 cache_w   1037 out   968  $0.0148
+[    ok] BELLRINGBRANDS,INC_02_07_2020-EX-10.18-MASTER SUPPLY AGREE  9/12 present   9 turns  $0.1782  72.5s
+           t1: in      2 cache_r   3887 cache_w    182 out   147  $0.0027
+           t2: in      2 cache_r   4069 cache_w   3340 out   304  $0.0122
+           t3: in      2 cache_r   7409 cache_w   7283 out   287  $0.0226
+           t4: in      2 cache_r  14692 cache_w   7781 out   457  $0.0270
+           t5: in      2 cache_r  22473 cache_w   2241 out   521  $0.0153
+           t6: in      2 cache_r  24714 cache_w    699 out   194  $0.0086
+           t7: in      2 cache_r  25413 cache_w   2642 out   244  $0.0141
+           t8: in      2 cache_r  28055 cache_w   2687 out  2499  $0.0373
+           t9: in      2 cache_r  30742 cache_w   2612 out  2563  $0.0383
+[    ok] BIOAMBERINC_04_10_2013-EX-10.34-DEVELOPMENT AGREEMENT - Fi  2/12 present   6 turns  $0.1404  44.6s
+           t1: in      2 cache_r   3887 cache_w    182 out   142  $0.0027
+           t2: in      2 cache_r   4069 cache_w   5256 out   470  $0.0187
+           t3: in      2 cache_r   9325 cache_w  15799 out   767  $0.0490
+           t4: in      2 cache_r  25124 cache_w    930 out   481  $0.0122
+           t5: in      2 cache_r  26054 cache_w   8149 out  1147  $0.0371
+           t6: in      2 cache_r  34203 cache_w   1228 out  1088  $0.0208
+[    ok] BloomEnergyCorp_20180321_DRSA (on S-1)_EX-10_11240356_EX-1  7/12 present   7 turns  $0.2337  63.8s
+           t1: in      2 cache_r   3887 cache_w    185 out   133  $0.0026
+           t2: in      2 cache_r   4072 cache_w   6470 out   311  $0.0201
+           t3: in      2 cache_r  10542 cache_w  12510 out   580  $0.0392
+           t4: in      2 cache_r  23052 cache_w  16986 out   309  $0.0502
+           t5: in      2 cache_r  40038 cache_w   1052 out   417  $0.0148
+           t6: in      2 cache_r  41090 cache_w  11798 out  2574  $0.0635
+           t7: in      2 cache_r  52888 cache_w   2677 out  2614  $0.0434
+[    ok] CardlyticsInc_20180112_S-1_EX-10.16_11002987_EX-10.16_Main  3/12 present   6 turns  $0.1346  41.1s
+           t1: in      2 cache_r   3887 cache_w    181 out   234  $0.0036
+           t2: in      2 cache_r   4068 cache_w   8520 out   376  $0.0259
+           t3: in      2 cache_r  12588 cache_w  12801 out   215  $0.0367
+           t4: in      2 cache_r  25389 cache_w   2602 out   407  $0.0157
+           t5: in      2 cache_r  27991 cache_w   4553 out  1302  $0.0300
+           t6: in      2 cache_r  32544 cache_w   1480 out  1257  $0.0228
+[    ok] Cerus Corporation - FIRST AMEND TO SUPPLY AND MANUFACTURIN  2/12 present   5 turns  $0.2107  47.9s
+           t1: in      2 cache_r   3887 cache_w    178 out   291  $0.0041
+           t2: in      2 cache_r   4065 cache_w  20353 out   489  $0.0566
+           t3: in      2 cache_r  24418 cache_w  24121 out  1586  $0.0811
+           t4: in      2 cache_r  48539 cache_w   9424 out  1046  $0.0437
+           t5: in      2 cache_r  57963 cache_w   1127 out  1082  $0.0252
+[    ok] CHERRYHILLMORTGAGEINVESTMENTCORP_09_26_2013-EX-10.1-Strate  5/12 present   9 turns  $0.2706  73.0s
+           t1: in      2 cache_r   3887 cache_w    188 out   130  $0.0026
+           t2: in      2 cache_r   4075 cache_w   7574 out   293  $0.0227
+           t3: in      2 cache_r  11649 cache_w  11161 out   966  $0.0399
+           t4: in      2 cache_r  22810 cache_w  19171 out   412  $0.0566
+           t5: in      2 cache_r  41981 cache_w   2007 out   246  $0.0159
+           t6: in      2 cache_r  43988 cache_w  10330 out   761  $0.0422
+           t7: in      2 cache_r  54318 cache_w   1047 out  2158  $0.0351
+           t8: in      2 cache_r  55365 cache_w   2253 out   121  $0.0179
+           t9: in      2 cache_r  57618 cache_w   3665 out  1711  $0.0378
+
+10 documents | 2 routed to review | grounding violations 0/50 (0.00%) | total $2.2649 ($0.2265/doc)
+
+[exited with code 0]
