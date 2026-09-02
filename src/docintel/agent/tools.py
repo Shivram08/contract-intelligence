@@ -102,10 +102,12 @@ def _evidence_schema() -> dict[str, Any]:
             },
             "char_start": {
                 "type": "integer",
-                "minimum": 0,
-                "description": "Start offset, from the search or read result.",
+                "description": "Start offset, from the search or read result. Must be >= 0.",
             },
-            "char_end": {"type": "integer", "minimum": 0, "description": "End offset."},
+            "char_end": {
+                "type": "integer",
+                "description": "End offset. Must be greater than char_start.",
+            },
         },
         "required": ["quote", "char_start", "char_end"],
         "additionalProperties": False,
@@ -113,6 +115,20 @@ def _evidence_schema() -> dict[str, Any]:
 
 
 def _clause_schema() -> dict[str, Any]:
+    """Schema for one clause extraction.
+
+    Deliberately free of ``minimum``/``maximum`` and of type arrays, because
+    this schema is reused by ``submit_extraction``, which runs with
+    ``strict: true``. Strict mode does not support numerical or string
+    constraints, and it takes single types or ``anyOf`` rather than
+    ``{"type": ["string", "null"]}``. The SDK strips unsupported keywords only
+    on the ``parse()`` / ``output_config`` path -- a raw tool dict is sent as
+    written, so an unsupported keyword here is a 400 on every request.
+
+    The bounds are not lost: ``Evidence`` and ``ClauseExtraction`` enforce them
+    with ``Field(ge=...)``, and a violation becomes a specific complaint handed
+    back to the model rather than a rejected request.
+    """
     return {
         "type": "object",
         "properties": {
@@ -122,13 +138,13 @@ def _clause_schema() -> dict[str, Any]:
                 "description": "Whether the contract contains this clause as defined.",
             },
             "value": {
-                "type": ["string", "null"],
+                "anyOf": [{"type": "string"}, {"type": "null"}],
                 "description": (
                     "Normalized value, or null. Always null for the six presence-only clause types."
                 ),
             },
             "raw_text": {
-                "type": ["string", "null"],
+                "anyOf": [{"type": "string"}, {"type": "null"}],
                 "description": "The clause text, verbatim. Never a paraphrase.",
             },
             "evidence": {
@@ -138,11 +154,9 @@ def _clause_schema() -> dict[str, Any]:
             },
             "confidence": {
                 "type": "number",
-                "minimum": 0.0,
-                "maximum": 1.0,
                 "description": (
-                    "Probability this verdict is correct. Vary it; a constant "
-                    "value across clauses is flagged as a defect."
+                    "Probability this verdict is correct, between 0 and 1. Vary "
+                    "it; a constant value across clauses is flagged as a defect."
                 ),
             },
         },
