@@ -20,7 +20,7 @@ from pathlib import Path
 from typing import Any, Protocol
 
 from docintel.agent.loop import DEFAULT_MODEL, AgentBudget
-from docintel.config import get_settings
+from docintel.config import get_settings, resolve_anthropic_api_key
 from docintel.extract import extract_document
 from docintel.ingest.chunker import ChunkingConfig, TiktokenCounter, chunk_document
 from docintel.ingest.index import create_tables, create_vector_index, index_document
@@ -180,15 +180,20 @@ def command_extract(args: argparse.Namespace) -> int:
     settings = get_settings()
     embedder = _build_embedder(args.fake_embeddings, settings.retrieval.embedding_dim)
 
-    client = anthropic.Anthropic()
+    # Passed explicitly when present, so a key in `.env` works. Falling back to
+    # a bare client lets the SDK resolve ANTHROPIC_AUTH_TOKEN or an
+    # `ant auth login` profile by itself.
+    api_key = resolve_anthropic_api_key()
+    client = anthropic.Anthropic(api_key=api_key) if api_key else anthropic.Anthropic()
+
     # Construction never fails on missing credentials -- the SDK resolves them
     # lazily and raises on the first request. Without this check the run would
     # iterate every document and produce one identical auth error per contract.
     if not (getattr(client, "api_key", None) or getattr(client, "auth_token", None)):
         print("no Anthropic credentials found.", file=sys.stderr)
         print(
-            "Set ANTHROPIC_API_KEY, or run `ant auth login` to store a profile "
-            "that the SDK picks up automatically.",
+            "Put ANTHROPIC_API_KEY in .env (gitignored), export it, or run "
+            "`ant auth login` to store a profile the SDK picks up automatically.",
             file=sys.stderr,
         )
         return 2

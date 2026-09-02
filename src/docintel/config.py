@@ -10,7 +10,7 @@ from __future__ import annotations
 
 from functools import lru_cache
 
-from pydantic import Field, PostgresDsn
+from pydantic import Field, PostgresDsn, SecretStr
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -69,6 +69,19 @@ class Settings(BaseSettings):
     database_url: PostgresDsn = Field(
         default=PostgresDsn("postgresql://docintel:docintel@localhost:5433/docintel")
     )
+
+    #: Read from plain ``ANTHROPIC_API_KEY`` rather than the ``DOCINTEL_`` prefix,
+    #: because that is the name the Anthropic SDK itself documents and the name a
+    #: CI secret will already be under.
+    #:
+    #: This field exists so a key in ``.env`` actually works. pydantic-settings
+    #: reads ``.env`` into *this model*, not into ``os.environ``, so the SDK's own
+    #: environment lookup never sees it -- a key in ``.env`` silently did nothing
+    #: before, while ``.env.example`` advertised it.
+    #:
+    #: SecretStr so it cannot leak through a repr, a log line, or a serialized
+    #: settings object.
+    anthropic_api_key: SecretStr | None = Field(default=None, validation_alias="ANTHROPIC_API_KEY")
     chunking: ChunkingSettings = Field(default_factory=ChunkingSettings)
     retrieval: RetrievalSettings = Field(default_factory=RetrievalSettings)
 
@@ -77,3 +90,14 @@ class Settings(BaseSettings):
 def get_settings() -> Settings:
     """Process-wide settings, read from the environment once."""
     return Settings()
+
+
+def resolve_anthropic_api_key() -> str | None:
+    """The API key, from ``.env`` or the environment, or None.
+
+    None is not an error here: the SDK also resolves ``ANTHROPIC_AUTH_TOKEN`` and
+    an ``ant auth login`` profile on its own, so a caller should fall back to a
+    bare client rather than refusing.
+    """
+    key = get_settings().anthropic_api_key
+    return key.get_secret_value() if key is not None else None
