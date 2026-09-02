@@ -1,4 +1,4 @@
-"""Unit tests for span offset verification.
+"""Unit tests for docintel.text -- span offset verification and title folding.
 
 This logic decides whether a model's quoted evidence is grounded in the source
 document. A false negative here rejects a correct extraction as a hallucination;
@@ -13,10 +13,10 @@ from pathlib import Path
 
 import pytest
 
-from audit_data import (
+from audit_data import build_text_index
+from docintel.text import (
     SpanCheck,
     SpanStatus,
-    build_text_index,
     contract_key,
     normalize_whitespace,
     verify_span,
