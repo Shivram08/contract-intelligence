@@ -64,8 +64,10 @@ class Settings(BaseSettings):
         extra="ignore",
     )
 
+    #: Port 5433 matches docker-compose, which deliberately avoids 5432 so a
+    #: natively installed Postgres cannot shadow the container.
     database_url: PostgresDsn = Field(
-        default=PostgresDsn("postgresql://docintel:docintel@localhost:5432/docintel")
+        default=PostgresDsn("postgresql://docintel:docintel@localhost:5433/docintel")
     )
     chunking: ChunkingSettings = Field(default_factory=ChunkingSettings)
     retrieval: RetrievalSettings = Field(default_factory=RetrievalSettings)
