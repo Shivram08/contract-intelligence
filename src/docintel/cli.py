@@ -19,6 +19,8 @@ from collections.abc import Sequence
 from pathlib import Path
 from typing import Any, Protocol
 
+from evals.cache import DEFAULT_CACHE_DIR, CacheMode, CachingClient, ResponseCache
+
 from docintel.agent.loop import DEFAULT_MODEL, AgentBudget
 from docintel.config import get_settings, resolve_anthropic_api_key
 from docintel.extract import extract_document
@@ -184,12 +186,12 @@ def command_extract(args: argparse.Namespace) -> int:
     # a bare client lets the SDK resolve ANTHROPIC_AUTH_TOKEN or an
     # `ant auth login` profile by itself.
     api_key = resolve_anthropic_api_key()
-    client = anthropic.Anthropic(api_key=api_key) if api_key else anthropic.Anthropic()
+    live = anthropic.Anthropic(api_key=api_key) if api_key else anthropic.Anthropic()
 
     # Construction never fails on missing credentials -- the SDK resolves them
     # lazily and raises on the first request. Without this check the run would
     # iterate every document and produce one identical auth error per contract.
-    if not (getattr(client, "api_key", None) or getattr(client, "auth_token", None)):
+    if not (getattr(live, "api_key", None) or getattr(live, "auth_token", None)):
         print("no Anthropic credentials found.", file=sys.stderr)
         print(
             "Put ANTHROPIC_API_KEY in .env (gitignored), export it, or run "
@@ -197,6 +199,12 @@ def command_extract(args: argparse.Namespace) -> int:
             file=sys.stderr,
         )
         return 2
+
+    # Every response is cached by content hash, so a re-run after a code change
+    # that does not alter the prompt costs nothing. Without this, iterating on
+    # the pipeline re-pays for identical requests every time.
+    cache = ResponseCache(directory=DEFAULT_CACHE_DIR, mode=CacheMode(args.cache_mode))
+    client = CachingClient(client=live, cache=cache)
 
     document_ids: set[str] | None = None
     if args.split:
@@ -238,6 +246,7 @@ def command_extract(args: argparse.Namespace) -> int:
                 search=search,
                 budget=budget,
                 model=args.model,
+                prompt_name=args.prompt,
             )
             result = outcome.result
             spend += result.usage.cost_usd
@@ -278,6 +287,7 @@ def command_extract(args: argparse.Namespace) -> int:
         return 1
 
     rate = totals["ungrounded"] / totals["spans"] if totals["spans"] else 0.0
+    print(f"cache: {cache.stats}")
     print(
         f"\n{totals['documents']} documents | "
         f"{totals['reviewed']} routed to review | "
@@ -336,6 +346,13 @@ def build_parser() -> argparse.ArgumentParser:
         type=float,
         default=2.00,
         help="Hard ceiling for the whole run, in USD. Stops before exceeding it.",
+    )
+    extractor.add_argument("--prompt", default="extract_v1", help="Prompt version to use.")
+    extractor.add_argument(
+        "--cache-mode",
+        choices=[m.value for m in CacheMode],
+        default=CacheMode.READ_WRITE.value,
+        help="read_write caches and reuses; read_only fails on a miss; off bypasses.",
     )
     extractor.add_argument(
         "--show-turns",

@@ -1,6 +1,6 @@
 """Tool schemas and implementations for the extraction agent.
 
-Five tools, and the split between them is deliberate:
+Four tools, and the split between them is deliberate:
 
 ``search_contract`` and ``read_span`` are the agent's eyes. Retrieval returns
 passages; ``read_span`` widens the window when a clause is cut off or when the
@@ -13,11 +13,14 @@ retrieval alone cannot make because both live in the same chunk.
 a tool rather than the system prompt keeps the cached prefix small and stable,
 and lets the agent pull only the definitions it needs.
 
-``validate_extraction`` runs the real deterministic rules and hands back the real
-violations. This is the one that earns its place: the agent gets to see exactly
-what would be rejected and fix it for the cost of one tool call, instead of the
-pipeline discarding the whole extraction. It is the same code path validation
-uses afterwards, so it cannot drift into a more permissive shadow copy.
+There is deliberately **no** ``validate_extraction`` dry-run tool. An earlier
+version had one, and it was the most expensive thing in the loop: the agent
+wrote the whole 12-clause payload to validate it, again after fixing, and on one
+measured contract five times over, at 3-4k output tokens a time. Asking it in the
+prompt to validate at most once did not change that. Grounding and the rules now
+run once after submission, in ``extract.py`` -- which also keeps the grounding
+violation rate honest, since a rejected-and-retried submission would report zero
+violations by construction. See ``accept_submission``.
 
 ``submit_extraction`` is the terminal tool. Its schema is ``strict: true``, which
 makes the API validate the structure before it ever reaches Pydantic -- so
@@ -45,13 +48,13 @@ from docintel.schemas import (
     Evidence,
     RetrievalHit,
 )
-from docintel.validation.grounding import GroundingStatus, check_extractions
-from docintel.validation.rules import JurisdictionIndex, apply_rules, load_jurisdictions
+from docintel.validation.rules import JurisdictionIndex, load_jurisdictions
 
 __all__ = [
     "TOOL_NAMES",
     "ToolContext",
     "ToolError",
+    "accept_submission",
     "build_tool_schemas",
     "execute_tool",
     "parse_submission",
@@ -75,7 +78,6 @@ TOOL_NAMES: Final[tuple[str, ...]] = (
     "search_contract",
     "read_span",
     "get_schema",
-    "validate_extraction",
     "submit_extraction",
 )
 
@@ -230,24 +232,6 @@ def build_tool_schemas() -> list[dict[str, Any]]:
                     }
                 },
                 "required": [],
-                "additionalProperties": False,
-            },
-        },
-        {
-            "name": "validate_extraction",
-            "description": (
-                "Run the deterministic validation rules and the verbatim "
-                "grounding check against a draft extraction, and return the "
-                "violations. Call this before submitting: it is the same code "
-                "the pipeline runs, so anything it reports would otherwise "
-                "reject your answer."
-            ),
-            "input_schema": {
-                "type": "object",
-                "properties": {
-                    "clauses": {"type": "array", "items": _clause_schema()},
-                },
-                "required": ["clauses"],
                 "additionalProperties": False,
             },
         },
@@ -429,41 +413,6 @@ def _coerce_clauses(raw: Any) -> list[ClauseExtraction]:
     return clauses
 
 
-def _tool_validate_extraction(ctx: ToolContext, args: dict[str, Any]) -> str:
-    clauses = _coerce_clauses(args.get("clauses"))
-
-    grounding = check_extractions(ctx.document, clauses)
-    violations = apply_rules(
-        grounding.repaired_clauses, document=ctx.document, jurisdictions=ctx.jurisdictions
-    )
-
-    lines: list[str] = []
-
-    ungrounded = grounding.ungrounded
-    if ungrounded:
-        lines.append(f"GROUNDING: {len(ungrounded)} of {grounding.total} quotes are not in the")
-        lines.append("document. These will be rejected as fabrications:")
-        for check in ungrounded[:10]:
-            lines.append(f"  - [{check.status.value}] {check.evidence.quote[:120]!r}")
-    relocated = grounding.count(GroundingStatus.RELOCATED)
-    if relocated:
-        lines.append(
-            f"GROUNDING: {relocated} quote(s) were found at different offsets than "
-            "you gave. The quotes are fine; the offsets were corrected."
-        )
-
-    if violations:
-        lines.append(f"\nRULES: {len(violations)} violation(s):")
-        for violation in violations:
-            lines.append(
-                f"  - [{violation.severity.value}] {violation.rule_id}: {violation.message}"
-            )
-
-    if not lines:
-        return "Clean: all quotes are grounded and no rules were violated."
-    return "\n".join(lines)
-
-
 def validate_submission(args: dict[str, Any]) -> list[ClauseExtraction]:
     """Parse and completeness-check a ``submit_extraction`` payload.
 
@@ -484,16 +433,45 @@ def validate_submission(args: dict[str, Any]) -> list[ClauseExtraction]:
     return clauses
 
 
+def accept_submission(ctx: ToolContext, args: dict[str, Any]) -> list[ClauseExtraction]:
+    """Acceptance check for a submission: structure and completeness only.
+
+    **Grounding and the deterministic rules are deliberately NOT checked here**,
+    and that is a measurement decision rather than an oversight.
+
+    Rejecting an ungrounded submission and letting the agent retry would make
+    the pipeline self-healing, which sounds strictly better. It is not: it
+    destroys the grounding violation rate as a metric. If every submission
+    carrying a fabricated quote is bounced back until it complies, the final
+    output shows zero violations *by construction*, and the number being
+    reported is "did the agent eventually comply" rather than "how often does
+    this model fabricate". ``CLAUDE.md`` section 6 wants the latter as a
+    first-class figure, and section 13 sets a threshold on it.
+
+    So grounding and the rules run once, afterwards, in ``extract.py``, where
+    their findings become part of the recorded result and route the case to
+    review. The agent gets one attempt and its raw behaviour is what gets
+    measured.
+
+    What this replaced: a separate ``validate_extraction`` dry-run tool. That
+    was the most expensive thing in the loop -- the agent wrote the entire
+    12-clause payload to validate, again after fixing, and on one measured
+    contract five times in total, at 3-4k output tokens each. Instructing it to
+    "validate at most once" in the prompt did not work. Removing the tool makes
+    the happy path write the payload exactly once, mechanically.
+    """
+    return validate_submission(args)
+
+
 def _tool_submit_extraction(ctx: ToolContext, args: dict[str, Any]) -> str:
-    clauses = validate_submission(args)
-    return f"Submitted {len(clauses)} clause extractions."
+    clauses = accept_submission(ctx, args)
+    return f"Accepted {len(clauses)} clause extractions."
 
 
 _HANDLERS: Final = {
     "search_contract": _tool_search_contract,
     "read_span": _tool_read_span,
     "get_schema": _tool_get_schema,
-    "validate_extraction": _tool_validate_extraction,
     "submit_extraction": _tool_submit_extraction,
 }
 

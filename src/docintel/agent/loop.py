@@ -39,9 +39,9 @@ from typing import Any, Final
 
 from docintel.agent.tools import (
     ToolContext,
+    accept_submission,
     build_tool_schemas,
     execute_tool,
-    validate_submission,
 )
 from docintel.schemas import ClauseExtraction, ClauseType, TokenUsage
 
@@ -341,7 +341,7 @@ def run_extraction(
 
             if name == "submit_extraction":
                 try:
-                    clauses = validate_submission(args)
+                    clauses = accept_submission(ctx, args)
                     submitted_this_turn = True
                     results.append(
                         {
