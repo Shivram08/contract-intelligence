@@ -109,7 +109,9 @@ ignore_missing_imports = true
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 # scripts/ is not a package; audit_data is imported directly by its unit tests.
-pythonpath = ["scripts"]
+# "." puts the repo root on the path so `evals` (a package, but not installed)
+# is importable the same way it is at the command line.
+pythonpath = [".", "scripts"]
 addopts = "-q --strict-markers --strict-config"
 asyncio_mode = "auto"
 markers = [
