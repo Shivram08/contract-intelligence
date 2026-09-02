@@ -150,6 +150,10 @@ class AgentRun:
     turns: int = 0
     retries: int = 0
     usage: TokenUsage = field(default_factory=TokenUsage)
+    #: One entry per turn. Without this, a run that costs 20x the estimate is a
+    #: single aggregate number with no way to see which turn or which token
+    #: class caused it.
+    turn_usage: list[TokenUsage] = field(default_factory=list)
     started_at: float = field(default_factory=time.monotonic)
     tool_calls: list[dict[str, Any]] = field(default_factory=list)
 
@@ -182,6 +186,8 @@ class AgentOutcome:
     model: str
     prompt_version: str
     tool_calls: list[dict[str, Any]]
+    #: Per-turn usage, for diagnosing where the cost went.
+    turn_usage: list[TokenUsage] = field(default_factory=list)
     #: Set when the loop ended without a valid submission.
     error: str | None = None
 
@@ -257,6 +263,7 @@ def run_extraction(
             model=model,
             prompt_version=version,
             tool_calls=ctx.calls,
+            turn_usage=list(run.turn_usage),
             error=err,
         )
 
@@ -269,6 +276,12 @@ def run_extraction(
             response = client.messages.create(
                 model=model,
                 max_tokens=budget.max_tokens_per_turn,
+                # Auto-caches the last cacheable block, which is the end of the
+                # growing conversation. Without this, every turn re-prices the
+                # whole history at full input rate and total input cost is
+                # quadratic in turn count -- the system breakpoint below only
+                # covers the fixed prefix.
+                cache_control={"type": "ephemeral"},
                 system=[
                     {
                         "type": "text",
@@ -287,7 +300,9 @@ def run_extraction(
             return finish(StopReason.API_ERROR, f"{type(exc).__name__}: {exc}")
 
         run.turns += 1
-        run.usage = run.usage + _usage_from_response(model, response)
+        turn = _usage_from_response(model, response)
+        run.turn_usage.append(turn)
+        run.usage = run.usage + turn
 
         if getattr(response, "stop_reason", None) == "refusal":
             details = getattr(response, "stop_details", None)

@@ -256,6 +256,15 @@ def command_extract(args: argparse.Namespace) -> int:
                 f"{result.latency_ms.get('total', 0) / 1000:.1f}s",
                 flush=True,
             )
+            if args.show_turns:
+                for n, turn in enumerate(outcome.agent.turn_usage, start=1):
+                    print(
+                        f"           t{n}: in {turn.input_tokens:>6} "
+                        f"cache_r {turn.cache_read_input_tokens:>6} "
+                        f"cache_w {turn.cache_creation_input_tokens:>6} "
+                        f"out {turn.output_tokens:>5}  ${turn.cost_usd:.4f}",
+                        flush=True,
+                    )
             if outcome.review is not None:
                 for reason in outcome.review.reasons:
                     print(f"           - {reason}", flush=True)
@@ -327,6 +336,11 @@ def build_parser() -> argparse.ArgumentParser:
         type=float,
         default=2.00,
         help="Hard ceiling for the whole run, in USD. Stops before exceeding it.",
+    )
+    extractor.add_argument(
+        "--show-turns",
+        action="store_true",
+        help="Print per-turn token and cost breakdown. Use when cost surprises you.",
     )
     extractor.set_defaults(handler=command_extract)
 
