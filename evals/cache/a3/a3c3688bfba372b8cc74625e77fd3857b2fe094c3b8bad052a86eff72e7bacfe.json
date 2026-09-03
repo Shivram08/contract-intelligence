@@ -1,0 +1,77 @@
+{
+  "meta": {
+    "latency_ms": 8589.505299998564,
+    "max_tokens": 8000,
+    "message_count": 7,
+    "messages_sha": "0946f104c4b6c0fb",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "208beedd51118449",
+      "800f96e931cf05ca",
+      "8abe429f1cd6313a",
+      "b9e0af2310c55424",
+      "1a383a1ba3969914",
+      "4bcf95dd19769e32",
+      "c07dd007b4cb2bc9"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "EuIHCpABCBEYAipAjPf1PJU4S0hp1Z3tMTkuYqWrxRNDVv2sO4JeSqxU4mpoQWBv9J+mzpJx28bqRVTZJ8Su0LoogEY3Uxt9N/8SJzIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAZbU49QGEgzcp4504uvD/kD9X6caDHETqmv9LDwvZNc6qiIwlKRD6HZ7YY6sCCjNH5moWk2kwxWmlUbHyTanP6WFHMOULFccNtf2FUYaXOK7cdlrKv4FQrjqHGbso29R6EPz1AmZD5ka7xSYfoKMxrni4BQA/ZLPtFzZE58E+lJgmUoeN6RDK8HBAjKMjZnwtS2YOizC75vlo3t2o1vEfzTdJ9ponTm4ejhLqBCLUgX05FU6nGjLGLw3GzxyvzkmSYrEX2Sngca9/NFdK6WDaQeNU5UD7Dbya77Dn03XmzV6tF571JxECcZ62x3h+ffWIWxyIu+mg3NVyg4BI1sHzDz/sTnk7qmZDJBRn6zZNWzuklVjbyv/xHfn5k8WfGTTwH009PS7qHUu7J08QItfHrgiGlvwqfQjda98DT/Be+Kmv/ffRpZ8y9NbqfyKDw7o53rYVm5+klH3vUnH1/zJGyMEd2KyTmtdDoOCR/kxF5HDhn4rYACYbzo53EOv/ur3Jc73cwgiiJFeLZeVP1Lf6lwBoR0EXVSUlaSrN1EL2LTsyrq/3ea+E5xWGeU0XmoE8Q2aIYD+/th3LRdJzpudLmhYmHbcUGTd9er3J9y9lhcmc6lIERisgy6Gpr7T8r79v67+n0lXkFkLjeEBXKHGLyGE5vkWvX7NQNZ4tchLovpA1rSTkdnwHXfad079uVkXU8jrdApaLIkwQWwydc1nzn3lPpvGzpyEVZn2KxqmkZhdSOq4xDhXlk9y+uix2/EkvQiD/xcWWdt9ywuXGRhlj++QMGl8ifioXKAIoE4hFQvat5YvsCkr+4U83GWJG/ePRWrteJx4pb13VRC5FoRyuxV3lXVtfDImcFlAVZderiOBdybOHG8oDeLodAcCts5Y2K2PqcwJXXynPvZRrGQ/29YRS8DxznJVL/AJlqx9PLnnTscFZ7imnXS94gV9XMzZBKwXTho4/6ChQK0IHINsYKLzpTs+uvTecQPuofsccckm0QpAqPzF5hlhxTktwUGTm3PQTOH9W8tAYxqbmrsdSXmSx6sft2jSIK13hYmGr6K3a6u02je1H3IQJjJYjKQLTy2tm4hSRzBqsrnGIZMmQuG3vyAgFHxi0VxBhBrEyFMlERn3fhgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01DxrDZfpLkWgf86MW27LYML",
+        "input": {
+          "clauses": [
+            {
+              "clause_type": "parties",
+              "confidence": 0.75,
+              "evidence": [
+                {
+                  "char_end": 935,
+                  "char_start": 811,
+                  "quote": "HPS INVESTMENT PARTNERS, LLC /s/ John Madden Name: John Madden Title: Authorized Signatory HPS MEZZANINE PARTNERS II, LLC"
+                }
+              ],
+              "present": true,
+              "raw_text": "HPS INVESTMENT PARTNERS, LLC ... HPS MEZZANINE PARTNERS II, LLC ... HPS MEZZANINE PARTNERS II OFFSHORE GP, L.P. ... MEZZANINE PARTNERS - OFFSHORE INVESTMENT MASTER FUND II, L.P. ... MEZZANINE PARTNERS II OFFSHORE LUX S.\u00c0 R.L ... MEZZANINE PARTNERS II OFFSHORE LUX S.\u00c0 R.L II ... HPS MEZZANINE PARTNERS II GP, L.P. ... MEZZANINE PARTNERS II, L.P. ... MEZZANINE PARTNERS II ONSHORE LUX S.\u00c0 R.L ... MEZZANINE PARTNERS II ONSHORE LUX S.\u00c0 R.L II",
+              "value": "HPS Investment Partners, LLC (Filer); HPS Mezzanine Partners II, LLC (Filer); HPS Mezzanine Partners II Offshore GP, L.P. (Filer); Mezzanine Partners - Offshore Investment Master Fund II, L.P. (Filer); Mezzanine Partners II Offshore Lux S.\u00e0 r.l (Filer); Mezzanine Partners II Offshore Lux S.\u00e0 r.l II (Filer); HPS Mezzanine Partners II GP, L.P. (Filer); Mezzanine Partners II, L.P. (Filer); Mezzanine Partners II Onshore Lux S.\u00e0 r.l (Filer); Mezzanine Partners II Onshore Lux S.\u00e0 r.l II (Filer)"
+            }
+          ]
+        },
+        "name": "submit_extraction",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefoMwjHUVcZcTZqFqELb",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 221
+      },
+      "cache_creation_input_tokens": 221,
+      "cache_read_input_tokens": 12609,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 1092,
+      "output_tokens_details": {
+        "thinking_tokens": 347
+      },
+      "service_tier": "standard"
+    }
+  }
+}

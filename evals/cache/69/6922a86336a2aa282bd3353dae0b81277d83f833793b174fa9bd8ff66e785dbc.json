@@ -1,0 +1,83 @@
+{
+  "meta": {
+    "latency_ms": 5449.859500004095,
+    "max_tokens": 8000,
+    "message_count": 5,
+    "messages_sha": "f3f15df8941f4dac",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "4bef271e3679c8c1",
+      "ef4ae70cb6f9da07",
+      "3227b95093781acc",
+      "36f387f13ab91b13",
+      "d6d295febe6a57ce"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "EqkGCpABCBEYAipAHvksr2XHh2Hy3xn6Fo9kgAQU06LVt9z47lK49ugDJ8wjb305bv/ORlXf3dcS3SLBVbGDntHMvLRxxQuSro4zbzIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAcPZ49QGEgwAaopSPWFlh0ceY6gaDFr2K7Hg4PChx5zZgSIwh4NpGrdwIoQ8JMUwsjG8atCuHDRfOCKJeslz10SsZ1fQI443nGmbSLFTGo6GnURWKsUEUR2kuniq1qbYp03GbrPE8Y74ZaP1Sra6CtvOpX+xlzGuoXEBBf63JBys0r8FskXnnHDXJRjabKqT6OB76nOaZhvqh0/BhUBuJTLF9Hay+WB942w2ljJFMoRu8+AK93WkCl2pidA7YeprBhbbd6B8K5nlFzGSgB5h3/C8jFOP+FnvYZh96yIUG+gYuQC4fMGuBnyepqwUqSKYCnUnHXN9MGkkSi7VgnWjhNREc+/r8hlMeV7UpJo1lpsTyoF8GuYuOKBPY5I4YuvB9eNIEWl3um/mmHNgRCb6qyCmvkuQ4qKmPWKTsBzkEdQZS+am4WN1ajjCHMZXZveoHa96MXuIlp8UjUg9JqppPtSN0dpHqp2UISfXXJtrSueVxe08hT7kxEHWWziwHTPj4q5J3O51V7ijU99LbVVQwuPCjg3iTO4D6AVhpWKC9pertcA45Zy8MhA57dV+JKS38OWH1KlSNQ8NXXY3GHRl0ik0N0W3orcnqC5bGf0StZSRrnUzwLsvkli9x6jgATUAdVEhfTJHBiTDzdcIHGkxJan+c10t6k+iS8fLQuBl46S+rRkxkyjKBD2ZfyHCrAeMnQTUcNavtX74/9gkdDm4lCFzzLhTnog7DyWibWm1T6xelA4NvAaxf9Mj7UA+W/dCTiVPTTbDRInpvLid+aDIBF3jIOe+JM/w0E8u8iEdtLDzWfBsTtPXIa4yUKFePnY9acERGq43nOSeB5a4aTJVega9iwXEE/5iK0spdl+9fzcJaBCzsscyeM63IbYYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_014ZtLFZQGvxEPdQtrvTJxVk",
+        "input": {
+          "char_end": 3000,
+          "char_start": 0
+        },
+        "name": "read_span",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_018kPRRB533auPWdSrbFaKFe",
+        "input": {
+          "query": "shall not assign this Agreement or any rights or obligations hereunder"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_013F6VjcQYXm5fr8XT3sh5kP",
+        "input": {
+          "query": "exclusive financial advisor and conversion agent appoint"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefpEXGnzszx2A6Kv9tgZ",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 28409
+      },
+      "cache_creation_input_tokens": 28409,
+      "cache_read_input_tokens": 20890,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 390,
+      "output_tokens_details": {
+        "thinking_tokens": 188
+      },
+      "service_tier": "standard"
+    }
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "meta": {
+    "latency_ms": 12484.253900009207,
+    "max_tokens": 8000,
+    "message_count": 13,
+    "messages_sha": "6cadc9fbabb989af",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "40c86ac6e9c6d864",
+      "2df86c3235ae798b",
+      "3b2f15390bc15eb7",
+      "c26881c84961cc88",
+      "ef0a4de164c55c9e",
+      "41aab1de455f05c9",
+      "e9d208de57b6a39e",
+      "10966571bf3dcdf7",
+      "7f2b67851d3d23c1",
+      "aaace53928ed1a19",
+      "88412f4e28807ad8",
+      "d30b93da16e1a49b",
+      "148ca83a406766ff"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "text": "Confirmed: this agreement is under Rate Schedule FTS (firm transportation), so the 180-day notice period applies. Now let's validate the draft extraction.",
+        "type": "text"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01PLXq5V8QG2ssZ4KtLMMQke",
+        "input": {
+          "clauses": [
+            {
+              "clause_type": "governing_law",
+              "confidence": 0.97,
+              "evidence": [
+                {
+                  "char_end": 7407,
+                  "char_start": 7099,
+                  "quote": "This Agreement and the rights and duties of                   Transporter and Shipper hereunder shall be governed by and                   interpreted in accordance with the laws of the State of                   Arkansas, without recourse to the law governing conflict of                   laws."
+                }
+              ],
+              "present": true,
+              "raw_text": "This Agreement and the rights and duties of Transporter and Shipper hereunder shall be governed by and interpreted in accordance with the laws of the State of Arkansas, without recourse to the law governing conflict of laws.",
+              "value": "US-AR"
+            },
+            {
+              "clause_type": "parties",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 448,
+                  "char_start": 205,
+                  "quote": "THIS AGREEMENT (\"Agreement\"), entered into on May 20, 1992, is between Arkansas Western Pipeline Company (\"Transporter\"), an Arkansas corporation, and Associated Natural Gas Company, a division of Arkansas Western Gas Company, (\"Shipper\");"
+                }
+              ],
+              "present": true,
+              "raw_text": "THIS AGREEMENT (\"Agreement\"), entered into on May 20, 1992, is between Arkansas Western Pipeline Company (\"Transporter\"), an Arkansas corporation, and Associated Natural Gas Company, a division of Arkansas Western Gas Company, (\"Shipper\");",
+              "value": "Arkansas Western Pipeline Company (Transporter); Associated Natural Gas Company, a division of Arkansas Western Gas Company (Shipper)"
+            },
+            {
+              "clause_type": "effective_date",
+              "confidence": 0.6,
+              "evidence": [
+                {
+                  "char_end": 312,
+                  "char_start": 205,
+                  "quote": "THIS AGREEMENT (\"Agreement\"), entered into on May 20, 1992, is between Arkansas Western Pipeline Company"
+                }
+              ],
+              "present": true,
+              "raw_text": "THIS AGREEMENT (\"Agreement\"), entered into on May 20, 1992, is between Arkansas Western Pipeline Company (\"Transporter\"), an Arkansas corporation, and Associated Natural Gas Company, a division of Arkansas Western Gas Company, (\"Shipper\");",
+              "value": "1992-05-20"
+            },
+            {
+              "clause_type": "expiration_date",
+              "confidence": 0.45,
+              "evidence": [
+                {
+                  "char_end": 4327,
+                  "char_start": 4093,
+                  "quote": "this Agreement                   shall be effective as of the date of physical completion of                   and initial deliveries on Transporter's pipeline and shall                   continue for a primary term of ten years."
+                }
+              ],
+              "present": true,
+              "raw_text": "this Agreement shall be effective as of the date of physical completion of and initial deliveries on Transporter's pipeline and shall continue for a primary term of ten years.",
+              "value": "UNSPECIFIED"
+            },
+            {
+              "clause_type": "renewal_term",
+              "confidence": 0.55,
+              "evidence": [
+                {
+                  "char_end": 4595,
+                  "char_start": 4327,
+                  "quote": "Thereafter, this\n\n\n\n\n                  Agreement shall be effective month to month, until terminated                   by Transporter or Shipper upon the following written notice to                   the other specifying a termination date"
+                }
+              ],
+              "present": true,
+              "raw_text": "Thereafter, this Agreement shall be effective month to month, until terminated by Transporter or Shipper upon the following written notice to the other specifying a termination date: sixty (60) days for interruptible transportation under Rate Schedule ITS and 180 days for firm transportation under Rate Schedule FTS.",
+              "value": "30 recurring"
+            },
+            {
+              "clause_type": "notice_period_to_terminate_renewal",
+              "confidence": 0.6,
+              "evidence": [
+                {
+                  "char_end": 4788,
+                  "char_start": 4747,
+                  "quote": "180                   days for firm transportation under Rate Schedule FTS."
+                }
+              ],
+              "present": true,
+              "raw_text": "180 days for firm transportation under Rate Schedule FTS",
+              "value": "180"
+            },
+            {
+              "clause_type": "change_of_control",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "anti_assignment",
+              "confidence": 0.75,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "cap_on_liability",
+              "confidence": 0.8,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "uncapped_liability",
+              "confidence": 0.8,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "non_compete",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "exclusivity",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            }
+          ]
+        },
+        "name": "submit_extraction",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011Cefog2YkwcQpx24SvCLQP",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 1032
+      },
+      "cache_creation_input_tokens": 1032,
+      "cache_read_input_tokens": 44106,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 1710,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard"
+    }
+  }
+}

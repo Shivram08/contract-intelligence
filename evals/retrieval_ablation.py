@@ -31,6 +31,7 @@ import json
 import math
 import statistics
 import sys
+import time
 from collections.abc import Iterable, Sequence
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -66,6 +67,22 @@ class ArmScores:
     #: Queries where no relevant chunk appeared at any depth. Reported because a
     #: mean over only the queries that found something is a different number.
     misses: int = 0
+    #: Wall clock per query. The rerank arm turned this from a quality question
+    #: into a cost/benefit one: arm 4 spent 122s and in one case 972s inside the
+    #: cross-encoder, against roughly 1.5s of actual search.
+    latencies_ms: list[float] = field(default_factory=list)
+
+    def latency_p50(self) -> float:
+        return statistics.median(self.latencies_ms) if self.latencies_ms else 0.0
+
+    def latency_p95(self) -> float:
+        if not self.latencies_ms:
+            return 0.0
+        ordered = sorted(self.latencies_ms)
+        return ordered[min(len(ordered) - 1, int(0.95 * len(ordered)))]
+
+    def latency_total_s(self) -> float:
+        return sum(self.latencies_ms) / 1000
 
     def mean_recall(self, k: int) -> float:
         values = self.recall_at.get(k, [])
@@ -91,10 +108,14 @@ def _dcg(relevances: Iterable[int]) -> float:
 
 
 def score_query(
-    arm: ArmScores, hits: Sequence[RetrievalHit], gold: Sequence[tuple[int, int]]
+    arm: ArmScores,
+    hits: Sequence[RetrievalHit],
+    gold: Sequence[tuple[int, int]],
+    latency_ms: float = 0.0,
 ) -> None:
     """Score one arm's ranking for one (contract, clause type) query."""
     arm.queries += 1
+    arm.latencies_ms.append(latency_ms)
     relevance = [1 if _overlaps(hit, gold) else 0 for hit in hits]
     total_relevant = sum(relevance)
 
@@ -164,18 +185,31 @@ def run_ablation(cases: Sequence[GoldenCase], fake_embeddings: bool = False) -> 
             gold = list(case.gold_spans)
             docs = [case.document_id]
 
+            started = time.perf_counter()
             lexical = [s.chunk for s in lexical_search(connection, query, CANDIDATES, docs)]
+            lexical_ms = (time.perf_counter() - started) * 1000
+
+            started = time.perf_counter()
             dense = [
                 s.chunk
                 for s in dense_search(connection, embedder.embed_query(query), CANDIDATES, docs)
             ]
-            fused = list(retriever.search(query, top_k=CANDIDATES, document_ids=docs))
-            reranked = apply_rerank(reranker, query, fused, top_k=CANDIDATES) if fused else []
+            dense_ms = (time.perf_counter() - started) * 1000
 
-            score_query(arms["lexical_only"], _as_hits(lexical), gold)
-            score_query(arms["dense_only"], _as_hits(dense), gold)
-            score_query(arms["hybrid_rrf"], fused, gold)
-            score_query(arms["hybrid_rrf_rerank"], reranked, gold)
+            started = time.perf_counter()
+            fused = list(retriever.search(query, top_k=CANDIDATES, document_ids=docs))
+            fused_ms = (time.perf_counter() - started) * 1000
+
+            started = time.perf_counter()
+            reranked = apply_rerank(reranker, query, fused, top_k=CANDIDATES) if fused else []
+            # Rerank timing is *incremental*: it cannot run without fusion, so the
+            # arm's real cost is fusion plus reranking.
+            rerank_ms = fused_ms + (time.perf_counter() - started) * 1000
+
+            score_query(arms["lexical_only"], _as_hits(lexical), gold, lexical_ms)
+            score_query(arms["dense_only"], _as_hits(dense), gold, dense_ms)
+            score_query(arms["hybrid_rrf"], fused, gold, fused_ms)
+            score_query(arms["hybrid_rrf_rerank"], reranked, gold, rerank_ms)
 
             if index % 10 == 0:
                 print(f"  {index}/{len(positives)}", flush=True)
@@ -197,6 +231,11 @@ def run_ablation(cases: Sequence[GoldenCase], fake_embeddings: bool = False) -> 
                 "ndcg_at": {str(k): round(arm.mean_ndcg(k), 4) for k in K_VALUES},
                 "queries": arm.queries,
                 "no_relevant_chunk_found": arm.misses,
+                "latency_ms": {
+                    "p50": round(arm.latency_p50(), 1),
+                    "p95": round(arm.latency_p95(), 1),
+                    "total_s": round(arm.latency_total_s(), 1),
+                },
             }
             for name, arm in arms.items()
         },
@@ -227,6 +266,7 @@ def print_report(result: dict[str, Any]) -> None:
         row += f"{arm['mrr']:>9.3f}"
         row += "".join(f"{arm['ndcg_at'][str(k)]:>10.3f}" for k in K_VALUES)
         row += f"{arm['no_relevant_chunk_found']:>8}"
+        row += f"{arm['latency_ms']['p50']:>10.0f}{arm['latency_ms']['p95']:>10.0f}"
         print(row)
 
 

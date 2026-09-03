@@ -1,0 +1,173 @@
+{
+  "meta": {
+    "latency_ms": 9942.35359999584,
+    "max_tokens": 8000,
+    "message_count": 9,
+    "messages_sha": "00362427b1ec42c0",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "57deb599ea95c8ac",
+      "a5f4daf8fd70fcb2",
+      "11628ab10e1d683d",
+      "f919d91dd9c6df00",
+      "e1eaa38ce73413c9",
+      "f5a4d7d2533f70d4",
+      "bdc9ae606eaec700",
+      "9845b025703f8ec1",
+      "53084ce8ab83c32b"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "EqYFCpABCBEYAipAs1S00EKPH715ZpD/tYorFMjay0iaIErJCDDb4kIG30NEeKr6Lx3oXkEiWSeVJVLFuLR/iIYk3UZH7leBwJlA2TIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAZXe49QGEgwoNep8JWQC6XCl87waDHeKU1HqSJpHTbFzUSIwggG2RW+5xjF+2zaKn3jV34byDKPrpdmK7on1ofIPN28cTZEWxEqEXfbIWnD1aTrLKsIDkgeAB0vjBIaLsDjJjp0vdWzQBsMXNx79J7DUSRV77g44lJd5hfU9XWnphuKkIOfmqUnaeKYSEHTLFsD8f26xj5xvMIuXeDKBze5pjverPM5+kWJkR8W64NfItxXVNkq0vvzyAM4qx1KfEdD5elk0LFmZYXi54kRpafMSeVKBwMg6212E/uYDNPuESbuq1XRrT3mvgXSL+LMTzvBK8tplHTaBF30bEgVGu4hs4X/hfjrxnOjp07sdCIX6vZCp2Mr6XTNrgpv1G2twuvp1SRJKLMXoUhqiY7e/5RjTgZw6sjW4mh01xMYWsE+24jz6sH/zNXIuTeNi64tLGyXwM6js8nts2ZnJr4h0clapX9QCLBslVltuYiI0beMaCE8LAQsn/q3R4xTe0X+rbKz/jq5CTzMptNEW8gFtq577vhgzEP0w3gNHOVwl3sk4aXxs9QRZ0IgAqMy3bsPxyW/809zxoWQKAL6UK/8eZe0fVCYZkjpzmu4LcV4Z37hWTw4rDi7F5cCVpZuDR/m4IfsEyOwwBvKAQ5/8Hq2qg0dk/W7xm8KaNfcD2e9zBOldyWz2ub1EL3XknClc2s5RFHfOKmF8yoJXGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01KCfH2FoZ1Ed8eJumcj97Ee",
+        "input": {
+          "clauses": [
+            {
+              "clause_type": "governing_law",
+              "confidence": 0.9,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "parties",
+              "confidence": 0.9,
+              "evidence": [
+                {
+                  "char_end": 446,
+                  "char_start": 133,
+                  "quote": "This Amendment No. 3 (the \"Third Amendment\"), entered into by and between Stremicks Heritage Foods, LLC (\"Heritage\") Premier Nutrition Corporation (\"Premier\") is effective as of July 3, 2019 (\"Third Amendment Effective Date\") and amends that certain Manufacturing Agreement between Heritage and Premier dated July 1, 2017 as amended (\"Agreement\")."
+                }
+              ],
+              "present": true,
+              "raw_text": "This Amendment No. 3 (the \"Third Amendment\"), entered into by and between Stremicks Heritage Foods, LLC (\"Heritage\") Premier Nutrition Corporation (\"Premier\") is effective as of July 3, 2019 (\"Third Amendment Effective Date\") and amends that certain Manufacturing Agreement between Heritage and Premier dated July 1, 2017 as amended (\"Agreement\").",
+              "value": "Stremick's Heritage Foods, LLC (Heritage); Premier Nutrition Corporation (Premier)"
+            },
+            {
+              "clause_type": "effective_date",
+              "confidence": 0.8,
+              "evidence": [
+                {
+                  "char_end": 333,
+                  "char_start": 264,
+                  "quote": "is effective as of July 3, 2019 (\"Third Amendment Effective Date\")"
+                }
+              ],
+              "present": true,
+              "raw_text": "is effective as of July 3, 2019 (\"Third Amendment Effective Date\")",
+              "value": "2019-07-03"
+            },
+            {
+              "clause_type": "expiration_date",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "renewal_term",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "notice_period_to_terminate_renewal",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "change_of_control",
+              "confidence": 0.9,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "anti_assignment",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "cap_on_liability",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "uncapped_liability",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "non_compete",
+              "confidence": 0.9,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "exclusivity",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            }
+          ]
+        },
+        "name": "submit_extraction",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefpzCbrxrTQrGmM3HKN4",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 72
+      },
+      "cache_creation_input_tokens": 72,
+      "cache_read_input_tokens": 11793,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 1219,
+      "output_tokens_details": {
+        "thinking_tokens": 154
+      },
+      "service_tier": "standard"
+    }
+  }
+}

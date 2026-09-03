@@ -1,0 +1,211 @@
+{
+  "meta": {
+    "latency_ms": 18623.768699995708,
+    "max_tokens": 8000,
+    "message_count": 13,
+    "messages_sha": "46a3204aa927c006",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "18d7bd40d0441d80",
+      "0e53952317d88317",
+      "cc8b4df9e342e8f7",
+      "3c412b41ff9ad2b6",
+      "6822313d71a23c54",
+      "a64b202bc04fedda",
+      "bc3b8e916bb840af",
+      "fa0460b03beacaba",
+      "b913ded3fab2ac33",
+      "b4c28c9f16ab2ddf",
+      "3feb25086efe4d21",
+      "f06e01bb16f85644",
+      "d741fc9947b1d99b"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "EpACCpABCBEYAipAdZPmZfnKDOGA0BJjphJoxUuSctBMEdyMsHscFQbXazkF3IbxgikmWKuXadtErJURgvMJUpB6C1JW0yyfLPMIVTIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAbXj49QGEgwugfk/sjCviRAT2uoaDAPTKCNOek69pu8a6iIwzLNa7PIODRKOBq9Mujl72ftGW6Dx3LIOmWp0XtdxGUj9UR5odlWKKWeq1QOQBN8SKi3v9aMME5XLo0pT2TuobqxqMCrUCSPvSc3fhyL+7O++qCNIwmozQ3k48w2GMG4YAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01BzgMMfRe7C4BMUk3v2TD1N",
+        "input": {
+          "clauses": [
+            {
+              "clause_type": "governing_law",
+              "confidence": 0.97,
+              "evidence": [
+                {
+                  "char_end": 128472,
+                  "char_start": 128260,
+                  "quote": "This Agreement shall be governed by and construed in accordance with the laws of the State of New York applicable to agreements made and to be performed in said State without regard to the conflicts of laws provisions thereof."
+                }
+              ],
+              "present": true,
+              "raw_text": "This Agreement shall be governed by and construed in accordance with the laws of the State of New York applicable to agreements made and to be performed in said State without regard to the conflicts of laws provisions thereof.",
+              "value": "US-NY"
+            },
+            {
+              "clause_type": "parties",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 1310,
+                  "char_start": 836,
+                  "quote": "Greater Delaware Valley Holdings, A Mutual Company, a Pennsylvania-chartered mutual holding company (the \"PA MHC\"), Alliance Mutual Holding Company, a federal mutual savings and loan holding company in formation (the \"Federal MHC\"), Alliance Bancorp, Inc. of Pennsylvania, a federal stock holding company in formation (the \"Company\"), and Greater Delaware Valley Savings Bank d/b/a Alliance Bank, a Pennsylvania-chartered stock savings bank (the \"Bank\"), hereby confirm their agreement with Sandler O'Neill & Partners, L.P. (\"Sandler O'Neill\" or the \"Agent\")"
+                }
+              ],
+              "present": true,
+              "raw_text": "Greater Delaware Valley Holdings, A Mutual Company, a Pennsylvania-chartered mutual holding company (the \"PA MHC\"), Alliance Mutual Holding Company, a federal mutual savings and loan holding company in formation (the \"Federal MHC\"), Alliance Bancorp, Inc. of Pennsylvania, a federal stock holding company in formation (the \"Company\"), and Greater Delaware Valley Savings Bank d/b/a Alliance Bank, a Pennsylvania-chartered stock savings bank (the \"Bank\"), hereby confirm their agreement with Sandler O'Neill & Partners, L.P. (\"Sandler O'Neill\" or the \"Agent\")",
+              "value": "Alliance Bancorp, Inc. of Pennsylvania (Company); Sandler O'Neill & Partners, L.P. (Agent); Greater Delaware Valley Savings Bank d/b/a Alliance Bank (Bank); Greater Delaware Valley Holdings, A Mutual Company (PA MHC); Alliance Mutual Holding Company (Federal MHC)"
+            },
+            {
+              "clause_type": "effective_date",
+              "confidence": 0.55,
+              "evidence": [
+                {
+                  "char_end": 688,
+                  "char_start": 650,
+                  "quote": "AGENCY AGREEMENT\n\nNovember ___, 2006"
+                }
+              ],
+              "present": true,
+              "raw_text": "AGENCY AGREEMENT\n\nNovember ___, 2006",
+              "value": "2006-11"
+            },
+            {
+              "clause_type": "expiration_date",
+              "confidence": 0.35,
+              "evidence": [
+                {
+                  "char_end": 58907,
+                  "char_start": 58725,
+                  "quote": "The appointment of the Agent hereunder shall terminate upon the earlier to occur of (a) forty-five (45) days after the last day of the Subscription and Community Offering, unless"
+                },
+                {
+                  "char_end": 59221,
+                  "char_start": 58911,
+                  "quote": "the Company and the Agent agree in writing to extend such period and the OTS agrees to extend the period of time in which the Securities may be sold, or (b) the receipt and acceptance of subscriptions and purchase orders for all of the Securities, or (c) the completion of the Syndicated Community Offering."
+                }
+              ],
+              "present": true,
+              "raw_text": "The appointment of the Agent hereunder shall terminate upon the earlier to occur of (a) forty-five (45) days after the last day of the Subscription and Community Offering, unless the Company and the Agent agree in writing to extend such period and the OTS agrees to extend the period of time in which the Securities may be sold, or (b) the receipt and acceptance of subscriptions and purchase orders for all of the Securities, or (c) the completion of the Syndicated Community Offering.",
+              "value": "UNSPECIFIED"
+            },
+            {
+              "clause_type": "renewal_term",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "notice_period_to_terminate_renewal",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "change_of_control",
+              "confidence": 0.8,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "anti_assignment",
+              "confidence": 0.75,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "cap_on_liability",
+              "confidence": 0.6,
+              "evidence": [
+                {
+                  "char_end": 122960,
+                  "char_start": 122765,
+                  "quote": "in no event shall the Agent be required to contribute an aggregate amount in excess of the aggregate marketing fees to which the Agent is entitled and actually paid pursuant to this Agreement."
+                }
+              ],
+              "present": true,
+              "raw_text": "Notwithstanding anything to the contrary set forth herein, to the extent permitted by applicable law, in no event shall the Agent be required to contribute an aggregate amount in excess of the aggregate marketing fees to which the Agent is entitled and actually paid pursuant to this Agreement.",
+              "value": null
+            },
+            {
+              "clause_type": "uncapped_liability",
+              "confidence": 0.45,
+              "evidence": [
+                {
+                  "char_end": 114594,
+                  "char_start": 114264,
+                  "quote": "The Company, the MHCs and the Bank, jointly and severally, agree to indemnify and hold harmless the Agent, each person, if any, who controls the Agent, within the meaning of Section 15 of the Securities Act or Section 20 of the Exchange Act, and its respective partners, directors, officers, employees and agents as follows:"
+                },
+                {
+                  "char_end": 114878,
+                  "char_start": 114596,
+                  "quote": "from and against any and all loss, liability, claim, damage and expense whatsoever, as incurred, related to or arising out of the Offerings or any action taken by the Agent where acting as agent of the Company, the MHCs or the Bank or otherwise as described in Section 2 hereof;"
+                }
+              ],
+              "present": true,
+              "raw_text": "The Company, the MHCs and the Bank, jointly and severally, agree to indemnify and hold harmless the Agent, each person, if any, who controls the Agent, within the meaning of Section 15 of the Securities Act or Section 20 of the Exchange Act, and its respective partners, directors, officers, employees and agents as follows: (i) from and against any and all loss, liability, claim, damage and expense whatsoever, as incurred, related to or arising out of the Offerings or any action taken by the Agent where acting as agent of the Company, the MHCs or the Bank or otherwise as described in Section 2 hereof;",
+              "value": null
+            },
+            {
+              "clause_type": "non_compete",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "exclusivity",
+              "confidence": 0.7,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            }
+          ]
+        },
+        "name": "submit_extraction",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefqqvUPgY7keYbSVga8k",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 242
+      },
+      "cache_creation_input_tokens": 242,
+      "cache_read_input_tokens": 83754,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 2495,
+      "output_tokens_details": {
+        "thinking_tokens": 11
+      },
+      "service_tier": "standard"
+    }
+  }
+}

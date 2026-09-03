@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "latency_ms": 3407.664600003045,
+    "max_tokens": 8000,
+    "message_count": 5,
+    "messages_sha": "c79f96fce05e90ec",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "f9443ca186e9070c",
+      "5394f345aa4b3c89",
+      "bb63f9b76c6b0bf5",
+      "ad07589398bee13c",
+      "212bd364da233207"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "text": "The document is confirmed to be only this ~8024-character Second Amendment. No governing law, cap on liability, uncapped liability, anti-assignment, change of control, exclusivity, non-compete, or renewal notice provisions appear anywhere in the text. Let me build the extraction now.",
+        "type": "text"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01Ds9MKMuARmRXBNGZ86p5Ta",
+        "input": {
+          "clause_types": [
+            "expiration_date",
+            "renewal_term"
+          ]
+        },
+        "name": "get_schema",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011Cefpr1i3jYv5MYgk2vkA3",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 27518
+      },
+      "cache_creation_input_tokens": 27518,
+      "cache_read_input_tokens": 26154,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 158,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard"
+    }
+  }
+}

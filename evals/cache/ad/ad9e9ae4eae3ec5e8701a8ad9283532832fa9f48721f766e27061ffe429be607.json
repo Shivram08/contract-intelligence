@@ -1,0 +1,205 @@
+{
+  "meta": {
+    "latency_ms": 33590.59399999387,
+    "max_tokens": 8000,
+    "message_count": 11,
+    "messages_sha": "6cb5734f52da5068",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "4bef271e3679c8c1",
+      "ef4ae70cb6f9da07",
+      "3227b95093781acc",
+      "36f387f13ab91b13",
+      "d6d295febe6a57ce",
+      "3dc9c12543b9db6c",
+      "67f9a4d59d8773ec",
+      "bc7ce4df18c79b23",
+      "fe4957ba52273ec5",
+      "3e38e4a04b2f991f",
+      "302584bc8052df3b"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01NXZJkvznv6HTgycY6iGPZn",
+        "input": {
+          "clauses": [
+            {
+              "clause_type": "governing_law",
+              "confidence": 0.97,
+              "evidence": [
+                {
+                  "char_end": 127141,
+                  "char_start": 126961,
+                  "quote": "This Agreement shall be governed by and construed in accordance with the laws of the State of New York without regard to principles of conflicts of law."
+                }
+              ],
+              "present": true,
+              "raw_text": "This Agreement shall be governed by and construed in accordance with the laws of the State of New York without regard to principles of conflicts of law.",
+              "value": "US-NY"
+            },
+            {
+              "clause_type": "parties",
+              "confidence": 0.9,
+              "evidence": [
+                {
+                  "char_end": 950,
+                  "char_start": 530,
+                  "quote": "Blue Hills Bancorp, Inc. (the \"Holding Company\"), a newly formed Maryland corporation, Hyde Park Bancorp, MHC, a Massachusetts\u00ad chartered mutual holding company (the \"MHC\"), Hyde Park Bancorp, Inc., a Massachusetts corporation (the \"Mid\u00adTier\"), and Blue Hills Bank, a Massachusetts\u00adchartered stock savings bank (the \"Bank\" and together with the Holding Company, the MHC and the Mid\u00adTier, the \"Blue Hills Parties\"), hereby confirm their agreement with Keefe, Bruyette & Woods, Inc. (the \"Agent\") as follows:"
+                }
+              ],
+              "present": true,
+              "raw_text": "Blue Hills Bancorp, Inc. (the \"Holding Company\"), a newly formed Maryland corporation, Hyde Park Bancorp, MHC, a Massachusetts\u00ad chartered mutual holding company (the \"MHC\"), Hyde Park Bancorp, Inc., a Massachusetts corporation (the \"Mid\u00adTier\"), and Blue Hills Bank, a Massachusetts\u00adchartered stock savings bank (the \"Bank\" and together with the Holding Company, the MHC and the Mid\u00adTier, the \"Blue Hills Parties\"), hereby confirm their agreement with Keefe, Bruyette & Woods, Inc. (the \"Agent\") as follows:",
+              "value": "Blue Hills Bancorp, Inc. (Holding Company); Blue Hills Bank (Bank); Hyde Park Bancorp, MHC (MHC); Hyde Park Bancorp, Inc. (Mid-Tier); Keefe, Bruyette & Woods, Inc. (Agent)"
+            },
+            {
+              "clause_type": "effective_date",
+              "confidence": 0.8,
+              "evidence": [
+                {
+                  "char_end": 200,
+                  "char_start": 170,
+                  "quote": "AGENCY AGREEMENT\n\nMay 14, 2014"
+                }
+              ],
+              "present": true,
+              "raw_text": "AGENCY AGREEMENT\n\nMay 14, 2014",
+              "value": "2014-05-14"
+            },
+            {
+              "clause_type": "expiration_date",
+              "confidence": 0.35,
+              "evidence": [
+                {
+                  "char_end": 7229,
+                  "char_start": 7000,
+                  "quote": "The obligations of the Agent pursuant to this Agreement shall terminate upon termination of the Offering, but in no event later than 45 days after the completion of the Subscription Offering, unless extended (the \"End Date\")."
+                }
+              ],
+              "present": true,
+              "raw_text": "The obligations of the Agent pursuant to this Agreement shall terminate upon termination of the Offering, but in no event later than 45 days after the completion of the Subscription Offering, unless extended (the \"End Date\").",
+              "value": "UNSPECIFIED"
+            },
+            {
+              "clause_type": "renewal_term",
+              "confidence": 0.7,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "notice_period_to_terminate_renewal",
+              "confidence": 0.7,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "change_of_control",
+              "confidence": 0.7,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "anti_assignment",
+              "confidence": 0.6,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "cap_on_liability",
+              "confidence": 0.85,
+              "evidence": [
+                {
+                  "char_end": 119887,
+                  "char_start": 119576,
+                  "quote": "It is expressly agreed that the Agent shall not be liable for any loss, liability, claim, damage or expense or be required to contribute any amount pursuant to Section 9(b) or this Section 10 which in the aggregate exceeds the amount paid (excluding reimbursable expenses) to the Agent under this Agreement."
+                }
+              ],
+              "present": true,
+              "raw_text": "It is expressly agreed that the Agent shall not be liable for any loss, liability, claim, damage or expense or be required to contribute any amount pursuant to Section 9(b) or this Section 10 which in the aggregate exceeds the amount paid (excluding reimbursable expenses) to the Agent under this Agreement.",
+              "value": null
+            },
+            {
+              "clause_type": "uncapped_liability",
+              "confidence": 0.55,
+              "evidence": [
+                {
+                  "char_end": 107886,
+                  "char_start": 107292,
+                  "quote": "Each of the Blue Hills Parties jointly and severally agrees to indemnify and hold harmless the Agent, its officers and directors, employees and agents, and each person, if any, who controls the Agent within the meaning of Section 15 of the 1933 Act or Section 20(a) of the 1934 Act, against any and all loss, liability, claim, damage or expense whatsoever (including, but not limited to, settlement expenses), joint or several, that the Agent or any of them may suffer or to which the Agent and any such persons may become subject under all applicable federal or state laws or otherwise"
+                }
+              ],
+              "present": true,
+              "raw_text": "Each of the Blue Hills Parties jointly and severally agrees to indemnify and hold harmless the Agent, its officers and directors, employees and agents, and each person, if any, who controls the Agent within the meaning of Section 15 of the 1933 Act or Section 20(a) of the 1934 Act, against any and all loss, liability, claim, damage or expense whatsoever (including, but not limited to, settlement expenses), joint or several, that the Agent or any of them may suffer or to which the Agent and any such persons may become subject under all applicable federal or state laws or otherwise",
+              "value": null
+            },
+            {
+              "clause_type": "non_compete",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "exclusivity",
+              "confidence": 0.8,
+              "evidence": [
+                {
+                  "char_end": 6858,
+                  "char_start": 6465,
+                  "quote": "the Blue Hills Parties hereby appoint the Agent as their exclusive financial advisor and conversion agent (i) to utilize its best efforts to solicit subscriptions for Shares and to advise and assist the Holding Company and the Bank with respect to the sale of the Shares in the Offering and (ii) to participate in the Offering in the areas of market making and in syndicate formation or to act as sole book-running manager in the Underwritten Offering (if necessary)."
+                }
+              ],
+              "present": true,
+              "raw_text": "the Blue Hills Parties hereby appoint the Agent as their exclusive financial advisor and conversion agent (i) to utilize its best efforts to solicit subscriptions for Shares and to advise and assist the Holding Company and the Bank with respect to the sale of the Shares in the Offering and (ii) to participate in the Offering in the areas of market making and in syndicate formation or to act as sole book-running manager in the Underwritten Offering (if necessary).",
+              "value": null
+            }
+          ]
+        },
+        "name": "submit_extraction",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefrD5q3s6Q8Rdvffn1Pw",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 74338
+      },
+      "cache_creation_input_tokens": 74338,
+      "cache_read_input_tokens": 3149,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 4142,
+      "output_tokens_details": {
+        "thinking_tokens": 1596
+      },
+      "service_tier": "standard"
+    }
+  }
+}

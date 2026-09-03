@@ -1,0 +1,66 @@
+{
+  "meta": {
+    "latency_ms": 3558.7928999884753,
+    "max_tokens": 8000,
+    "message_count": 11,
+    "messages_sha": "17fa4c7a8426531a",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "dd1d3effd2da8125",
+      "9a09a1cf6860be31",
+      "897b772a17a77837",
+      "d4e3860585efe395",
+      "69df623ac08c8091",
+      "bde64239ba9aadde",
+      "1ac2c4907123c98e",
+      "17d0c2bfb0a88fe1",
+      "9c79403d7cbcc673",
+      "1f7c55c61bbe9dbf",
+      "da8bdf7ebc822b9b"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "EpwFCpABCBEYAipApdgi7o7JcHu5/qBTmjEjMa5+KhWcDkA1u/qyE9RXsrtWHn8OhVOD9oimu+yfXSYrbossIO8LuGX0oOBtP0O/ejIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAcrf49QGEgyzte1Uj+3IQFcbStoaDIXRUizQokJp7lvF0iIwQHqF711MnygE5cAvcZJKdsr4RovJsRU7ArZOaLF6hwJKGThiM8ugXqWSE2izRqdHKrgDNkEVcVm8pnmHVlXE69pJQk7+aqgrHYi1EA2cW5d7rKOcWN2wrtTsMaC3ftgs+A5b83n4bIxqGVv1iuf1sH2t84Sgn0MSfsrbuSpeXr1jACZKXircfBsZGTaV5Zu3Y+akQC6jezXHNNNRLiajcIzlDSW4oiu7dUyuKRHp5FmoqhyFjhERGeQOMmLEoo88eleaac6etM22NTPr0GTmrM4SiMPEPjIfvUESSOsLW25HZy42oy3IWJ6i5VsR3FN9Hq+k1onVko5Qpdjo9b2laOAsfDOtMrgPyEvvJvmlYHSaJAR6yd6+SAGy7UE8Hm9gaJVy8YSkZEjcDmr5KFrsrr3rtg1DB3YwdHK3WYcY7BS0Tbeuqvx99isX54/HawoVAbkAxpAR9DU2Ddgt0Blm57i7mCv+Lr1jK8nN3qcoAGIdsRlGYGoIq25dqQg1yypsHGZNwKcA2n6fm194+m4UsqMHukeLY8yEakwzTmPAuOSTHCFqJ/GUjnoQe2S3mt1vs4K7n2fHpRGZd0uhrot81Q4RdccqLFlDfdaaARCzK9fBVS/Ky/pW8T8CaOYDTY35vgCYKqyj6HXJ9ZgYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01EpWDW7dwJcTxbeBgkjmDMq",
+        "input": {
+          "query": "notice period renewal term additional consecutive years"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefqDfQmzTcD332qiM8Mh",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 1243
+      },
+      "cache_creation_input_tokens": 1243,
+      "cache_read_input_tokens": 50513,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 203,
+      "output_tokens_details": {
+        "thinking_tokens": 141
+      },
+      "service_tier": "standard"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "meta": {
+    "latency_ms": 2332.1371999918483,
+    "max_tokens": 8000,
+    "message_count": 7,
+    "messages_sha": "44083c8c9f6dc1c7",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "57deb599ea95c8ac",
+      "a5f4daf8fd70fcb2",
+      "11628ab10e1d683d",
+      "f919d91dd9c6df00",
+      "e1eaa38ce73413c9",
+      "f5a4d7d2533f70d4",
+      "bdc9ae606eaec700"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "text": "Now I'll draft the extraction based on findings, then validate.",
+        "type": "text"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01VfeosC7PRnz9ZeByHdTktk",
+        "input": {},
+        "name": "read_span",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011Cefpz2acAWXNcRrMty49j",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 1472
+      },
+      "cache_creation_input_tokens": 1472,
+      "cache_read_input_tokens": 10321,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 51,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard"
+    }
+  }
+}

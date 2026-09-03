@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "latency_ms": 3026.636700000381,
+    "max_tokens": 8000,
+    "message_count": 7,
+    "messages_sha": "922fa4aefad3804c",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "40c86ac6e9c6d864",
+      "2df86c3235ae798b",
+      "3b2f15390bc15eb7",
+      "c26881c84961cc88",
+      "ef0a4de164c55c9e",
+      "41aab1de455f05c9",
+      "e9d208de57b6a39e"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "text": "Confirmed: no anti-assignment, change of control, cap on liability, uncapped liability, non-compete, or exclusivity clauses in the document. Now let me prepare the extraction. Let me check the term section for renewal_term more carefully.",
+        "type": "text"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01HeGrY5gvULrQ17MN6PutsJ",
+        "input": {
+          "char_end": 4777,
+          "char_start": 3933
+        },
+        "name": "read_span",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefoetsMzM8NXfL8cjpV8",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 15836
+      },
+      "cache_creation_input_tokens": 15836,
+      "cache_read_input_tokens": 26790,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 154,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard"
+    }
+  }
+}

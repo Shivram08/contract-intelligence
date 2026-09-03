@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "latency_ms": 4582.400700004655,
+    "max_tokens": 8000,
+    "message_count": 3,
+    "messages_sha": "71ed8714c5215182",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "208beedd51118449",
+      "800f96e931cf05ca",
+      "8abe429f1cd6313a"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "text": "This is a very short Joint Filing Agreement with no governing law, term, liability, or non-compete/exclusivity provisions. Only parties and effective date (dated) are present. Let me check the full length and confirm nothing else is present.",
+        "type": "text"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01DiMnoJow2EtaLjUUxaMxKX",
+        "input": {
+          "query": "termination renewal notice"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_019B46Q5tK8pnHrSTdirdiDn",
+        "input": {
+          "query": "limitation of liability"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01PsETeY7HDfmWhLpsVqAPCm",
+        "input": {
+          "query": "assignment shall not assign"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01J88PSQFpMbXk23hnxtrFzi",
+        "input": {
+          "query": "non-compete exclusivity change of control"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefoJp6KQxLHkeRgvrVVg",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 3287
+      },
+      "cache_creation_input_tokens": 3287,
+      "cache_read_input_tokens": 3149,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 287,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard"
+    }
+  }
+}

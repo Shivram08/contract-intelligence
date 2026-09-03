@@ -1,0 +1,185 @@
+{
+  "meta": {
+    "latency_ms": 9517.477499990491,
+    "max_tokens": 8000,
+    "message_count": 15,
+    "messages_sha": "84c270fcac2cb4ae",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "b9cb3680ddda94d7",
+      "68c60317e4398960",
+      "21fece2fac16fc88",
+      "fff8cab7d77ae119",
+      "18fb01d5a51730fe",
+      "6f34632bafca64a4",
+      "9f755e103da38d64",
+      "1e56e2cfca6e5c06",
+      "f12723f0a51d6615",
+      "3114bea5dc9e95ee",
+      "7983322edb1870ac",
+      "d73a8dc4891cbc96",
+      "508cb96dfabcf275",
+      "d982f45142d91178",
+      "66b2581b89ee8f6a"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "Es8CCpABCBEYAipAny3ymyYMQ7wryWpsoiMTcdWFZp7PyrAX8Z6I2VyQ0+LCey0+mCzWP6Xx55BNVfRvv95j4p614snabkaxYTDp6zIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAc3b49QGEgzMwC1lB4EtIEjRO78aDOluS/MlAOEL4GUzuSIw71rL4FRIBvFPPUep2dIBLA7lb9guMpDePkK852stpPW+8XuZv+2mu2yAh/+M2HzhKmw4NS+FqycB+Fitqh2rZrg1A+N3we1m0S7CP2NzFdlrGRugs+Ux7WsaIPecLFgzVaWOT+FXMIUB4TfunTU4XkvQjOCZ2KmwAMNDY6xCBO5f98AR1QP5nFSs0+9yjGXwB+OSGxzIBQU82XjpEQQYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01BbJUm6Zd9syp5ruRhePECN",
+        "input": {
+          "clauses": [
+            {
+              "clause_type": "governing_law",
+              "confidence": 0.75,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "parties",
+              "confidence": 0.9,
+              "evidence": [
+                {
+                  "char_end": 460,
+                  "char_start": 112,
+                  "quote": "This Amendment No. 1 (the \"Amendment\"), entered into by and between Stremick's Heritage Foods, LLC (\"Heritage\") Premier Nutrition Corporation (\"Premier\") is effective as of June 11, 2018 (\"Amendment Effective Date\") and amends that certain Manufacturing Agreement between Heritage and Premier dated July 1, 2017 (\"Agreement\")."
+                }
+              ],
+              "present": true,
+              "raw_text": "This Amendment No. 1 (the \"Amendment\"), entered into by and between Stremick's Heritage Foods, LLC (\"Heritage\") Premier Nutrition Corporation (\"Premier\") is effective as of June 11, 2018 (\"Amendment Effective Date\") and amends that certain Manufacturing Agreement between Heritage and Premier dated July 1, 2017 (\"Agreement\"). Heritage and Premier are each referred to herein as a \"Party\" and collectively as the \"Parties.\"",
+              "value": "Stremick's Heritage Foods, LLC (Manufacturer); Premier Nutrition Corporation (Customer)"
+            },
+            {
+              "clause_type": "effective_date",
+              "confidence": 0.75,
+              "evidence": [
+                {
+                  "char_end": 295,
+                  "char_start": 232,
+                  "quote": "is effective as of June 11, 2018 (\"Amendment Effective Date\")"
+                }
+              ],
+              "present": true,
+              "raw_text": "This Amendment No. 1 (the \"Amendment\"), entered into by and between Stremick's Heritage Foods, LLC (\"Heritage\") Premier Nutrition Corporation (\"Premier\") is effective as of June 11, 2018 (\"Amendment Effective Date\")",
+              "value": "2018-06-11"
+            },
+            {
+              "clause_type": "expiration_date",
+              "confidence": 0.45,
+              "evidence": [
+                {
+                  "char_end": 1638,
+                  "char_start": 1518,
+                  "quote": "the six-month period commencing July 1, 2022 and ending December 31, 2022, Premier will be required to purchase [***]"
+                }
+              ],
+              "present": true,
+              "raw_text": "the six-month period commencing July 1, 2022 and ending December 31, 2022, Premier will be required to purchase [***] (the twelve-month periods and the six-month period are each a \"Contract Period\")",
+              "value": "2022-12-31"
+            },
+            {
+              "clause_type": "renewal_term",
+              "confidence": 0.7,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "notice_period_to_terminate_renewal",
+              "confidence": 0.7,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "change_of_control",
+              "confidence": 0.75,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "anti_assignment",
+              "confidence": 0.75,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "cap_on_liability",
+              "confidence": 0.75,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "uncapped_liability",
+              "confidence": 0.7,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "non_compete",
+              "confidence": 0.8,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "exclusivity",
+              "confidence": 0.6,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            }
+          ]
+        },
+        "name": "submit_extraction",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefpaGZpPYtoEB1jjk2ib",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 849
+      },
+      "cache_creation_input_tokens": 849,
+      "cache_read_input_tokens": 25964,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 1373,
+      "output_tokens_details": {
+        "thinking_tokens": 31
+      },
+      "service_tier": "standard"
+    }
+  }
+}

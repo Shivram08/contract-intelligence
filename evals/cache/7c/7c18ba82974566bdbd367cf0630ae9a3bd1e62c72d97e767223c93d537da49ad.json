@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "latency_ms": 6719.695199994021,
+    "max_tokens": 8000,
+    "message_count": 11,
+    "messages_sha": "737f50a3665cdf24",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "40c86ac6e9c6d864",
+      "2df86c3235ae798b",
+      "3b2f15390bc15eb7",
+      "c26881c84961cc88",
+      "ef0a4de164c55c9e",
+      "41aab1de455f05c9",
+      "e9d208de57b6a39e",
+      "10966571bf3dcdf7",
+      "7f2b67851d3d23c1",
+      "aaace53928ed1a19",
+      "88412f4e28807ad8"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "Ev0NCpABCBEYAipA7pXNYicNCensHvpri+55kY8Xh4cdRIT7t6TqayOiCHa3dqvJ3fBI14QWzBztR21oYS20QQu6ffHcDYHdcPFlkjIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAYbW49QGEgx8SdkI41LKntMk5FsaDNZz4IiLdXHFCHgJyyIw+Now6oEqvPnIw0YS9e8t08kZv8GJ5KguYtu9ak9lJZwH2K1+QM5Jgd7bvLda1oMbKpkMWcXmVnEVmGbHpuun8X50SFCnibPEekAnQlMuzmfHwjWNPmGqDL3bW/JhpICRITUVnwqILAFKsxjrRdk+8aNDg88+r1XUgdBvvejqJ2iDi6DyjRxnNMMivJPnq0UDKnbyCeDA0Xp0sxtWCoQa746CkkFC/nqlAFkDzktR0PIBIFZN33F17LPBschxTTknRhs15c1N1ZNMDtYGdvUzb92ngFu3oE/X0IZrds6Nn4kOrs6Ha2Jdu6palDO8GsnEVq2SgmdFHOph7pXHBso7IQ47XDKBUPAyJaTNW2Jxoll/1ruFVF2lzEFtItwbjiq/drStF4ZcfyNjYdAnCIIWVPYo6YJfY9xedeVxUO/VJ7AFVgq9mi/gWoMzWVGQZX2ARczt+Z23pR+5D/FKY0+SDkbMuLMYmsurODHDldmXsmBUxXXe00RnqK7nhCfwKZS6rqWcpmglHJGmbNEvByTZBlaugTVvcGKK002V35puggtS78KCfnRolkrB5ZJDwIJtC6jKRF4nDuMvqWMor83ba4qbc9l2rmXl1bmfEXNpTNg/5ddwmru7YUUhRMgsgRv4Du/+4TAjgkN0J62ykQVd5bmKXRjU1xf+G68NSZ0rRceSilnebuGiDFbK3cUUzUSxXdkTbCt3Gm/KLfww04kRP7GDhKFMmk1ksOiPMPfr+IPReguJglczrghlDayvL2Mg4hlXMGc/ByBNWPoUtD6L9JwCYf4oETkK27Gzm7Cp1XwgVzuRnC7Dsjf8UbtUcyyGATWW6+fEYhr+yj24zcGkmgt6JHXRyUCDUNHQ3ZwAFhPka9gR24mXCqupbByGptHnswnF00YNcYNUYR+c5MDHzHQCAXFgHEBr86dMIrWvxctq/Rxf/lA3Sbb8xbKQNTXP0fO9fkV3zbSKMmc1JuLH3Ja6wyuSYVk3REpE8vLQGWLrHAQBwRxKdGQe1S14l1Q68aF3e9haKWMmiwdCQIULDuziGk3TnikRNdyV5FnxNYe6G1DBkHtJQJgP8JerExkvoSs/LHABGU0WREzSd8q94yhIzlEpee8momEjD8CZfbopoj6MhHIriDodY/bMsG1Y7iw5mdnRo0cOId9YoyUVaaQ0cv86lqXWVsWsqYtOnerfWhCFfBbea1aCeCtpLa/pi84hq+q6mV1llkEFaOdkfKS/4ivEh61u0kBFHvrUNP4Wp22b0gLf72izz7WSynPSMvmTQDSeFERSQdd+36XTJccQrNfnKaRAlpbBKdBADiaK5CocZr2QeCqYZJBougxGR3Ha4wfb21tDHinT934eLytUrBCepr1YCVspdAunM4JVKj/22i2ns/Eg1/ecbqQ+K9PEdCyYe79xogj7jKzr5pYF/Vtivbi1Sax4m1kUFfbaBICXZOKqyf+R9cbyO8cfCAhKe9CBEMWO4SlHvU724TxGTOCFmepf3chkuv3QW706VhgYsI1S2QRGEV6tIVGJ9qBOZnaTpr4D6k7Bcn30fDeEO/oRuoXWlm3FEREAndJW/dJWYLAQLNVQMUdtdpVPwXLHftqQyYW3p46fNmQ2k1khSb1FapCqwhzlHBQJzjLPfzQk7b6L7V3iJIvFz5/iVI64abhYAScqMk+AkYihdQvkuIn6AfOsBMcLpJA/uEqP5KALPgpt+b7q4RiCIQb4GIqCrJXImlOhU/h1B0bAfX5uXaQqWGx4grFfusQOvq1ljUscKP4vNY4Kzu2f4prO4XRO4Zzh22IiudzE/4dLag1z26CuRfwxZ5E3/gnx9CQ+j1cLYosfjZO91fi+lu1KO/6u5Dv7GH6ZGeaIZCLmjQ2+dALmH/Of9GzQL1VURWWVUblNE67IBVLrtf8ictcxYf/7ADAE2TPRLohPHGOcxwAaZlfqJ/YOkPpSP9dwn/IT6hkCS3tE2a6W7KAeHDcDoGjjvFrh17ubo+havxaQMfv/Y6ybxf0iOJB4uUBMHMx+3cH6sUrplIUF8VwMaJ61Ty8ah3SusdKnpPLDKPQqajQ3k/gwPPRF8qm0AxoWfO4OqoH0/9aPV2qk/dSTXjt46n2p+UGkqeU5b0sZ5c0jPhOPJaK83eEqQumomBgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_016TgFgFhhzcyNTmhyBmyBak",
+        "input": {
+          "char_end": 3400,
+          "char_start": 2968
+        },
+        "name": "read_span",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefofXehFfwDLnJhiBKFo",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 798
+      },
+      "cache_creation_input_tokens": 798,
+      "cache_read_input_tokens": 43308,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 593,
+      "output_tokens_details": {
+        "thinking_tokens": 518
+      },
+      "service_tier": "standard"
+    }
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "meta": {
+    "latency_ms": 10399.136399995768,
+    "max_tokens": 8000,
+    "message_count": 7,
+    "messages_sha": "81ebb49f4a963039",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "18d7bd40d0441d80",
+      "0e53952317d88317",
+      "cc8b4df9e342e8f7",
+      "3c412b41ff9ad2b6",
+      "6822313d71a23c54",
+      "a64b202bc04fedda",
+      "bc3b8e916bb840af"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_012npWN6ju9Y6ZJsN2mGGyjG",
+        "input": {
+          "query": "assign this agreement without the prior written consent"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01NqRR19S36d9Beqqbgcnm6p",
+        "input": {
+          "query": "merger, consolidation, or sale of substantially all assets"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01K5oXZCi4trMdnYiAdZrytV",
+        "input": {
+          "query": "successors and assigns"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01WzFj8VKMV31WmoMRZQMGPY",
+        "input": {
+          "query": "solely liable or agree to procure exclusively from Agent"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefoAaexmQpUkfdmi21ib",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 1138
+      },
+      "cache_creation_input_tokens": 1138,
+      "cache_read_input_tokens": 60998,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 936,
+      "output_tokens_details": {
+        "thinking_tokens": 701
+      },
+      "service_tier": "standard"
+    }
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "meta": {
+    "latency_ms": 5012.561800002004,
+    "max_tokens": 8000,
+    "message_count": 3,
+    "messages_sha": "b7fe08c46d973bd2",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "4bef271e3679c8c1",
+      "ef4ae70cb6f9da07",
+      "3227b95093781acc"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "Eo8ECpABCBEYAipAA54sHiqoHURAh0CfJO26lG7CnvMke4sJItxLnnxvgaod9x9DfiPBseGkRo3UaZUTJEk4HimXVPwTkuuClKRZqzIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAcPY49QGEgyTFAxLvFBCx3TXiVUaDNjQsJRZhIKHoMq2RyIwVkWshXGbPqEwi1FR5XcplXqFe2bPU20SUOJMhDLhlyMZKCLcnpavyWjhKz8+71TxKqsCXoZ8IRs2BU+GU2/MJ2NHhiaOHnhI8wnTswMEQZ3xUHSIBUhehmYhHRWWZ+hdOkitVkIqhmMbeGQKEizoCKVPNIsTa5gOpMhJgCezaqz7Uviw6nx+6rGX7ixYpy0LePydbEAKgh+sJF6YtPwQlV8dXtZIdh0RGzze6kJ1ilTNeV/65NEyebzeOMCBw4kYx04NyAATp8cmnBoEDwQP/JagVtEPrF0sh1k0+iAiyje6I7azC/L0Vqqfrf852r3ED8c6PI3DQdoXzSMy3Ac+d9HsYQOT2HrAkj43CBXaFB1dW6eJ5PRGI+9nsXpDyzOjzee7MWIBwP+eBz8FmesYiqiF7WL69XUqds1m0MxD0H6s6j2QhTlbxKBgO1wA2zMZQll761iZC6pF4zvHzyIYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01MSTRyx4518cwPHYuk2ZCWg",
+        "input": {
+          "query": "date of this Agreement, dated as of"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_012s2jWcb4c7k9KJKMLoX3vH",
+        "input": {
+          "query": "may not assign this Agreement without prior written consent"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01CcJCMZFkNp2VB8ycBrbqwf",
+        "input": {
+          "query": "change of control merger consolidation"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01G1VwTScKpMrsrDr8TLSGJa",
+        "input": {
+          "query": "limitation of liability aggregate liability shall not exceed"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_014n3zVJsR4VFjjMtsRTq2oF",
+        "input": {
+          "query": "non-competition covenant not to compete"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01RJ2ddim1h5WbR8zN8fY4gN",
+        "input": {
+          "query": "exclusive agent exclusivity"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011Cefp56exFDH9fHA5WDnpJ",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 17741
+      },
+      "cache_creation_input_tokens": 17741,
+      "cache_read_input_tokens": 3149,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 437,
+      "output_tokens_details": {
+        "thinking_tokens": 92
+      },
+      "service_tier": "standard"
+    }
+  }
+}

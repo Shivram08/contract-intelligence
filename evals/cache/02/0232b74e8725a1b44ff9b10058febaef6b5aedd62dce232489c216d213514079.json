@@ -1,0 +1,73 @@
+{
+  "meta": {
+    "latency_ms": 9924.956000002567,
+    "max_tokens": 8000,
+    "message_count": 7,
+    "messages_sha": "d24ae8ed8740e228",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "b9cb3680ddda94d7",
+      "68c60317e4398960",
+      "21fece2fac16fc88",
+      "fff8cab7d77ae119",
+      "18fb01d5a51730fe",
+      "6f34632bafca64a4",
+      "9f755e103da38d64"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_012LgCTZB1fDUPDeQC5TzsUy",
+        "input": {
+          "query": "exclusively purchase from Heritage sole source"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01XxNL1nDDw25Fi6be9Wfbdo",
+        "input": {
+          "query": "indemnification liability cap"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefpXUQ8F7pu14JGNC5jh",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 1042
+      },
+      "cache_creation_input_tokens": 1042,
+      "cache_read_input_tokens": 20052,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 920,
+      "output_tokens_details": {
+        "thinking_tokens": 805
+      },
+      "service_tier": "standard"
+    }
+  }
+}

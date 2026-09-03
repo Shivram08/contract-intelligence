@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "latency_ms": 5694.803100006538,
+    "max_tokens": 8000,
+    "message_count": 9,
+    "messages_sha": "ae76d01e2ce325a7",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "dd1d3effd2da8125",
+      "9a09a1cf6860be31",
+      "897b772a17a77837",
+      "d4e3860585efe395",
+      "69df623ac08c8091",
+      "bde64239ba9aadde",
+      "1ac2c4907123c98e",
+      "17d0c2bfb0a88fe1",
+      "9c79403d7cbcc673"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "EvMJCpABCBEYAipADmIvkqyN5h5RaND6rdYBSlMrbJ0x+XAaupQL28Mz3Q7Xa8/TGXBqQ0Nt93cujz4wTUrYzOKJU2I2T092VR4XaTIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAcbf49QGEgzJjYkm7IIKehuZPwsaDFIuJZrtpAabnZiOOyIwSsZIEe2Oa5ojr/9QQAQMZobdWEuJ1xl1ifvi9LeqOPQAkACFCtwJ+HU6Kmqtm3VAKo8IkidB/UF83S8Nb54aBT0BvvAbJgUeoedQLMev5lvooE7YOrtrzt8Z+s0mVBsv9fdEqedfmlMQfFssdvghCnsNAzFITW/o8bgqBmDNY1VGFIVZ+R+H2SxCqYduTIo5eJEl++ndzwmZ7tvFd8Kd6lJ1CW8YTv+PHZos2O0d3rsY342hwooN7o279zb51Z1KtqqcsewARpH+1OFJZztUaLm4FxJ5uGC5viAA0lqRg4YugEfYleJwIIVgb7YhFSdfuaGvWQkOLvjdIvmepJv03PzTRhgXr5VWRW2LeLsJ4wwOYlqUNwJ5K5m0g4UWjQ3SqGFA0TvVQohbzbWz8I9B2xzE+YXvVbfSfIGZWg1AVixeweYcCEQBZtBFLvSRoR3kFTskiOLGW8mFtyeqXGicAD7NYjCSnZzOU8MopvNW2udU98NlOrRuE9TfWVfvWJtrY4ADHB3EZe8SvinAx1CEZjuiKvPWBJR8r6CKB3LhQ7vzYatcV2Bp+UF+zQl9thmPQouemcESxtDNxUtp2iRqAlTBhrDTbWaDx33PqGaSbLjz/DPw/IwGb9RywO/97CtWprqi+NHklrGMH31aUXITwBOMYOe/0mIg28ydC9R+LK1Vq50eGmQWn8q4SgGMq0aN05Fy17k+kw9ReNdWWCWQWHC7R/+BngaFxT6iRB/6/Hvsiyd8RDUCy51L5jt2ZW2Upk+H6WNInHypz4aCT3fZeliOWPcmleCsOan98xwQwDgZ3L5x80Lu7lkfY5qC+q9Mfe55loDm8cFVEYze9Z8k3xcSa3DSmTc8jIdm2gMsZeifiPDrZFfhWzHhBG0nzvmzLu2Fww0UVXlkCarTvH353E12xRg+q91oFEyZNSx+JAtJM6osZFSrMXwkyv7az4/Re82D9f09FicbxWU6KJ6v16za2bmXAi2p+lN0zO6Oz/9j5S1LlMmho4vNSnh7oCrDGFEOdQaO/rAc7AXIYWDk3xGpEt6QJj6com9xhfezoI0qCgTAB9VD3JhNvT2H4MasK0lNvn3LXmL5x58ckXfyt+dy2KCNWpcShugO3vi1iP+j9AKSEDCPUntuVMCuIlA4L/9QZI4TThTfk+96Tt49U+zHvZ1ET9ONrg+Hng34fJF9Sk6qCuF6ENuZdafAHE5KAApDOkCfyF0X2+3S4LI4NQWsTug+sqjn8P7FWWrzmiRgbNHDRllzbqdlfhVJKCsGePPL4Nl38/4DxxiJu2BUsupBvH8TvCwrcUPtJz05C/m+SXKQZKfZQlB6W8TPqqpV76Tn8/7GU0iwHKwN8cXhioynh3yynwOJs1zP4zyaGFHmNLXetEPvqMSPzL2O4l7liCCQ9c+NAV0l3o0uG97K8mjQmgpAEm8EZGyj0uk7KXjgchgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01LaqYUKusxaCkrMtKM68PFs",
+        "input": {
+          "clause_types": [
+            "notice_period_to_terminate_renewal",
+            "governing_law",
+            "parties",
+            "change_of_control",
+            "anti_assignment"
+          ]
+        },
+        "name": "get_schema",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefqDEJRFZRBzhyAnewaU",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 10530
+      },
+      "cache_creation_input_tokens": 10530,
+      "cache_read_input_tokens": 39983,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 458,
+      "output_tokens_details": {
+        "thinking_tokens": 365
+      },
+      "service_tier": "standard"
+    }
+  }
+}

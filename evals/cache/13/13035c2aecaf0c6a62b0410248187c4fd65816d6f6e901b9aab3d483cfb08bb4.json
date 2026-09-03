@@ -1,0 +1,213 @@
+{
+  "meta": {
+    "latency_ms": 27982.362199996714,
+    "max_tokens": 8000,
+    "message_count": 7,
+    "messages_sha": "e6910e5c8eaef6b6",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "04a53e144c18c7f9",
+      "955c70b0e6a91115",
+      "133bfa25c56872af",
+      "6e4dd14aa3d7805f",
+      "e23abfefc1e1b813",
+      "4e80cb34c44eecd8",
+      "eaae3a3a32b34711"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01DeJ5RC9gK6wzyAPagjnsXz",
+        "input": {
+          "clauses": [
+            {
+              "clause_type": "governing_law",
+              "confidence": 0.85,
+              "evidence": [
+                {
+                  "char_end": 11563,
+                  "char_start": 11476,
+                  "quote": "This agreement shall be governed by the Laws of England (English common and statutory Law)."
+                }
+              ],
+              "present": true,
+              "raw_text": "This agreement shall be governed by the Laws of England (English common and statutory Law).",
+              "value": "GB-EAW"
+            },
+            {
+              "clause_type": "parties",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 700,
+                  "char_start": 403,
+                  "quote": "ORGANIC PREPARATIONS INC. 2nd Floor, Transpacific Haus Lini Highway, Port Vila. Vanuatu ('the Manufacturer') of one part AND: AGAPE ATP INTERNATIONAL HOLDING LIMITED Unit 05, 4F, Energy Plaza No. 92, Granville Road Tsim Sha Tsui East Kowloon, Hong Kong ('the Customer') of the other part."
+                }
+              ],
+              "present": true,
+              "raw_text": "ODM SUPPLY AGREEMENT THIS AGREEMENT is made on the 15t h day of January 2018. BETWEEN: ORGANIC PREPARATIONS INC. 2nd Floor, Transpacific Haus Lini Highway, Port Vila. Vanuatu ('the Manufacturer') of one part AND: AGAPE ATP INTERNATIONAL HOLDING LIMITED Unit 05, 4F, Energy Plaza No. 92, Granville Road Tsim Sha Tsui East Kowloon, Hong Kong ('the Customer') of the other part.",
+              "value": "Organic Preparations INC. (Manufacturer); Agape ATP International Holding Limited (Customer)"
+            },
+            {
+              "clause_type": "effective_date",
+              "confidence": 0.9,
+              "evidence": [
+                {
+                  "char_end": 413,
+                  "char_start": 355,
+                  "quote": "THIS AGREEMENT is made on the 15t h day of January 2018."
+                }
+              ],
+              "present": true,
+              "raw_text": "THIS AGREEMENT is made on the 15t h day of January 2018.",
+              "value": "2018-01-15"
+            },
+            {
+              "clause_type": "expiration_date",
+              "confidence": 0.45,
+              "evidence": [
+                {
+                  "char_end": 1035,
+                  "char_start": 880,
+                  "quote": "This agreement will be automatically renewed at the end of every ten (10) year term, with each subsequent term of renewal being for a ten (10) year term."
+                }
+              ],
+              "present": true,
+              "raw_text": "1.2 Term This agreement is for a term of ten (10) years. 1.3 Renewal This agreement will be automatically renewed at the end of every ten (10) year term, with each subsequent term of renewal being for a ten (10) year term.",
+              "value": "PERPETUAL"
+            },
+            {
+              "clause_type": "renewal_term",
+              "confidence": 0.7,
+              "evidence": [
+                {
+                  "char_end": 1035,
+                  "char_start": 880,
+                  "quote": "This agreement will be automatically renewed at the end of every ten (10) year term, with each subsequent term of renewal being for a ten (10) year term."
+                }
+              ],
+              "present": true,
+              "raw_text": "This agreement will be automatically renewed at the end of every ten (10) year term, with each subsequent term of renewal being for a ten (10) year term.",
+              "value": "3650 recurring"
+            },
+            {
+              "clause_type": "notice_period_to_terminate_renewal",
+              "confidence": 0.8,
+              "evidence": [
+                {
+                  "char_end": 1188,
+                  "char_start": 1036,
+                  "quote": "A six (6) months notice must be given by either party of their intention to terminate relations due to any reason other than breach of this agreement."
+                }
+              ],
+              "present": true,
+              "raw_text": "A six (6) months notice must be given by either party of their intention to terminate relations due to any reason other than breach of this agreement.",
+              "value": "180"
+            },
+            {
+              "clause_type": "change_of_control",
+              "confidence": 0.85,
+              "evidence": [
+                {
+                  "char_end": 10275,
+                  "char_start": 9861,
+                  "quote": "(e) If control of either party shall pass from the present shareholders or owners or controllers to other persons whom the other party shall in their absolute discretion regard as unsuitable. (f) Either parties voting stock is transferred to any third party to such extent as to result in a change in effective control of the company or its ownership or active management is changed in any other manner."
+                }
+              ],
+              "present": true,
+              "raw_text": "(e) If control of either party shall pass from the present shareholders or owners or controllers to other persons whom the other party shall in their absolute discretion regard as unsuitable. (f) Either parties voting stock is transferred to any third party to such extent as to result in a change in effective control of the company or its ownership or active management is changed in any other manner.",
+              "value": null
+            },
+            {
+              "clause_type": "anti_assignment",
+              "confidence": 0.9,
+              "evidence": [
+                {
+                  "char_end": 15161,
+                  "char_start": 14840,
+                  "quote": "14.6 Assignment The Manufacturer may not transfer or assign any of its rights or obligations under this agreement without the prior written consent of the Customer. The Customer may not freely transfer or assign its rights or obligations under this agreement without the prior written consent of the Manufacturer."
+                }
+              ],
+              "present": true,
+              "raw_text": "14.6 Assignment The Manufacturer may not transfer or assign any of its rights or obligations under this agreement without the prior written consent of the Customer. The Customer may not freely transfer or assign its rights or obligations under this agreement without the prior written consent of the Manufacturer.",
+              "value": null
+            },
+            {
+              "clause_type": "cap_on_liability",
+              "confidence": 0.75,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "uncapped_liability",
+              "confidence": 0.7,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "non_compete",
+              "confidence": 0.6,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "exclusivity",
+              "confidence": 0.9,
+              "evidence": [
+                {
+                  "char_end": 12888,
+                  "char_start": 12578,
+                  "quote": "13.1 The Manufacturer hereby appoints the Customer to be the sole and exclusive agent for the promotion, sales, marketing, distribution and administration of the products listed in schedule A of this agreement based on minimum annual product purchase requirements as listed in Schedule B of this agreement."
+                }
+              ],
+              "present": true,
+              "raw_text": "13.1 The Manufacturer hereby appoints the Customer to be the sole and exclusive agent for the promotion, sales, marketing, distribution and administration of the products listed in schedule A of this agreement based on minimum annual product purchase requirements as listed in Schedule B of this agreement. 13.2 The Manufacturer grants exclusive rights to the Customer for the term of ten (10) years from the date of the signing of this agreement and for an indefinite period upon the customer fulfilling the minimum annual purchase requirement as listed in Schedule B. of this agreement.",
+              "value": null
+            }
+          ]
+        },
+        "name": "submit_extraction",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefowLf6hZt1ApgS3gWhK",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 13872
+      },
+      "cache_creation_input_tokens": 13872,
+      "cache_read_input_tokens": 42895,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 3323,
+      "output_tokens_details": {
+        "thinking_tokens": 1012
+      },
+      "service_tier": "standard"
+    }
+  }
+}

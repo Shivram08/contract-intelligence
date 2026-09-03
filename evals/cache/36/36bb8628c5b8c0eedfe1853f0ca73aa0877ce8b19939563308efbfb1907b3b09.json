@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "latency_ms": 2531.3458000018727,
+    "max_tokens": 8000,
+    "message_count": 5,
+    "messages_sha": "dfd09e2083cdbf4e",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "b9cb3680ddda94d7",
+      "68c60317e4398960",
+      "21fece2fac16fc88",
+      "fff8cab7d77ae119",
+      "18fb01d5a51730fe"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "text": "The document is entirely this short amendment (2274 characters total). None of the other clause types appear anywhere in it. Let me confirm the full document length and content by reading the entire span.",
+        "type": "text"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_014nNFKB2PECMnu9ipRsP6m9",
+        "input": {
+          "char_end": 2274,
+          "char_start": 0
+        },
+        "name": "read_span",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefpXHzojUgqPYkmwWEfd",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 10063
+      },
+      "cache_creation_input_tokens": 10063,
+      "cache_read_input_tokens": 9989,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 129,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard"
+    }
+  }
+}

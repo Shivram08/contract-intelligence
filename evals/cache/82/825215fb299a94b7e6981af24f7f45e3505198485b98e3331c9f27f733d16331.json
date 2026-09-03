@@ -1,0 +1,200 @@
+{
+  "meta": {
+    "latency_ms": 15386.43110000703,
+    "max_tokens": 8000,
+    "message_count": 13,
+    "messages_sha": "f2d2c09d26481f7d",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "dd1d3effd2da8125",
+      "9a09a1cf6860be31",
+      "897b772a17a77837",
+      "d4e3860585efe395",
+      "69df623ac08c8091",
+      "bde64239ba9aadde",
+      "1ac2c4907123c98e",
+      "17d0c2bfb0a88fe1",
+      "9c79403d7cbcc673",
+      "1f7c55c61bbe9dbf",
+      "da8bdf7ebc822b9b",
+      "28012cbe99e66003",
+      "ce4f0067076eb0b1"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "text": "Confirmed: no renewal provision exists (fixed 5-year term ending 2025-01-31, no automatic or optional renewal language). Now compiling and validating the draft extraction.",
+        "type": "text"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01G111yFatua5mULBc5tCAgX",
+        "input": {
+          "clauses": [
+            {
+              "clause_type": "governing_law",
+              "confidence": 0.97,
+              "evidence": [
+                {
+                  "char_end": 21994,
+                  "char_start": 21793,
+                  "quote": "the Agreement shall be governed by and construed in accordance with the laws of the Province of British Columbia and the federal laws of Canada applicable therein, and the parties hereto submit and attorn to the jurisdiction of the courts of the Province of British Columbia."
+                }
+              ],
+              "present": true,
+              "raw_text": "Unless otherwise agreed to in writing by the parties, the Agreement shall be governed by and construed in accordance with the laws of the Province of British Columbia and the federal laws of Canada applicable therein, and the parties hereto submit and attorn to the jurisdiction of the courts of the Province of British Columbia.",
+              "value": "CA-BC"
+            },
+            {
+              "clause_type": "parties",
+              "confidence": 0.97,
+              "evidence": [
+                {
+                  "char_end": 593,
+                  "char_start": 146,
+                  "quote": "CORAL GOLD RESOURCES LTD., a company duly incorporated pursuant to the laws of the Province of British Columbia and having its head office at Suite 900 - 570 Granville Street, Vancouver, British Columbia V6C 3Pl (the \"Company\") AND: INTERMARK CAPITAL CORP., a company duly incorporated pursuant to the laws of the Province of British Columbia and having an office at Suite 900 - 570 Granville Street, Vancouver, British Columbia V6C 3PI (the \"Consultant\")"
+                }
+              ],
+              "present": true,
+              "raw_text": "CORAL GOLD RESOURCES LTD., a company duly incorporated pursuant to the laws of the Province of British Columbia and having its head office at Suite 900 - 570 Granville Street, Vancouver, British Columbia V6C 3Pl (the \"Company\") AND: INTERMARK CAPITAL CORP., a company duly incorporated pursuant to the laws of the Province of British Columbia and having an office at Suite 900 - 570 Granville Street, Vancouver, British Columbia V6C 3PI (the \"Consultant\")",
+              "value": "Coral Gold Resources Ltd. (Company); Intermark Capital Corp. (Consultant)"
+            },
+            {
+              "clause_type": "effective_date",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 119,
+                  "char_start": 25,
+                  "quote": "THIS AGREEMENT is dated for reference the 1st day of February, 2020 (the \"Effective Date\")."
+                }
+              ],
+              "present": true,
+              "raw_text": "THIS AGREEMENT is dated for reference the 1st day of February, 2020 (the \"Effective Date\").",
+              "value": "2020-02-01"
+            },
+            {
+              "clause_type": "expiration_date",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 3881,
+                  "char_start": 3648,
+                  "quote": "The term of this Agreement is for a period of five (5) years (the \"Term\") commencing on the Effective Date and, unless terminated earlier in accordance with the termination provisions of this Agreement, ending on January 31, 2025."
+                }
+              ],
+              "present": true,
+              "raw_text": "The term of this Agreement is for a period of five (5) years (the \"Term\") commencing on the Effective Date and, unless terminated earlier in accordance with the termination provisions of this Agreement, ending on January 31, 2025.",
+              "value": "2025-01-31"
+            },
+            {
+              "clause_type": "renewal_term",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "notice_period_to_terminate_renewal",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "change_of_control",
+              "confidence": 0.93,
+              "evidence": [
+                {
+                  "char_end": 5183,
+                  "char_start": 4837,
+                  "quote": "by the Consultant electing to give the Company notice, in the event that there occurs a Change of Control (as defined below) within six (6) months of the effective date of such Change of Control, and if the Consultant so elects to terminate this Agreement, then the Consultant will be immediately entitled to a termination payment equal to CDN$750,000"
+                }
+              ],
+              "present": true,
+              "raw_text": "by the Consultant electing to give the Company notice, in the event that there occurs a Change of Control (as defined below) within six (6) months of the effective date of such Change of Control, and if the Consultant so elects to terminate this Agreement, then the Consultant will be immediately entitled to a termination payment equal to CDN$750,000; and ... For the purpose of this clause, a Change of Control shall be deemed to have occurred when: (i) any person, entity or group becomes the beneficial owner of 20% or more of the combined voting power of the Company's then outstanding voting securities entitled to vote generally in the election of directors...",
+              "value": null
+            },
+            {
+              "clause_type": "anti_assignment",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 21142,
+                  "char_start": 20989,
+                  "quote": "Neither this Agreement nor any of the rights of any of the parties under this Agreement shall be assigned without thewritten consent of all the parties."
+                }
+              ],
+              "present": true,
+              "raw_text": "Neither this Agreement nor any of the rights of any of the parties under this Agreement shall be assigned without thewritten consent of all the parties.",
+              "value": null
+            },
+            {
+              "clause_type": "cap_on_liability",
+              "confidence": 0.7,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "uncapped_liability",
+              "confidence": 0.65,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "non_compete",
+              "confidence": 0.75,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "exclusivity",
+              "confidence": 0.75,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            }
+          ]
+        },
+        "name": "submit_extraction",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefqEV9fTuwfXnQVo7j83",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 3583
+      },
+      "cache_creation_input_tokens": 3583,
+      "cache_read_input_tokens": 51756,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 2042,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard"
+    }
+  }
+}

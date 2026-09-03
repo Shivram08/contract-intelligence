@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "latency_ms": 6866.176199997426,
+    "max_tokens": 8000,
+    "message_count": 13,
+    "messages_sha": "618d095d68fa560d",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "b9cb3680ddda94d7",
+      "68c60317e4398960",
+      "21fece2fac16fc88",
+      "fff8cab7d77ae119",
+      "18fb01d5a51730fe",
+      "6f34632bafca64a4",
+      "9f755e103da38d64",
+      "1e56e2cfca6e5c06",
+      "f12723f0a51d6615",
+      "3114bea5dc9e95ee",
+      "7983322edb1870ac",
+      "d73a8dc4891cbc96",
+      "508cb96dfabcf275"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "EpIGCpABCBEYAipApFEKwKZPpDzfQNBHfWL/RDpkTVDRSIvJtlutkcUYLh4cW0id/CEyxwwV1zoMmB8CPJork9BojArftgVOyiULdTIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAcnb49QGEgxLNVjVbpymDobIIqgaDNnfLWqPK6Gt9HlKVCIwK0y9/5tAQPtEAYOx4Qa90D1I3p4AquRCZYCJU0cqQA+srEAX0DGFX38C+I3dGKpyKq4EivgIDPRxyC+/kHM/9dnz9mD9jHfG0Wu2++Bqa5FfGYsYAMImglQJK3JZsMCFtpHec25hhewbFJsQyeFdW+yyqGF3P8eExiU7/amEiCtdIx9uyjPpX0OxQrF8MuR6O+fZ3hfy4Bxdt2ykkAlYJ02CErVRPUAYsAjSnnGE9ishcHtMJs3adC0Q6r9CvkhuTfRwLEARFzf1nfIKbKt3/RExipN0dwN03FA3lZQtFrAwuz4+lZJbgg/njydiSTAcocPbX/9FwzjIEtpCKejctu4E1/9zM6rb4SD2RKyptI+Z6ie/Cy2STaW+iinU2yQAvwYnYwNvf4N/Dm1ZTlGAiymP7JlQVtMSAIy23Otw9JDRIPAJCvGmZFStSSQhpUMDZPpHcslZXfrriiI+CwoaOzALf1guGxDCxyoO80JJYhY9iAOuYU/BF13UJzl0Pxgp6m8TW0rjTSn4eijPMsaQeF7sbm6Ofv5on0NoTRt0AJCTiGvGc68kZL4io9P2YyDyjaqX/tP5oLBBjwRoXlLFR1K/UOZ+KaJZMhfi8CmI85YlV6qUx0Hx4owztomYY9S640QwcIdU6Gzj61gAN526L9+wbOUxVoejKYfm7LVQ18TEPO5W+bT/fVXhOnH1QJGZ/fhKU+5lWHOGsCl2EaHCK6cBaoHiqU24ttaoDtaGSiwwSL90RLvf3toVsY+QisFRjfDKe07JPvK8CifArlXJECzd+clXUUmiTqr/NyhlZCW1GAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_016a1if3H8FWSeFLDefKmB9h",
+        "input": {
+          "clauses": [
+            {
+              "clause_type": "governing_law",
+              "confidence": 0.75,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "parties",
+              "confidence": 0.9,
+              "evidence": [
+                {
+                  "char_end": 460,
+                  "char_start": 112,
+                  "quote": "This Amendment No. 1 (the \"Amendment\"), entered into by and between Stremick's Heritage Foods, LLC (\"Heritage\") Premier Nutrition Corporation (\"Premier\") is effective as of June 11, 2018 (\"Amendment Effective Date\") and amends that certain Manufacturing Agreement between Heritage and Premier dated July 1, 2017 (\"Agreement\")."
+                }
+              ],
+              "present": true,
+              "raw_text": "This Amendment No. 1 (the \"Amendment\"), entered into by and between Stremick's Heritage Foods, LLC (\"Heritage\") Premier Nutrition Corporation (\"Premier\") is effective as of June 11, 2018 (\"Amendment Effective Date\") and amends that certain Manufacturing Agreement between Heritage and Premier dated July 1, 2017 (\"Agreement\"). Heritage and Premier are each referred to herein as a \"Party\" and collectively as the \"Parties.\"",
+              "value": "Stremick's Heritage Foods, LLC (Manufacturer); Premier Nutrition Corporation (Customer)"
+            }
+          ]
+        },
+        "name": "submit_extraction",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefpZmAzGA6PjUbgc7Mgv",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 408
+      },
+      "cache_creation_input_tokens": 408,
+      "cache_read_input_tokens": 25556,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 701,
+      "output_tokens_details": {
+        "thinking_tokens": 160
+      },
+      "service_tier": "standard"
+    }
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "meta": {
+    "latency_ms": 4946.035500004655,
+    "max_tokens": 8000,
+    "message_count": 5,
+    "messages_sha": "fc828c8331031cf5",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "40c86ac6e9c6d864",
+      "2df86c3235ae798b",
+      "3b2f15390bc15eb7",
+      "c26881c84961cc88",
+      "ef0a4de164c55c9e"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "EpAECpABCBEYAipA9ix1RVV6j2leTG1PrIfRHk55ARHecwugmXAD3qEK9qhSNCT/VLoDEGTRw/6Q4KutDkt0yWz1Ue2veQ9P8NhWPTIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAarV49QGEgxYyOiBriJFn7I4kE0aDCFSCCLPmpcyYmehpyIwSCN23EL+7hP4L+qnfCIkaOBYepxyLLCRMZ6WVy5iFADaVcOfKUwjItuu/GPMSNS6KqwCjhugz6YdpjshOWBIL3t2+CzpjDlgBldhrIgixTVX0xNZPHepLbFbMoaF9mLSKqNLuxHccYZtY6C/X1Gse4XWueMr2+1snNN3ZIL8/878IiY2bbRHRHqBPcVuXit+B5iEFIMzDZUV3OwYu/yh35WnlDNcUsCz2qEIVqxA6vV5MvZGB2YbA4c/gJDoGVk08OY/P6aOnCNvFaK0Kn7Ar1d7g8Qc8/iTQHoJYr0IGSJTwMH/gpohL6RQdvR21x4QNBug8kQ1c3wTgvjtHSsU1ZGs/M9tUYNWuhf1ynV/9NqVJo3veFmBZKofLgT8+BcCTg0Ke3mfzMq4krQck4+lqkdFt9nOzF7mx1HSQbKBRH/pcD6bGxsjZr02tDXThPJsUxUv844szCsUjZiXy4HaGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01UVBkPVrhWM5jw61pT5w3yh",
+        "input": {
+          "query": "Shipper or Transporter shall not assign this Agreement without prior written consent"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01DxTSSZMSekmwuSmBhkAxDA",
+        "input": {
+          "query": "consequential damages indirect special punitive damages liability"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01UQ6482cQxHTRwUKjguc7nL",
+        "input": {
+          "query": "exclusive right sole supplier requirements"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01YM4vhT3x4VeGoovXt1uhCY",
+        "input": {
+          "query": "renewal term automatically renew evergreen"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefoYzZFh8UFmqTdPTeWg",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 17664
+      },
+      "cache_creation_input_tokens": 17664,
+      "cache_read_input_tokens": 9126,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 342,
+      "output_tokens_details": {
+        "thinking_tokens": 95
+      },
+      "service_tier": "standard"
+    }
+  }
+}

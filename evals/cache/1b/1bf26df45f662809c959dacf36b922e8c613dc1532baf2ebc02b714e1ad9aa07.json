@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "latency_ms": 3886.219299994991,
+    "max_tokens": 8000,
+    "message_count": 3,
+    "messages_sha": "0dc26a4b5d68eb19",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "57deb599ea95c8ac",
+      "a5f4daf8fd70fcb2",
+      "11628ab10e1d683d"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "Eo0DCpABCBEYAipAwmLZuYC0M5bdH8K78IURjt8yaIhBDPw7bxkKG9mePX47O/ECSTcaKF5SUW4PfhO0UrboRH20onbiHWxtZThchTIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAend49QGEgxnTrv7N84gLNLlGeEaDBmyAwTUPcMfTSH4ZSIwp9gg5OYkYCA6eVEIdDkJ0wMWZcUgU6dlItxlTae4U0QAjS3E/8Tlr4Qv+drphIDrKqkBGHLO5RY30z/vvsWENjrIQLJm1W/1g/2hEsfXqE68y8zR+VY2CG9imsa6QDYUaBTC+xkGTYyylDDme8UTk+v+hnzHWVmN8SDRD+sf6iSFMWEJMx+NTpJtZRlgFOxwDfxbaCR8CIBDITdQ7bx8F413HqTOJiTE4sPcjTCwL3xPAo//azr+xuGuWYpRp7tDwLYSCGeDTW59rlp2cpV1mxQ5aR9+Z67Zvvj5NxgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01BgWm4mfbcWyPHc1vART87o",
+        "input": {
+          "query": "term of this Agreement shall commence and continue"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01HQ4RkWURaAPxnqgP9HZgzk",
+        "input": {
+          "query": "exclusive manufacturer requirements exclusivity"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01AdbKd5BcQEkbLyW9R7Xnwg",
+        "input": {
+          "query": "limitation of liability cap"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01FXQY5FKaCUdfoWrHghkUZp",
+        "input": {
+          "query": "assignment of this agreement without prior written consent"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011Cefpw6sjvRCtH55GvfpZ9",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 2557
+      },
+      "cache_creation_input_tokens": 2557,
+      "cache_read_input_tokens": 3149,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 282,
+      "output_tokens_details": {
+        "thinking_tokens": 48
+      },
+      "service_tier": "standard"
+    }
+  }
+}

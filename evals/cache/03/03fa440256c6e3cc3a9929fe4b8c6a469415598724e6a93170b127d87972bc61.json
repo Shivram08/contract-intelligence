@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "latency_ms": 5536.525100003928,
+    "max_tokens": 8000,
+    "message_count": 3,
+    "messages_sha": "dd3a49fb38083625",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "40c86ac6e9c6d864",
+      "2df86c3235ae798b",
+      "3b2f15390bc15eb7"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "EocFCpABCBEYAipAY6p64xIiA7l8VvmYqVzdKoAEFXspHThfRu7nXMHO/xzthAcwLyJr8WcC7hJiBWG86H3Qh2P4oCVB3/UHDzyaXjIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAcHU49QGEgzhtpb9AQriJ3hJbrwaDDWHTkFsUmYBAXJOoSIwJw3XSZ+4QwNrtcvGy0GrDxxHuTODQ6L4IvMrO/vn0wlBPGuE2JMSs7y78AmoWn5zKqMD7syF3eF8QK8+qrrvp4dCN+mvMaw2HFgsBPX/g4pKUsmh9DOX7wM9rFtLRw18KZ/GDDbrCrtskH/sMxXIW/F5OvkZEWBkLllzesYTpPXG8xppVwi3WuFolVraoNoSV8YE7jmdEdie4L4kvGyQtYOmbUQa8avA6ooRrXlL5IwXovHa3knWbF639406pReoN1Wtmlto4Mtnpdi+JDw4vCZxhq6SA+hN/EWZhpq76IahPLy4+iOK6G9TQ28Eua1mpaUaF7KIZ1VW7XdZn1Fc3u8kgyDg0kBaXf6aUYb1F7zNN1xd5NpmAVcIlXlZnPsLYdLWXhXn9AMJksMwChqH2vRZYUPCPxkmeykv+sSkpNz18PnXpWzayx2TqAdLBYo5hofiDhxSa6V/bRwzXQlcpiG6lkTBmxquZVWJzvpmbX87uxln44E0Z41gGJP86SU5tNAu3I59rlKOdFO2GnvE6QOSkqmaw/eaGAVCihMHRnO3Avk7PBfD/iZ2k5X7tfcQxkGZnNQxk+WlQwgimOGaJreP9PZRmWr83UC53BzliqH3YPw/988YAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_018nJvq55rLmoWy9zGGvrCLv",
+        "input": {
+          "query": "assignment of this Agreement shall not be assigned without consent"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_013WwsTA5MQKvjNGUgpYXFvd",
+        "input": {
+          "query": "change of control merger consolidation sale of assets"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_014J4MFAmDdgKdb53NFx9CMd",
+        "input": {
+          "query": "limitation of liability shall not exceed"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01X53MFaydU9kskoUWqGQTxh",
+        "input": {
+          "query": "indemnify and hold harmless liability arising from negligence"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_019rzAygHzVTPYVQGcii13ni",
+        "input": {
+          "query": "non-compete exclusivity Shipper shall not transport with any other party"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefoRBLvF5niMPVgn1sqi",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 5977
+      },
+      "cache_creation_input_tokens": 5977,
+      "cache_read_input_tokens": 3149,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 444,
+      "output_tokens_details": {
+        "thinking_tokens": 135
+      },
+      "service_tier": "standard"
+    }
+  }
+}

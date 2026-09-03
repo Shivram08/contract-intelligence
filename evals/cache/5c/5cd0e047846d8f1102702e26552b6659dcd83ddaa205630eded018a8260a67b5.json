@@ -1,0 +1,92 @@
+{
+  "meta": {
+    "latency_ms": 4549.092200002633,
+    "max_tokens": 8000,
+    "message_count": 3,
+    "messages_sha": "e6b4476e9d561751",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "04a53e144c18c7f9",
+      "955c70b0e6a91115",
+      "133bfa25c56872af"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "EvADCpABCBEYAipATkS3lnclvw97lBHgTyjuHxALnEKHkix0FxbDcsdE3gMOdtkQuMqNH8tBHcndv0sEmBSsQF0ISJc9w28xAhIjezIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAdzW49QGEgzS3UbpNtT8OrhPWiUaDB5smIFO1WE2H68loyIwuoGT8C0S6WY5ZnEj+tk4uuSbnLIKqP2WL/pl+8533qqoT0g4tdfZXEL6+uFrM1qWKowCWD16qdXhIfN2S/a6+0VTYfqV5hCn5mD/kPPpVK7p7xpeSsBAGBW230ieUebsoTuNsiHj57GzSkMJA1E+xmey8dWWS6HocruqBJJZAKAMQHcLo06O6bzHo3hNJQSoWTof2WcZfd93t/7cghOAFQWODTDfOylZ/rhPQwFsp49XiyGHTUAhXQuI5sBGOZf7vURNrC5A3RPhNZZWdS/ThZQbZI10xheRBWcPCB9s2Go2eno6mRn1Rp/h9fF3GADKlazHKVTi4gP5dfw9qQiLDm2+Ly5sfLK9vCVGrHbC7LXkZDNI8m2bF6WFE4RUY9oLyuqOBJreU2Kk6869+gDZCn7bT6zFeii7kVtw7RY/vhgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01SPLMefnM1sfgk5wCjqxdy8",
+        "input": {
+          "query": "limitation of liability maximum aggregate liability shall not exceed"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01H5KTW6tANREMbKNojLvBS6",
+        "input": {
+          "query": "non-compete non-competition shall not manufacture sell competing products"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_016kYTkheMXkkcWVaCtpRk8v",
+        "input": {
+          "query": "exclusive agent sole and exclusive rights minimum purchase requirement"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_018XPdF4GpidhwFqVb7RewMS",
+        "input": {
+          "char_end": 18500,
+          "char_start": 17000
+        },
+        "name": "read_span",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011Cefon5KcEQEZJRd4jEzN3",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 21787
+      },
+      "cache_creation_input_tokens": 21787,
+      "cache_read_input_tokens": 3149,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 361,
+      "output_tokens_details": {
+        "thinking_tokens": 89
+      },
+      "service_tier": "standard"
+    }
+  }
+}

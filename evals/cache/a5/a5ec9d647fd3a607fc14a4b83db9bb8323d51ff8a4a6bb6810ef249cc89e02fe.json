@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "latency_ms": 2815.095600002678,
+    "max_tokens": 8000,
+    "message_count": 5,
+    "messages_sha": "3f7c0378105e7595",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "208beedd51118449",
+      "800f96e931cf05ca",
+      "8abe429f1cd6313a",
+      "b9e0af2310c55424",
+      "1a383a1ba3969914"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "text": "Confirmed - this is a short Joint Filing Agreement with only parties and effective date present. All other clauses are absent. Let me build the extraction and validate.",
+        "type": "text"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01YJZReZMJhspR2yq1cX5JmX",
+        "input": {
+          "clause_types": [
+            "parties",
+            "effective_date"
+          ]
+        },
+        "name": "get_schema",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefoMkGTnXte7ehNbvjqj",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 6173
+      },
+      "cache_creation_input_tokens": 6173,
+      "cache_read_input_tokens": 6436,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 112,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard"
+    }
+  }
+}

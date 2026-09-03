@@ -1,0 +1,173 @@
+{
+  "meta": {
+    "latency_ms": 11566.104900004575,
+    "max_tokens": 8000,
+    "message_count": 9,
+    "messages_sha": "2aae0dc08950fb2f",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "208beedd51118449",
+      "800f96e931cf05ca",
+      "8abe429f1cd6313a",
+      "b9e0af2310c55424",
+      "1a383a1ba3969914",
+      "4bcf95dd19769e32",
+      "c07dd007b4cb2bc9",
+      "542aa5f58db3c2e1",
+      "fab18a0d73cec0d3"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "EvgGCpABCBEYAipA63zNXhUpGURqzbuwTBz3dvDGNHb1TJgDY2nzChFMV8gsMb7beJMDFXWEciPatX4SoJ5wHYa4wHaBluLvksyQzzIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAZ7U49QGEgz0Ixbc909Nz82cbE0aDC1kz2FlB16zxzJqqCIw6IM49p+C79Z3+fi4ZRQ/vBomFbW3hsIf+8r1Mpm6Xgnrb2XdVOJitaAnBD5HzVhsKpQFL0yo0lZSVzjQk0ejRNSqFbWu1ik8RAsMMytBpbKKlIG3j5cLi0BivvmVfgCursO7EYR1e8+/NKWER/x0vk0sImvrIhjNqy0+MxcRFgvL1k9xtoayGH+9RwzHwDB2KMifITItf4Vwk0Jia4ezoKKBgUaEZIf+u7vAmkAGbtfKRFEpY0j5jjKeLMSRSsRiJdM0wxi9ikEQDhh3zVz4Gw0XFFekFZn6NuEmYcPu+VSUOO0QkegXMWdawqbEDIzZJ2d7GEg6a19A6ZR4Aza93Zb3rEdCUshEEjyLRZtJChil2MIaCKcGIZ0IHkd6rFQWR4uVCgaNLI/PjExvMnMSNILTBSESj8SLRh/I71Lwb+9DdplHc3mnvWT6sAbAzULbv2UkTcqS9HDvNVd5+rbtvDQLBaXCdCgTcxYf2NSf3h1g3Ix0wjeYOHZuOZh3hQWsXG6LVZJ4W+l1atPmYibm70YV86Ehzr+elGLoK5MimSmy0VIAL4TN6FpybcU2EbjreO5cgITgAvU+QllzHsKP2LHIOi4Yqvd1bBC11JEwxeWC56gb8UI/n5LhEmMWdj2vRhEe4aiKfCpjFbvV6GCJplcT/IW/i8gpoDjIeDCvylKNTIqMN/R/E4Ej6ynX9EoJN6hvLAjjl/G2BShIHHil0kH0/Ei329PDrSJ0sRBH6XzQAYVEwoksoeXkpmBJ5gm9U42Zy470R7x5OtPT9DkmPyNnvGhucHz6GfoTAqg5fv4Ssu2dKAI7V8rjrcCSbiborixhAhZKXktmnU7zO1Tg1TCFu9FbjurJbAeHDiVu9PTn+6Eo56LHa0X/1p+7AQ8pkeEZ4CRJh65nJGw5Jtp0a4aUHTwYO+kyUsaHQc3X9YrCtyVqXXU7GAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01GiPLd5AYqJ5gBwd4Ypmz6A",
+        "input": {
+          "clauses": [
+            {
+              "clause_type": "parties",
+              "confidence": 0.75,
+              "evidence": [
+                {
+                  "char_end": 935,
+                  "char_start": 811,
+                  "quote": "HPS INVESTMENT PARTNERS, LLC /s/ John Madden Name: John Madden Title: Authorized Signatory HPS MEZZANINE PARTNERS II, LLC"
+                }
+              ],
+              "present": true,
+              "raw_text": "HPS INVESTMENT PARTNERS, LLC ... HPS MEZZANINE PARTNERS II, LLC ... HPS MEZZANINE PARTNERS II OFFSHORE GP, L.P. ... MEZZANINE PARTNERS - OFFSHORE INVESTMENT MASTER FUND II, L.P. ... MEZZANINE PARTNERS II OFFSHORE LUX S.\\u00c0 R.L ... MEZZANINE PARTNERS II OFFSHORE LUX S.\\u00c0 R.L II ... HPS MEZZANINE PARTNERS II GP, L.P. ... MEZZANINE PARTNERS II, L.P. ... MEZZANINE PARTNERS II ONSHORE LUX S.\\u00c0 R.L ... MEZZANINE PARTNERS II ONSHORE LUX S.\\u00c0 R.L II",
+              "value": "HPS Investment Partners, LLC (Filer); HPS Mezzanine Partners II, LLC (Filer); HPS Mezzanine Partners II Offshore GP, L.P. (Filer); Mezzanine Partners - Offshore Investment Master Fund II, L.P. (Filer); Mezzanine Partners II Offshore Lux S.\\u00e0 r.l (Filer); Mezzanine Partners II Offshore Lux S.\\u00e0 r.l II (Filer); HPS Mezzanine Partners II GP, L.P. (Filer); Mezzanine Partners II, L.P. (Filer); Mezzanine Partners II Onshore Lux S.\\u00e0 r.l (Filer); Mezzanine Partners II Onshore Lux S.\\u00e0 r.l II (Filer)"
+            },
+            {
+              "clause_type": "effective_date",
+              "confidence": 0.85,
+              "evidence": [
+                {
+                  "char_end": 807,
+                  "char_start": 788,
+                  "quote": "Dated: July 6, 2020"
+                }
+              ],
+              "present": true,
+              "raw_text": "Dated: July 6, 2020",
+              "value": "2020-07-06"
+            },
+            {
+              "clause_type": "expiration_date",
+              "confidence": 0.75,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "renewal_term",
+              "confidence": 0.8,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "notice_period_to_terminate_renewal",
+              "confidence": 0.8,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "governing_law",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "change_of_control",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "anti_assignment",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "cap_on_liability",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "uncapped_liability",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "non_compete",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "exclusivity",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            }
+          ]
+        },
+        "name": "submit_extraction",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefoNbBoBH4rsRx8hiND2",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 1291
+      },
+      "cache_creation_input_tokens": 1291,
+      "cache_read_input_tokens": 12830,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 1597,
+      "output_tokens_details": {
+        "thinking_tokens": 192
+      },
+      "service_tier": "standard"
+    }
+  }
+}
