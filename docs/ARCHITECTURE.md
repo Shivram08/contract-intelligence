@@ -85,3 +85,63 @@ first is what established it.
 Validation at 4 milliseconds also substantiates the claim that the grounding
 gate adds no inference cost: it is a string search, and it is now measured
 rather than asserted.
+
+## Amendment 1 — the reranker is dropped (arm 4 v2)
+
+**The freeze is amended once, on the record.** Any further configuration change
+goes through review before it runs.
+
+### What changed
+
+| | arm 4 v1 | arm 4 v2 |
+|---|---|---|
+| retrieval | hybrid RRF + cross-encoder rerank | hybrid RRF only |
+| candidates per search | top_k = 5 (reranked from 50) | top_k = 20 |
+| reranker | `BAAI/bge-reranker-v2-m3` | none |
+
+Both remain runnable (`4_rag_rerank_agent`, `4b_rag_top20_agent`) and both are
+reported. v1 is not superseded; it is an ablation point.
+
+### Why this is not tuning toward a favourable result
+
+The change was driven by **retrieval-layer evidence measured independently of
+the paired comparison, and before any v2 accuracy number existed.** The
+retrieval ablation scores rankings against CUAD gold spans — it never calls the
+model and never touches presence F1 or span F1.
+
+It found the v1 configuration strictly dominated:
+
+```
+hybrid RRF        recall@20 = 0.917  at    102ms p50
+hybrid + rerank   recall@5  = 0.917  at 37,035ms p50
+```
+
+Identical recall, 1/361 the latency. The cost of the substitution is 2,535 extra
+context tokens per search, roughly half a cent. Reranking does earn its recall
+(+0.119 recall@5, +0.119 MRR, +0.127 nDCG@5 over hybrid at matched k) and cannot
+justify its cost when the same recall is purchasable that cheaply.
+
+It also explains a failure mode: one v1 run consumed its entire 300-second
+budget inside the cross-encoder on a **2-chunk** contract — five sequential
+rerank calls at p95 latency, not candidate count and not document length.
+
+**Direction disclosure:** this change helps arm 4 — the arm currently losing on
+cost and latency, and the arm I built. That is stated here rather than left for
+a reader to notice.
+
+### Prediction, recorded before the v2 run
+
+Written down so the run can contradict it:
+
+1. **Latency falls by roughly the rerank share.** v1 spent 10.8–972.4s in
+   retrieval; v2 should spend ~0.1s per search.
+2. **Cost rises $0.03–$0.08 per document** from the wider context, so roughly
+   $0.23–$0.28 against v1's $0.1956.
+3. **Completion improves to 10/10.** The single v1 timeout was caused by the
+   reranker, and the cause is removed.
+4. **Span F1 moves little** — recall is matched at the retrieval layer, so the
+   agent should see equivalent evidence.
+
+If span F1 drops materially, that **contradicts the substitution argument** and
+needs explaining rather than accepting: it would mean rank order within the
+top-20 matters to the agent in a way recall@20 does not capture.

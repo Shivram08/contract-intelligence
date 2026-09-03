@@ -1,0 +1,88 @@
+{
+  "cases_scored": 84,
+  "cases_skipped_not_indexed": 0,
+  "candidates_per_arm": 50,
+  "relevance": "binary: a chunk is relevant if it overlaps any gold span",
+  "arms": {
+    "lexical_only": {
+      "recall_at": {
+        "5": 0.7738,
+        "10": 0.9048,
+        "20": 0.9643
+      },
+      "mrr": 0.5825,
+      "ndcg_at": {
+        "5": 0.5894,
+        "10": 0.6412,
+        "20": 0.6548
+      },
+      "queries": 84,
+      "no_relevant_chunk_found": 2,
+      "latency_ms": {
+        "p50": 12.7,
+        "p95": 45.0,
+        "total_s": 1.5
+      }
+    },
+    "dense_only": {
+      "recall_at": {
+        "5": 0.6786,
+        "10": 0.8333,
+        "20": 0.9048
+      },
+      "mrr": 0.6104,
+      "ndcg_at": {
+        "5": 0.5784,
+        "10": 0.6299,
+        "20": 0.6504
+      },
+      "queries": 84,
+      "no_relevant_chunk_found": 2,
+      "latency_ms": {
+        "p50": 116.7,
+        "p95": 191.8,
+        "total_s": 10.7
+      }
+    },
+    "hybrid_rrf": {
+      "recall_at": {
+        "5": 0.7976,
+        "10": 0.9167,
+        "20": 0.9167
+      },
+      "mrr": 0.639,
+      "ndcg_at": {
+        "5": 0.6277,
+        "10": 0.6668,
+        "20": 0.6734
+      },
+      "queries": 84,
+      "no_relevant_chunk_found": 1,
+      "latency_ms": {
+        "p50": 102.5,
+        "p95": 172.8,
+        "total_s": 9.7
+      }
+    },
+    "hybrid_rrf_rerank": {
+      "recall_at": {
+        "5": 0.9167,
+        "10": 0.9286,
+        "20": 0.9524
+      },
+      "mrr": 0.758,
+      "ndcg_at": {
+        "5": 0.755,
+        "10": 0.7674,
+        "20": 0.7813
+      },
+      "queries": 84,
+      "no_relevant_chunk_found": 1,
+      "latency_ms": {
+        "p50": 37034.6,
+        "p95": 67544.8,
+        "total_s": 3361.3
+      }
+    }
+  }
+}

@@ -70,8 +70,19 @@ BASELINE_NAMES: Final[tuple[str, ...]] = (
     "2_zeroshot_truncated",
     "3_rag_no_rerank",
     "4_rag_rerank_agent",
+    "4b_rag_top20_agent",
     "5_full_context",
 )
+
+#: Candidates the v2 agent arm retrieves per search, regardless of what the
+#: model asks for.
+#:
+#: Set from the retrieval ablation, not from taste: hybrid RRF at k=20 reaches
+#: recall@20 = 0.917, which is *identical* to hybrid+cross-encoder at recall@5,
+#: for 102ms against 37,035ms -- 1/361 the latency. The reranker earns its
+#: recall and cannot justify its cost when the same recall is purchasable with
+#: 2,535 more context tokens, about half a cent per search.
+V2_TOP_K: Final = 20
 
 #: Baseline 2's truncation. 8k is the smallest context window worth calling
 #: "naive but plausible", and `docs/DATA_AUDIT.md` found 42.5% of contracts

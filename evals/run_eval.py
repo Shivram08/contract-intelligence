@@ -45,6 +45,7 @@ from evals.preflight import run_preflight
 from evals.runners import (
     BASELINE_NAMES,
     TRUNCATE_TOKENS,
+    V2_TOP_K,
     AgentBaseline,
     Baseline,
     BaselineOutcome,
@@ -64,7 +65,9 @@ MAX_GROUNDING_VIOLATION_RATE: Final = 0.01
 #: Baselines that need no API key and no database.
 FREE_BASELINES: Final = frozenset({"1_regex"})
 #: Baselines that need Postgres and the embedder.
-RETRIEVAL_BASELINES: Final = frozenset({"3_rag_no_rerank", "4_rag_rerank_agent"})
+RETRIEVAL_BASELINES: Final = frozenset(
+    {"3_rag_no_rerank", "4_rag_rerank_agent", "4b_rag_top20_agent"}
+)
 
 
 @dataclass(slots=True)
@@ -155,10 +158,16 @@ def make_baseline(
     if retrieval is None:
         raise RuntimeError(f"{name} needs retrieval, which was not opened")
     rerank = name == "4_rag_rerank_agent"
+    # v2 retrieves a fixed 20 candidates and skips the cross-encoder. Both
+    # configurations stay runnable so v1 remains a reportable ablation point
+    # rather than being quietly superseded.
+    floor = V2_TOP_K if name == "4b_rag_top20_agent" else 0
     return AgentBaseline(
         name=name,
         client=client,
-        search=lambda doc_id, query, top_k: retrieval.search(doc_id, query, top_k, rerank=rerank),
+        search=lambda doc_id, query, top_k: retrieval.search(
+            doc_id, query, max(top_k, floor), rerank=rerank
+        ),
         budget=budget,
         model=model,
         prompt_name=prompt_name,
