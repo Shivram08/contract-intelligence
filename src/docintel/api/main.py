@@ -18,6 +18,7 @@ import os
 from collections.abc import AsyncIterator
 from contextlib import asynccontextmanager
 from dataclasses import dataclass
+from types import SimpleNamespace
 from typing import Any, Final
 
 from fastapi import FastAPI, Request, Response
@@ -96,6 +97,17 @@ def _build_extractor() -> tuple[Any, Any]:
             with stage_span("rerank", **{"docintel.candidates": len(hits)}):
                 return apply_rerank(reranker, query, hits, top_k=top_k)
 
+        # Demo mode. Makes the full stack -- traces, metrics, the whole request
+        # path -- demonstrable without spending money, which matters because a
+        # live extraction costs $0.05-$0.67. The stub is a fixed canned
+        # response, and /healthz reports `extractor: stub` so nobody can mistake
+        # a demo run for a measurement.
+        if os.environ.get("DOCINTEL_LLM_STUB") == "1":
+            return (
+                ExtractionService(extractor=Extractor(client=_StubClient()), search=search),
+                connection,
+            )
+
         api_key = resolve_anthropic_api_key()
         if not api_key and not os.environ.get("ANTHROPIC_AUTH_TOKEN"):
             return None, connection
@@ -111,6 +123,69 @@ def _build_extractor() -> tuple[Any, Any]:
         )
     except Exception:
         return None, connection
+
+
+class _StubClient:
+    """A deterministic stand-in for the Anthropic client.
+
+    Returns one ``submit_extraction`` call quoting text taken from the document
+    itself, so the grounding check does real work and the response is a real
+    ``ExtractionResult`` rather than a fixture. Costs nothing and never varies.
+    """
+
+    def __init__(self) -> None:
+        self.messages = self
+
+    def create(self, **kwargs: Any) -> Any:
+        from docintel.schemas import ClauseType
+
+        text = ""
+        for message in kwargs.get("messages", []):
+            content = message.get("content")
+            if isinstance(content, str):
+                text = content
+                break
+
+        # Quote a real substring so grounding resolves rather than rejecting.
+        quote = ""
+        marker = "<contract>"
+        if marker in text:
+            body = text.split(marker, 1)[1].split("</contract>", 1)[0].strip()
+            quote = " ".join(body.split()[:12])
+
+        clauses = [
+            {
+                "clause_type": clause.value,
+                "present": clause is ClauseType.PARTIES and bool(quote),
+                "value": None,
+                "raw_text": quote if clause is ClauseType.PARTIES and quote else None,
+                "evidence": (
+                    [{"quote": quote, "char_start": 0, "char_end": 0}]
+                    if clause is ClauseType.PARTIES and quote
+                    else []
+                ),
+                "confidence": 0.5,
+            }
+            for clause in ClauseType
+        ]
+        return SimpleNamespace(
+            content=[
+                SimpleNamespace(
+                    type="tool_use",
+                    id="stub_1",
+                    name="submit_extraction",
+                    input={"clauses": clauses},
+                )
+            ],
+            stop_reason="tool_use",
+            usage=SimpleNamespace(
+                input_tokens=0,
+                output_tokens=0,
+                cache_read_input_tokens=0,
+                cache_creation_input_tokens=0,
+            ),
+            model="stub",
+        )
 
 
 @asynccontextmanager

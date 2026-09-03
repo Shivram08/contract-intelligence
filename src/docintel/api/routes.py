@@ -142,8 +142,19 @@ def healthz(request: Request) -> HealthView:
         except Exception as exc:
             database = f"error: {type(exc).__name__}"
 
-    extractor = "ok" if getattr(request.app.state, "extractor", None) else "absent"
-    healthy = database == "ok" and extractor == "ok"
+    service = getattr(request.app.state, "extractor", None)
+    if service is None:
+        extractor = "absent"
+    elif (
+        type(getattr(service, "extractor", None)).__name__ == "Extractor"
+        and type(getattr(getattr(service, "extractor", None), "client", None)).__name__
+        == "_StubClient"
+    ):
+        # Named distinctly so a demo run can never be mistaken for a measurement.
+        extractor = "stub"
+    else:
+        extractor = "ok"
+    healthy = database == "ok" and extractor in {"ok", "stub"}
     return HealthView(
         status="ok" if healthy else "degraded",
         database=database,

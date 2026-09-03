@@ -1,0 +1,16 @@
+# Scrapes the api's /metrics. 15s because the interesting histograms
+# (per-stage latency, cost) move on the timescale of a single extraction, which
+# was measured at 25-225 seconds.
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+scrape_configs:
+  - job_name: docintel-api
+    metrics_path: /metrics
+    static_configs:
+      - targets: ["api:8000"]
+
+  - job_name: prometheus
+    static_configs:
+      - targets: ["localhost:9090"]

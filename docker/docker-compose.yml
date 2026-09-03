@@ -1,4 +1,9 @@
-# M0: Postgres only. The api / jaeger / prometheus / grafana services land in M4.
+# Full stack: api + postgres/pgvector + jaeger + prometheus + grafana.
+#
+# `docker compose up` from a clean clone should give a working service. The api
+# waits for Postgres to be genuinely ready rather than merely started, and the
+# model cache is a named volume so a restart does not re-download ~1.5 GB of
+# embedding and reranker weights.
 name: contract-intelligence
 
 services:
@@ -14,19 +19,18 @@ services:
       # Deterministic collation so FTS ranking does not drift with the host locale.
       POSTGRES_INITDB_ARGS: "--encoding=UTF8 --locale=C"
     ports:
-      # 5433 on the host, not 5432. A natively installed Postgres commonly owns
-      # 5432, and when it does, the container's healthcheck still passes -- it
-      # runs *inside* the container -- while every host client silently talks to
-      # the wrong server. Publishing elsewhere avoids depending on a machine
-      # having no system Postgres.
+      # 5433, not 5432. A natively installed Postgres commonly owns 5432, and
+      # when it does this stack looks healthy while being unreachable: the
+      # healthcheck runs inside the container and passes, while every client on
+      # the host silently talks to the other server. That happened here.
       - "${POSTGRES_PORT:-5433}:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
-      # Runs once, on an empty data directory only.
       - ./initdb:/docker-entrypoint-initdb.d:ro
     healthcheck:
-      # `pg_isready` alone returns true before initdb scripts finish, so also
-      # confirm the vector extension is actually registered.
+      # More than pg_isready: the entrypoint reports ready before initdb scripts
+      # finish, so this also confirms the vector extension is registered.
+      # Otherwise the api can start against a database without it.
       test:
         - CMD-SHELL
         - >-
@@ -38,6 +42,98 @@ services:
       retries: 12
       start_period: 20s
 
+  api:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: docintel-api
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+      jaeger:
+        condition: service_started
+    environment:
+      # Container-internal host and port, not the published 5433.
+      DOCINTEL_DATABASE_URL: >-
+        postgresql://${POSTGRES_USER:-docintel}:${POSTGRES_PASSWORD:-docintel}@postgres:5432/${POSTGRES_DB:-docintel}
+      OTEL_EXPORTER_OTLP_ENDPOINT: http://jaeger:4317
+      OTEL_SERVICE_NAME: docintel
+      # Passed through rather than baked in. Absent is survivable: the service
+      # starts degraded and /healthz says so.
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      # Demo mode: a deterministic canned client, so the stack is fully
+      # exercisable -- traces, metrics, the real request path -- at zero cost.
+      # /healthz reports extractor: stub, so a demo cannot be mistaken for a
+      # measurement. Unset it and supply a key for real extraction.
+      DOCINTEL_LLM_STUB: ${DOCINTEL_LLM_STUB:-1}
+    ports:
+      - "${API_PORT:-8000}:8000"
+    env_file:
+      # The repo-root .env, not docker/.env -- compose resolves env_file
+      # relative to the compose file, and the key lives at the root.
+      - path: ../.env
+        required: false
+    volumes:
+      # ~1.5 GB of bge-base + bge-reranker-v2-m3 weights. Without this a restart
+      # re-downloads them, which took ~18 minutes to embed 60 documents once.
+      - models:/models
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request,sys,json; sys.exit(0 if json.loads(urllib.request.urlopen('http://127.0.0.1:8000/healthz',timeout=4).read())['database']=='ok' else 1)"]
+      interval: 15s
+      timeout: 5s
+      # Generous: first boot downloads model weights before serving.
+      start_period: 180s
+      retries: 5
+
+  jaeger:
+    image: jaegertracing/all-in-one:1.62.0
+    container_name: docintel-jaeger
+    restart: unless-stopped
+    environment:
+      COLLECTOR_OTLP_ENABLED: "true"
+    ports:
+      - "${JAEGER_UI_PORT:-16686}:16686"  # UI
+      - "4317:4317"                        # OTLP gRPC
+
+  prometheus:
+    image: prom/prometheus:v2.55.1
+    container_name: docintel-prometheus
+    restart: unless-stopped
+    depends_on:
+      api:
+        condition: service_started
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - promdata:/prometheus
+    ports:
+      - "${PROMETHEUS_PORT:-9090}:9090"
+
+  grafana:
+    image: grafana/grafana:11.3.1
+    container_name: docintel-grafana
+    restart: unless-stopped
+    depends_on:
+      prometheus:
+        condition: service_started
+    environment:
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_PASSWORD:-admin}
+      # Anonymous viewer access: this is a local demo stack, and a login wall
+      # between a reader and the dashboard adds nothing here.
+      GF_AUTH_ANONYMOUS_ENABLED: "true"
+      GF_AUTH_ANONYMOUS_ORG_ROLE: Viewer
+    volumes:
+      - ./grafana/provisioning:/etc/grafana/provisioning:ro
+      - grafanadata:/var/lib/grafana
+    ports:
+      - "${GRAFANA_PORT:-3000}:3000"
+
 volumes:
   pgdata:
     name: docintel-pgdata
+  models:
+    name: docintel-models
+  promdata:
+    name: docintel-promdata
+  grafanadata:
+    name: docintel-grafanadata

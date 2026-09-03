@@ -2,21 +2,29 @@
   "baseline": "1_regex",
   "documents": 81,
   "cases_scored": 150,
+  "completion": {
+    "rate": 0.0,
+    "completed": 0,
+    "attempted": 0,
+    "paired_documents": 0,
+    "excluded": {}
+  },
+  "retries_used": 0,
   "presence": {
-    "f1": 0.1875,
-    "precision": 0.75,
-    "recall": 0.1071,
+    "f1": 0.26,
+    "precision": 0.8125,
+    "recall": 0.1548,
     "base_rate": 0.56,
     "trivial_f1": 0.7179,
     "counts": {
-      "tp": 9,
+      "tp": 13,
       "fp": 3,
       "tn": 63,
-      "fn": 75
+      "fn": 71
     },
     "by_tier": {
       "1": {
-        "f1": 0.3214,
+        "f1": 0.4333,
         "base_rate": 0.898,
         "n": 49
       },
@@ -132,13 +140,13 @@
         "interpretable": false
       },
       "parties": {
-        "f1": 0.0,
+        "f1": 0.5,
         "base_rate": 1.0,
         "n": 12,
         "gold_positives": 12,
         "recall_interval": [
-          0.0,
-          0.243
+          0.138,
+          0.609
         ],
         "interpretable": true
       },
@@ -167,27 +175,32 @@
     }
   },
   "span_token_f1": {
-    "mean": 0.0739,
+    "mean": 0.0977,
     "by_tier": {
-      "1": 0.1411,
+      "1": 0.1864,
       "2": 0.0,
       "3": 0.0
     }
   },
   "grounding": {
     "violation_rate": 0.0,
-    "spans_checked": 109,
-    "violations": 0
+    "spans_checked": 0,
+    "violations": 0,
+    "relocated": 0
   },
-  "schema_validity_rate": 1.0,
-  "rule_violation_rate": 0.0988,
+  "schema_validity_rate": 0.0,
+  "rule_violation_rate": 0.0,
   "cost_usd": {
     "mean": 0.0,
     "p95": 0.0,
-    "total": 0.0
+    "total": 0
   },
   "latency_ms": {
-    "p50": 4.7,
-    "p95": 22.8
+    "measured_runs": 0,
+    "unavailable_runs": 0,
+    "p50": 0.0,
+    "p95": 0.0,
+    "retrieval_p50": 0.0,
+    "validation_p50": 0.0
   }
 }

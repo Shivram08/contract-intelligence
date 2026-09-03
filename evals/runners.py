@@ -260,6 +260,24 @@ _MONTH_NUMBERS: Final = {
     month.lower(): index for index, month in enumerate(_MONTHS.split("|"), start=1)
 }
 
+#: "by and between Acme Inc. ("Company") and Beta LLC ("Distributor")".
+#: Anchored on the recital verb rather than on entity names, because a corporate
+#: suffix list ("Inc.", "LLC", "S.A.", "plc", "GmbH") is open-ended and CUAD
+#: contains all of them. The recital phrasing is far more stable than the names.
+_PARTIES: Final = re.compile(
+    r"(?:by\s+and\s+between|between|among)\s+"
+    r"(?P<body>[^.;]{10,400}?)"
+    r"(?=\s*(?:\.|;|\n\n|WHEREAS|RECITAL|W\s?I\s?T\s?N\s?E\s?S))",
+    re.IGNORECASE,
+)
+
+#: An entity mention: capitalised words followed by a corporate suffix. Used only
+#: to confirm the recital body actually names companies, not to find them.
+_ENTITY_HINT: Final = re.compile(
+    r"\b(?:Inc|LLC|L\.L\.C|Ltd|Limited|Corp|Corporation|Company|Co|"
+    r"plc|PLC|GmbH|S\.A|N\.V|LP|L\.P|Trust|Partnership)\b\.?",
+)
+
 _PERPETUAL_HINTS: Final = re.compile(
     r"\b(?:in\s+perpetuity|perpetual|until\s+terminated|remain\s+in\s+(?:full\s+)?"
     r"force\s+and\s+effect\s+until\s+terminated)\b",
@@ -336,6 +354,32 @@ class RegexBaseline:
             )
         return _absent(clause_type)
 
+    def _parties(self, text: str) -> ClauseExtraction:
+        """The recital naming the signatories.
+
+        Requires at least two corporate-suffix mentions inside the matched
+        recital: "between the parties hereto" matches the verb but names nobody,
+        and reporting that as a parties extraction would be a false positive the
+        grounding check cannot catch, because the quote is genuinely present.
+        """
+        # Only the first 6,000 characters -- the recital is at the top, and
+        # scanning the whole document invites matching a mid-contract "between".
+        window = text[:6000]
+        for match in _PARTIES.finditer(window):
+            body = match.group("body")
+            if len(_ENTITY_HINT.findall(body)) < 2:
+                continue
+            start, end = match.start("body"), match.end("body")
+            return ClauseExtraction(
+                clause_type=ClauseType.PARTIES,
+                present=True,
+                value=" ".join(body.split())[:300],
+                raw_text=text[start:end],
+                evidence=[Evidence(quote=text[start:end], char_start=start, char_end=end)],
+                confidence=0.55,
+            )
+        return _absent(ClauseType.PARTIES)
+
     def _expiration(self, text: str) -> ClauseExtraction:
         match = _PERPETUAL_HINTS.search(text)
         if match:
@@ -357,6 +401,7 @@ class RegexBaseline:
             ClauseType.GOVERNING_LAW: self._governing_law(text),
             ClauseType.EFFECTIVE_DATE: self._first_date(text, ClauseType.EFFECTIVE_DATE),
             ClauseType.EXPIRATION_DATE: self._expiration(text),
+            ClauseType.PARTIES: self._parties(text),
         }
         clauses = [handled.get(clause_type) or _absent(clause_type) for clause_type in ClauseType]
         return _finalize(
