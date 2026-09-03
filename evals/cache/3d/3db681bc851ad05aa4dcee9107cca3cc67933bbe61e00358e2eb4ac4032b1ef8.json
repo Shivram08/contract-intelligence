@@ -1,0 +1,63 @@
+{
+  "meta": {
+    "latency_ms": 4357.299199997215,
+    "max_tokens": 8000,
+    "message_count": 5,
+    "messages_sha": "aa1d85053ae92bb6",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "40c86ac6e9c6d864",
+      "2df86c3235ae798b",
+      "ff1599f82b392ec5",
+      "b5fa91cd24618379",
+      "39eb36b0f2d9191b"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "text": "This contract has no explicit anti-assignment, change of control, liability cap/uncapped liability, non-compete, or exclusivity clauses. Based on my thorough review of the entire document, I've confirmed the presence of: parties, governing law, effective date, expiration/term, renewal term, and notice period. Let me validate my draft extraction.",
+        "type": "text"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01Lr5fkscF6XLwKJ99PwBFXm",
+        "input": {
+          "clause_types": [
+            "renewal_term",
+            "notice_period_to_terminate_renewal",
+            "expiration_date"
+          ]
+        },
+        "name": "get_schema",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CegtUeJpL4MzpcM4evnwN",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 50719
+      },
+      "cache_creation_input_tokens": 50719,
+      "cache_read_input_tokens": 28170,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 190,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard"
+    }
+  }
+}

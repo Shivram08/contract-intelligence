@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "latency_ms": 12444.71790001262,
+    "max_tokens": 8000,
+    "message_count": 11,
+    "messages_sha": "254d870c7d26215f",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "40c86ac6e9c6d864",
+      "2df86c3235ae798b",
+      "ff1599f82b392ec5",
+      "b5fa91cd24618379",
+      "39eb36b0f2d9191b",
+      "2bdc00f9e1fc3695",
+      "942c10149958a283",
+      "6b9886d95dba2c64",
+      "0278924bb2d7afb5",
+      "8b0ecf5b06712406",
+      "1398323c7b2efed6"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "text": "Now let me submit the extraction after validating.",
+        "type": "text"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01J2iEr5ZsgVz3oNayoQv61n",
+        "input": {
+          "clauses": [
+            {
+              "clause_type": "governing_law",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 7346,
+                  "char_start": 7093,
+                  "quote": "This Agreement and the rights and duties of                   Transporter and Shipper hereunder shall be governed by and                   interpreted in accordance with the laws of the State of                   Arkansas, without recourse to the law governing conflict of                   laws."
+                }
+              ],
+              "present": true,
+              "raw_text": "This Agreement and the rights and duties of Transporter and Shipper hereunder shall be governed by and interpreted in accordance with the laws of the State of Arkansas, without recourse to the law governing conflict of laws.",
+              "value": "US-AR"
+            },
+            {
+              "clause_type": "parties",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 403,
+                  "char_start": 161,
+                  "quote": "THIS AGREEMENT (\"Agreement\"), entered into on May 20, 1992, is between Arkansas Western Pipeline Company (\"Transporter\"), an Arkansas corporation, and Associated Natural Gas Company, a division of Arkansas Western Gas Company, (\"Shipper\");"
+                }
+              ],
+              "present": true,
+              "raw_text": "THIS AGREEMENT (\"Agreement\"), entered into on May 20, 1992, is between Arkansas Western Pipeline Company (\"Transporter\"), an Arkansas corporation, and Associated Natural Gas Company, a division of Arkansas Western Gas Company, (\"Shipper\");",
+              "value": "Arkansas Western Pipeline Company (Transporter); Associated Natural Gas Company, a division of Arkansas Western Gas Company (Shipper)"
+            },
+            {
+              "clause_type": "effective_date",
+              "confidence": 0.45,
+              "evidence": [
+                {
+                  "char_end": 221,
+                  "char_start": 161,
+                  "quote": "THIS AGREEMENT (\"Agreement\"), entered into on May 20, 1992"
+                }
+              ],
+              "present": true,
+              "raw_text": "THIS AGREEMENT (\"Agreement\"), entered into on May 20, 1992",
+              "value": "1992-05-20"
+            },
+            {
+              "clause_type": "expiration_date",
+              "confidence": 0.4,
+              "evidence": [
+                {
+                  "char_end": 4372,
+                  "char_start": 4142,
+                  "quote": "this Agreement                   shall be effective as of the date of physical completion of                   and initial deliveries on Transporter's pipeline and shall                   continue for a primary term of ten years."
+                }
+              ],
+              "present": true,
+              "raw_text": "this Agreement shall be effective as of the date of physical completion of and initial deliveries on Transporter's pipeline and shall continue for a primary term of ten years.",
+              "value": "UNSPECIFIED"
+            },
+            {
+              "clause_type": "renewal_term",
+              "confidence": 0.65,
+              "evidence": [
+                {
+                  "char_end": 4788,
+                  "char_start": 4372,
+                  "quote": "Thereafter, this\n\n                  Agreement shall be effective month to month, until terminated                   by Transporter or Shipper upon the following written notice to                   the other specifying a termination date: sixty (60) days for\n\n                  interruptible transportation under Rate Schedule ITS and 180                   days for firm transportation under Rate Schedule FTS."
+                }
+              ],
+              "present": true,
+              "raw_text": "Thereafter, this Agreement shall be effective month to month, until terminated by Transporter or Shipper upon the following written notice to the other specifying a termination date: sixty (60) days for interruptible transportation under Rate Schedule ITS and 180 days for firm transportation under Rate Schedule FTS.",
+              "value": "30 recurring"
+            },
+            {
+              "clause_type": "notice_period_to_terminate_renewal",
+              "confidence": 0.6,
+              "evidence": [
+                {
+                  "char_end": 4788,
+                  "char_start": 4429,
+                  "quote": "until terminated                   by Transporter or Shipper upon the following written notice to                   the other specifying a termination date: sixty (60) days for\n\n                  interruptible transportation under Rate Schedule ITS and 180                   days for firm transportation under Rate Schedule FTS."
+                }
+              ],
+              "present": true,
+              "raw_text": "until terminated by Transporter or Shipper upon the following written notice to the other specifying a termination date: sixty (60) days for interruptible transportation under Rate Schedule ITS and 180 days for firm transportation under Rate Schedule FTS.",
+              "value": "180"
+            },
+            {
+              "clause_type": "change_of_control",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "anti_assignment",
+              "confidence": 0.8,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "cap_on_liability",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "uncapped_liability",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "non_compete",
+              "confidence": 0.9,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "exclusivity",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            }
+          ]
+        },
+        "name": "submit_extraction",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CegtWnM4eTdBtbhLo3usM",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 2760
+      },
+      "cache_creation_input_tokens": 2760,
+      "cache_read_input_tokens": 79895,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 1760,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard"
+    }
+  }
+}

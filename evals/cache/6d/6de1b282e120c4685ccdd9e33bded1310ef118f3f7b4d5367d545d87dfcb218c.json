@@ -1,0 +1,113 @@
+{
+  "meta": {
+    "latency_ms": 12952.935299981618,
+    "max_tokens": 8000,
+    "message_count": 3,
+    "messages_sha": "f408961daf3e1c09",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "4bef271e3679c8c1",
+      "ef4ae70cb6f9da07",
+      "36a855e0d42df4cf"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01XBDicMn8TuZbTW4QtoLafr",
+        "input": {
+          "query": "dated as of the date first above written / this Agreement dated"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01Psve8ae9vKk4GFgQcWi949",
+        "input": {
+          "query": "assignment of this Agreement without the prior written consent"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01G4o8srvnoo3t3o9ZJkvNJ3",
+        "input": {
+          "query": "change in control of the Bank or Holding Company"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01CvmFRqcHHfyRLBKWRvtnzu",
+        "input": {
+          "query": "non-competition covenant not to compete restrict"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01NXxCc6fESp9uWtHLEQRx52",
+        "input": {
+          "query": "exclusive financial advisor and conversion agent"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_018Ws6s5q7ehgVF1CBoMGcwL",
+        "input": {
+          "query": "limitation of liability Agent shall not be liable for any amount exceeding"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CegtaumuvY2KGqAR3vwgq",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 73191
+      },
+      "cache_creation_input_tokens": 73191,
+      "cache_read_input_tokens": 3149,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 1211,
+      "output_tokens_details": {
+        "thinking_tokens": 844
+      },
+      "service_tier": "standard"
+    }
+  }
+}

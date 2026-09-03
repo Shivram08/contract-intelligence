@@ -1,0 +1,40 @@
+warning: `VIRTUAL_ENV=D:\Anaconda_app\envs\anacondavscode` does not match the project environment path `.venv` and will be ignored; use `--active` to target the active environment instead
+18 cases over 10 contracts | baselines: 4b_rag_top20_agent | sample seed 42, skip 0
+preflight
+  [PASS] case set loaded              150 cases, 10 documents
+  [PASS] split membership             all 10 documents are in the 'golden' split
+  [PASS] database reachable           localhost:5433/docintel
+  [PASS] index covers case set        10/10 documents indexed
+  [PASS] every document has chunks    min 2 / median chunk count present
+  [PASS] chunks are embedded          all chunks have embeddings
+  [PASS] retrieval canary             5 hits for 'this agreement' on ALLIANCEBANCORPINCOFPENNSYLVANIA_10_18_2
+  [PASS] frozen config recorded       model=claude-sonnet-5 prompt=extract_v1 max_turns=20 all present
+  [PASS] latency stored at capture    41/200 sampled entries carry capture latency; the rest report latency as unavailable rather than zero
+preflight passed
+
+
+=== 4b_rag_top20_agent ===
+  [  1/10] ALLIANCEBANCORPINCOFPENNSYLVANIA_10_18_2  0/12  4t $0.6260  tot   0.0s (model  -2.1 retr  2.1/13c val   15ms)  ! budget exhausted: max_cost
+  [  2/10] ATENTOSA_07_06_2020-EX-99.1-JOINT FILING  2/12  5t $0.0681  tot   0.0s (model  -0.6 retr  0.6/6c val    1ms)
+  [  3/10] ATMOSENERGYCORP_11_22_2002-EX-10.17-TRAN  6/12  6t $0.3074  tot   0.0s (model  -0.8 retr  0.8/6c val    7ms)
+  [  4/10] AgapeAtpCorp_20191202_10-KA_EX-10.1_1191  9/12  5t $0.3214  tot   0.0s (model  -1.1 retr  1.1/8c val    3ms)
+  [  5/10] BLUEHILLSBANCORP,INC_05_20_2014-EX-1.1-A  0/12  4t $0.6683  tot   0.0s (model  -1.6 retr  1.6/12c val   15ms)  ! budget exhausted: max_cost
+  [  6/10] BellringBrandsInc_20190920_S-1_EX-10.12_  3/12  5t $0.1038  tot   0.0s (model  -1.5 retr  1.5/12c val    1ms)
+  [  7/10] BellringBrandsInc_20190920_S-1_EX-10.12_  3/12  4t $0.1768  tot   0.0s (model  -1.4 retr  1.4/11c val    2ms)
+  [  8/10] BellringBrandsInc_20190920_S-1_EX-10.12_  2/12  5t $0.0475  tot   0.0s (model  -0.8 retr  0.8/6c val    1ms)
+  [  9/10] CORALGOLDRESOURCES,LTD_05_28_2020-EX-4.1  6/12  7t $0.4048  tot   0.0s (model  -1.2 retr  1.2/8c val    5ms)
+  [ 10/10] DRAGONSYSTEMSINC_01_08_1999-EX-10.17-OUT  5/12  6t $0.2498  tot   0.0s (model  -1.1 retr  1.1/9c val    2ms)
+  4b_rag_top20_agent: $2.9738 in 357s
+
+baseline                      done     F1   triv      P      R  spanF1  ground  schema  rules    $/doc     $p95   p50 ms   p95 ms
+---------------------------------------------------------------------------------------------------------------------------------
+4b_rag_top20_agent            8/10  1.000  0.571  1.000  1.000   0.702   0.00%     75%    10%   0.2974   0.6683      n/a      n/a
+
+by tier (presence F1 / base rate / n):
+  baseline                                tier 1                tier 2                tier 3
+  4b_rag_top20_agent         1.000 / 1.00 /   3   1.000 / 0.33 /   6   1.000 / 0.17 /   6
+
+precision at 80% recall (CUAD convention):
+  4b_rag_top20_agent       P=0.500 at confidence >= 0.80
+
+cache: 14/51 hits (27.5%), 37 misses, 37 written

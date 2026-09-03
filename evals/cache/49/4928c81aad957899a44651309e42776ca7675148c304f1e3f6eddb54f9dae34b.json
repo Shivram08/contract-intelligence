@@ -1,0 +1,117 @@
+{
+  "meta": {
+    "latency_ms": 4881.54349999968,
+    "max_tokens": 8000,
+    "message_count": 3,
+    "messages_sha": "90894ef3a040fa26",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "b9cb3680ddda94d7",
+      "68c60317e4398960",
+      "bc85cff332d82e80"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "EuIDCpABCBEYAipAvTPiWeYtMoCsShCRoNREsEYB7jvpcobhAAX58KN3yiw2yA3rrkMLtN0BAaYZ2RbdgZxa1wvG+ZZRDA66PXOwtjIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAZrZ5tQGEgziHq8/KkeR6FAyrkwaDDWBVTu/+dpCeEG/rCIwD9toD4ytGckqjr3zn53NIZwt1VYUcXeQOjQ/tVvojj6YrNKzGJJJwxFMBWAIkYG+Kv4BE0aawEVoW+vcqR3/12l2A2oc4VnhSUB+PmLEIsDi7zPvMxu4uzlyRL0KzLgtJbIw4ldRuNyFEENTGqT5tjtAbKa5iYSAgiJlX/iKaUHWjCRvEpnzMeWTxotPnq29e9e47JOsSjLCkTDDi1cNOcU1sszh9LkZxytc8baitgAGKCQR41ZJxrbYCZXWvujG6LQEyFRPLqcQedSMLLxR3Og63eglcl2YxNfrkpENuE2XLp/yh1bys3NFixO+eOB7yyV+S9HSAD8yZdu7LVlzhFnQToSy3bLE7up+u0pplbPkRO93fzeqUOqrVylE0CPAItw4c0VN3klYKfpEUT3Nm50YAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "This appears to be a short amendment document. Let me search for other clause types to confirm the full scope of the document.",
+        "type": "text"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_012ioFDwfcbhqX1x28Kg6pt2",
+        "input": {
+          "query": "change of control assignment merger"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01XoA7NxfnXbXBKkQYDrpY31",
+        "input": {
+          "query": "limitation of liability cap"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01AYQ4B2fmv8KBAqdtYGhKvh",
+        "input": {
+          "query": "exclusive supply requirements"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01NByNgupKYP2H7qw18uegVu",
+        "input": {
+          "query": "non-compete restriction on competing business"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_0188ECPZGFCTyAofWjBn2gmg",
+        "input": {
+          "query": "renewal term automatically renew"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_014YLCQos8n9s6au3DG5QcQJ",
+        "input": {
+          "query": "notice period to terminate"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CegtenLJ8oTV4AmHNnkzW",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 6840
+      },
+      "cache_creation_input_tokens": 6840,
+      "cache_read_input_tokens": 3149,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 424,
+      "output_tokens_details": {
+        "thinking_tokens": 70
+      },
+      "service_tier": "standard"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "latency_ms": 2386.8436999910045,
+    "max_tokens": 8000,
+    "message_count": 7,
+    "messages_sha": "dc05c0194dfe7e1b",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "04a53e144c18c7f9",
+      "955c70b0e6a91115",
+      "0bc48099c7e6b7f2",
+      "97c806680efec1df",
+      "24548199173885ca",
+      "2e9c24f87a24f648",
+      "ca491ae149a84ca3"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "text": "Now let me submit the draft to validation.",
+        "type": "text"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01GCo9N1uvdGas6uhU22ocWK",
+        "input": {
+          "char_end": 4300,
+          "char_start": 3900
+        },
+        "name": "read_span",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CegtZ6RohyVQ45ZPPQC6P",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 656
+      },
+      "cache_creation_input_tokens": 656,
+      "cache_read_input_tokens": 92134,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 88,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard"
+    }
+  }
+}

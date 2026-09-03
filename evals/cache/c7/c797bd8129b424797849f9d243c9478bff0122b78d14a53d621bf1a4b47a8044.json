@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "latency_ms": 6421.586899989052,
+    "max_tokens": 8000,
+    "message_count": 3,
+    "messages_sha": "261c54048ef9a5ae",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "dd1d3effd2da8125",
+      "9a09a1cf6860be31",
+      "3da2d04155faed97"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "EvgGCpABCBEYAipAMMH+uaAHfpGW5BGzUQ8a9AFdh0MnD4/1HK5nOKzh1/NtTAOLsHMW35wNQOK/xh7f+gEIoWp4aiqXYlFCDeZwizIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAfDZ5tQGEgyG9kCpjLbjr0HsjdEaDM2OBIfuE/F622MO6CIwiclkyh+FocX1ocQhx1j1gpPJExLmRjHp1V3v/i8XbWZpJqoFvz5BYs1wcc1V33isKpQFzjLy/1sOA7I/UppWHTWPszhTj9y1YxsRyGnYV1eIYVRhp3Hhh3zrwNvJlzpxfy5i+vOaG/lOKXmyYIrFRUH1SS8kIzKxrYtKtQ62hjpQHhNys6mX7a5+JNhRdqyEBtW5jEBOnkDt6IxDv6g7ZP/n7qS/49u5kdw/7ZFs5cTJn/SDDzmTNbT79CXUfF412ur/IXi2NhZCZ1XnA4///RNxTm1dREoVH8l8Gr44UVCiBEclZL8UFBz1JOzsanQdJFQj5TQ4bo9JGJPA7ux2vZBlOpvM7az0yP6KibCoRc3S/v014XfS3Mgr2EdPbQIjBsaZd8PDidxUzaZ1p+Q+OVuNST+26muWPy1X35S1akabI4nuK1zSU0fFO7vGvrFUKhzweMTpn+2dBmiHg2/7uW1njsKn1sWm/R4J+oWoufL4tNuytnhuMh+sut2itMxinxpOPstVFhpsqPAVqYBCNB202zKbwVBCdRBstozt3c8QQd1LtfIczmqTBGGjAPkF9vSHqfuySV2ml0gCcLlgTBBHldnRtrYivHTmvFz+S7zvZAEZJubw/ttdYjzfLWa9PyXNB+oF18TllQEYhrnR8T5e2HWIIGvRtkKmHuHQAvTsBQf/ZrgqysjNEulJyiKB2l7mKU+p9c7Z4W8ZDrPyNvM0xylamjc8t0At54ouO8ymmlGmP8HnLyBQ/mH9GwCgR6f32SOnH4kzEFMnsmjsRUrUMRdYJIfFzOsUW2UZDm5jjB6Qjg1Irg/C8dOB6frRkkBxr+gH2I9UKND5yw2LIJAt9vRBgI/2kTuBYg1mfV1h2kjBDEV1L11kQ/qlKeqdSHqsq30+0gXNKUwistYGmMRr1nmL1A9MMa3FQqbOfZxIL/anQiGUGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_015FZuhwv4b4NjqwpPVQsNiR",
+        "input": {
+          "query": "liability shall not exceed / limitation of liability aggregate"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01FeywLdm3httyuGvHRrnjTQ",
+        "input": {
+          "query": "exclusive / exclusivity Consultant shall not provide services to any other"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01T14MCeDtbJz9ikBLqDX4DZ",
+        "input": {
+          "query": "non-compete competitive business restriction"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01AWJfcxQwKKxcKLjSxHKXie",
+        "input": {
+          "query": "renewal of this Agreement automatically renew"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CegtkumSWN4se32Q2GczV",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 51077
+      },
+      "cache_creation_input_tokens": 51077,
+      "cache_read_input_tokens": 3149,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 459,
+      "output_tokens_details": {
+        "thinking_tokens": 212
+      },
+      "service_tier": "standard"
+    }
+  }
+}

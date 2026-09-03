@@ -1,0 +1,59 @@
+{
+  "meta": {
+    "latency_ms": 2741.3471000036225,
+    "max_tokens": 8000,
+    "message_count": 7,
+    "messages_sha": "c01f2e0e344aea28",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "57deb599ea95c8ac",
+      "a5f4daf8fd70fcb2",
+      "592aba05055fc942",
+      "448c916642b5788e",
+      "e259169e90406749",
+      "9bb21ae7d8c0d597",
+      "402babb3b4fe4ede"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "text": "Confirmed: the document ends at char 1742. This is the entirety of the contract \u2014 a short amendment with no governing law, term, renewal, liability, assignment, or non-compete/exclusivity provisions. Only parties and effective date are identifiable.",
+        "type": "text"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01DDPqzk3XeUWc4Gatw77NUt",
+        "input": {},
+        "name": "get_schema",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011Cegtk26fTSF3wdb2TfA6L",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 360
+      },
+      "cache_creation_input_tokens": 360,
+      "cache_read_input_tokens": 10345,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 108,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard"
+    }
+  }
+}

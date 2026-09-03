@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "latency_ms": 4696.621600014623,
+    "max_tokens": 8000,
+    "message_count": 5,
+    "messages_sha": "66bd21433b096a52",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "04a53e144c18c7f9",
+      "955c70b0e6a91115",
+      "0bc48099c7e6b7f2",
+      "97c806680efec1df",
+      "24548199173885ca"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "text": "I have full contract coverage now (it's a short ~21K char document). No cap on liability or uncapped liability clause exists, and no true non-compete clause on a party's own competitive activity. Let me draft and validate.",
+        "type": "text"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01NrrHNjPWqd6L337rWnmjkE",
+        "input": {
+          "clause_types": [
+            "change_of_control",
+            "non_compete",
+            "exclusivity",
+            "cap_on_liability",
+            "uncapped_liability"
+          ]
+        },
+        "name": "get_schema",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CegtYkL5ZoLV8iQ9c6Efn",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 44839
+      },
+      "cache_creation_input_tokens": 44839,
+      "cache_read_input_tokens": 47295,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 154,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard"
+    }
+  }
+}

@@ -1,0 +1,220 @@
+{
+  "meta": {
+    "latency_ms": 21731.43909999635,
+    "max_tokens": 8000,
+    "message_count": 9,
+    "messages_sha": "b43abdc4a72891ba",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "04a53e144c18c7f9",
+      "955c70b0e6a91115",
+      "0bc48099c7e6b7f2",
+      "97c806680efec1df",
+      "24548199173885ca",
+      "2e9c24f87a24f648",
+      "ca491ae149a84ca3",
+      "9d84c8d9caf95a04",
+      "d512996faafd043a"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "EuAFCpABCBEYAipAnW7eMiCjnzS9ar7FtpkRyx8MDqu7fdrqVODOG9myBTwjnbr9tSsRw7D2bE94EOhomDwNBSSa4Cd7hNFlUR163jIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAdPY5tQGEgwePPXluE7z+xMRVA4aDBTA2hs/JfXnNOrTxyIwdFFrXIA2FNA6keCNVA8k3wW5Jgfr7QiUDJYbgYuHLKNSa7aUrt39HpZnBfHeyHwnKvwDmVlkfy7C1Bymud52756pve38HIlJBVByAFb/2hlRRHSIcXhD6JIcQzeck0gAYfswtJLXjFJ4LUSWtSu34ELbhODGCPTonFg+HawiphzEh6j87aBSH46/WaWs6rbmsyrD+lo3U/Ct8ic24zxUQXLs20N4F8IMOvPVRDy5B95P7DftopJgpZDEAwGoV+SrKrkNgjaIqGXug0YKU43/r80qvc0C8jfKSsHJgNAzev1lZmfkDVcfXrOBP6uS3TMxH1An2KDGspfxsGQeP9O4Nc+8Rd0+qpg4qjpDbJNjDTs90kKi+bH5zv/gbIm9Pw/rPBlwxO9/KLuM5ecFPEy8+ly0OOhmQkGOKv9czBpx9YdeY8lxas6Gq7tIMiY4wwqPuCMjs2CeyFkkyXG8cJmjdueij2UQfKThY/mq+hDEvfAyikkARPB2ulLdm65YBuvgDeLBDHZVqsW0SyKS5f4yWFedJzqWtUK9oWXYuc8r/K/T6uLqcgqVrKwYeEi3WkYTrgamEd1JBVloHP48hO7BYIRBMbamH3JqS8JA/KurJcqQTXBq8pv5M7NOkwoG1va8jWNwkVSIsHHLw/+w4HN1NcPviYCBV1Q7mcNIlLv5tThP2seCH/ONOTrbk3hU+8+ZpjimUMF+3+zzBH5LazgpKHn+MIuA0IUsjsP98tZ6lxgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01WohaeM3yAQj8q1XmiwKfVt",
+        "input": {
+          "clauses": [
+            {
+              "clause_type": "governing_law",
+              "confidence": 0.93,
+              "evidence": [
+                {
+                  "char_end": 11562,
+                  "char_start": 11466,
+                  "quote": "This agreement shall be governed by the Laws of England (English common and statutory Law)."
+                }
+              ],
+              "present": true,
+              "raw_text": "This agreement shall be governed by the Laws of England (English common and statutory Law).",
+              "value": "GB"
+            },
+            {
+              "clause_type": "parties",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 650,
+                  "char_start": 345,
+                  "quote": "BETWEEN: ORGANIC PREPARATIONS INC. 2nd Floor, Transpacific Haus Lini Highway, Port Vila. Vanuatu ('the Manufacturer') of one part AND: AGAPE ATP INTERNATIONAL HOLDING LIMITED Unit 05, 4F, Energy Plaza No. 92, Granville Road Tsim Sha Tsui East Kowloon, Hong Kong ('the Customer') of the other part."
+                }
+              ],
+              "present": true,
+              "raw_text": "BETWEEN: ORGANIC PREPARATIONS INC. 2nd Floor, Transpacific Haus Lini Highway, Port Vila. Vanuatu ('the Manufacturer') of one part AND: AGAPE ATP INTERNATIONAL HOLDING LIMITED Unit 05, 4F, Energy Plaza No. 92, Granville Road Tsim Sha Tsui East Kowloon, Hong Kong ('the Customer') of the other part.",
+              "value": "Organic Preparations Inc. (Manufacturer); Agape ATP International Holding Limited (Customer)"
+            },
+            {
+              "clause_type": "effective_date",
+              "confidence": 0.9,
+              "evidence": [
+                {
+                  "char_end": 344,
+                  "char_start": 293,
+                  "quote": "THIS AGREEMENT is made on the 15t h day of January 2018."
+                }
+              ],
+              "present": true,
+              "raw_text": "THIS AGREEMENT is made on the 15t h day of January 2018.",
+              "value": "2018-01-15"
+            },
+            {
+              "clause_type": "expiration_date",
+              "confidence": 0.6,
+              "evidence": [
+                {
+                  "char_end": 1058,
+                  "char_start": 1000,
+                  "quote": "1.2 Term This agreement is for a term of ten (10) years."
+                }
+              ],
+              "present": true,
+              "raw_text": "1.2 Term This agreement is for a term of ten (10) years.",
+              "value": "2028-01-15"
+            },
+            {
+              "clause_type": "renewal_term",
+              "confidence": 0.85,
+              "evidence": [
+                {
+                  "char_end": 1235,
+                  "char_start": 1080,
+                  "quote": "This agreement will be automatically renewed at the end of every ten (10) year term, with each subsequent term of renewal being for a ten (10) year term."
+                }
+              ],
+              "present": true,
+              "raw_text": "1.3 Renewal This agreement will be automatically renewed at the end of every ten (10) year term, with each subsequent term of renewal being for a ten (10) year term.",
+              "value": "3650 recurring"
+            },
+            {
+              "clause_type": "notice_period_to_terminate_renewal",
+              "confidence": 0.75,
+              "evidence": [
+                {
+                  "char_end": 1390,
+                  "char_start": 1236,
+                  "quote": "A six (6) months notice must be given by either party of their intention to terminate relations due to any reason other than breach of this agreement."
+                }
+              ],
+              "present": true,
+              "raw_text": "A six (6) months notice must be given by either party of their intention to terminate relations due to any reason other than breach of this agreement.",
+              "value": "180"
+            },
+            {
+              "clause_type": "change_of_control",
+              "confidence": 0.85,
+              "evidence": [
+                {
+                  "char_end": 10366,
+                  "char_start": 9954,
+                  "quote": "(e) If control of either party shall pass from the present shareholders or owners or controllers to other persons whom the other party shall in their absolute discretion regard as unsuitable. (f) Either parties voting stock is transferred to any third party to such extent as to result in a change in effective control of the company or its ownership or active management is changed in any other manner."
+                }
+              ],
+              "present": true,
+              "raw_text": "(e) If control of either party shall pass from the present shareholders or owners or controllers to other persons whom the other party shall in their absolute discretion regard as unsuitable. (f) Either parties voting stock is transferred to any third party to such extent as to result in a change in effective control of the company or its ownership or active management is changed in any other manner.",
+              "value": null
+            },
+            {
+              "clause_type": "anti_assignment",
+              "confidence": 0.9,
+              "evidence": [
+                {
+                  "char_end": 15188,
+                  "char_start": 14875,
+                  "quote": "The Manufacturer may not transfer or assign any of its rights or obligations under this agreement without the prior written consent of the Customer. The Customer may not freely transfer or assign its rights or obligations under this agreement without the prior written consent of the Manufacturer."
+                }
+              ],
+              "present": true,
+              "raw_text": "14.6 Assignment The Manufacturer may not transfer or assign any of its rights or obligations under this agreement without the prior written consent of the Customer. The Customer may not freely transfer or assign its rights or obligations under this agreement without the prior written consent of the Manufacturer.",
+              "value": null
+            },
+            {
+              "clause_type": "cap_on_liability",
+              "confidence": 0.75,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "uncapped_liability",
+              "confidence": 0.7,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "non_compete",
+              "confidence": 0.55,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "exclusivity",
+              "confidence": 0.9,
+              "evidence": [
+                {
+                  "char_end": 12520,
+                  "char_start": 12212,
+                  "quote": "13.1 The Manufacturer hereby appoints the Customer to be the sole and exclusive agent for the promotion, sales, marketing, distribution and administration of the products listed in schedule A of this agreement based on minimum annual product purchase requirements as listed in Schedule B of this agreement."
+                },
+                {
+                  "char_end": 4626,
+                  "char_start": 4400,
+                  "quote": "3.6 Sale of Product The Manufacturer covenants not to sell any product listed in this agreement, or product name (as listed in schedule A of this agreement) to any other party without prior written consent of the Customer."
+                }
+              ],
+              "present": true,
+              "raw_text": "13.1 The Manufacturer hereby appoints the Customer to be the sole and exclusive agent for the promotion, sales, marketing, distribution and administration of the products listed in schedule A of this agreement based on minimum annual product purchase requirements as listed in Schedule B of this agreement. 13.2 The Manufacturer grants exclusive rights to the Customer for the term of ten (10) years from the date of the signing of this agreement and for an indefinite period upon the customer fulfilling the minimum annual purchase requirement as listed in Schedule B. of this agreement.",
+              "value": null
+            }
+          ]
+        },
+        "name": "submit_extraction",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CegtZGgTNorQhG8WxWHPi",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 615
+      },
+      "cache_creation_input_tokens": 615,
+      "cache_read_input_tokens": 92790,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 2448,
+      "output_tokens_details": {
+        "thinking_tokens": 163
+      },
+      "service_tier": "standard"
+    }
+  }
+}

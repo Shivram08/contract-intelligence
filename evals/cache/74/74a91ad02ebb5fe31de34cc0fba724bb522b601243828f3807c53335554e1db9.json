@@ -1,0 +1,179 @@
+{
+  "meta": {
+    "latency_ms": 14686.57799999346,
+    "max_tokens": 8000,
+    "message_count": 9,
+    "messages_sha": "6932a252dae168ee",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "b9cb3680ddda94d7",
+      "68c60317e4398960",
+      "bc85cff332d82e80",
+      "b37bb46250a9d1fc",
+      "6610d60ac581ca54",
+      "f74b321f9b5efc27",
+      "edf0aa5f2ca5101a",
+      "e8a89014ae1934a2",
+      "65a0db1d6ac6b835"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01BrkVLwCzSitaoH4uHNcKTf",
+        "input": {
+          "clauses": [
+            {
+              "clause_type": "governing_law",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "parties",
+              "confidence": 0.7,
+              "evidence": [
+                {
+                  "char_end": 320,
+                  "char_start": 128,
+                  "quote": "This Amendment No. 1 (the \"Amendment\"), entered into by and between Stremick's Heritage Foods, LLC (\"Heritage\") Premier Nutrition Corporation (\"Premier\") is effective as of June 11, 2018"
+                }
+              ],
+              "present": true,
+              "raw_text": "This Amendment No. 1 (the \"Amendment\"), entered into by and between Stremick's Heritage Foods, LLC (\"Heritage\") Premier Nutrition Corporation (\"Premier\")",
+              "value": "Stremick's Heritage Foods, LLC (Manufacturer/Heritage); Premier Nutrition Corporation (Customer/Premier)"
+            },
+            {
+              "clause_type": "effective_date",
+              "confidence": 0.65,
+              "evidence": [
+                {
+                  "char_end": 314,
+                  "char_start": 250,
+                  "quote": "is effective as of June 11, 2018 (\"Amendment Effective Date\")"
+                }
+              ],
+              "present": true,
+              "raw_text": "is effective as of June 11, 2018 (\"Amendment Effective Date\")",
+              "value": "2018-06-11"
+            },
+            {
+              "clause_type": "expiration_date",
+              "confidence": 0.45,
+              "evidence": [
+                {
+                  "char_end": 1728,
+                  "char_start": 1520,
+                  "quote": "For the avoidance of doubt, the six-month period commencing July 1, 2022 and ending December 31, 2022, Premier will be required to purchase [***] (the twelve-month periods and the six-month period are each a \"Contract Period\")."
+                }
+              ],
+              "present": true,
+              "raw_text": "For the avoidance of doubt, the six-month period commencing July 1, 2022 and ending December 31, 2022, Premier will be required to purchase [***] (the twelve-month periods and the six-month period are each a \"Contract Period\").",
+              "value": "2022-12-31"
+            },
+            {
+              "clause_type": "renewal_term",
+              "confidence": 0.8,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "notice_period_to_terminate_renewal",
+              "confidence": 0.8,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "change_of_control",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "anti_assignment",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "cap_on_liability",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "uncapped_liability",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "non_compete",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "exclusivity",
+              "confidence": 0.6,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            }
+          ]
+        },
+        "name": "submit_extraction",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CegtgFUDieqHXwkH7o2da",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 4287
+      },
+      "cache_creation_input_tokens": 4287,
+      "cache_read_input_tokens": 21494,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 1706,
+      "output_tokens_details": {
+        "thinking_tokens": 595
+      },
+      "service_tier": "standard"
+    }
+  }
+}

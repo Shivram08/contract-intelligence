@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "latency_ms": 13051.733599975705,
+    "max_tokens": 8000,
+    "message_count": 3,
+    "messages_sha": "a0e5628d4924aac3",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "04a53e144c18c7f9",
+      "955c70b0e6a91115",
+      "0bc48099c7e6b7f2"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01B4pn417KYT6XdqCjdd9UVQ",
+        "input": {
+          "query": "liability shall not exceed limitation of liability"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01KuM9QNymZHqnbVHfb5Gfgg",
+        "input": {
+          "query": "not be liable for indirect consequential damages in no event"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_019CRkEYaRnvkPH2Wjsxdze3",
+        "input": {
+          "query": "non-compete restriction on competing business"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01N9mFACyH5FBbpGV3LxGEN4",
+        "input": {
+          "query": "sole and exclusive agent exclusive rights"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CegtXjt1igK7HwhNKxHbW",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 44146
+      },
+      "cache_creation_input_tokens": 44146,
+      "cache_read_input_tokens": 3149,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 1110,
+      "output_tokens_details": {
+        "thinking_tokens": 874
+      },
+      "service_tier": "standard"
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "meta": {
+    "latency_ms": 5302.804999984801,
+    "max_tokens": 8000,
+    "message_count": 7,
+    "messages_sha": "5bc317b93b98fe84",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "dd1d3effd2da8125",
+      "9a09a1cf6860be31",
+      "3da2d04155faed97",
+      "88eaeb23328d0b28",
+      "7a1847bdf73057ac",
+      "31b780cca84b1d5f",
+      "09acd84ae31ba770"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "text": "Now let me check \"uncapped liability\" - section 10.3 negates liability for consequential losses (a limitation, not uncapped). No explicit cap either. Let's check liability more - there's indemnification obligations without dollar caps, which suggests uncapped liability for indemnification claims. But that's typical indemnity, not explicitly \"uncapped\" language. I'll mark cap_on_liability and uncapped_liability as not present, since no explicit statements either way beyond the consequential damages carve-out (which is a limitation but not a \"cap\" - it's exclusion of certain damage types, not a dollar/time cap). Let's verify with schema: cap_on_liability includes \"maximum amount for recovery\" or \"time limitation to bring claims\". Not found here. uncapped_liability: \"uncapped liability upon breach ... including breach of confidentiality\" - not explicitly stated either. I'll mark both false.\n\nNow let's validate.",
+        "type": "text"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_013j8DnRDU4n9mhBcG7Zv4x2",
+        "input": {
+          "clause_types": [
+            "parties",
+            "effective_date",
+            "expiration_date",
+            "notice_period_to_terminate_renewal"
+          ]
+        },
+        "name": "get_schema",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CegtmoMWUvBriCTuPP4Zu",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 1448
+      },
+      "cache_creation_input_tokens": 1448,
+      "cache_read_input_tokens": 106218,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 387,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard"
+    }
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "meta": {
+    "latency_ms": 8760.743000020739,
+    "max_tokens": 8000,
+    "message_count": 9,
+    "messages_sha": "b8c2288174705a6f",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "57deb599ea95c8ac",
+      "a5f4daf8fd70fcb2",
+      "592aba05055fc942",
+      "448c916642b5788e",
+      "e259169e90406749",
+      "9bb21ae7d8c0d597",
+      "402babb3b4fe4ede",
+      "c75ab7fe583ad747",
+      "9eb41ae84b5d0cfb"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "text": "Now I'll build the extraction. Only parties and effective_date are present; everything else is absent given this short amendment document.",
+        "type": "text"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01HSepgap1d9o8QxYJLYbTTW",
+        "input": {
+          "clauses": [
+            {
+              "clause_type": "governing_law",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "parties",
+              "confidence": 0.9,
+              "evidence": [
+                {
+                  "char_end": 505,
+                  "char_start": 150,
+                  "quote": "This Amendment No. 3 (the \"Third Amendment\"), entered into by and between Stremicks Heritage Foods, LLC (\"Heritage\") Premier Nutrition Corporation (\"Premier\") is effective as of July 3, 2019 (\"Third Amendment Effective Date\") and amends that certain Manufacturing Agreement between Heritage and Premier dated July 1, 2017 as amended (\"Agreement\")."
+                }
+              ],
+              "present": true,
+              "raw_text": "This Amendment No. 3 (the \"Third Amendment\"), entered into by and between Stremicks Heritage Foods, LLC (\"Heritage\") Premier Nutrition Corporation (\"Premier\") is effective as of July 3, 2019",
+              "value": "Stremicks Heritage Foods, LLC (Heritage); Premier Nutrition Corporation (Premier)"
+            },
+            {
+              "clause_type": "effective_date",
+              "confidence": 0.8,
+              "evidence": [
+                {
+                  "char_end": 316,
+                  "char_start": 248,
+                  "quote": "is effective as of July 3, 2019 (\"Third Amendment Effective Date\")"
+                }
+              ],
+              "present": true,
+              "raw_text": "is effective as of July 3, 2019 (\"Third Amendment Effective Date\")",
+              "value": "2019-07-03"
+            },
+            {
+              "clause_type": "expiration_date",
+              "confidence": 0.8,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "renewal_term",
+              "confidence": 0.8,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "notice_period_to_terminate_renewal",
+              "confidence": 0.8,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "change_of_control",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "anti_assignment",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "cap_on_liability",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "uncapped_liability",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "non_compete",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "exclusivity",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            }
+          ]
+        },
+        "name": "submit_extraction",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CegtkDP56XGu2vuh72sXt",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 1473
+      },
+      "cache_creation_input_tokens": 1473,
+      "cache_read_input_tokens": 10705,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 1038,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard"
+    }
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "meta": {
+    "latency_ms": 7650.0986000173725,
+    "max_tokens": 8000,
+    "message_count": 3,
+    "messages_sha": "b9b2df175e1d385d",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "18d7bd40d0441d80",
+      "0e53952317d88317",
+      "f42cdf90e761a5ba"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "EsYECpABCBEYAipALHqFemAk5uJOkaol3zlrgn/pWb6xCYPAf98H1514lzxYUvmnGUYnueRPSPFugZ2zfcFM4lcZ4Jv3Bhw6R9i/PzIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAe/X5tQGEgzcxdNXnArk4bj14b4aDCM8qQ52Fmun/7gsjyIwUR/92ZeX50KA6k0HgNzcNCNDHNgLOtdbVHsc9KwZ0bmQALvYqpoGpzapSrYZ3SN4KuICu1ZLqJmdJsnhOhnsX04IJDs79KNKsOTVKhwo/7e1mj7+QtGFavbvM2UVl8HahXgtWEY+xhJVO7CirPGN9q4N0CfKOfUxorrCpxyiUbP6lFj+MjqPF5vnmVfR0wtVm1FpUknLT3CkrsNY8Cp6VuwRwBhnp62XQGm2bYUnRV3zRXWaF1mk1SenWNG/Ia8ZbuGvRmUHHwAajSHnQWNBqLeEiNTq+xHmNfYIUGzbJtx3NVUGiNXtaavgysv27u8DDFBnn1/nlCJdG0BIJdDLFTkmmMtA0Gb1mlEhPB+qhbHXtfJRiKyDRq2rtZsiD7n5PnA04Co5AVPN57mVhZ0koYizkPzFOWjFttIZsK42sID7tX/gFkSGZrJz25DP9LXcscfRP8YYh145fpc8Sp+lpRw8iiPyOaRRk5UYUWcmykHacwz5PIRaIvXfw2Poa2V/WxQmDNpp865+K7dYbm1xkZIhqU/JGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_015GdpDQiuehaMMK33Xiocj3",
+        "input": {
+          "query": "assign this Agreement without the prior written consent"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_0117BAZTqo4wEa2rQuvb63UU",
+        "input": {
+          "query": "change in control of the Company"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01Bm4PQ15VFj7hcixwDMBC8y",
+        "input": {
+          "query": "liability shall not exceed limitation of liability cap"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01MHXfWmETMKJcX2b8TnWVRi",
+        "input": {
+          "query": "Agent shall not be liable for indirect consequential damages"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01QR1t4YiBYGfMqDxyeC21vz",
+        "input": {
+          "query": "exclusive right to act as agent no other agent may be engaged"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01BtYVSsjeLqh5D1HELrDQDy",
+        "input": {
+          "query": "non-compete restriction on soliciting or competing"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CegtRxwQmb78Ejyvb48P7",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 96287
+      },
+      "cache_creation_input_tokens": 96287,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 470,
+      "output_tokens_details": {
+        "thinking_tokens": 112
+      },
+      "service_tier": "standard"
+    }
+  }
+}

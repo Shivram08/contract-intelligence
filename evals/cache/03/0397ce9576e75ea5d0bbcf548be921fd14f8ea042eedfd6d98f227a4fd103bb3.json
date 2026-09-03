@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "latency_ms": 4180.089400004363,
+    "max_tokens": 8000,
+    "message_count": 3,
+    "messages_sha": "af4b12dd5632a876",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "40c86ac6e9c6d864",
+      "2df86c3235ae798b",
+      "ff1599f82b392ec5"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "EocDCpABCBEYAipAM6YQ+3fyDXlylWrueEAsMcRzsLy0cYVUUyLma96aag9XWsxYHK+JAvR8844toU9NJFxwlwk0QVnve5HZ6o0a7TIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAYzY5tQGEgye+vvaLOhk/YZjR0waDIZ32bCQqLabCjHRESIwD/hNmTvjZTKsHO5BM6NfcY/K/xOK5LiIAB5CRlu6za32HuokJMeZIMA2g3LO/QWcKqMB7pSVprSOPBedano1MfidZ2F8GjVuDBX8tBCA4qOgVpqR6jTjvvouP9YChBzIE1inpOqUepvVugG60UF2OTM3JyjDXBlo+WIjdVlMFpCH3FnTtDn+LMgC6AkILxFhQu2+I4ePyV14yuUBa230QvyoZBVpTJyELcSkiQMi3yLVAgqKv1Znl6z0JJYQlgGo4urro/WKHXyk6yW9OtsaM8m6yz9K2hgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01K26ytDB45iGkgb7iMpcmdH",
+        "input": {
+          "query": "assignment of this Agreement shall not be assigned without consent"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_018hoTGCvPBFVhbde7gK3pDp",
+        "input": {
+          "query": "change of control merger consolidation"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_019cYPa4NQ9eiWTREoqtKUZb",
+        "input": {
+          "query": "limitation of liability shall not exceed"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_0193R5nNd1VSwN3zdWpf8LWv",
+        "input": {
+          "query": "non-compete exclusivity requirements shall exclusively purchase"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CegtUHxDCPPvHL43mSSDC",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 25021
+      },
+      "cache_creation_input_tokens": 25021,
+      "cache_read_input_tokens": 3149,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 290,
+      "output_tokens_details": {
+        "thinking_tokens": 49
+      },
+      "service_tier": "standard"
+    }
+  }
+}
