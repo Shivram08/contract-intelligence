@@ -1,0 +1,26 @@
+warning: `VIRTUAL_ENV=D:\Anaconda_app\envs\anacondavscode` does not match the project environment path `.venv` and will be ignored; use `--active` to target the active environment instead
+18 cases over 10 contracts | baselines: 4_rag_rerank_agent, 5_full_context | sample seed 42, skip 0
+
+=== 4_rag_rerank_agent ===
+  4_rag_rerank_agent: $2.1564 in 611s
+
+=== 5_full_context ===
+  5_full_context: $0.5056 in 0s
+
+paired scoring: 10/10 documents completed in every arm (100% pair yield)
+
+baseline                      done     F1   triv      P      R  spanF1  ground  schema  rules    $/doc     $p95   p50 ms   p95 ms
+---------------------------------------------------------------------------------------------------------------------------------
+4_rag_rerank_agent           10/10  1.000  0.560  1.000  1.000   0.716   0.00%     80%    40%   0.2156   0.4882      n/a      n/a
+5_full_context               10/10  1.000  0.560  1.000  1.000   0.691   2.17%    100%    40%   0.0506   0.1315      n/a      n/a
+
+by tier (presence F1 / base rate / n):
+  baseline                                tier 1                tier 2                tier 3
+  4_rag_rerank_agent         1.000 / 1.00 /   3   1.000 / 0.25 /   8   1.000 / 0.29 /   7
+  5_full_context             1.000 / 1.00 /   3   1.000 / 0.25 /   8   1.000 / 0.29 /   7
+
+precision at 80% recall (CUAD convention):
+  4_rag_rerank_agent       P=0.545 at confidence >= 0.85
+  5_full_context           P=0.667 at confidence >= 0.85
+
+cache: 70/70 hits (100.0%), 0 misses, 0 written

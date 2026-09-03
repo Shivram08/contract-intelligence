@@ -135,9 +135,34 @@ class _StubClient:
 
     def __init__(self) -> None:
         self.messages = self
+        self.calls = 0
 
     def create(self, **kwargs: Any) -> Any:
         from docintel.schemas import ClauseType
+
+        self.calls += 1
+        # Turn 1 issues a real search, so a demo trace shows the whole stage
+        # breakdown -- retrieval and rerank included -- rather than only the
+        # model and validation spans. Turn 2 submits.
+        if self.calls == 1:
+            return SimpleNamespace(
+                content=[
+                    SimpleNamespace(
+                        type="tool_use",
+                        id="stub_search",
+                        name="search_contract",
+                        input={"query": "governing law construed in accordance with"},
+                    )
+                ],
+                stop_reason="tool_use",
+                usage=SimpleNamespace(
+                    input_tokens=0,
+                    output_tokens=0,
+                    cache_read_input_tokens=0,
+                    cache_creation_input_tokens=0,
+                ),
+                model="stub",
+            )
 
         text = ""
         for message in kwargs.get("messages", []):

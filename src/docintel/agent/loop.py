@@ -44,6 +44,7 @@ from docintel.agent.tools import (
     execute_tool,
 )
 from docintel.schemas import ClauseExtraction, ClauseType, TokenUsage
+from docintel.telemetry import stage_span
 
 __all__ = [
     "MODEL_PRICING",
@@ -301,27 +302,31 @@ def run_extraction(
 
         try:
             call_started = time.perf_counter()
-            response = client.messages.create(
-                model=model,
-                max_tokens=budget.max_tokens_per_turn,
-                # Auto-caches the last cacheable block, which is the end of the
-                # growing conversation. Without this, every turn re-prices the
-                # whole history at full input rate and total input cost is
-                # quadratic in turn count -- the system breakpoint below only
-                # covers the fixed prefix.
-                cache_control={"type": "ephemeral"},
-                system=[
-                    {
-                        "type": "text",
-                        "text": system,
-                        # The system prompt and tool list are the stable prefix;
-                        # caching them makes turn 2 onward ~10x cheaper on input.
-                        "cache_control": {"type": "ephemeral"},
-                    }
-                ],
-                tools=tools,
-                messages=messages,
-            )
+            # One span per model call. This is where 97%+ of wall clock goes, so
+            # a trace without it shows almost nothing.
+            with stage_span("model", **{"docintel.turn": run.turns + 1}):
+                response = client.messages.create(
+                    model=model,
+                    max_tokens=budget.max_tokens_per_turn,
+                    # Auto-caches the last cacheable block, which is the end of the
+                    # growing conversation. Without this, every turn re-prices the
+                    # whole history at full input rate and total input cost is
+                    # quadratic in turn count -- the system breakpoint below only
+                    # covers the fixed prefix.
+                    cache_control={"type": "ephemeral"},
+                    system=[
+                        {
+                            "type": "text",
+                            "text": system,
+                            # The system prompt and tool list are the stable
+                            # prefix; caching them makes turn 2 onward ~10x
+                            # cheaper on input.
+                            "cache_control": {"type": "ephemeral"},
+                        }
+                    ],
+                    tools=tools,
+                    messages=messages,
+                )
             call_elapsed_ms = (time.perf_counter() - call_started) * 1000
         except Exception as exc:
             # The SDK already retried transient failures per max_retries, so

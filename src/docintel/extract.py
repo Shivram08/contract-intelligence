@@ -36,6 +36,7 @@ from docintel.schemas import (
     RetrievalHit,
     ReviewItem,
 )
+from docintel.telemetry import stage_span
 from docintel.validation.grounding import GroundingReport, check_extractions
 from docintel.validation.rules import (
     JurisdictionIndex,
@@ -123,8 +124,14 @@ def extract_document(
 
     # Order matters. Grounding first, so fabricated spans are gone before the
     # rules look for missing evidence.
-    grounding = check_extractions(document, agent.clauses)
-    violations = apply_rules(grounding.repaired_clauses, document=document, jurisdictions=index)
+    # Validation gets its own span. It runs in ~4ms against 25-225s of model
+    # time, and having it in the trace is what substantiates the claim that the
+    # grounding gate adds no inference cost.
+    with stage_span("validation", **{"docintel.clauses": len(agent.clauses)}) as span:
+        grounding = check_extractions(document, agent.clauses)
+        violations = apply_rules(grounding.repaired_clauses, document=document, jurisdictions=index)
+        span.set_attribute("docintel.ungrounded", len(grounding.ungrounded))
+        span.set_attribute("docintel.violations", len(violations))
     validation_ms = (time.perf_counter() - validation_started) * 1000
 
     result = ExtractionResult(
