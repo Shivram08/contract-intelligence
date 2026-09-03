@@ -29,6 +29,7 @@ import dataclasses
 import hashlib
 import json
 import os
+import time
 from collections.abc import Iterator
 from dataclasses import dataclass, field
 from enum import StrEnum
@@ -200,9 +201,26 @@ class ResponseCache:
     directory: Path = field(default_factory=lambda: DEFAULT_CACHE_DIR)
     mode: CacheMode = CacheMode.READ_WRITE
     stats: CacheStats = field(default_factory=CacheStats)
+    #: Wall clock of the most recent *live* call, for callers that cannot read
+    #: an attribute off a Pydantic response.
+    last_latency_ms: float | None = None
 
     def path_for(self, key: str) -> Path:
         return self.directory / key[:2] / f"{key}.json"
+
+    def get_entry(self, key: str) -> dict[str, Any] | None:
+        """The whole stored payload, meta included.
+
+        Callers need the meta because some metrics can only be recovered from
+        capture time -- latency above all. See ``CachingClient``.
+        """
+        if self.mode in {CacheMode.OFF, CacheMode.REFRESH}:
+            return None
+        path = self.path_for(key)
+        if not path.exists():
+            return None
+        payload: dict[str, Any] = json.loads(path.read_text(encoding="utf-8"))
+        return payload if isinstance(payload.get("response"), dict) else None
 
     def get(self, key: str) -> dict[str, Any] | None:
         if self.mode in {CacheMode.OFF, CacheMode.REFRESH}:
@@ -251,10 +269,17 @@ class _CachedMessages:
     def create(self, **kwargs: Any) -> Any:
         key = cache_key(kwargs)
 
-        cached = self._cache.get(key)
-        if cached is not None:
+        entry = self._cache.get_entry(key)
+        if entry is not None:
             self._cache.stats.hits += 1
-            return _rehydrate(cached)
+            replayed = _rehydrate(entry["response"])
+            # Latency HAS to come from capture time. Measuring it at replay
+            # yields cache-read time -- which is what happened: the frozen
+            # baselines reported a 972ms p50 for a run whose real p50 was 44.4s.
+            # None here means "unavailable", never zero, so a consumer cannot
+            # mistake a missing measurement for a fast one.
+            replayed.capture_latency_ms = (entry.get("meta") or {}).get("latency_ms")
+            return replayed
 
         self._cache.stats.misses += 1
 
@@ -272,12 +297,16 @@ class _CachedMessages:
                 f"no cached response for {key[:12]} and no live client was provided."
             )
 
+        started = time.perf_counter()
         response = self._client.messages.create(**kwargs)
-        self._cache.put(
-            key,
-            _dehydrate(response),
-            meta=fingerprint(kwargs),
-        )
+        elapsed_ms = (time.perf_counter() - started) * 1000
+
+        meta = fingerprint(kwargs)
+        meta["latency_ms"] = elapsed_ms
+        self._cache.put(key, _dehydrate(response), meta=meta)
+        # Live responses are Pydantic and may reject attribute assignment, so
+        # the value is published on the cache rather than the response.
+        self._cache.last_latency_ms = elapsed_ms
         return response
 
 
@@ -410,7 +439,14 @@ class _Usage(_Replayed):
 class _Response(_Replayed):
     """A response read back from cache, quacking like the SDK's Message."""
 
-    __slots__ = ("content", "model", "stop_details", "stop_reason", "usage")
+    __slots__ = (
+        "capture_latency_ms",
+        "content",
+        "model",
+        "stop_details",
+        "stop_reason",
+        "usage",
+    )
 
     def __init__(self, payload: dict[str, Any]) -> None:
         raw_content = payload.get("content")
@@ -419,6 +455,9 @@ class _Response(_Replayed):
         self.usage = _Usage(payload.get("usage"))
         self.stop_details = payload.get("stop_details")
         self.model = payload.get("model")
+        #: Milliseconds the original live call took. None when the entry
+        #: predates latency capture -- unavailable, not zero.
+        self.capture_latency_ms: float | None = None
 
 
 def _rehydrate(payload: dict[str, Any]) -> _Response:

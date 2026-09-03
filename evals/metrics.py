@@ -373,6 +373,9 @@ class MetricSummary:
     #: Per-stage, so section 6's "latency per stage" is answerable.
     retrieval_ms: list[float] = field(default_factory=list)
     validation_ms: list[float] = field(default_factory=list)
+    #: Runs whose latency could not be recovered. Reported so a percentile over
+    #: a subset is never mistaken for one over the whole run.
+    latency_unavailable: int = 0
     cases_scored: int = 0
 
     @property
@@ -504,6 +507,8 @@ class MetricSummary:
                 "total": round(self.total_cost_usd, 4),
             },
             "latency_ms": {
+                "measured_runs": len(self.latencies_ms),
+                "unavailable_runs": self.latency_unavailable,
                 "p50": round(self.p50_latency_ms, 1),
                 "p95": round(self.p95_latency_ms, 1),
                 "retrieval_p50": round(self.percentile(self.retrieval_ms, 50), 1),

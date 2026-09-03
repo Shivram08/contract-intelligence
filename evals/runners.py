@@ -144,6 +144,17 @@ class BaselineOutcome:
     #: what is left -- which is where nearly all of it goes.
     retrieval_ms: float = 0.0
     validation_ms: float = 0.0
+    #: Model time. None means unavailable -- a replayed run whose entry has no
+    #: captured latency. Consumers must exclude it, not treat it as zero.
+    #:
+    #: This is the second metric that could be silently substituted at replay
+    #: time; the first was budget-exhausted runs scoring as 0/12. Both produced
+    #: plausible numbers measuring the wrong thing.
+    model_ms: float | None = None
+    #: False when latency could not be recovered from a replayed entry.
+    #: Consumers must exclude the run from latency percentiles rather than
+    #: treat 0 as fast.
+    latency_available: bool = True
     search_calls: int = 0
     turns: int = 0
     #: Whether the first submission parsed without a retry. The schema validity
@@ -404,13 +415,15 @@ class SingleCallBaseline:
         )
 
     def run(self, document: Document) -> BaselineOutcome:
-        started = time.perf_counter()
+        # No wall-clock total: model time comes from capture, so a replayed run
+        # reports what the live call actually took.
         system = load_prompt("extract_v1")
         tools = [_submit_only_tool()]
         version = prompt_version(system, str([t["name"] for t in tools]))
 
         messages: list[dict[str, Any]] = [{"role": "user", "content": self._prompt(document)}]
         token_usage = TokenUsage()
+        model_ms_total: float | None = 0.0
         clauses: list[ClauseExtraction] = []
         schema_ok = True
         error: str | None = None
@@ -419,6 +432,7 @@ class SingleCallBaseline:
         # One retry, against the agent's three. Recorded per run so the
         # asymmetry is visible in the results rather than assumed away.
         for attempt in range(self.max_retries + 1):
+            call_started = time.perf_counter()
             try:
                 response = self.client.messages.create(
                     model=self.model,
@@ -434,13 +448,28 @@ class SingleCallBaseline:
                     document_id=document.document_id,
                     clauses=[],
                     usage=token_usage,
-                    latency_ms=(time.perf_counter() - started) * 1000,
+                    latency_ms=model_ms_total if model_ms_total is not None else 0.0,
+                    model_ms=model_ms_total,
+                    latency_available=model_ms_total is not None,
                     schema_ok=False,
                     retries=retries,
                     stop_reason=StopReason.API_ERROR,
                     status=RunStatus.ERROR,
                     error=f"{type(exc).__name__}: {exc}",
                 )
+
+            # Same provenance rule as the agent loop: capture-time latency for a
+            # replayed response, wall clock only for a genuinely live call, and
+            # None meaning unavailable rather than fast.
+            if hasattr(response, "capture_latency_ms"):
+                captured = response.capture_latency_ms
+                model_ms_total = (
+                    None
+                    if captured is None or model_ms_total is None
+                    else model_ms_total + captured
+                )
+            elif model_ms_total is not None:
+                model_ms_total += (time.perf_counter() - call_started) * 1000
 
             usage = getattr(response, "usage", None)
             token_usage = token_usage + TokenUsage(
@@ -495,7 +524,9 @@ class SingleCallBaseline:
             clauses,
             self.jurisdictions,
             usage=token_usage,
-            latency_ms=(time.perf_counter() - started) * 1000,
+            latency_ms=model_ms_total if model_ms_total is not None else 0.0,
+            model_ms=model_ms_total,
+            latency_available=model_ms_total is not None,
             turns=1,
             schema_ok=schema_ok and retries == 0,
             retries=retries,
@@ -527,7 +558,9 @@ class AgentBaseline:
     jurisdictions: JurisdictionIndex = field(default_factory=load_jurisdictions)
 
     def run(self, document: Document) -> BaselineOutcome:
-        started = time.perf_counter()
+        # No wall-clock total here on purpose. Model time comes from capture, so
+        # a replayed run reports the latency the live call actually took rather
+        # than how fast the cache read was.
         retrieval_ms = 0.0
         search_calls = 0
 
@@ -553,7 +586,9 @@ class AgentBaseline:
             agent.clauses,
             self.jurisdictions,
             usage=agent.usage,
-            latency_ms=(time.perf_counter() - started) * 1000,
+            latency_ms=((agent.model_ms + retrieval_ms) if agent.model_ms is not None else 0.0),
+            model_ms=agent.model_ms,
+            latency_available=agent.model_ms is not None,
             retrieval_ms=retrieval_ms,
             search_calls=search_calls,
             turns=agent.turns,

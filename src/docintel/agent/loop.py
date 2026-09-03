@@ -160,6 +160,10 @@ class AgentRun:
     #: single aggregate number with no way to see which turn or which token
     #: class caused it.
     turn_usage: list[TokenUsage] = field(default_factory=list)
+    #: Model time per turn, taken from capture when a response is replayed.
+    #: None entries mean "unavailable" -- a replayed entry recorded before
+    #: latency capture existed. Never silently zero.
+    turn_model_ms: list[float | None] = field(default_factory=list)
     started_at: float = field(default_factory=time.monotonic)
     tool_calls: list[dict[str, Any]] = field(default_factory=list)
 
@@ -195,8 +199,16 @@ class AgentOutcome:
     model: str
     prompt_version: str
     tool_calls: list[dict[str, Any]]
+    #: Sum of per-turn model time, or None if any turn's latency was
+    #: unavailable. None propagates deliberately: a partial sum would look like
+    #: a fast run rather than a missing measurement.
+    model_ms: float | None = None
     #: Per-turn usage, for diagnosing where the cost went.
     turn_usage: list[TokenUsage] = field(default_factory=list)
+    #: Model time per turn, taken from capture when a response is replayed.
+    #: None entries mean "unavailable" -- a replayed entry recorded before
+    #: latency capture existed. Never silently zero.
+    turn_model_ms: list[float | None] = field(default_factory=list)
     #: Set when the loop ended without a valid submission.
     error: str | None = None
 
@@ -268,6 +280,11 @@ def run_extraction(
             stop_reason=reason,
             turns=run.turns,
             retries=run.retries,
+            model_ms=(
+                None
+                if any(v is None for v in run.turn_model_ms)
+                else sum(v for v in run.turn_model_ms if v is not None)
+            ),
             usage=run.usage,
             latency_ms=run.elapsed_s * 1000,
             model=model,
@@ -283,6 +300,7 @@ def run_extraction(
             return finish(blown, f"budget exhausted: {blown}")
 
         try:
+            call_started = time.perf_counter()
             response = client.messages.create(
                 model=model,
                 max_tokens=budget.max_tokens_per_turn,
@@ -304,6 +322,7 @@ def run_extraction(
                 tools=tools,
                 messages=messages,
             )
+            call_elapsed_ms = (time.perf_counter() - call_started) * 1000
         except Exception as exc:
             # The SDK already retried transient failures per max_retries, so
             # reaching here means it is not going to succeed.
@@ -311,6 +330,22 @@ def run_extraction(
 
         run.turns += 1
         ctx.turn = run.turns
+        # Latency provenance, and the fallback is deliberately narrow.
+        #
+        # A replayed response always carries the `capture_latency_ms` attribute,
+        # even when its value is None (an entry recorded before latency capture
+        # existed). Presence of the attribute is therefore what identifies a
+        # replay -- not the value. Falling back to the wall clock whenever the
+        # value was None re-introduced the exact bug this fixes: cache-read time
+        # reported as model latency, 1.2s standing in for 44s.
+        #
+        # Live call  -> wall clock, which is the real thing.
+        # Replay     -> stored value, or None meaning unavailable. Never a
+        #               substitute measured now.
+        if hasattr(response, "capture_latency_ms"):
+            run.turn_model_ms.append(response.capture_latency_ms)
+        else:
+            run.turn_model_ms.append(call_elapsed_ms)
         turn = _usage_from_response(model, response)
         run.turn_usage.append(turn)
         run.usage = run.usage + turn

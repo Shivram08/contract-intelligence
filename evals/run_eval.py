@@ -213,9 +213,12 @@ def run_baseline(
     summary.excluded = {o.document_id: o.status.value for o in outcomes if not o.is_scoreable}
     for outcome in outcomes:
         summary.costs_usd.append(outcome.usage.cost_usd)
-        summary.latencies_ms.append(outcome.latency_ms)
-        summary.retrieval_ms.append(outcome.retrieval_ms)
-        summary.validation_ms.append(outcome.validation_ms)
+        if outcome.latency_available:
+            summary.latencies_ms.append(outcome.latency_ms)
+            summary.retrieval_ms.append(outcome.retrieval_ms)
+            summary.validation_ms.append(outcome.validation_ms)
+        else:
+            summary.latency_unavailable += 1
         if not outcome.is_scoreable:
             continue
         summary.schema_attempts += 1
@@ -247,9 +250,12 @@ def score_paired(
     summary.paired_documents = len(scoreable)
     for outcome in outcomes:
         summary.costs_usd.append(outcome.usage.cost_usd)
-        summary.latencies_ms.append(outcome.latency_ms)
-        summary.retrieval_ms.append(outcome.retrieval_ms)
-        summary.validation_ms.append(outcome.validation_ms)
+        if outcome.latency_available:
+            summary.latencies_ms.append(outcome.latency_ms)
+            summary.retrieval_ms.append(outcome.retrieval_ms)
+            summary.validation_ms.append(outcome.validation_ms)
+        else:
+            summary.latency_unavailable += 1
         if outcome.document_id not in scoreable:
             continue
         summary.schema_attempts += 1
@@ -286,7 +292,14 @@ def print_table(summaries: Sequence[MetricSummary]) -> None:
             f"{summary.schema_validity_rate:>8.0%}"
             f"{summary.rule_violation_rate:>7.0%}"
             f"{summary.mean_cost_usd:>9.4f}{summary.p95_cost_usd:>9.4f}"
-            f"{summary.p50_latency_ms:>9.0f}{summary.p95_latency_ms:>9.0f}"
+            # "n/a" rather than 0: latency is unavailable when every run was
+            # replayed from an entry recorded before latency capture existed,
+            # and a zero there reads as "instant".
+            + (
+                f"{summary.p50_latency_ms:>9.0f}{summary.p95_latency_ms:>9.0f}"
+                if summary.latencies_ms
+                else f"{'n/a':>9}{'n/a':>9}"
+            )
         )
 
     print("\nby tier (presence F1 / base rate / n):")

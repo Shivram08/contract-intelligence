@@ -1,0 +1,152 @@
+{
+  "baseline": "4_rag_rerank_agent",
+  "documents": 10,
+  "cases_scored": 11,
+  "completion": {
+    "rate": 0.7,
+    "completed": 7,
+    "attempted": 10,
+    "paired_documents": 7,
+    "excluded": {
+      "AgapeAtpCorp_20191202_10-KA_EX-10.1_11911128_EX-10.1_Supply Agreement": "error",
+      "BLUEHILLSBANCORP,INC_05_20_2014-EX-1.1-AGENCY AGREEMENT": "error",
+      "BellringBrandsInc_20190920_S-1_EX-10.12_11817081_EX-10.12_Manufacturing Agreement2": "error"
+    }
+  },
+  "retries_used": 0,
+  "presence": {
+    "f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "base_rate": 0.3636,
+    "trivial_f1": 0.5333,
+    "counts": {
+      "tp": 4,
+      "fp": 0,
+      "tn": 7,
+      "fn": 0
+    },
+    "by_tier": {
+      "1": {
+        "f1": 1.0,
+        "base_rate": 1.0,
+        "n": 3
+      },
+      "2": {
+        "f1": 1.0,
+        "base_rate": 0.2,
+        "n": 5
+      },
+      "3": {
+        "f1": 0.0,
+        "base_rate": 0.0,
+        "n": 3
+      }
+    },
+    "by_clause_type": {
+      "anti_assignment": {
+        "f1": 0.0,
+        "base_rate": 0.0,
+        "n": 1,
+        "gold_positives": 0,
+        "recall_interval": [
+          0.0,
+          1.0
+        ],
+        "interpretable": false
+      },
+      "change_of_control": {
+        "f1": 1.0,
+        "base_rate": 0.3333,
+        "n": 3,
+        "gold_positives": 1,
+        "recall_interval": [
+          0.207,
+          1.0
+        ],
+        "interpretable": false
+      },
+      "effective_date": {
+        "f1": 1.0,
+        "base_rate": 1.0,
+        "n": 2,
+        "gold_positives": 2,
+        "recall_interval": [
+          0.342,
+          1.0
+        ],
+        "interpretable": false
+      },
+      "expiration_date": {
+        "f1": 1.0,
+        "base_rate": 1.0,
+        "n": 1,
+        "gold_positives": 1,
+        "recall_interval": [
+          0.207,
+          1.0
+        ],
+        "interpretable": false
+      },
+      "non_compete": {
+        "f1": 0.0,
+        "base_rate": 0.0,
+        "n": 1,
+        "gold_positives": 0,
+        "recall_interval": [
+          0.0,
+          1.0
+        ],
+        "interpretable": false
+      },
+      "renewal_term": {
+        "f1": 0.0,
+        "base_rate": 0.0,
+        "n": 1,
+        "gold_positives": 0,
+        "recall_interval": [
+          0.0,
+          1.0
+        ],
+        "interpretable": false
+      },
+      "uncapped_liability": {
+        "f1": 0.0,
+        "base_rate": 0.0,
+        "n": 2,
+        "gold_positives": 0,
+        "recall_interval": [
+          0.0,
+          1.0
+        ],
+        "interpretable": false
+      }
+    }
+  },
+  "span_token_f1": {
+    "mean": 0.6356,
+    "by_tier": {
+      "1": 0.5535,
+      "2": 0.8819
+    }
+  },
+  "grounding": {
+    "violation_rate": 0.0,
+    "spans_checked": 32,
+    "violations": 0,
+    "relocated": 32
+  },
+  "schema_validity_rate": 1.0,
+  "rule_violation_rate": 0.1,
+  "cost_usd": {
+    "mean": 0.1659,
+    "p95": 0.3128,
+    "total": 1.6588
+  },
+  "latency_ms": {
+    "p50": 971.5,
+    "p95": 2038.6,
+    "retrieval_p50": 955.4,
+    "validation_p50": 0.8
+  }
+}
