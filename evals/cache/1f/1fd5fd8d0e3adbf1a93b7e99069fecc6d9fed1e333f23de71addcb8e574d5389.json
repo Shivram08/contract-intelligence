@@ -1,0 +1,210 @@
+{
+  "meta": {
+    "max_tokens": 8000,
+    "message_count": 23,
+    "messages_sha": "4c3714ca3a813a11",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "40c86ac6e9c6d864",
+      "2df86c3235ae798b",
+      "85d7995c87eee274",
+      "86ddc74586b2a0ad",
+      "92e6fd8d9bd9e7c4",
+      "d01f39feea96cb56",
+      "179412b09519475b",
+      "189f0f51c7a22c1a",
+      "89f18689a08a6957",
+      "f423c61f841d986e",
+      "8b3d19dc6397453a",
+      "c87caf709ae56bcd",
+      "d365181a8e8f73b4",
+      "cc4e50c5a1af0536",
+      "5e7d35c92209ce62",
+      "bd7e3ee5a9273542",
+      "e21a7326dec40c30",
+      "7d6cfb0f846b97aa",
+      "bb0ea59f8842883e",
+      "1e04a2399113481a",
+      "fd3eb44547721cfc",
+      "a34a41065fdc8939",
+      "2844d492d2def847"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01M9jkajkd2SB9D5x5ew374K",
+        "input": {
+          "clauses": [
+            {
+              "clause_type": "governing_law",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 8330,
+                  "char_start": 8100,
+                  "quote": "This Agreement and the rights and duties of                   Transporter and Shipper hereunder shall be governed by and                   interpreted in accordance with the laws of the State of                   Arkansas, without recourse to the law governing conflict of                   laws."
+                }
+              ],
+              "present": true,
+              "raw_text": "This Agreement and the rights and duties of                   Transporter and Shipper hereunder shall be governed by and                   interpreted in accordance with the laws of the State of                   Arkansas, without recourse to the law governing conflict of                   laws.",
+              "value": "US-AR"
+            },
+            {
+              "clause_type": "parties",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 390,
+                  "char_start": 140,
+                  "quote": "THIS AGREEMENT (\"Agreement\"), entered into on May 20, 1992, is between Arkansas Western Pipeline Company (\"Transporter\"), an Arkansas corporation, and Associated Natural Gas Company, a division of Arkansas Western Gas Company, (\"Shipper\");"
+                }
+              ],
+              "present": true,
+              "raw_text": "THIS AGREEMENT (\"Agreement\"), entered into on May 20, 1992, is between Arkansas Western Pipeline Company (\"Transporter\"), an Arkansas corporation, and Associated Natural Gas Company, a division of Arkansas Western Gas Company, (\"Shipper\");",
+              "value": "Arkansas Western Pipeline Company (Transporter); Associated Natural Gas Company, a division of Arkansas Western Gas Company (Shipper)"
+            },
+            {
+              "clause_type": "effective_date",
+              "confidence": 0.5,
+              "evidence": [
+                {
+                  "char_end": 4050,
+                  "char_start": 3850,
+                  "quote": "this Agreement                   shall be effective as of the date of physical completion of                   and initial deliveries on Transporter's pipeline"
+                }
+              ],
+              "present": true,
+              "raw_text": "this Agreement                   shall be effective as of the date of physical completion of                   and initial deliveries on Transporter's pipeline",
+              "value": "UNSPECIFIED"
+            },
+            {
+              "clause_type": "expiration_date",
+              "confidence": 0.4,
+              "evidence": [
+                {
+                  "char_end": 4130,
+                  "char_start": 4050,
+                  "quote": "shall                   continue for a primary term of ten years. Thereafter, this"
+                }
+              ],
+              "present": true,
+              "raw_text": "shall                   continue for a primary term of ten years. Thereafter, this Agreement shall be effective month to month, until terminated                   by Transporter or Shipper upon the following written notice to                   the other specifying a termination date",
+              "value": "UNSPECIFIED"
+            },
+            {
+              "clause_type": "renewal_term",
+              "confidence": 0.55,
+              "evidence": [
+                {
+                  "char_end": 4330,
+                  "char_start": 4130,
+                  "quote": "Agreement shall be effective month to month, until terminated                   by Transporter or Shipper upon the following written notice to                   the other specifying a termination date"
+                }
+              ],
+              "present": true,
+              "raw_text": "Thereafter, this                  Agreement shall be effective month to month, until terminated                   by Transporter or Shipper upon the following written notice to                   the other specifying a termination date",
+              "value": "30 recurring"
+            },
+            {
+              "clause_type": "notice_period_to_terminate_renewal",
+              "confidence": 0.55,
+              "evidence": [
+                {
+                  "char_end": 4480,
+                  "char_start": 4330,
+                  "quote": "interruptible transportation under Rate Schedule ITS and 180                   days for firm transportation under Rate Schedule FTS."
+                }
+              ],
+              "present": true,
+              "raw_text": "sixty (60) days for\n\n                  interruptible transportation under Rate Schedule ITS and 180                   days for firm transportation under Rate Schedule FTS.",
+              "value": "180"
+            },
+            {
+              "clause_type": "change_of_control",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "anti_assignment",
+              "confidence": 0.7,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "cap_on_liability",
+              "confidence": 0.8,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "uncapped_liability",
+              "confidence": 0.75,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "non_compete",
+              "confidence": 0.9,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "exclusivity",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            }
+          ]
+        },
+        "name": "submit_extraction",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefNv24i7d2iPbMj1a3cA",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 2113
+      },
+      "cache_creation_input_tokens": 2113,
+      "cache_read_input_tokens": 17474,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 3064,
+      "output_tokens_details": {
+        "thinking_tokens": 1490
+      },
+      "service_tier": "standard"
+    }
+  }
+}

@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "max_tokens": 8000,
+    "message_count": 15,
+    "messages_sha": "8c2a468fb96dcd0a",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "f9443ca186e9070c",
+      "5394f345aa4b3c89",
+      "1f348ea2fdfb7d37",
+      "b3415eda96aa64bf",
+      "97b8a9bd95013637",
+      "6c647274e8a23d73",
+      "553951c7ca7ff50c",
+      "cc88d6768644c8a8",
+      "47f3286e736033af",
+      "8993c02bf23a23dc",
+      "015f8bd75e26fb9d",
+      "8e205c4a79397706",
+      "ec13143f284a850a",
+      "439076f53bcd7b37",
+      "67f53ceaa25a1e72"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "text": "Now let me validate my draft before submission.",
+        "type": "text"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01WsTY2M2r981hMUbu1dCaLs",
+        "input": {
+          "clauses": [
+            {
+              "clause_type": "governing_law",
+              "confidence": 0.75,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "parties",
+              "confidence": 0.85,
+              "evidence": [
+                {
+                  "char_end": 470,
+                  "char_start": 150,
+                  "quote": "This Second Amendment (\"Second Amendment\"), entered into by and between Stremick's Heritage Foods, LLC, (\"Heritage\"), Premier Nutrition Corporation (\"Premier\") is effective as of October 1, 2018 (\"Second Amendment Effective Date\") and amends that certain Manufacturing Agreement between Heritage and Premier dated July 1, 2017 (\"Agreement\")."
+                }
+              ],
+              "present": true,
+              "raw_text": "This Second Amendment (\"Second Amendment\"), entered into by and between Stremick's Heritage Foods, LLC, (\"Heritage\"), Premier Nutrition Corporation (\"Premier\") is effective as of October 1, 2018 (\"Second Amendment Effective Date\") and amends that certain Manufacturing Agreement between Heritage and Premier dated July 1, 2017 (\"Agreement\").",
+              "value": "Stremick's Heritage Foods, LLC (Manufacturer); Premier Nutrition Corporation (Customer)"
+            },
+            {
+              "clause_type": "effective_date",
+              "confidence": 0.85,
+              "evidence": [
+                {
+                  "char_end": 322,
+                  "char_start": 250,
+                  "quote": "is effective as of October 1, 2018 (\"Second Amendment Effective Date\")"
+                }
+              ],
+              "present": true,
+              "raw_text": "This Second Amendment (\"Second Amendment\"), entered into by and between Stremick's Heritage Foods, LLC, (\"Heritage\"), Premier Nutrition Corporation (\"Premier\") is effective as of October 1, 2018 (\"Second Amendment Effective Date\")",
+              "value": "2018-10-01"
+            },
+            {
+              "clause_type": "expiration_date",
+              "confidence": 0.8,
+              "evidence": [
+                {
+                  "char_end": 1020,
+                  "char_start": 900,
+                  "quote": "This Second Amendment shall be effective from The Second Amendment Effective Date and shall expire on December 31, 2021."
+                }
+              ],
+              "present": true,
+              "raw_text": "This Second Amendment shall be effective from The Second Amendment Effective Date and shall expire on December 31, 2021.",
+              "value": "2021-12-31"
+            },
+            {
+              "clause_type": "renewal_term",
+              "confidence": 0.7,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "notice_period_to_terminate_renewal",
+              "confidence": 0.7,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "change_of_control",
+              "confidence": 0.75,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "anti_assignment",
+              "confidence": 0.7,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "cap_on_liability",
+              "confidence": 0.7,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "uncapped_liability",
+              "confidence": 0.7,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "non_compete",
+              "confidence": 0.75,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "exclusivity",
+              "confidence": 0.65,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            }
+          ]
+        },
+        "name": "submit_extraction",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefPN93ddarhsCUgfKnav",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 1738
+      },
+      "cache_creation_input_tokens": 1738,
+      "cache_read_input_tokens": 8943,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 1245,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard"
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "meta": {
+    "max_tokens": 8000,
+    "message_count": 9,
+    "messages_sha": "e6dfc5eb02e83592",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "40c86ac6e9c6d864",
+      "2df86c3235ae798b",
+      "85d7995c87eee274",
+      "86ddc74586b2a0ad",
+      "92e6fd8d9bd9e7c4",
+      "d01f39feea96cb56",
+      "179412b09519475b",
+      "189f0f51c7a22c1a",
+      "89f18689a08a6957"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "text": "Good, search seems broken; I'll read the whole document directly via read_span in chunks.",
+        "type": "text"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_0138Mf4KVNLfJpxyKv5pXrYK",
+        "input": {
+          "char_end": 8000,
+          "char_start": 3000
+        },
+        "name": "read_span",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefNqXiHPppvJgZ2J5AAc",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 1272
+      },
+      "cache_creation_input_tokens": 1272,
+      "cache_read_input_tokens": 4213,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 103,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard"
+    }
+  }
+}

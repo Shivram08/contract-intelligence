@@ -382,8 +382,29 @@ class Evidence(BaseModel):
     #: Which chunk this came from, for tracing a citation back through retrieval.
     chunk_id: str | None = None
 
+    @property
+    def offsets_unknown(self) -> bool:
+        """Whether the model declined to compute offsets.
+
+        ``0/0`` is the sentinel. It means "I am quoting accurately but did not
+        work out where this sits", which the extraction prompt explicitly invites
+        -- the quote is what the grounding check verifies, and offsets are
+        recoverable from it.
+        """
+        return self.char_start == 0 and self.char_end == 0
+
     @model_validator(mode="after")
     def _check_range(self) -> Evidence:
+        # 0/0 is permitted. Rejecting it contradicted the prompt, which tells the
+        # model the quote is what matters and that offsets can be recovered --
+        # and it killed submissions for a problem the grounding layer exists to
+        # repair. It failed four of ten single-call runs outright, while the
+        # agent survived the same mistake only because it gets retries.
+        #
+        # This is a validity check, not a grounding check: a quote that does not
+        # appear in the source is still a violation, with or without offsets.
+        if self.offsets_unknown:
+            return self
         if self.char_end <= self.char_start:
             raise ValueError(
                 f"evidence char_end {self.char_end} must exceed char_start {self.char_start}"

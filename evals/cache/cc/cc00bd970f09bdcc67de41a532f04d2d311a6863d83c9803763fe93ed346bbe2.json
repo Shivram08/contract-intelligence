@@ -1,0 +1,118 @@
+{
+  "meta": {
+    "max_tokens": 8000,
+    "message_count": 9,
+    "messages_sha": "2d1f0a357f2d417b",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "f9443ca186e9070c",
+      "5394f345aa4b3c89",
+      "1f348ea2fdfb7d37",
+      "b3415eda96aa64bf",
+      "97b8a9bd95013637",
+      "6c647274e8a23d73",
+      "553951c7ca7ff50c",
+      "cc88d6768644c8a8",
+      "47f3286e736033af"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "EvYGCpABCBEYAipAH0liymRx69eUVncxxx8GxP8FQ45t5TlxTyS0aN8h0es5fM+aNnC4ldChW+UXm02jKUYsLvqkVxJEXdrPM6nwVzIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAcTA4tQGEgyJNiFCCnpQGyFce2EaDEHb+7pZ+/ZR7vcCiCIwOJ5wyhDAX3cbUpXYKL60b34vq64OZfyzSaMxa7xYvoTnYzjiByJGW4fNORr7jFjfKpIFlneZ6tbA8C0e07NTfj5H8+CYlSrUBLH1en8s0QXv7zYuXLriASE+WAQNBhB+SFA0Yl2j6Ogt2y2rWpiEbQZWj0R8lwqiSfD0nCyOmNljS73AerTnh3TFYwJb90OTEU3atubzEoekgZOs3cm1J4C1EJkCxL7lzW2UlKdKz0dU3IJZmWD0Z012DGmkdDda248Z7fIkSOYgsi9fUiOVvQST0rsGEHqgqVfhazST2OZbYHtSgHX1FrsTKbiRhqH6tF9TSrAJ4Sr78Z7ySxPHUY9XKEmkCUdRyVpsGt7cMqkJrqTn0DYl3XRVEc7mIm2GkZ+FeLesjNzbgLr4MeS84YCRQoHnXPMFSo++y2ADZRDNlr3Ce8EwVkVV4rP1FRO9HXTtIT+99hTAVEt04ScmZEtZH9oczWUNOzVI0RUHN67dU6PpG2t/KnlU37hZ7XV5P4Q7XsyOlijVCtBWmfp2B4tF7XFdV7M6rZ8PCjwmTimKOrQ9zCm6CpF76o4qhcd8V+3pm2118tscQF2BeDjSR9ZXblc2JG5m3DlxTNi7k3C8Nihjxk7TXlJSmsVcOwLnMGN4qVUwwIK6q+jzwadWD4CpO2tAY7Z6rruGV1sryOi73hGX5L8VEKW0Y7kwRaoAkWvRMKRMeHy2rvT+nlscL2r8/T+4I6gMDyQUcw12O9B9Pzg5+IwEOZQGLikoka1h8xT2alKESXpPs6RK/PfWeQbJESeYKyTy5+Y0/ZVrugKWy893e8WK75+qx+Vpx+R0+3D1GcTEYCEHsfPddXnJBUdc3ZlxjRdSOdXs8h4heMHphvPmKarZItgKnJjXQ7Px15HtjUN1oIobD2VtjHzn/rhiCEL87hhb/vpuvb9PpI6l/nrDVhgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01H3n5MCFBxNqqLhpnJXa58E",
+        "input": {
+          "query": "liability limitation cap damages"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_016TgHmRKV8wPExwfnZ1m9t8",
+        "input": {
+          "query": "exclusivity exclusive right to purchase"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_018w7KsZ6xzEMnY8EdcTwpkH",
+        "input": {
+          "query": "assignment consent"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_0118o49FRUprinyEuKfmKBG9",
+        "input": {
+          "query": "change of control"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_014Bc7TgeeyJJ5qgEH9t7axo",
+        "input": {
+          "query": "non-compete competing business"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01MZL72Tv64rCFmw8hZ4vETg",
+        "input": {
+          "query": "notice period terminate renewal"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefPLsHpSqpSbF4aREECX",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 2572
+      },
+      "cache_creation_input_tokens": 2572,
+      "cache_read_input_tokens": 5181,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 517,
+      "output_tokens_details": {
+        "thinking_tokens": 202
+      },
+      "service_tier": "standard"
+    }
+  }
+}

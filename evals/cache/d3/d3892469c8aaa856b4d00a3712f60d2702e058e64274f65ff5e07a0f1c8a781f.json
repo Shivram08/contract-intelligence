@@ -1,0 +1,110 @@
+{
+  "meta": {
+    "max_tokens": 8000,
+    "message_count": 23,
+    "messages_sha": "188fa0e011bda496",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "cde3e5cd9e42b2e9",
+      "d398d0b12d606d0f",
+      "d31536f7e0f30f18",
+      "2d875d647ccd67d0",
+      "b5a471b4c4b1bfc2",
+      "4ab9cb32216bb842",
+      "61202a7634b7f566",
+      "f10c9cabda515791",
+      "788e0e1f960491b9",
+      "bbc80c480599778e",
+      "0b338076f070e4ee",
+      "2b44c8eb4a741b56",
+      "bb37afb39cdf1280",
+      "ef868984fc1ccc17",
+      "3d99777c8f424785",
+      "9cd968eb25208474",
+      "45dfb31843b4a0f8",
+      "5efff587d95a9675",
+      "225f43becb6755f9",
+      "d5a9af5efcfe7038",
+      "ed2098d9fc78cea3",
+      "a8f19da866b29d63",
+      "8cf7d500568eb0a4"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01JBPTQkuZrVSGYZ7TasvsuJ",
+        "input": {
+          "query": "indefinite period"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01QSiFq4vyoh29TT36PJUh7r",
+        "input": {
+          "query": "Commonwealth of Massachusetts"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01HiG5UtRuB7rii44Vcmsfej",
+        "input": {
+          "query": "indirect or consequential damages"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01WUgmes5w1AHRpFBdmcTfaS",
+        "input": {
+          "query": "change of key management or control"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefPfwgWzzbQevhExmRDa",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 6038
+      },
+      "cache_creation_input_tokens": 6038,
+      "cache_read_input_tokens": 16360,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 729,
+      "output_tokens_details": {
+        "thinking_tokens": 516
+      },
+      "service_tier": "standard"
+    }
+  }
+}

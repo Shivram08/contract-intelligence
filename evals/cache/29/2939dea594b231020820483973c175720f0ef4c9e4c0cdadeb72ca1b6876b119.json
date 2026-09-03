@@ -1,0 +1,159 @@
+{
+  "meta": {
+    "max_tokens": 8000,
+    "message_count": 1,
+    "messages_sha": "6e18da5857becb21",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "0bd2368599431eeb"
+    ],
+    "system_sha": "69611e8285dfcbf8",
+    "temperature": null,
+    "tools_sha": "5b367b13abebb35b",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_015592XFYUhadXV1EbWtfN3e",
+        "input": {
+          "clauses": [
+            {
+              "clause_type": "governing_law",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "parties",
+              "confidence": 0.9,
+              "evidence": [
+                {
+                  "char_end": 210,
+                  "char_start": 52,
+                  "quote": "This Amendment No. 1 (the \"Amendment\"), entered into by and between Stremick's Heritage Foods, LLC (\"Heritage\") Premier Nutrition Corporation (\"Premier\")"
+                }
+              ],
+              "present": true,
+              "raw_text": "This Amendment No. 1 (the \"Amendment\"), entered into by and between Stremick's Heritage Foods, LLC (\"Heritage\") Premier Nutrition Corporation (\"Premier\")",
+              "value": "Stremick's Heritage Foods, LLC (Heritage); Premier Nutrition Corporation (Premier)"
+            },
+            {
+              "clause_type": "effective_date",
+              "confidence": 0.9,
+              "evidence": [
+                {
+                  "char_end": 275,
+                  "char_start": 211,
+                  "quote": "is effective as of June 11, 2018 (\"Amendment Effective Date\")"
+                }
+              ],
+              "present": true,
+              "raw_text": "is effective as of June 11, 2018 (\"Amendment Effective Date\")",
+              "value": "2018-06-11"
+            },
+            {
+              "clause_type": "expiration_date",
+              "confidence": 0.6,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "renewal_term",
+              "confidence": 0.6,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "notice_period_to_terminate_renewal",
+              "confidence": 0.6,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "change_of_control",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "anti_assignment",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "cap_on_liability",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "uncapped_liability",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "non_compete",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "exclusivity",
+              "confidence": 0.8,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            }
+          ]
+        },
+        "name": "submit_extraction",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefPsMnQjMFx9qQraA4uo",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 3734
+      },
+      "cache_creation_input_tokens": 3734,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 20,
+      "output_tokens": 886,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard"
+    }
+  }
+}

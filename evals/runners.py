@@ -149,6 +149,10 @@ class BaselineOutcome:
     #: Whether the first submission parsed without a retry. The schema validity
     #: rate in CLAUDE.md section 6.
     schema_ok: bool = True
+    #: Submissions rejected before one was accepted. Reported per arm because
+    #: the agent gets 3 and the single-call arm gets 1, and that asymmetry has
+    #: to be visible rather than smoothed over.
+    retries: int = 0
     stop_reason: str = "submitted"
     status: RunStatus = RunStatus.COMPLETED
     prompt_version: str = ""
@@ -370,6 +374,14 @@ class SingleCallBaseline:
     truncate_tokens: int | None = None
     model: str = DEFAULT_MODEL
     max_tokens: int = 8_000
+    #: One retry, against the agent's three.
+    #:
+    #: A DESIGN CHOICE, not a bug fix, and it happens to help the arm expected
+    #: to win -- so it is recorded here and in LIMITATIONS.md rather than left
+    #: implicit. Zero retries against three was an unfair handicap; matching all
+    #: three would make "single call" a misnomer. One is the compromise, and the
+    #: retry-used counter shows how often it actually mattered.
+    max_retries: int = 1
     jurisdictions: JurisdictionIndex = field(default_factory=load_jurisdictions)
 
     def _prompt(self, document: Document) -> str:
@@ -397,53 +409,86 @@ class SingleCallBaseline:
         tools = [_submit_only_tool()]
         version = prompt_version(system, str([t["name"] for t in tools]))
 
-        try:
-            response = self.client.messages.create(
-                model=self.model,
-                max_tokens=self.max_tokens,
-                cache_control={"type": "ephemeral"},
-                system=[{"type": "text", "text": system}],
-                tools=tools,
-                tool_choice={"type": "tool", "name": "submit_extraction"},
-                messages=[{"role": "user", "content": self._prompt(document)}],
-            )
-        except Exception as exc:
-            return BaselineOutcome(
-                document_id=document.document_id,
-                clauses=[],
-                latency_ms=(time.perf_counter() - started) * 1000,
-                schema_ok=False,
-                stop_reason=StopReason.API_ERROR,
-                status=RunStatus.ERROR,
-                error=f"{type(exc).__name__}: {exc}",
-            )
-
-        usage = getattr(response, "usage", None)
-        token_usage = TokenUsage(
-            input_tokens=getattr(usage, "input_tokens", 0) or 0,
-            output_tokens=getattr(usage, "output_tokens", 0) or 0,
-            cache_read_input_tokens=getattr(usage, "cache_read_input_tokens", 0) or 0,
-            cache_creation_input_tokens=getattr(usage, "cache_creation_input_tokens", 0) or 0,
-            cost_usd=compute_cost(self.model, usage) if usage else 0.0,
-        )
-
-        blocks = [
-            block
-            for block in getattr(response, "content", []) or []
-            if getattr(block, "type", None) == "tool_use"
-        ]
+        messages: list[dict[str, Any]] = [{"role": "user", "content": self._prompt(document)}]
+        token_usage = TokenUsage()
         clauses: list[ClauseExtraction] = []
         schema_ok = True
         error: str | None = None
-        for block in blocks:
+        retries = 0
+
+        # One retry, against the agent's three. Recorded per run so the
+        # asymmetry is visible in the results rather than assumed away.
+        for attempt in range(self.max_retries + 1):
             try:
-                clauses = validate_submission(getattr(block, "input", {}) or {})
+                response = self.client.messages.create(
+                    model=self.model,
+                    max_tokens=self.max_tokens,
+                    cache_control={"type": "ephemeral"},
+                    system=[{"type": "text", "text": system}],
+                    tools=tools,
+                    tool_choice={"type": "tool", "name": "submit_extraction"},
+                    messages=messages,
+                )
             except Exception as exc:
+                return BaselineOutcome(
+                    document_id=document.document_id,
+                    clauses=[],
+                    usage=token_usage,
+                    latency_ms=(time.perf_counter() - started) * 1000,
+                    schema_ok=False,
+                    retries=retries,
+                    stop_reason=StopReason.API_ERROR,
+                    status=RunStatus.ERROR,
+                    error=f"{type(exc).__name__}: {exc}",
+                )
+
+            usage = getattr(response, "usage", None)
+            token_usage = token_usage + TokenUsage(
+                input_tokens=getattr(usage, "input_tokens", 0) or 0,
+                output_tokens=getattr(usage, "output_tokens", 0) or 0,
+                cache_read_input_tokens=getattr(usage, "cache_read_input_tokens", 0) or 0,
+                cache_creation_input_tokens=getattr(usage, "cache_creation_input_tokens", 0) or 0,
+                cost_usd=compute_cost(self.model, usage) if usage else 0.0,
+            )
+
+            content = list(getattr(response, "content", []) or [])
+            blocks = [b for b in content if getattr(b, "type", None) == "tool_use"]
+            if not blocks:
                 schema_ok = False
+                error = "no submit_extraction call in the response"
+                break
+
+            try:
+                clauses = validate_submission(getattr(blocks[0], "input", {}) or {})
+                error = None
+                break
+            except Exception as exc:
                 error = str(exc)
-        if not blocks:
-            schema_ok = False
-            error = "no submit_extraction call in the response"
+                schema_ok = False
+                if attempt >= self.max_retries:
+                    break
+                retries += 1
+                # Hand back the specific complaint, the same way the agent loop
+                # does, rather than failing the whole run on a fixable mistake.
+                messages = [
+                    *messages,
+                    {"role": "assistant", "content": content},
+                    {
+                        "role": "user",
+                        "content": [
+                            {
+                                "type": "tool_result",
+                                "tool_use_id": getattr(blocks[0], "id", ""),
+                                "is_error": True,
+                                "content": (
+                                    f"Rejected: {exc}\n"
+                                    "Fix only what is named and call "
+                                    "submit_extraction again."
+                                ),
+                            }
+                        ],
+                    },
+                ]
 
         outcome = _finalize(
             document,
@@ -452,12 +497,14 @@ class SingleCallBaseline:
             usage=token_usage,
             latency_ms=(time.perf_counter() - started) * 1000,
             turns=1,
-            schema_ok=schema_ok,
+            schema_ok=schema_ok and retries == 0,
+            retries=retries,
             prompt_version=version,
             error=error,
         )
-        outcome.stop_reason = "submitted" if schema_ok else "schema_error"
-        outcome.status = RunStatus.COMPLETED if schema_ok else RunStatus.ERROR
+        accepted = error is None and bool(clauses)
+        outcome.stop_reason = "submitted" if accepted else "schema_error"
+        outcome.status = RunStatus.COMPLETED if accepted else RunStatus.ERROR
         return outcome
 
 
@@ -511,6 +558,7 @@ class AgentBaseline:
             search_calls=search_calls,
             turns=agent.turns,
             schema_ok=agent.retries == 0,
+            retries=agent.retries,
             stop_reason=str(agent.stop_reason),
             status=status_for(str(agent.stop_reason), agent.clauses),
             prompt_version=agent.prompt_version,

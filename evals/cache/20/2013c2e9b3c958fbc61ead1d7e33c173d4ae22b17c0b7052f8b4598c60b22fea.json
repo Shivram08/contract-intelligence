@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "max_tokens": 8000,
+    "message_count": 1,
+    "messages_sha": "2b4fe46eee2f4df1",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "6d2162b9199974a4"
+    ],
+    "system_sha": "69611e8285dfcbf8",
+    "temperature": null,
+    "tools_sha": "5b367b13abebb35b",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01JDyQyJR1z63BnsPznM33tX",
+        "input": {
+          "clauses": [
+            {
+              "clause_type": "governing_law",
+              "confidence": 0.97,
+              "evidence": [
+                {
+                  "char_end": 0,
+                  "char_start": 0,
+                  "quote": "This Agreement shall be governed by and construed in accordance with the laws of the State of New York applicable to agreements made and to be performed in said State without regard to the conflicts of laws provisions thereof."
+                }
+              ],
+              "present": true,
+              "raw_text": "This Agreement shall be governed by and construed in accordance with the laws of the State of New York applicable to agreements made and to be performed in said State without regard to the conflicts of laws provisions thereof.",
+              "value": "US-NY"
+            },
+            {
+              "clause_type": "parties",
+              "confidence": 0.93,
+              "evidence": [
+                {
+                  "char_end": 0,
+                  "char_start": 0,
+                  "quote": "Greater Delaware Valley Holdings, A Mutual Company, a Pennsylvania-chartered mutual holding company (the \"PA MHC\"), Alliance Mutual Holding Company, a federal mutual savings and loan holding company in formation (the \"Federal MHC\"), Alliance Bancorp, Inc. of Pennsylvania, a federal stock holding company in formation (the \"Company\"), and Greater Delaware Valley Savings Bank d/b/a Alliance Bank, a Pennsylvania-chartered stock savings bank (the \"Bank\"), hereby confirm their agreement with Sandler O'Neill & Partners, L.P. (\"Sandler O'Neill\" or the \"Agent\")"
+                }
+              ],
+              "present": true,
+              "raw_text": "Greater Delaware Valley Holdings, A Mutual Company, a Pennsylvania-chartered mutual holding company (the \"PA MHC\"), Alliance Mutual Holding Company, a federal mutual savings and loan holding company in formation (the \"Federal MHC\"), Alliance Bancorp, Inc. of Pennsylvania, a federal stock holding company in formation (the \"Company\"), and Greater Delaware Valley Savings Bank d/b/a Alliance Bank, a Pennsylvania-chartered stock savings bank (the \"Bank\"), hereby confirm their agreement with Sandler O'Neill & Partners, L.P. (\"Sandler O'Neill\" or the \"Agent\")",
+              "value": "Greater Delaware Valley Holdings, A Mutual Company (PA MHC); Alliance Mutual Holding Company (Federal MHC); Alliance Bancorp, Inc. of Pennsylvania (Company); Greater Delaware Valley Savings Bank d/b/a Alliance Bank (Bank); Sandler O'Neill & Partners, L.P. (Agent)"
+            },
+            {
+              "clause_type": "effective_date",
+              "confidence": 0.55,
+              "evidence": [
+                {
+                  "char_end": 0,
+                  "char_start": 0,
+                  "quote": "November ___, 2006"
+                }
+              ],
+              "present": true,
+              "raw_text": "November ___, 2006",
+              "value": "2006-11"
+            },
+            {
+              "clause_type": "expiration_date",
+              "confidence": 0.6,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "renewal_term",
+              "confidence": 0.75,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "notice_period_to_terminate_renewal",
+              "confidence": 0.75,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "change_of_control",
+              "confidence": 0.6,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "anti_assignment",
+              "confidence": 0.55,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "cap_on_liability",
+              "confidence": 0.65,
+              "evidence": [
+                {
+                  "char_end": 0,
+                  "char_start": 0,
+                  "quote": "Notwithstanding anything to the contrary set forth herein, to the extent permitted by applicable law, in no event shall the Agent be required to contribute an aggregate amount in excess of the aggregate marketing fees to which the Agent is entitled and actually paid pursuant to this Agreement."
+                }
+              ],
+              "present": true,
+              "raw_text": "Notwithstanding anything to the contrary set forth herein, to the extent permitted by applicable law, in no event shall the Agent be required to contribute an aggregate amount in excess of the aggregate marketing fees to which the Agent is entitled and actually paid pursuant to this Agreement.",
+              "value": null
+            },
+            {
+              "clause_type": "uncapped_liability",
+              "confidence": 0.55,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "non_compete",
+              "confidence": 0.7,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "exclusivity",
+              "confidence": 0.55,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            }
+          ]
+        },
+        "name": "submit_extraction",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefPne1LKbzsAK925PEhm",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 44151
+      },
+      "cache_creation_input_tokens": 44151,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 20,
+      "output_tokens": 1650,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard"
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "meta": {
+    "max_tokens": 8000,
+    "message_count": 17,
+    "messages_sha": "aededc1faa001a38",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "cde3e5cd9e42b2e9",
+      "d398d0b12d606d0f",
+      "d31536f7e0f30f18",
+      "2d875d647ccd67d0",
+      "b5a471b4c4b1bfc2",
+      "4ab9cb32216bb842",
+      "61202a7634b7f566",
+      "f10c9cabda515791",
+      "788e0e1f960491b9",
+      "bbc80c480599778e",
+      "0b338076f070e4ee",
+      "2b44c8eb4a741b56",
+      "bb37afb39cdf1280",
+      "ef868984fc1ccc17",
+      "3d99777c8f424785",
+      "9cd968eb25208474",
+      "45dfb31843b4a0f8"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01EpRaxFREX2vHnTEZHq3HpJ",
+        "input": {
+          "char_end": 760,
+          "char_start": 700
+        },
+        "name": "read_span",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefPbRs2jSR21jNKCBDWX",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 2446
+      },
+      "cache_creation_input_tokens": 2446,
+      "cache_read_input_tokens": 12472,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 638,
+      "output_tokens_details": {
+        "thinking_tokens": 565
+      },
+      "service_tier": "standard"
+    }
+  }
+}

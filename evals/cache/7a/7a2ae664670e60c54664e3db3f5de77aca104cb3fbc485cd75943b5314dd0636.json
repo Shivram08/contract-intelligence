@@ -1,0 +1,176 @@
+{
+  "meta": {
+    "max_tokens": 8000,
+    "message_count": 1,
+    "messages_sha": "cf0eae26ac9d740f",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "eae608c4b65bd171"
+    ],
+    "system_sha": "69611e8285dfcbf8",
+    "temperature": null,
+    "tools_sha": "5b367b13abebb35b",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_011LQTjqgJ6AQWdyEBnfK7yv",
+        "input": {
+          "clauses": [
+            {
+              "clause_type": "governing_law",
+              "confidence": 0.55,
+              "evidence": [
+                {
+                  "char_end": 5020,
+                  "char_start": 4800,
+                  "quote": "Any lawsuit relating to any matter arising under this Agreement may be initiated in a State or Federal Court located in the Commonwealth of Massachusetts or in any court in the Netherlands having jurisdiction over the matter."
+                }
+              ],
+              "present": true,
+              "raw_text": "Any lawsuit relating to any matter arising under this Agreement may be initiated in a State or Federal Court located in the Commonwealth of Massachusetts or in any court in the Netherlands having jurisdiction over the matter.",
+              "value": "US-MA"
+            },
+            {
+              "clause_type": "parties",
+              "confidence": 0.9,
+              "evidence": [
+                {
+                  "char_end": 226,
+                  "char_start": 200,
+                  "quote": "MODUS MEDIA INTERNATIONAL"
+                },
+                {
+                  "char_end": 351,
+                  "char_start": 330,
+                  "quote": "DRAGON SYSTEMS, INC."
+                }
+              ],
+              "present": true,
+              "raw_text": "MODUS MEDIA INTERNATIONAL ... (HEREINAFTER \"MMI\") AND DRAGON SYSTEMS, INC. ... (HEREAFTER \"DRAGON SYSTEMS\")",
+              "value": "Modus Media International (MMI); Dragon Systems, Inc. (Dragon Systems)"
+            },
+            {
+              "clause_type": "effective_date",
+              "confidence": 0.75,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "expiration_date",
+              "confidence": 0.85,
+              "evidence": [
+                {
+                  "char_end": 4357,
+                  "char_start": 4300,
+                  "quote": "This Agreement shall be valid for an indefinite period."
+                }
+              ],
+              "present": true,
+              "raw_text": "This Agreement shall be valid for an indefinite period.",
+              "value": "PERPETUAL"
+            },
+            {
+              "clause_type": "renewal_term",
+              "confidence": 0.8,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "notice_period_to_terminate_renewal",
+              "confidence": 0.75,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "change_of_control",
+              "confidence": 0.8,
+              "evidence": [
+                {
+                  "char_end": 4531,
+                  "char_start": 4470,
+                  "quote": "in case of a merger or change of key management or control"
+                }
+              ],
+              "present": true,
+              "raw_text": "in case of a merger or change of key management or control",
+              "value": null
+            },
+            {
+              "clause_type": "anti_assignment",
+              "confidence": 0.7,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "cap_on_liability",
+              "confidence": 0.6,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "uncapped_liability",
+              "confidence": 0.55,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "non_compete",
+              "confidence": 0.75,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "exclusivity",
+              "confidence": 0.7,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            }
+          ]
+        },
+        "name": "submit_extraction",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefPv7qqrHTFcXc5PiEUE",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 5551
+      },
+      "cache_creation_input_tokens": 5551,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 20,
+      "output_tokens": 1073,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard"
+    }
+  }
+}

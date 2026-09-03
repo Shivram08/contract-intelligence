@@ -1,0 +1,88 @@
+{
+  "meta": {
+    "max_tokens": 8000,
+    "message_count": 1,
+    "messages_sha": "15ce811feb0ea593",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "dd1d3effd2da8125"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "EpUCCpABCBEYAipAnCrnfE+mqL7EaT8VMCMGb2dHnJRSiB6+JEZYT11jojjviZCkHWfCmo2lLoK4FGN/QB2xB83IT9lwikjj2N2CyjIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAYjB4tQGEgx0EJJSUexk6E3NsdYaDHR6TT0rEH/6xKCJoiIwTIRbMQeuHmfRJn3gws2llLFJePq18+0c8G82da+zzP1G+ywtIqOqAywFV3Pd+V9CKjJEGEV9pESJNfA0zpFcK0CEda5QIzEob6MxxkRYFCLRAKlNTn/xctffmKf2Kz+1UfdADRgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01Bjgj9QmKiKJYUeCeNJ77BA",
+        "input": {
+          "query": "governing law construed in accordance with the laws of"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01UuhXsXAobh44ZU31WJqSpN",
+        "input": {
+          "query": "This Agreement is entered into by and between"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01KMLgDsBvy3AW77P9GdfSDJ",
+        "input": {
+          "query": "effective date of this Agreement"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01BAwGrtvfwAmmZ7kobjbkBD",
+        "input": {
+          "query": "term of this Agreement shall commence and expire"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefPS6bQLoPgvMNZbbkAU",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 181
+      },
+      "cache_creation_input_tokens": 181,
+      "cache_read_input_tokens": 3149,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 241,
+      "output_tokens_details": {
+        "thinking_tokens": 12
+      },
+      "service_tier": "standard"
+    }
+  }
+}

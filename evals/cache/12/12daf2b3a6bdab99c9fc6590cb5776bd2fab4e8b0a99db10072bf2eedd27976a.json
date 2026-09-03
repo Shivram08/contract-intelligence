@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "max_tokens": 8000,
+    "message_count": 1,
+    "messages_sha": "2deb0b0bf6a3e944",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "3500af950e3547ed"
+    ],
+    "system_sha": "69611e8285dfcbf8",
+    "temperature": null,
+    "tools_sha": "5b367b13abebb35b",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_0188c96no6bveAwAneg31xiK",
+        "input": {
+          "clauses": [
+            {
+              "clause_type": "governing_law",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 0,
+                  "char_start": 0,
+                  "quote": "the Agreement shall be governed by and construed in accordance with the laws of the Province of British Columbia and the federal laws of Canada applicable therein, and the parties hereto submit and attorn to the jurisdiction of the courts of the Province of British Columbia."
+                }
+              ],
+              "present": true,
+              "raw_text": "the Agreement shall be governed by and construed in accordance with the laws of the Province of British Columbia and the federal laws of Canada applicable therein, and the parties hereto submit and attorn to the jurisdiction of the courts of the Province of British Columbia.",
+              "value": "CA-BC"
+            },
+            {
+              "clause_type": "parties",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 0,
+                  "char_start": 0,
+                  "quote": "CORAL GOLD RESOURCES LTD., a company duly incorporated pursuant to the laws of the Province of British Columbia and having its head office at Suite 900 - 570 Granville Street, Vancouver, British Columbia V6C 3Pl (the \"Company\") AND: INTERMARK CAPITAL CORP., a company duly incorporated pursuant to the laws of the Province of British Columbia and having an office at Suite 900 - 570 Granville Street, Vancouver, British Columbia V6C 3PI (the \"Consultant\")"
+                }
+              ],
+              "present": true,
+              "raw_text": "CORAL GOLD RESOURCES LTD., a company duly incorporated pursuant to the laws of the Province of British Columbia and having its head office at Suite 900 - 570 Granville Street, Vancouver, British Columbia V6C 3Pl (the \"Company\") AND: INTERMARK CAPITAL CORP., a company duly incorporated pursuant to the laws of the Province of British Columbia and having an office at Suite 900 - 570 Granville Street, Vancouver, British Columbia V6C 3PI (the \"Consultant\")",
+              "value": "Coral Gold Resources Ltd. (Company); Intermark Capital Corp. (Consultant)"
+            },
+            {
+              "clause_type": "effective_date",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 0,
+                  "char_start": 0,
+                  "quote": "THIS AGREEMENT is dated for reference the 1st day of February, 2020 (the \"Effective Date\")."
+                }
+              ],
+              "present": true,
+              "raw_text": "THIS AGREEMENT is dated for reference the 1st day of February, 2020 (the \"Effective Date\").",
+              "value": "2020-02-01"
+            },
+            {
+              "clause_type": "expiration_date",
+              "confidence": 0.9,
+              "evidence": [
+                {
+                  "char_end": 0,
+                  "char_start": 0,
+                  "quote": "The term of this Agreement is for a period of five (5) years (the \"Term\") commencing on the Effective Date and, unless terminated earlier in accordance with the termination provisions of this Agreement, ending on January 31, 2025."
+                }
+              ],
+              "present": true,
+              "raw_text": "The term of this Agreement is for a period of five (5) years (the \"Term\") commencing on the Effective Date and, unless terminated earlier in accordance with the termination provisions of this Agreement, ending on January 31, 2025.",
+              "value": "2025-01-31"
+            },
+            {
+              "clause_type": "renewal_term",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "notice_period_to_terminate_renewal",
+              "confidence": 0.8,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "change_of_control",
+              "confidence": 0.9,
+              "evidence": [
+                {
+                  "char_end": 0,
+                  "char_start": 0,
+                  "quote": "by the Consultant electing to give the Company notice, in the event that there occurs a Change of Control (as defined below) within six (6) months of the effective date of such Change of Control, and if the Consultant so elects to terminate this Agreement, then the Consultant will be immediately entitled to a termination payment equal to CDN$750,000; and"
+                }
+              ],
+              "present": true,
+              "raw_text": "by the Consultant electing to give the Company notice, in the event that there occurs a Change of Control (as defined below) within six (6) months of the effective date of such Change of Control, and if the Consultant so elects to terminate this Agreement, then the Consultant will be immediately entitled to a termination payment equal to CDN$750,000; and ... For the purpose of this clause, a Change of Control shall be deemed to have occurred when: (i) any person, entity or group becomes the beneficial owner of 20% or more of the combined voting power of the Company's then outstanding voting securities entitled to vote generally in the election of directors, and such person, entity or group uses such effective voting control to change a majority of the Board of Directors of the Company, either all at once or through any series of elections and appointments when considered together; or (ii) completion of the sale or other disposition by the Company of all or substantially all of the Company's assets or a reorganization or merger or consolidation of the Company with any other entity or corporation",
+              "value": null
+            },
+            {
+              "clause_type": "anti_assignment",
+              "confidence": 0.9,
+              "evidence": [
+                {
+                  "char_end": 0,
+                  "char_start": 0,
+                  "quote": "Neither this Agreement nor any of the rights of any of the parties under this Agreement shall be assigned without thewritten consent of all the parties."
+                }
+              ],
+              "present": true,
+              "raw_text": "Neither this Agreement nor any of the rights of any of the parties under this Agreement shall be assigned without the written consent of all the parties.",
+              "value": null
+            },
+            {
+              "clause_type": "cap_on_liability",
+              "confidence": 0.6,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "uncapped_liability",
+              "confidence": 0.55,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "non_compete",
+              "confidence": 0.75,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "exclusivity",
+              "confidence": 0.65,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            }
+          ]
+        },
+        "name": "submit_extraction",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefPu1fEs2DjHFTAoXSWL",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 12083
+      },
+      "cache_creation_input_tokens": 12083,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 20,
+      "output_tokens": 2051,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard"
+    }
+  }
+}

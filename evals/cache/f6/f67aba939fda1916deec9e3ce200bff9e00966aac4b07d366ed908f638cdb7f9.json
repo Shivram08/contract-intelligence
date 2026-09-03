@@ -1,0 +1,66 @@
+{
+  "meta": {
+    "max_tokens": 8000,
+    "message_count": 1,
+    "messages_sha": "df22d01d4d2e4df0",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "57deb599ea95c8ac"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "Et8DCpABCBEYAipACAnnEZ08TdJ17r5X45+R2ES6sH4TercH0uMyJ1zVJfKzc6K3TDFnvW4mHmVxiNMEWxR0+5GayVtOXzw6KNKWOjIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAdzA4tQGEgwwLGKdOgM5S4lLLkcaDPonZIPrrQdfCA8aEyIwSWLb4M1eVYa1bHR+hlj34QEsgePS+H5Ha0mIzU2vg7ibQ+5pNDKlhAdQ6sGCyME4KvsBgEAFQyxRaXR+qvvCQnLSWIt7qRYf80ZwFODq11Q7z4WPJlBnHXYtdoF7myHbtADu6UaJGmrPddTyBjOAPRh3XdLTfE+TRcecdN8PMkwlJfZlKTSrvQzMgxl3bbMID8D6xiKdeEQjFq88jr5f3vkLcVmLsqjGzjEqOHA9x+iZUKLds8MPDfNY5iS1T3V6J/jqTwN/tMK43dvqxVkm+ZGWdJVEKi1vvIcb2zr8EN2+T+l0W6CBbcEfF1WFUroonBFfGy6BWIsSnBEA4XgpkDCOAKjjbAZ04lqr82t+K6mnpyj5n7xugvdm2ibUZ3g70y1dOmVxibSqkPMh7uoYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01YPoZ9oXgXVPUJSq59yEzcD",
+        "input": {
+          "query": "This Manufacturing Agreement is entered into by and between"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01N3f1xW8HAaGq5YnV5b2U1e",
+        "input": {
+          "query": "governing law construed in accordance with the laws of the State of"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefPNpctX34MMa1hozYWh",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 183
+      },
+      "cache_creation_input_tokens": 183,
+      "cache_read_input_tokens": 3149,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 204,
+      "output_tokens_details": {
+        "thinking_tokens": 77
+      },
+      "service_tier": "standard"
+    }
+  }
+}

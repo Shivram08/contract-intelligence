@@ -1,0 +1,69 @@
+{
+  "meta": {
+    "max_tokens": 8000,
+    "message_count": 11,
+    "messages_sha": "e85defc69c671d6f",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "f9443ca186e9070c",
+      "5394f345aa4b3c89",
+      "1f348ea2fdfb7d37",
+      "b3415eda96aa64bf",
+      "97b8a9bd95013637",
+      "6c647274e8a23d73",
+      "553951c7ca7ff50c",
+      "cc88d6768644c8a8",
+      "47f3286e736033af",
+      "8993c02bf23a23dc",
+      "015f8bd75e26fb9d"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "text": "Search seems non-functional for this document; I'll rely on the full text I've already read (the entire 8024-character document). None of these clauses appear in the text. Let me confirm parties, effective date, expiration date, and term from the text already read.",
+        "type": "text"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_017MaJ8iAKgvLoHCBjdzaMZm",
+        "input": {
+          "clause_types": [
+            "parties",
+            "effective_date",
+            "expiration_date",
+            "renewal_term"
+          ]
+        },
+        "name": "get_schema",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefPMMauneFurFRJzuhiY",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 805
+      },
+      "cache_creation_input_tokens": 805,
+      "cache_read_input_tokens": 7753,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 147,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard"
+    }
+  }
+}

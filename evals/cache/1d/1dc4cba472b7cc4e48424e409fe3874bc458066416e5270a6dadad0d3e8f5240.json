@@ -1,0 +1,164 @@
+{
+  "meta": {
+    "max_tokens": 8000,
+    "message_count": 1,
+    "messages_sha": "ae4aaec1136e532f",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "8c91d678361606e1"
+    ],
+    "system_sha": "69611e8285dfcbf8",
+    "temperature": null,
+    "tools_sha": "5b367b13abebb35b",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_013qQdzrP7DxDTphQLWPiiFy",
+        "input": {
+          "clauses": [
+            {
+              "clause_type": "governing_law",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "parties",
+              "confidence": 0.85,
+              "evidence": [
+                {
+                  "char_end": 175,
+                  "char_start": 90,
+                  "quote": "Stremicks Heritage Foods, LLC (\"Heritage\") Premier Nutrition Corporation (\"Premier\")"
+                }
+              ],
+              "present": true,
+              "raw_text": "Stremicks Heritage Foods, LLC (\"Heritage\") Premier Nutrition Corporation (\"Premier\")",
+              "value": "Stremicks Heritage Foods, LLC (Heritage); Premier Nutrition Corporation (Premier)"
+            },
+            {
+              "clause_type": "effective_date",
+              "confidence": 0.7,
+              "evidence": [
+                {
+                  "char_end": 247,
+                  "char_start": 178,
+                  "quote": "is effective as of July 3, 2019 (\"Third Amendment Effective Date\")"
+                },
+                {
+                  "char_end": 368,
+                  "char_start": 248,
+                  "quote": "amends that certain Manufacturing Agreement between Heritage and Premier dated July 1, 2017 as amended (\"Agreement\")"
+                }
+              ],
+              "present": true,
+              "raw_text": "is effective as of July 3, 2019 (\"Third Amendment Effective Date\")",
+              "value": "2019-07-03"
+            },
+            {
+              "clause_type": "expiration_date",
+              "confidence": 0.6,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "renewal_term",
+              "confidence": 0.6,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "notice_period_to_terminate_renewal",
+              "confidence": 0.6,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "change_of_control",
+              "confidence": 0.75,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "anti_assignment",
+              "confidence": 0.7,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "cap_on_liability",
+              "confidence": 0.7,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "uncapped_liability",
+              "confidence": 0.7,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "non_compete",
+              "confidence": 0.75,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "exclusivity",
+              "confidence": 0.7,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            }
+          ]
+        },
+        "name": "submit_extraction",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefPtV7Ts6Y8JVSGiR3s5",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 3553
+      },
+      "cache_creation_input_tokens": 3553,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 20,
+      "output_tokens": 902,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard"
+    }
+  }
+}

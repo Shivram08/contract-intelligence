@@ -1,0 +1,85 @@
+{
+  "meta": {
+    "max_tokens": 8000,
+    "message_count": 3,
+    "messages_sha": "ad0ec3e3b9e0bb3b",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "57deb599ea95c8ac",
+      "a5f4daf8fd70fcb2",
+      "223222fe180a0f9f"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01TVQ9ELu72E1nLnk6XQZemr",
+        "input": {
+          "query": "Agreement made by and between"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01YKHVjHi3aubDaJhv2jApeQ",
+        "input": {
+          "query": "governing law"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01NynL82FQJnPjRXyQLQvPxx",
+        "input": {
+          "query": "effective date of this agreement"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01YGc4GpLu1PsrkyrCjmXJxE",
+        "input": {
+          "query": "term of this agreement shall expire"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefPP4ESand7NaSPDp1xR",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 304
+      },
+      "cache_creation_input_tokens": 304,
+      "cache_read_input_tokens": 3332,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 208,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard"
+    }
+  }
+}

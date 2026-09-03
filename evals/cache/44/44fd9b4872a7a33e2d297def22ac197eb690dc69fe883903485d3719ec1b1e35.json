@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "max_tokens": 8000,
+    "message_count": 1,
+    "messages_sha": "852ba512871b5791",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "fc757b06b203b04d"
+    ],
+    "system_sha": "69611e8285dfcbf8",
+    "temperature": null,
+    "tools_sha": "5b367b13abebb35b",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01QSMFzjkxbgj2RHqfdAEpzd",
+        "input": {
+          "clauses": [
+            {
+              "clause_type": "governing_law",
+              "confidence": 0.97,
+              "evidence": [
+                {
+                  "char_end": 0,
+                  "char_start": 0,
+                  "quote": "This Agreement shall be governed by and construed in accordance with the laws of the State of New York without regard to principles of conflicts of law."
+                }
+              ],
+              "present": true,
+              "raw_text": "This Agreement shall be governed by and construed in accordance with the laws of the State of New York without regard to principles of conflicts of law.",
+              "value": "US-NY"
+            },
+            {
+              "clause_type": "parties",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 0,
+                  "char_start": 0,
+                  "quote": "Blue Hills Bancorp, Inc. (the \"Holding Company\"), a newly formed Maryland corporation, Hyde Park Bancorp, MHC, a Massachusetts\u00ad chartered mutual holding company (the \"MHC\"), Hyde Park Bancorp, Inc., a Massachusetts corporation (the \"Mid\u00adTier\"), and Blue Hills Bank, a Massachusetts\u00adchartered stock savings bank (the \"Bank\" and together with the Holding Company, the MHC and the Mid\u00adTier, the \"Blue Hills Parties\"), hereby confirm their agreement with Keefe, Bruyette & Woods, Inc. (the \"Agent\") as follows:"
+                }
+              ],
+              "present": true,
+              "raw_text": "Blue Hills Bancorp, Inc. (the \"Holding Company\"), a newly formed Maryland corporation, Hyde Park Bancorp, MHC, a Massachusetts\u00ad chartered mutual holding company (the \"MHC\"), Hyde Park Bancorp, Inc., a Massachusetts corporation (the \"Mid\u00adTier\"), and Blue Hills Bank, a Massachusetts\u00adchartered stock savings bank (the \"Bank\" and together with the Holding Company, the MHC and the Mid\u00adTier, the \"Blue Hills Parties\"), hereby confirm their agreement with Keefe, Bruyette & Woods, Inc. (the \"Agent\") as follows:",
+              "value": "Blue Hills Bancorp, Inc. (Holding Company); Hyde Park Bancorp, MHC (MHC); Hyde Park Bancorp, Inc. (Mid-Tier); Blue Hills Bank (Bank); Keefe, Bruyette & Woods, Inc. (Agent)"
+            },
+            {
+              "clause_type": "effective_date",
+              "confidence": 0.85,
+              "evidence": [
+                {
+                  "char_end": 0,
+                  "char_start": 0,
+                  "quote": "AGENCY AGREEMENT\n\nMay 14, 2014"
+                }
+              ],
+              "present": true,
+              "raw_text": "AGENCY AGREEMENT\n\nMay 14, 2014",
+              "value": "2014-05-14"
+            },
+            {
+              "clause_type": "expiration_date",
+              "confidence": 0.6,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "renewal_term",
+              "confidence": 0.6,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "notice_period_to_terminate_renewal",
+              "confidence": 0.6,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "change_of_control",
+              "confidence": 0.6,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "anti_assignment",
+              "confidence": 0.4,
+              "evidence": [
+                {
+                  "char_end": 0,
+                  "char_start": 0,
+                  "quote": "This Agreement shall inure solely to the benefit of, and shall be binding upon, the Agent, the Blue Hills Parties and their respective successors and assigns, and no other person shall have or be construed to have any legal or equitable right, remedy or claim under or in respect of or by virtue of this Agreement or any provision herein contained."
+                }
+              ],
+              "present": true,
+              "raw_text": "This Agreement shall inure solely to the benefit of, and shall be binding upon, the Agent, the Blue Hills Parties and their respective successors and assigns, and no other person shall have or be construed to have any legal or equitable right, remedy or claim under or in respect of or by virtue of this Agreement or any provision herein contained.",
+              "value": null
+            },
+            {
+              "clause_type": "cap_on_liability",
+              "confidence": 0.85,
+              "evidence": [
+                {
+                  "char_end": 0,
+                  "char_start": 0,
+                  "quote": "It is expressly agreed that the Agent shall not be liable for any loss, liability, claim, damage or expense or be required to contribute any amount pursuant to Section 9(b) or this Section 10 which in the aggregate exceeds the amount paid (excluding reimbursable expenses) to the Agent under this Agreement."
+                }
+              ],
+              "present": true,
+              "raw_text": "It is expressly agreed that the Agent shall not be liable for any loss, liability, claim, damage or expense or be required to contribute any amount pursuant to Section 9(b) or this Section 10 which in the aggregate exceeds the amount paid (excluding reimbursable expenses) to the Agent under this Agreement.",
+              "value": null
+            },
+            {
+              "clause_type": "uncapped_liability",
+              "confidence": 0.55,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "non_compete",
+              "confidence": 0.65,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "exclusivity",
+              "confidence": 0.85,
+              "evidence": [
+                {
+                  "char_end": 0,
+                  "char_start": 0,
+                  "quote": "the Blue Hills Parties hereby appoint the Agent as their exclusive financial advisor and conversion agent (i) to utilize its best efforts to solicit subscriptions for Shares and to advise and assist the Holding Company and the Bank with respect to the sale of the Shares in the Offering and (ii) to participate in the Offering in the areas of market making and in syndicate formation or to act as sole book-running manager in the Underwritten Offering (if necessary)."
+                }
+              ],
+              "present": true,
+              "raw_text": "the Blue Hills Parties hereby appoint the Agent as their exclusive financial advisor and conversion agent (i) to utilize its best efforts to solicit subscriptions for Shares and to advise and assist the Holding Company and the Bank with respect to the sale of the Shares in the Offering and (ii) to participate in the Offering in the areas of market making and in syndicate formation or to act as sole book-running manager in the Underwritten Offering (if necessary).",
+              "value": null
+            }
+          ]
+        },
+        "name": "submit_extraction",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefPrCjufd7fxxnACorkj",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 43859
+      },
+      "cache_creation_input_tokens": 43859,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 20,
+      "output_tokens": 2182,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard"
+    }
+  }
+}

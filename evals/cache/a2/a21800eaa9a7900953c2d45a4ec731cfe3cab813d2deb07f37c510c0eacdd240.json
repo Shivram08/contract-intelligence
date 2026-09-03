@@ -1,0 +1,61 @@
+{
+  "meta": {
+    "max_tokens": 8000,
+    "message_count": 7,
+    "messages_sha": "c2f87ca50fa0e855",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "cde3e5cd9e42b2e9",
+      "d398d0b12d606d0f",
+      "d31536f7e0f30f18",
+      "2d875d647ccd67d0",
+      "b5a471b4c4b1bfc2",
+      "4ab9cb32216bb842",
+      "61202a7634b7f566"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "text": "The contract is only 8599 characters total. Let me read the full document.",
+        "type": "text"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01SSFQNug9XiDQELMPjg5i2Z",
+        "input": {
+          "char_end": 8599,
+          "char_start": 2000
+        },
+        "name": "read_span",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefPWbZYVxFHVxnZB9EEz",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 944
+      },
+      "cache_creation_input_tokens": 944,
+      "cache_read_input_tokens": 4021,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 96,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "max_tokens": 8000,
+    "message_count": 3,
+    "messages_sha": "f2a9560c111164b2",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "40c86ac6e9c6d864",
+      "2df86c3235ae798b",
+      "85d7995c87eee274"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "EpcCCpABCBEYAipAlkMngbDsoDWV0yBV31yXNuSpJ59yr/DUatVfiWD0zI+CrLvNxIECgXG9rSeBuXSzl5thJCNQiUloKuDWqndASTIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAau94tQGEgxwb/Q1teQZIweSEPIaDIgFigM7wTRYASUb6iIw3ftwiPakC7DAO9At6Br6sCv4k1j4HEcLyqtx2YpubusEXCaLbV/xpN7u7//fX5xnKjSPtRBOQDKfmIpRsWA4U1RjnwTXPM8fc7MobfxYGnNhevMVcTE1eePSQ94DHkeez7huaxXlGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01DAuuf3hmpA1LXcFsHN1GE9",
+        "input": {
+          "query": "law of the State"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_018t4WJBuVSuPwVC6qvELjyw",
+        "input": {
+          "query": "Transportation Service Agreement between"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_014tfid14AW5qUNRqZRQTo6b",
+        "input": {
+          "query": "Shipper and Transporter"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01EijRCzcozmKMga9emm3QJv",
+        "input": {
+          "query": "effective date of this Agreement"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefNpxfBr3giChUCHzQM1",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 236
+      },
+      "cache_creation_input_tokens": 236,
+      "cache_read_input_tokens": 3333,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 226,
+      "output_tokens_details": {
+        "thinking_tokens": 13
+      },
+      "service_tier": "standard"
+    }
+  }
+}

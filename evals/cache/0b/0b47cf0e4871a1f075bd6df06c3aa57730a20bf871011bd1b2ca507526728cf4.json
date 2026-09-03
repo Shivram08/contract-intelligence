@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "max_tokens": 8000,
+    "message_count": 11,
+    "messages_sha": "8f693ea3d2c8e1fb",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "dd1d3effd2da8125",
+      "9a09a1cf6860be31",
+      "a84f11b98859227a",
+      "599d7f01fd419b36",
+      "d7f7114606d14155",
+      "7001ef295a8b370e",
+      "e1915bcaf4b06468",
+      "d44e25f1fdf0fbeb",
+      "3379796a3d6b40fc",
+      "2cd468a079d6cc96",
+      "afda270e61705f87"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "text": "Now let's see the rest of the document for entire agreement, cap on liability, etc.",
+        "type": "text"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01Tq6YQE69WJg9KEYB4MJYS5",
+        "input": {
+          "char_end": 29749,
+          "char_start": 24000
+        },
+        "name": "read_span",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefPTFGKzZJgVBpMRSnSv",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 4186
+      },
+      "cache_creation_input_tokens": 4186,
+      "cache_read_input_tokens": 9203,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 102,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard"
+    }
+  }
+}

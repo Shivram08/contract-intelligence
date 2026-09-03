@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "max_tokens": 8000,
+    "message_count": 9,
+    "messages_sha": "442bf7b170f45302",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "4bef271e3679c8c1",
+      "ef4ae70cb6f9da07",
+      "9da4c7f376ed3e92",
+      "dbbd884a90ba3b88",
+      "367e41c7f5f74f27",
+      "2d38a08fe879d184",
+      "88024308c5116e0e",
+      "ed207a44a6ce2751",
+      "a26ddaaff9239b4b"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "ErUDCpABCBEYAipAwExthJs0Q2cMvB7JOn/Z1rhq3jRyuagWx+0rdexJG3O3OZNo9uMUpkYBh0QmCXX2XFxS2R7Ee+8Hru/CbnjwdjIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAZq+4tQGEgwGeDa2uV1fH43LdEwaDAeGCJdN0VIpAccAjSIw840PRA7hIBrvCzzZsVhGypfCmiqcj7CXjqx2rBrhnyhjKmg+YjNmlNJSrrePsLcOKtEBo7kK+6HNrUCp8vhZR3mFF5CYr3YJZTKcYBSYvqbBbWG47FjjOxuFH1BO44R+Q6Mr8Cx7gR2o80R25Tj5OLKAv1FWEEAA1Gaj2wd/r4B5wEA8D7QKP5HOYjwWehdlWyz+grZW1aRq9DgZunsBNzRU3mAU2zMNvmNP2zgXQyP5OCbFcJmqDbv7cA1ThXEk4RSU6FNsb9DZzfE7xFPkIHY2geJH8BUAjiAltTH/DbBCwFKbiK5tn/iJUJJRuy8Ajo5PwIq6VngVwMCjV1alGJTIQyQYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01363Z3ubpKpRg5ynjDx9eYX",
+        "input": {
+          "char_end": 14000,
+          "char_start": 2000
+        },
+        "name": "read_span",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefNy3XrYT516Ho2zDqGH",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 252
+      },
+      "cache_creation_input_tokens": 252,
+      "cache_read_input_tokens": 5086,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 143,
+      "output_tokens_details": {
+        "thinking_tokens": 68
+      },
+      "service_tier": "standard"
+    }
+  }
+}

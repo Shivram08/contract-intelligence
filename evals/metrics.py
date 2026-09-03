@@ -360,6 +360,13 @@ class MetricSummary:
     completed: int = 0
     #: document_id -> terminal state, for the runs that were excluded.
     excluded: dict[str, str] = field(default_factory=dict)
+    #: Documents scored, after intersecting completions across every arm.
+    paired_documents: int = 0
+    #: Evidence spans whose offsets were wrong but whose quote was real. Counted
+    #: so the grounding recovery path cannot become a silent escape hatch.
+    relocated: int = 0
+    #: Submissions rejected before one was accepted, summed over scored runs.
+    retries_used: int = 0
     #: Per-document cost and latency, for mean and p95.
     costs_usd: list[float] = field(default_factory=list)
     latencies_ms: list[float] = field(default_factory=list)
@@ -435,8 +442,10 @@ class MetricSummary:
                 "rate": round(self.completion_rate, 4),
                 "completed": self.completed,
                 "attempted": self.attempted,
+                "paired_documents": self.paired_documents,
                 "excluded": self.excluded,
             },
+            "retries_used": self.retries_used,
             "presence": {
                 "f1": round(overall.f1, 4),
                 "precision": round(overall.precision, 4),
@@ -485,6 +494,7 @@ class MetricSummary:
                 "violation_rate": round(self.grounding_violation_rate, 4),
                 "spans_checked": self.grounding_checked,
                 "violations": self.grounding_violations,
+                "relocated": self.relocated,
             },
             "schema_validity_rate": round(self.schema_validity_rate, 4),
             "rule_violation_rate": round(self.rule_violation_rate, 4),

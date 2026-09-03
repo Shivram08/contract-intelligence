@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "max_tokens": 8000,
+    "message_count": 17,
+    "messages_sha": "e85b63a41200aa8e",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "40c86ac6e9c6d864",
+      "2df86c3235ae798b",
+      "85d7995c87eee274",
+      "86ddc74586b2a0ad",
+      "92e6fd8d9bd9e7c4",
+      "d01f39feea96cb56",
+      "179412b09519475b",
+      "189f0f51c7a22c1a",
+      "89f18689a08a6957",
+      "f423c61f841d986e",
+      "8b3d19dc6397453a",
+      "c87caf709ae56bcd",
+      "d365181a8e8f73b4",
+      "cc4e50c5a1af0536",
+      "5e7d35c92209ce62",
+      "bd7e3ee5a9273542",
+      "e21a7326dec40c30"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_017APZ5wo8gGbFYwvjaso1N9",
+        "input": {
+          "query": "assign this Agreement without prior written consent"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_013VjjjVkYPYdWsHkh7WCePp",
+        "input": {
+          "query": "change of control merger consolidation"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01LRf4VjM9gZDUxMCbshfqjy",
+        "input": {
+          "query": "liability shall not exceed / limitation of liability"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01CT5Ck2NZ4BXbK65DhPUNFZ",
+        "input": {
+          "query": "exclusive dealing / exclusivity requirement"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01N5JmnxpCSW8nD69udbfejy",
+        "input": {
+          "query": "covenant not to compete"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefNrTQbmvF48XsskPQvY",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 889
+      },
+      "cache_creation_input_tokens": 889,
+      "cache_read_input_tokens": 12753,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 1554,
+      "output_tokens_details": {
+        "thinking_tokens": 1270
+      },
+      "service_tier": "standard"
+    }
+  }
+}

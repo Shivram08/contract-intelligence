@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "max_tokens": 8000,
+    "message_count": 11,
+    "messages_sha": "f110ddf550812228",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "b9cb3680ddda94d7",
+      "68c60317e4398960",
+      "f06c11f7994b5b3a",
+      "75348f50c90a1a60",
+      "d163f44852ddbbcf",
+      "01960efa5d5c92dc",
+      "d0a72f23778e38b8",
+      "6de559e9ab14a6f0",
+      "fe1c7e50c6ac867b",
+      "f7b57521e279b518",
+      "3da1237222f19a8e"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "text": "The search index appears empty/non-functional for this document. I'll rely on the full text I already read (the entire contract is only 2274 characters).",
+        "type": "text"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01H9BuyGuo8eB3jeGmCfsruu",
+        "input": {
+          "char_end": 2274,
+          "char_start": 0
+        },
+        "name": "read_span",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefPD5M8ambXHjGkYL1c2",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 1460
+      },
+      "cache_creation_input_tokens": 1460,
+      "cache_read_input_tokens": 5256,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 117,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard"
+    }
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "max_tokens": 8000,
+    "message_count": 1,
+    "messages_sha": "eb712d8286f4f991",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "f9443ca186e9070c"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "EpUCCpABCBEYAipAnCrnfE+mqL7EaT8VMCMGb2dHnJRSiB6+JEZYT11jojjviZCkHWfCmo2lLoK4FGN/QB2xB83IT9lwikjj2N2CyjIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAbbA4tQGEgwt+7U7PkvCYJW1FbwaDPeMHw0koEwrclEDCyIwc74l3WkJwOQZ1gS506TEyAn4ih3lKY0XPNEQtUrKAVw/EvrtsFm5d1M7vg52GM2yKjKUw1THMrKQt/8i7bIUFCIoIRX64NZmV/LgB/AL7s9ubvNIZXZstoS89iskIIOpFr303xgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01La8HKut36qYdh3km96WQBF",
+        "input": {
+          "query": "governing law construed in accordance with the laws of"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01AvVLvo8zgqYdE8aHNLgG6k",
+        "input": {
+          "query": "parties to this agreement"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01YPGHaYapB7GJBKKhFFZo1v",
+        "input": {
+          "query": "effective date of this agreement"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_012isa1DNbzPezrDnGEY38wD",
+        "input": {
+          "query": "term of agreement expiration"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01LpbJHbjEUdasPX838zs6oa",
+        "input": {
+          "query": "automatically renew for additional term"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefPL2SCj9Ncgdd3xMFTF",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 183
+      },
+      "cache_creation_input_tokens": 183,
+      "cache_read_input_tokens": 3149,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 282,
+      "output_tokens_details": {
+        "thinking_tokens": 12
+      },
+      "service_tier": "standard"
+    }
+  }
+}

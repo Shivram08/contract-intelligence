@@ -1,0 +1,200 @@
+{
+  "meta": {
+    "max_tokens": 8000,
+    "message_count": 1,
+    "messages_sha": "5c9dc5b0ab3ee12d",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "94aff60d4234131e"
+    ],
+    "system_sha": "69611e8285dfcbf8",
+    "temperature": null,
+    "tools_sha": "5b367b13abebb35b",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01LBUFdm1PXpJ4NyxtXAfday",
+        "input": {
+          "clauses": [
+            {
+              "clause_type": "governing_law",
+              "confidence": 0.93,
+              "evidence": [
+                {
+                  "char_end": 0,
+                  "char_start": 0,
+                  "quote": "This agreement shall be governed by the Laws of England (English common and statutory Law)."
+                }
+              ],
+              "present": true,
+              "raw_text": "This agreement shall be governed by the Laws of England (English common and statutory Law).",
+              "value": "GB-EAW"
+            },
+            {
+              "clause_type": "parties",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 0,
+                  "char_start": 0,
+                  "quote": "ORGANIC PREPARATIONS INC. 2nd Floor, Transpacific Haus Lini Highway, Port Vila. Vanuatu ('the Manufacturer') of one part AND: AGAPE ATP INTERNATIONAL HOLDING LIMITED Unit 05, 4F, Energy Plaza No. 92, Granville Road Tsim Sha Tsui East Kowloon, Hong Kong ('the Customer') of the other part."
+                }
+              ],
+              "present": true,
+              "raw_text": "ORGANIC PREPARATIONS INC. 2nd Floor, Transpacific Haus Lini Highway, Port Vila. Vanuatu ('the Manufacturer') of one part AND: AGAPE ATP INTERNATIONAL HOLDING LIMITED Unit 05, 4F, Energy Plaza No. 92, Granville Road Tsim Sha Tsui East Kowloon, Hong Kong ('the Customer') of the other part.",
+              "value": "Organic Preparations Inc. (Manufacturer); Agape ATP International Holding Limited (Customer)"
+            },
+            {
+              "clause_type": "effective_date",
+              "confidence": 0.9,
+              "evidence": [
+                {
+                  "char_end": 0,
+                  "char_start": 0,
+                  "quote": "THIS AGREEMENT is made on the 15t h day of January 2018."
+                }
+              ],
+              "present": true,
+              "raw_text": "THIS AGREEMENT is made on the 15t h day of January 2018.",
+              "value": "2018-01-15"
+            },
+            {
+              "clause_type": "expiration_date",
+              "confidence": 0.6,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "renewal_term",
+              "confidence": 0.9,
+              "evidence": [
+                {
+                  "char_end": 0,
+                  "char_start": 0,
+                  "quote": "This agreement will be automatically renewed at the end of every ten (10) year term, with each subsequent term of renewal being for a ten (10) year term."
+                }
+              ],
+              "present": true,
+              "raw_text": "This agreement will be automatically renewed at the end of every ten (10) year term, with each subsequent term of renewal being for a ten (10) year term.",
+              "value": "3650 recurring"
+            },
+            {
+              "clause_type": "notice_period_to_terminate_renewal",
+              "confidence": 0.85,
+              "evidence": [
+                {
+                  "char_end": 0,
+                  "char_start": 0,
+                  "quote": "A six (6) months notice must be given by either party of their intention to terminate relations due to any reason other than breach of this agreement."
+                }
+              ],
+              "present": true,
+              "raw_text": "A six (6) months notice must be given by either party of their intention to terminate relations due to any reason other than breach of this agreement.",
+              "value": "180"
+            },
+            {
+              "clause_type": "change_of_control",
+              "confidence": 0.9,
+              "evidence": [
+                {
+                  "char_end": 0,
+                  "char_start": 0,
+                  "quote": "If control of either party shall pass from the present shareholders or owners or controllers to other persons whom the other party shall in their absolute discretion regard as unsuitable."
+                },
+                {
+                  "char_end": 0,
+                  "char_start": 0,
+                  "quote": "Either parties voting stock is transferred to any third party to such extent as to result in a change in effective control of the company or its ownership or active management is changed in any other manner."
+                }
+              ],
+              "present": true,
+              "raw_text": "If control of either party shall pass from the present shareholders or owners or controllers to other persons whom the other party shall in their absolute discretion regard as unsuitable. (f) Either parties voting stock is transferred to any third party to such extent as to result in a change in effective control of the company or its ownership or active management is changed in any other manner.",
+              "value": null
+            },
+            {
+              "clause_type": "anti_assignment",
+              "confidence": 0.92,
+              "evidence": [
+                {
+                  "char_end": 0,
+                  "char_start": 0,
+                  "quote": "The Manufacturer may not transfer or assign any of its rights or obligations under this agreement without the prior written consent of the Customer. The Customer may not freely transfer or assign its rights or obligations under this agreement without the prior written consent of the Manufacturer."
+                }
+              ],
+              "present": true,
+              "raw_text": "The Manufacturer may not transfer or assign any of its rights or obligations under this agreement without the prior written consent of the Customer. The Customer may not freely transfer or assign its rights or obligations under this agreement without the prior written consent of the Manufacturer.",
+              "value": null
+            },
+            {
+              "clause_type": "cap_on_liability",
+              "confidence": 0.6,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "uncapped_liability",
+              "confidence": 0.55,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "non_compete",
+              "confidence": 0.55,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "exclusivity",
+              "confidence": 0.92,
+              "evidence": [
+                {
+                  "char_end": 0,
+                  "char_start": 0,
+                  "quote": "The Manufacturer hereby appoints the Customer to be the sole and exclusive agent for the promotion, sales, marketing, distribution and administration of the products listed in schedule A of this agreement based on minimum annual product purchase requirements as listed in Schedule B of this agreement."
+                }
+              ],
+              "present": true,
+              "raw_text": "The Manufacturer hereby appoints the Customer to be the sole and exclusive agent for the promotion, sales, marketing, distribution and administration of the products listed in schedule A of this agreement based on minimum annual product purchase requirements as listed in Schedule B of this agreement.",
+              "value": null
+            }
+          ]
+        },
+        "name": "submit_extraction",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefPq7wQcviXFbo3dkLKo",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 10198
+      },
+      "cache_creation_input_tokens": 10198,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 20,
+      "output_tokens": 1977,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard"
+    }
+  }
+}

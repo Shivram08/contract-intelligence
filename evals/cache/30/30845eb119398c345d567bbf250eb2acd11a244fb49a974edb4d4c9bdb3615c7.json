@@ -1,0 +1,118 @@
+{
+  "meta": {
+    "max_tokens": 8000,
+    "message_count": 9,
+    "messages_sha": "a82d8ad20003dd4f",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "b9cb3680ddda94d7",
+      "68c60317e4398960",
+      "f06c11f7994b5b3a",
+      "75348f50c90a1a60",
+      "d163f44852ddbbcf",
+      "01960efa5d5c92dc",
+      "d0a72f23778e38b8",
+      "6de559e9ab14a6f0",
+      "fe1c7e50c6ac867b"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_011g6x2qm8womSmHDrwzTqxe",
+        "input": {
+          "query": "Minimum Annual Order Volume"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01AN9zFMYDy2viLx9SFSwLKM",
+        "input": {
+          "query": "governing law"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01A2ZYtF2NMUMEVTUcMnmaPe",
+        "input": {
+          "query": "Term of this Agreement"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01TRh3z7uNy1f4FAHrVeUDXF",
+        "input": {
+          "query": "assignment"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01RpKbLqh4KYayXcsfi53b4K",
+        "input": {
+          "query": "liability"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01F3jFwZDJ5TcVUVDsAhF5T2",
+        "input": {
+          "query": "exclusive"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefPCBtWPtoDj837RuGVk",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 1020
+      },
+      "cache_creation_input_tokens": 1020,
+      "cache_read_input_tokens": 4236,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 1172,
+      "output_tokens_details": {
+        "thinking_tokens": 872
+      },
+      "service_tier": "standard"
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "max_tokens": 8000,
+    "message_count": 15,
+    "messages_sha": "7de371b476c51b3e",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "b9cb3680ddda94d7",
+      "68c60317e4398960",
+      "f06c11f7994b5b3a",
+      "75348f50c90a1a60",
+      "d163f44852ddbbcf",
+      "01960efa5d5c92dc",
+      "d0a72f23778e38b8",
+      "6de559e9ab14a6f0",
+      "fe1c7e50c6ac867b",
+      "f7b57521e279b518",
+      "3da1237222f19a8e",
+      "997e0518a742df46",
+      "f2252cb5d085a70d",
+      "3f45ed632a6ee655",
+      "a0493eabd76d6261"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "Eo8GCpABCBEYAipAnoH4kk9c+X8xZUC6lGEQNjayhgQu3XPxlQi4G3C/VeCK2QU08y3HUyBMvxxIS0wQmwpkfG8QJJtipGqmDVQRPjIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAeu/4tQGEgwbU/HXuWxArCqpEkIaDIkpqTHJhPsH+Yl4/yIwPCwqdbm0maCsxz7yc0YOzb1CipufVIoq36wJX/YklwYMKQZakQ6akWrriav8ySupKqsEqsV23un7vDzg0TiRe8ogNciRcb/Hbt49tkwQNygjP9T8H2sWkaaDF49PLfajozw+kciENmPk27o3NNPeza9xrEID/hAZ7V6LMuYJHwg7GhLiQhkyi9q5raKW56k0ujzHKxYQFiwu60B75RgwoCnOnBWjx5LKq+5ODJOzxCeVNbNKQpSmSAn2hePSQ7wPpvBT947A8FQcy8HBMsD2veUFDxN2DYWj34O6i8TglmMHGBavzOKBY08CSd5caOxmU43SbsbPrCHHQDsTnhpwlgr8yBtIoWvgpJOXFZyIf0/BfbAvAJ4HLW1YpUYWeCkICxA3iNv4aAxczDpjuqtqlGKyrv78pIr/H6CyAHvGlzpU6fzFOpXFB4iR+UwTkTjBNkZUbN7zXXuH1oXnG8+Qx+FSwLCwbZV9UA4149kEp77CKO/k870a0Hl1qkgDvBKf3EWQpnc7Bd2/WISy4Lr/rHSifiJQt+HsfKxxeH0INho1PQhaQLIh1Bp/HX8/PBsYQqTjZ3OxwFybuQHBJtI6MnZbCEi2VNvrFvWEEZ/i25fPYi+/Na4EKPBzTL8e+s6o7PLEPBtLKeiy3BZ9SeA+YyjFuFqKqUg/Z5q0IiW43EMIvG0CjkGdjRxupAUG3UfMfrUyiCEGGgfIf/PaQBSKSXnpxm/nYFnpTXsoSb1Se6kTa3y+qqSOr8dc9iUPtPE/0freWBP4NAH/myYD0GGOuhldQEh9s+pRvL1q2bt+GAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01CR41KFSsJiY6Ji6VTCW55n",
+        "input": {
+          "char_end": 300,
+          "char_start": 270
+        },
+        "name": "read_span",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefPENSKAnBnGoBN6UVRX",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 1815
+      },
+      "cache_creation_input_tokens": 1815,
+      "cache_read_input_tokens": 7746,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 255,
+      "output_tokens_details": {
+        "thinking_tokens": 182
+      },
+      "service_tier": "standard"
+    }
+  }
+}

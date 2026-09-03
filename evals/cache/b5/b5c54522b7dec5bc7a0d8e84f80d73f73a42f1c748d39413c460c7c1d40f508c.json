@@ -1,0 +1,74 @@
+{
+  "meta": {
+    "max_tokens": 8000,
+    "message_count": 19,
+    "messages_sha": "b3e70511a02652eb",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "cde3e5cd9e42b2e9",
+      "d398d0b12d606d0f",
+      "d31536f7e0f30f18",
+      "2d875d647ccd67d0",
+      "b5a471b4c4b1bfc2",
+      "4ab9cb32216bb842",
+      "61202a7634b7f566",
+      "f10c9cabda515791",
+      "788e0e1f960491b9",
+      "bbc80c480599778e",
+      "0b338076f070e4ee",
+      "2b44c8eb4a741b56",
+      "bb37afb39cdf1280",
+      "ef868984fc1ccc17",
+      "3d99777c8f424785",
+      "9cd968eb25208474",
+      "45dfb31843b4a0f8",
+      "5efff587d95a9675",
+      "225f43becb6755f9"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "EocDCpABCBEYAipAmnah3xo8saGEzLsvCwN8D7amYvx19ZCm2xiNovfxtMZWXg+xPISwQscdDs2bChQ59vvfiUcHktN6nKVQsJOO7zIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAY/C4tQGEgzK6gSfvOZfKIvK9ksaDJKpXM4ZzyJBccYAYiIwlXnoDoztRcqecPrKAS1hZHh2KBOcSf7D53weTDxjjB1GNHiWUtFwDpt2Tub81wyvKqMBIKB2b5wT7CNMFlwh+K3afaJTdFr0ZHSG2b4ouqpJc7Oi+RDO2BlqhLalT1uUW+XriiP8e7fitROc86LUivaU37JZRLSxEo2erZUiXs2O0Nc6jPi/2WL68z8VUIUPxnVBmAoO42psh/6gHE+V173bJd/aJTcC8AXm7VEBD7LOMr8Bc54n4MXxGfQVR5nCkkq//LKM9NIZURatMpP7gChd/JYyyhgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_019hyR3e3zMEiX5Fbat16bco",
+        "input": {
+          "char_end": 1010,
+          "char_start": 950
+        },
+        "name": "read_span",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefPc1NembFpLAaT12SAz",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 973
+      },
+      "cache_creation_input_tokens": 973,
+      "cache_read_input_tokens": 14918,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 139,
+      "output_tokens_details": {
+        "thinking_tokens": 65
+      },
+      "service_tier": "standard"
+    }
+  }
+}

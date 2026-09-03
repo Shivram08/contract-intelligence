@@ -1,0 +1,219 @@
+{
+  "meta": {
+    "max_tokens": 8000,
+    "message_count": 27,
+    "messages_sha": "b5fb32ffaa3282d0",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "cde3e5cd9e42b2e9",
+      "d398d0b12d606d0f",
+      "d31536f7e0f30f18",
+      "2d875d647ccd67d0",
+      "b5a471b4c4b1bfc2",
+      "4ab9cb32216bb842",
+      "61202a7634b7f566",
+      "f10c9cabda515791",
+      "788e0e1f960491b9",
+      "bbc80c480599778e",
+      "0b338076f070e4ee",
+      "2b44c8eb4a741b56",
+      "bb37afb39cdf1280",
+      "ef868984fc1ccc17",
+      "3d99777c8f424785",
+      "9cd968eb25208474",
+      "45dfb31843b4a0f8",
+      "5efff587d95a9675",
+      "225f43becb6755f9",
+      "d5a9af5efcfe7038",
+      "ed2098d9fc78cea3",
+      "a8f19da866b29d63",
+      "8cf7d500568eb0a4",
+      "d5802f9185dc9102",
+      "a7985ae936ba5d93",
+      "885c5a10c9269f8f",
+      "9343900956990a2f"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "ErECCpABCBEYAipAgBeKx46EvyiRm9CuJ0U1A58CwMBJ8VwkhaRdgwRhFJkqEYyHHqx/wWfWG/sGxJ4eKaB3Q4uesgiH6ujowrhldTIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAZLD4tQGEgxlcIr4aGYF4CYbzyIaDP1sNpzaK+R3DjPgSyIwnfuRoIoEdf2JmvTjjyLnP3QTeCOE3HhSkLoCf2W+dMhRTEx4s9liP6yt22J91TyJKk7SkA0JDuOeSkl3amNNY6EUlaUJC5CfYDol3Fjh0nJP7fgyHpsd343kQE8lIlPBYUIjqnol0bKa61N04FcqSjYZ6/0RFmwk0ZT3GQXkQU4YAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01BmVyoXCD5YvCC3tqsRwqE1",
+        "input": {
+          "clauses": [
+            {
+              "clause_type": "governing_law",
+              "confidence": 0.4,
+              "evidence": [
+                {
+                  "char_end": 6671,
+                  "char_start": 6440,
+                  "quote": "Any lawsuit relating to any matter arising under this Agreement may be initiated in a State or Federal Court located in the Commonwealth of Massachusetts or in any court in the Netherlands having jurisdiction over the matter."
+                }
+              ],
+              "present": true,
+              "raw_text": "Any lawsuit relating to any matter arising under this Agreement may be initiated in a State or Federal Court located in the Commonwealth of Massachusetts or in any court in the Netherlands having jurisdiction over the matter.",
+              "value": "UNSPECIFIED"
+            },
+            {
+              "clause_type": "parties",
+              "confidence": 0.85,
+              "evidence": [
+                {
+                  "char_end": 366,
+                  "char_start": 340,
+                  "quote": "MODUS MEDIA INTERNATIONAL"
+                },
+                {
+                  "char_end": 511,
+                  "char_start": 490,
+                  "quote": "DRAGON SYSTEMS, INC."
+                }
+              ],
+              "present": true,
+              "raw_text": "MODUS MEDIA INTERNATIONAL LANDDROSTLAAN 51 7327 GM APELDOORN THE NETHERLANDS (HEREINAFTER \"MMI\") AND DRAGON SYSTEMS, INC. 320 NEVADA STREET NEWTON, MA 02160 U.S.A. (HEREAFTER \"DRAGON SYSTEMS\")",
+              "value": "Modus Media International (Service Provider); Dragon Systems, Inc. (Customer)"
+            },
+            {
+              "clause_type": "effective_date",
+              "confidence": 0.5,
+              "evidence": [
+                {
+                  "char_end": 600,
+                  "char_start": 567,
+                  "quote": "EFFECTIVE AS OF (EFFECTIVE DATE)"
+                }
+              ],
+              "present": true,
+              "raw_text": "EFFECTIVE AS OF (EFFECTIVE DATE)",
+              "value": "UNSPECIFIED"
+            },
+            {
+              "clause_type": "expiration_date",
+              "confidence": 0.85,
+              "evidence": [
+                {
+                  "char_end": 6058,
+                  "char_start": 6000,
+                  "quote": "This Agreement shall be valid for an indefinite period."
+                }
+              ],
+              "present": true,
+              "raw_text": "This Agreement shall be valid for an indefinite period.",
+              "value": "PERPETUAL"
+            },
+            {
+              "clause_type": "renewal_term",
+              "confidence": 0.8,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "notice_period_to_terminate_renewal",
+              "confidence": 0.75,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "change_of_control",
+              "confidence": 0.7,
+              "evidence": [
+                {
+                  "char_end": 6261,
+                  "char_start": 6200,
+                  "quote": "in case of a merger or change of key management or control"
+                }
+              ],
+              "present": true,
+              "raw_text": "Both parties may terminate the Agreement with immediate effect\n\n- -        of either party breaches a material term of the Agreement\n\n- -        in case of a merger or change of key management or control",
+              "value": null
+            },
+            {
+              "clause_type": "anti_assignment",
+              "confidence": 0.75,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "cap_on_liability",
+              "confidence": 0.5,
+              "evidence": [
+                {
+                  "char_end": 4270,
+                  "char_start": 4160,
+                  "quote": "MMI shall not be liable for indirect or consequential damages unless caused by intention or gross negligence."
+                }
+              ],
+              "present": true,
+              "raw_text": "MMI shall not be liable for indirect or consequential damages unless caused by intention or gross negligence.",
+              "value": null
+            },
+            {
+              "clause_type": "uncapped_liability",
+              "confidence": 0.55,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "non_compete",
+              "confidence": 0.8,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "exclusivity",
+              "confidence": 0.8,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            }
+          ]
+        },
+        "name": "submit_extraction",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefPmhkHFvsJVmPsY2hck",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 7045
+      },
+      "cache_creation_input_tokens": 7045,
+      "cache_read_input_tokens": 23321,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 1389,
+      "output_tokens_details": {
+        "thinking_tokens": 22
+      },
+      "service_tier": "standard"
+    }
+  }
+}

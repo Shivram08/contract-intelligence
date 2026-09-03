@@ -1,0 +1,71 @@
+{
+  "meta": {
+    "max_tokens": 8000,
+    "message_count": 9,
+    "messages_sha": "f23169555b9a2c18",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "dd1d3effd2da8125",
+      "9a09a1cf6860be31",
+      "a84f11b98859227a",
+      "599d7f01fd419b36",
+      "d7f7114606d14155",
+      "7001ef295a8b370e",
+      "e1915bcaf4b06468",
+      "d44e25f1fdf0fbeb",
+      "3379796a3d6b40fc"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01YLR4Ckb3tKJA4Jw2eWeewh",
+        "input": {
+          "char_end": 19000,
+          "char_start": 13000
+        },
+        "name": "read_span",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01DAv51EYMk9oWieeQYzS3Bx",
+        "input": {
+          "char_end": 24000,
+          "char_start": 19000
+        },
+        "name": "read_span",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefPSxjQWXbpMN81fzrgn",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 3834
+      },
+      "cache_creation_input_tokens": 3834,
+      "cache_read_input_tokens": 5369,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 145,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard"
+    }
+  }
+}

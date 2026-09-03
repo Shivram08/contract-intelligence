@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "max_tokens": 8000,
+    "message_count": 21,
+    "messages_sha": "cf238e8b95db11e6",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "4bef271e3679c8c1",
+      "ef4ae70cb6f9da07",
+      "9da4c7f376ed3e92",
+      "dbbd884a90ba3b88",
+      "367e41c7f5f74f27",
+      "2d38a08fe879d184",
+      "88024308c5116e0e",
+      "ed207a44a6ce2751",
+      "a26ddaaff9239b4b",
+      "6e187df110e569d3",
+      "b629b68e9ffd42db",
+      "9e9b327a2e462188",
+      "14e3cb2c386b7d0f",
+      "1491daf6221c33ff",
+      "4abfe7eb7a766197",
+      "91b12ffb1cb0d7a9",
+      "df6646de2d152e3b",
+      "be43d20ace086147",
+      "72d4a7840cb4b1ac",
+      "ce294d73b3f905b9",
+      "f3c18c2f7fcbc2e3"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "EswDCpABCBEYAipAzxR7gP4EzeA182ufZ3DcvcwB3CykdGUVxCwUAjTmDFTYzCex1gY8xl4pbxxxlHoxqxlEWhShVbSlM61E2tFWdDIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAb2+4tQGEgyhWqrWI2hhOG0CeD8aDGsyKXCpHGKPF36f6iIw6N2hocMTgqa2KjchxGbMckJnDgJ+E23tPfZ3FjVujNd0fodPdNPX4DR3WwRO7sNlKugBWvdkJ6KrNPtSoopz9IXNt8HZpA9qz4ICu0hPOUIFKUyL+HV2vePPtH8g3PoYKjHeb3J3+VfUQvTi/LQv/K59dHdBZL7K1mcQ19qXetFUcwHs5MpkJZhNJWKu/I2eJ62TdFMxj+LeHeIS9ztZbE0VeSbsK7q2ng8U20kr51fdZHDmq1Gu9eEZNJqbvyHuarD+qp1FFw7i87BSrr/CLNNg2dxK50zJhoQF2eyPS2PeF5rmQyb/xsces6OMpdSoKpgXayNUsQKIeN04ehC/AvuVXgN0gzpJjC3Z8HHg9I1Z3WE23P1povqpvxgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01V5nh3Z8t52Gc2Guf2EsWdu",
+        "input": {
+          "query": "change in control merger consolidation sale of substantially all assets"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01VrMceYzsE3oeakCgciFgoh",
+        "input": {
+          "query": "shall not assign this Agreement without prior written consent"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01RAu1foEivTzysckZgHMeyZ",
+        "input": {
+          "query": "compete with the Agent restriction on business"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01NGCVGYbz9Q6AYN3a1H8d88",
+        "input": {
+          "query": "exclusive financial advisor and conversion agent"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01VvHjCMGyAzYsU5q5rRUcsm",
+        "input": {
+          "query": "renewal term automatically renew"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_018bVXBWseJ4YHVC8oXucFDM",
+        "input": {
+          "query": "Closing Date shall occur"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefP1b1VkffhVrMtnzrQZ",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 1104
+      },
+      "cache_creation_input_tokens": 1104,
+      "cache_read_input_tokens": 21514,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 416,
+      "output_tokens_details": {
+        "thinking_tokens": 69
+      },
+      "service_tier": "standard"
+    }
+  }
+}

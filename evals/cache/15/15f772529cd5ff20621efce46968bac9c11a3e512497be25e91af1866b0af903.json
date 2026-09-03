@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "max_tokens": 8000,
+    "message_count": 15,
+    "messages_sha": "619b7b2d7d2abf7d",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "40c86ac6e9c6d864",
+      "2df86c3235ae798b",
+      "85d7995c87eee274",
+      "86ddc74586b2a0ad",
+      "92e6fd8d9bd9e7c4",
+      "d01f39feea96cb56",
+      "179412b09519475b",
+      "189f0f51c7a22c1a",
+      "89f18689a08a6957",
+      "f423c61f841d986e",
+      "8b3d19dc6397453a",
+      "c87caf709ae56bcd",
+      "d365181a8e8f73b4",
+      "cc4e50c5a1af0536",
+      "5e7d35c92209ce62"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "EpQCCpABCBEYAipArFbxTf1evNvg8qE0w0OVquigWuHPlNdsB5+P70ZvoxBFQvnmhjLTTZ3lNVt5chKlocGhJHKcGcRangmzn4NmkzIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAb694tQGEgyhornYV7QhB5vgNj8aDF/fLj4Km1VM2oc3AiIwlSN9hj2BpdCctE+w3YCHdS+u1tA50zQgrEn9DnhIA0VAZcDPsnHg+KS6bsfl2DFLKjEy8eltBiHf7Q/xZc66IVkEO+ofgic7L+TWn5CG03nWalyLYXzoh4/SkGltt+AEYIbzGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01QJfsKeM2EtvNnvNXHdmjWg",
+        "input": {
+          "char_end": 24151,
+          "char_start": 22000
+        },
+        "name": "read_span",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefNrCBZKnzShFo8mZkVe",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 3212
+      },
+      "cache_creation_input_tokens": 3212,
+      "cache_read_input_tokens": 9541,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 88,
+      "output_tokens_details": {
+        "thinking_tokens": 13
+      },
+      "service_tier": "standard"
+    }
+  }
+}

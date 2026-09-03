@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "max_tokens": 8000,
+    "message_count": 13,
+    "messages_sha": "d40866b7fa4e76ec",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "40c86ac6e9c6d864",
+      "2df86c3235ae798b",
+      "85d7995c87eee274",
+      "86ddc74586b2a0ad",
+      "92e6fd8d9bd9e7c4",
+      "d01f39feea96cb56",
+      "179412b09519475b",
+      "189f0f51c7a22c1a",
+      "89f18689a08a6957",
+      "f423c61f841d986e",
+      "8b3d19dc6397453a",
+      "c87caf709ae56bcd",
+      "d365181a8e8f73b4"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "EsMCCpABCBEYAipAy2ekgaLTTiSi/xnomo0o7NukDgxs7OURa0WgRCUCG8SgCGVOK3+S/Ic3sdU9WcOfwu4Ax4JooyTAEI14rjXFcTIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAbq94tQGEgzHm53d0yefKKo7urwaDGqJEB2uQzjVJ5eXniIwrQ+fAAQKcBtGai5xoDeoyUuau4WztJXbWNWFzZEUf/ERZ8UExxA9Fu3n/+0nsLgpKmCbMn39z7K3kGB+0Lp9AHFKaXy1JdXhXE7FrU5byc60+3lI3DNpq290kM+ZH5Nu3Gwz7rMR7f2RWPc13XU9b5EEkwStSs9jfdm2RF+k6SzobPYz5oseDi2mYGFxdApnx4YYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01Uo7q2PN2o8B8pgkS2Wbfmi",
+        "input": {
+          "char_end": 24151,
+          "char_start": 14000
+        },
+        "name": "read_span",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefNr1fHuVYWJmPC3VNo4",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 2222
+      },
+      "cache_creation_input_tokens": 2222,
+      "cache_read_input_tokens": 7319,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 104,
+      "output_tokens_details": {
+        "thinking_tokens": 29
+      },
+      "service_tier": "standard"
+    }
+  }
+}

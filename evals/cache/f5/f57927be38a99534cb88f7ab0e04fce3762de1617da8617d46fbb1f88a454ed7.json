@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "max_tokens": 8000,
+    "message_count": 3,
+    "messages_sha": "faab0fcba33e6f86",
+    "model": "claude-sonnet-5",
+    "per_message_sha": [
+      "b9cb3680ddda94d7",
+      "68c60317e4398960",
+      "f06c11f7994b5b3a"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "signature": "EsYCCpABCBEYAipAusHzGt7F+N7Uu84+d7bfhKHSqXCY4gM+txrTL2mOBSuF61i9neYfbo8rG0CAQCUclJ9Z0Lna0EUFzl6ZsrSbFTIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjMmRhMGM5Ni01ZGNlLTQzMzgtYjM1OS1kNzQ1NDBlNTE3NjGoAcS/4tQGEgwpuOVUwdx6rqueaTgaDPCBXUIGn88tvmIkVyIw7JoX7y29yJO8RLShY/DU8G+gBLihG8MaNF/sZTN68bpI/IGMMonY1yx3tfh3pPWKKmO7ZkqD3tmL0QhUvAg/2qKeOrekRyrAlKvh1luYo/VxbtwoToAElGUv7YqkmyTwHXKL78zbw3V97MxPZJAV+P5MBc48HzhaIS3j0inHcxE7+PFqhdEtOGPR461KmFBtv5Sv5kgYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01EgmG9anT8uFjvUBLWythbx",
+        "input": {
+          "query": "this Agreement is entered into by and between"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01QYfUZa6GXZT4nWsdN9R7Pw",
+        "input": {
+          "query": "Manufacturing Agreement"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_011CefPBfND6rZ6fPXoggcrZ",
+    "model": "claude-sonnet-5",
+    "role": "assistant",
+    "stop_reason": "tool_use",
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 425
+      },
+      "cache_creation_input_tokens": 425,
+      "cache_read_input_tokens": 3332,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "output_tokens": 143,
+      "output_tokens_details": {
+        "thinking_tokens": 28
+      },
+      "service_tier": "standard"
+    }
+  }
+}

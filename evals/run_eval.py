@@ -37,6 +37,7 @@ from docintel.agent.loop import DEFAULT_MODEL, AgentBudget
 from docintel.config import get_settings, resolve_anthropic_api_key
 from docintel.ingest.loader import iter_documents
 from docintel.schemas import ClauseExtraction, Document, RetrievalHit, Tier
+from docintel.validation.grounding import GroundingStatus
 from evals.cache import CacheMode, CachingClient, ResponseCache, cache_from_env
 from evals.cases import DEFAULT_CASES_PATH, GoldenCase, cases_by_document, load_cases
 from evals.metrics import MetricSummary, precision_at_recall, score_cases
@@ -169,8 +170,13 @@ def run_baseline(
     cases: Sequence[GoldenCase],
     budget_usd: float,
     verbose: bool = True,
-) -> MetricSummary:
-    """Run one baseline over the documents and score it against the cases."""
+) -> tuple[MetricSummary, list[BaselineOutcome]]:
+    """Run one baseline over the documents and score it against the cases.
+
+    Returns the outcomes as well, because scoring is not final until every arm
+    has run: a case is scoreable only where **all** arms completed, so the
+    per-arm summaries are recomputed on the intersection afterwards.
+    """
     predictions: dict[str, list[ClauseExtraction]] = {}
     outcomes: list[BaselineOutcome] = []
     spent = 0.0
@@ -218,6 +224,42 @@ def run_baseline(
         if outcome.grounding is not None:
             summary.grounding_checked += outcome.grounding.total
             summary.grounding_violations += len(outcome.grounding.ungrounded)
+    return summary, outcomes
+
+
+def score_paired(
+    baseline_name: str,
+    cases: Sequence[GoldenCase],
+    outcomes: Sequence[BaselineOutcome],
+    scoreable: set[str],
+) -> MetricSummary:
+    """Re-score one arm restricted to documents every arm completed.
+
+    Without this each arm is scored on its own completed subset, and those
+    subsets are different -- batch 1 produced F1 = 1.000 for both arms on
+    disjoint sets of about five cases, which is not a comparison at all.
+    """
+    predictions = {o.document_id: o.clauses for o in outcomes}
+    summary = score_cases(baseline_name, cases, predictions, scoreable=scoreable)
+    summary.attempted = len(outcomes)
+    summary.completed = sum(1 for o in outcomes if o.is_scoreable)
+    summary.excluded = {o.document_id: o.status.value for o in outcomes if not o.is_scoreable}
+    summary.paired_documents = len(scoreable)
+    for outcome in outcomes:
+        summary.costs_usd.append(outcome.usage.cost_usd)
+        summary.latencies_ms.append(outcome.latency_ms)
+        summary.retrieval_ms.append(outcome.retrieval_ms)
+        summary.validation_ms.append(outcome.validation_ms)
+        if outcome.document_id not in scoreable:
+            continue
+        summary.schema_attempts += 1
+        summary.schema_first_try += int(outcome.schema_ok)
+        summary.documents_with_errors += int(outcome.has_errors)
+        if outcome.grounding is not None:
+            summary.grounding_checked += outcome.grounding.total
+            summary.grounding_violations += len(outcome.grounding.ungrounded)
+            summary.relocated += outcome.grounding.count(GroundingStatus.RELOCATED)
+        summary.retries_used += outcome.retries
     return summary
 
 
@@ -330,6 +372,26 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         choices=list(BASELINE_NAMES),
     )
     parser.add_argument("--limit", type=int, default=0, help="Cap the number of contracts.")
+    parser.add_argument(
+        "--sample",
+        type=int,
+        default=0,
+        help="Seeded random sample of N contracts from the case set's contracts.",
+    )
+    parser.add_argument(
+        "--sample-seed",
+        type=int,
+        default=42,
+        help="Recorded with the result, so the subset is reproducible and "
+        "visibly not cherry-picked.",
+    )
+    parser.add_argument(
+        "--skip",
+        type=int,
+        default=0,
+        help="Skip the first N of the sample, for running a later batch over the "
+        "remainder without re-paying for the first.",
+    )
     parser.add_argument("--model", default=DEFAULT_MODEL)
     parser.add_argument("--prompt", default="extract_v1")
     parser.add_argument("--max-turns", type=int, default=12)
@@ -394,14 +456,18 @@ def main(argv: Sequence[str] | None = None) -> int:
 
     budget = AgentBudget(max_turns=args.max_turns, max_cost_usd=args.max_cost)
     summaries: list[MetricSummary] = []
+    per_arm: dict[str, list[BaselineOutcome]] = {}
 
     try:
         for name in args.baselines:
             print(f"\n=== {name} ===", flush=True)
             started = time.perf_counter()
             baseline = make_baseline(name, client, retrieval, budget, args.model, args.prompt)
-            summary = run_baseline(baseline, documents, cases, args.budget, verbose=not args.quiet)
+            summary, outcomes = run_baseline(
+                baseline, documents, cases, args.budget, verbose=not args.quiet
+            )
             summaries.append(summary)
+            per_arm[name] = outcomes
             print(
                 f"  {name}: ${summary.total_cost_usd:.4f} in {time.perf_counter() - started:.0f}s",
                 flush=True,
@@ -409,6 +475,24 @@ def main(argv: Sequence[str] | None = None) -> int:
     finally:
         if retrieval is not None:
             retrieval.close()
+
+    # A case is scoreable only where every arm completed. Anything else compares
+    # arms on different documents.
+    if len(per_arm) > 1:
+        attempted = {o.document_id for outs in per_arm.values() for o in outs}
+        scoreable = {
+            doc
+            for doc in attempted
+            if all(
+                any(o.document_id == doc and o.is_scoreable for o in outs)
+                for outs in per_arm.values()
+            )
+        }
+        print(
+            f"\npaired scoring: {len(scoreable)}/{len(attempted)} documents completed "
+            f"in every arm ({len(scoreable) / len(attempted):.0%} pair yield)"
+        )
+        summaries = [score_paired(name, cases, outs, scoreable) for name, outs in per_arm.items()]
 
     print_table(summaries)
     if cache is not None:
