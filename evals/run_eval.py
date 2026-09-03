@@ -41,6 +41,7 @@ from docintel.validation.grounding import GroundingStatus
 from evals.cache import CacheMode, CachingClient, ResponseCache, cache_from_env
 from evals.cases import DEFAULT_CASES_PATH, GoldenCase, cases_by_document, load_cases
 from evals.metrics import MetricSummary, precision_at_recall, score_cases
+from evals.preflight import run_preflight
 from evals.runners import (
     BASELINE_NAMES,
     TRUNCATE_TOKENS,
@@ -407,7 +408,9 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     )
     parser.add_argument("--model", default=DEFAULT_MODEL)
     parser.add_argument("--prompt", default="extract_v1")
-    parser.add_argument("--max-turns", type=int, default=12)
+    # 20 matches the frozen configuration in docs/ARCHITECTURE.md. The
+    # preflight cross-checks this, and caught the two disagreeing.
+    parser.add_argument("--max-turns", type=int, default=20)
     parser.add_argument("--max-cost", type=float, default=1.50, help="Per document.")
     parser.add_argument("--budget", type=float, default=5.00, help="Per baseline, in USD.")
     parser.add_argument("--cache-mode", choices=[m.value for m in CacheMode], default=None)
@@ -419,6 +422,12 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         help="Replay from cache read-only and fail on regression. What CI runs.",
     )
     parser.add_argument("--quiet", action="store_true")
+    parser.add_argument("--split-name", default="golden")
+    parser.add_argument(
+        "--skip-preflight",
+        action="store_true",
+        help="Bypass the setup invariants. Only for debugging the harness itself.",
+    )
     return parser.parse_args(argv)
 
 
@@ -449,6 +458,27 @@ def main(argv: Sequence[str] | None = None) -> int:
         f"baselines: {', '.join(args.baselines)}"
         + (f" | sample seed {args.sample_seed}, skip {args.skip}" if args.sample else "")
     )
+
+    # Preflight before anything can spend. Three separate times this project
+    # produced a plausible number that measured the wrong system -- most
+    # expensively, an entire agent evaluation run against an index that did not
+    # contain the documents being evaluated. The checks assert setup, not
+    # behaviour, and they run before the money.
+    if not args.skip_preflight and not args.gate:
+        checks = run_preflight(
+            split=args.split_name,
+            max_turns=args.max_turns,
+            model=args.model,
+            prompt=args.prompt,
+            limit=args.limit,
+            sample=args.sample,
+            sample_seed=args.sample_seed,
+        )
+        checks.report()
+        if not checks.ok:
+            print("\nrefusing to run: preflight failed, so any numbers would be suspect.")
+            return 2
+        print()
 
     # The gate never calls the API: read-only cache, and a miss is an error.
     mode = (

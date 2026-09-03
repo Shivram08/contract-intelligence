@@ -306,6 +306,10 @@ class ToolContext:
     calls: list[dict[str, Any]] = field(default_factory=list)
     #: Stamped by the agent loop before each turn's tool batch.
     turn: int = 0
+    #: Whether this document is known to be in the retrieval index. None means
+    #: not checked; False makes an empty search result a hard error rather than
+    #: something the model tries to rephrase its way out of.
+    document_indexed: bool | None = None
     #: Every search query issued, for near-duplicate detection.
     queries: list[str] = field(default_factory=list)
     #: Counters surfaced in the eval report, so the effect of each guard is
@@ -364,6 +368,21 @@ def _tool_search_contract(ctx: ToolContext, args: dict[str, Any]) -> str:
 
     ctx.queries.append(query)
     hits = ctx.search(query, top_k)
+
+    # "This document is not indexed" and "no passage matched this query" are
+    # different failures and used to be reported identically -- as the same
+    # bland string the model had to interpret. An entire evaluation ran against
+    # an index that did not contain the documents being evaluated, and the only
+    # symptom was an agent that searched a lot and gave up. This raises instead,
+    # because it is an operator error, not something the model can fix by
+    # rephrasing.
+    if not hits and ctx.document_indexed is False:
+        raise ToolError(
+            f"document {ctx.document.document_id!r} is not in the retrieval "
+            "index, so search cannot work. This is a setup error, not a query "
+            "problem. Index it before extracting."
+        )
+
     return _format_hits(ctx.document, hits)
 
 
