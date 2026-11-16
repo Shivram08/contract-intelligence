@@ -67,11 +67,17 @@ PROMPTS_DIR: Final = Path(__file__).resolve().parent / "prompts"
 DEFAULT_MODEL: Final = "claude-sonnet-5"
 
 #: USD per million tokens: (input, output, cache_read, cache_write).
-#: Cache reads are ~0.1x input and writes ~1.25x, per the pricing docs.
+#: Anthropic: cache reads ~0.1x input, writes ~1.25x. Gemini: implicit caching,
+#: so no write charge, and output includes thinking tokens. Gemini rates are
+#: the standard paid tier from ai.google.dev/gemini-api/docs/pricing as of
+#: 2026-11-16; 3.8 Flash is at its introductory rate through 2026-12-31.
 MODEL_PRICING: Final[dict[str, tuple[float, float, float, float]]] = {
     "claude-sonnet-5": (2.00, 10.00, 0.20, 2.50),
     "claude-opus-5": (5.00, 25.00, 0.50, 6.25),
     "claude-haiku-4-5": (1.00, 5.00, 0.10, 1.25),
+    "gemini-3.5-flash-lite": (0.30, 2.50, 0.03, 0.0),
+    "gemini-3.1-flash-lite": (0.25, 1.50, 0.025, 0.0),
+    "gemini-3.8-flash": (0.75, 3.75, 0.075, 0.0),
 }
 
 

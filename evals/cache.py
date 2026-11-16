@@ -36,6 +36,8 @@ from enum import StrEnum
 from pathlib import Path
 from typing import Any, Final
 
+from docintel.agent.loop import compute_cost
+
 __all__ = [
     "CacheMissError",
     "CacheMode",
@@ -172,6 +174,11 @@ class CacheStats:
     hits: int = 0
     misses: int = 0
     writes: int = 0
+    #: Calls that actually reached the provider, and what they cost. Replays
+    #: report their original cost to the results table, but only these are
+    #: money spent in this run -- which is what the spend ledger records.
+    live_calls: int = 0
+    live_cost_usd: float = 0.0
 
     @property
     def total(self) -> int:
@@ -184,7 +191,8 @@ class CacheStats:
     def __str__(self) -> str:
         return (
             f"{self.hits}/{self.total} hits ({self.hit_rate:.1%}), "
-            f"{self.misses} misses, {self.writes} written"
+            f"{self.misses} misses, {self.writes} written, "
+            f"{self.live_calls} live (${self.live_cost_usd:.4f})"
         )
 
 
@@ -300,6 +308,11 @@ class _CachedMessages:
         started = time.perf_counter()
         response = self._client.messages.create(**kwargs)
         elapsed_ms = (time.perf_counter() - started) * 1000
+
+        self._cache.stats.live_calls += 1
+        self._cache.stats.live_cost_usd += compute_cost(
+            str(kwargs.get("model")), getattr(response, "usage", None)
+        )
 
         meta = fingerprint(kwargs)
         meta["latency_ms"] = elapsed_ms

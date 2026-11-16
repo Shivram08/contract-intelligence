@@ -10,7 +10,7 @@ from __future__ import annotations
 
 from functools import lru_cache
 
-from pydantic import Field, PostgresDsn, SecretStr
+from pydantic import AliasChoices, Field, PostgresDsn, SecretStr
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -82,6 +82,18 @@ class Settings(BaseSettings):
     #: SecretStr so it cannot leak through a repr, a log line, or a serialized
     #: settings object.
     anthropic_api_key: SecretStr | None = Field(default=None, validation_alias="ANTHROPIC_API_KEY")
+
+    #: Gemini key. ``GCP_KEY`` first because that is the name already in use in
+    #: this repo's ``.env``; ``GEMINI_API_KEY`` / ``GOOGLE_API_KEY`` are the names
+    #: Google documents. Same SecretStr and same ``.env`` caveat as above.
+    gemini_api_key: SecretStr | None = Field(
+        default=None,
+        validation_alias=AliasChoices("GCP_KEY", "GEMINI_API_KEY", "GOOGLE_API_KEY"),
+    )
+
+    #: Model the API service and CLI extract with. The provider follows from
+    #: the name (``docintel.llm.make_client``).
+    llm_model: str = "gemini-3.5-flash-lite"
     chunking: ChunkingSettings = Field(default_factory=ChunkingSettings)
     retrieval: RetrievalSettings = Field(default_factory=RetrievalSettings)
 
@@ -100,4 +112,10 @@ def resolve_anthropic_api_key() -> str | None:
     bare client rather than refusing.
     """
     key = get_settings().anthropic_api_key
+    return key.get_secret_value() if key is not None else None
+
+
+def resolve_gemini_api_key() -> str | None:
+    """The Gemini key from ``.env`` or the environment, or None."""
+    key = get_settings().gemini_api_key
     return key.get_secret_value() if key is not None else None

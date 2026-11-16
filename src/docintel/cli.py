@@ -21,8 +21,8 @@ from typing import Any, Protocol
 
 from evals.cache import DEFAULT_CACHE_DIR, CacheMode, CachingClient, ResponseCache
 
-from docintel.agent.loop import DEFAULT_MODEL, AgentBudget
-from docintel.config import get_settings, resolve_anthropic_api_key
+from docintel.agent.loop import AgentBudget
+from docintel.config import get_settings
 from docintel.extract import extract_document
 from docintel.ingest.chunker import ChunkingConfig, TiktokenCounter, chunk_document
 from docintel.ingest.index import create_tables, create_vector_index, index_document
@@ -177,21 +177,27 @@ def command_search(args: argparse.Namespace) -> int:
 
 def command_extract(args: argparse.Namespace) -> int:
     """Run the full pipeline over indexed contracts."""
-    import anthropic
+    from docintel.llm import is_gemini, make_client
 
     settings = get_settings()
     embedder = _build_embedder(args.fake_embeddings, settings.retrieval.embedding_dim)
 
-    # Passed explicitly when present, so a key in `.env` works. Falling back to
-    # a bare client lets the SDK resolve ANTHROPIC_AUTH_TOKEN or an
-    # `ant auth login` profile by itself.
-    api_key = resolve_anthropic_api_key()
-    live = anthropic.Anthropic(api_key=api_key) if api_key else anthropic.Anthropic()
+    # Passed explicitly when present, so a key in `.env` works. For Anthropic,
+    # falling back to a bare client lets the SDK resolve ANTHROPIC_AUTH_TOKEN or
+    # an `ant auth login` profile by itself.
+    try:
+        live = make_client(args.model)
+    except RuntimeError as exc:
+        print(exc, file=sys.stderr)
+        return 2
 
-    # Construction never fails on missing credentials -- the SDK resolves them
-    # lazily and raises on the first request. Without this check the run would
-    # iterate every document and produce one identical auth error per contract.
-    if not (getattr(live, "api_key", None) or getattr(live, "auth_token", None)):
+    # Anthropic construction never fails on missing credentials -- the SDK
+    # resolves them lazily and raises on the first request. Without this check
+    # the run would iterate every document and produce one identical auth error
+    # per contract.
+    if not is_gemini(args.model) and not (
+        getattr(live, "api_key", None) or getattr(live, "auth_token", None)
+    ):
         print("no Anthropic credentials found.", file=sys.stderr)
         print(
             "Put ANTHROPIC_API_KEY in .env (gitignored), export it, or run "
@@ -219,6 +225,24 @@ def command_extract(args: argparse.Namespace) -> int:
 
     totals = {"documents": 0, "reviewed": 0, "spans": 0, "ungrounded": 0}
     spend = 0.0
+
+    # Same project-wide cap as the eval harness: --budget bounds this run, the
+    # ledger bounds every run together. Imported lazily because evals/ is a
+    # repo-level package, not part of the installed service.
+    ledger: Any = None
+    if cache.mode is not CacheMode.READ_ONLY:
+        try:
+            from evals.spend import Ledger, SpendCapError
+        except ImportError:
+            pass  # running outside the repo checkout
+        else:
+            ledger = Ledger.load()
+            try:
+                ledger.check(args.budget)
+            except SpendCapError as exc:
+                print(f"refusing to run: {exc}", file=sys.stderr)
+                connection.close()
+                return 2
 
     try:
         retriever = HybridRetriever(
@@ -281,6 +305,15 @@ def command_extract(args: argparse.Namespace) -> int:
                 print(f"           ! {violation.rule_id}: {violation.message}", flush=True)
     finally:
         connection.close()
+        if ledger is not None:
+            ledger.record(
+                cache.stats.live_cost_usd,
+                model=args.model,
+                command="extract",
+                documents=totals["documents"],
+                live_calls=cache.stats.live_calls,
+                argv=sys.argv[1:],
+            )
 
     if not totals["documents"]:
         print("no documents processed", file=sys.stderr)
@@ -337,7 +370,7 @@ def build_parser() -> argparse.ArgumentParser:
     extractor.add_argument("--split-file", type=Path, default=DEFAULT_SPLIT)
     extractor.add_argument("--split", choices=["dev", "golden", "reserve"], default="dev")
     extractor.add_argument("--limit", type=int, default=10)
-    extractor.add_argument("--model", default=DEFAULT_MODEL)
+    extractor.add_argument("--model", default=get_settings().llm_model)
     extractor.add_argument("--max-turns", type=int, default=12)
     extractor.add_argument("--max-cost", type=float, default=0.50, help="Per document.")
     extractor.add_argument("--timeout", type=float, default=180.0, help="Per document.")
