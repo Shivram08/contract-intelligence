@@ -97,6 +97,25 @@ explained by candidate count or document length, and it is currently
 unattributed. Until the per-stage split lands, arm 4's end-to-end latency is not
 reportable.
 
+## Gemini has no strict tool schemas
+
+From Amendment 2 onward the measured model is `gemini-3.5-flash-lite`.
+Anthropic validates `strict: true` tool input server-side; Gemini constrains
+generation with `parametersJsonSchema` but offers no such guarantee. Pydantic
+validation plus retry-on-parse-failure is therefore the *only* structural
+guarantee on the Gemini path, and a `MALFORMED_FUNCTION_CALL` finish is counted
+as a schema failure rather than retried away inside the adapter. The schema
+validity column measures exactly this.
+
+## Grounding tolerates one artifact, and that tolerance was chosen after looking
+
+The verifier skips SEC page footers (`14 Source: COMPANY, 8-K, 2/5/2020`)
+between quoted words. The rule was added after five of six dev-split Gemini
+"fabrications" turned out to be footer omissions -- so it is a change motivated
+by observed model output. It was made on dev data before any golden-set Gemini
+run, it skips nothing but a footer-shaped line, and the strict rate (footer
+omissions counted as violations) is reported beside the lenient one everywhere.
+
 ## Not production-ready
 
 This is a rigorously evaluated prototype. It has no authentication, no rate

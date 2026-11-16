@@ -1,0 +1,44 @@
+{
+  "meta": {
+    "latency_ms": 4184.878600004595,
+    "max_tokens": 8000,
+    "message_count": 7,
+    "messages_sha": "b7a52809bce7f6b5",
+    "model": "gemini-3.8-flash",
+    "per_message_sha": [
+      "061bd41b793c00c6",
+      "19c1a5398a589c57",
+      "add74312f2bf36ae",
+      "4ec237c26305a904",
+      "98086f04469f32ba",
+      "cc4dec3515360b43",
+      "6eaae9355c2c2e53"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_15490640839786249529",
+        "input": {
+          "query": "ARTICLE 13 TERM AND TERMINATION"
+        },
+        "name": "search_contract",
+        "thought_signature": "EtMLCtALAWkUfRMKy3Uh50QsCSX0GLoVzdAeFT+xylStZQwqOEhpRbS1pNtw2h93iFO6Ip25LJag3N+xfwyl2eVqXiHxRfkhSKpSIkX/lAiBHh0w38aVz0GZnJruy3B3h8KmF1W/CbTNV9tF17UYDUadhAMRGxgoT+mG+T+f2vrCa/yFTlBtKA0JN8kMetCvYGBPRkCMv+AkC4cXPDDIrd8OnCMr2OSUDDgCgG5si+5Fk95dUdlme4Wtjx/FtHxP79BbBg0Ace+GhILCdHU1BsFs8KI1XsgTHon5RIHGCSORFUi3XnUl5qoq3qbajmLp+l3JQx4cyzhUDHWJprLJE+wJmFIc/ED2Cx4LeEkwZ5FVRfED1lyjN8XzUomgSM1N45dpT8DNpANVZ3mAmUnzxesxzHFR7FYuPeC1p4kEwm80QpgBKaNvrOvsakhT5vUg/AFcOCUwCg2m1mPEpkR7JxrJvIrnAsX5hhdf4q6GQSSCGMjutuynWizgfgnhmyvPpKR38gVQYnsttntQCy9LfKHmMOnRlg+61cdNfGh3PER+0LN+tSv9UGmIEQ/qF3j+ZVi4ZR5ZXAWn6UoaHNqyxFcq6EPCDHGWYoViP0KiKr7vwUKyuoq1GD4qsCPGDH4tsxX1WeTGiHhd7tQsUyZDuLuoMfaSaAnb66x8lpwKNuW+Wl0jOGhy90+9wzEvcWhLNjTS/jZmuq6knJ7lSQs2ZMbxYr5Ojxg8iRXxbkcXT92BHPkOMHZ+kW8yh8XYWQOWyOItPJ6pLRwH9IsS2D/exwPNsrzuOexPsHoxro29BK2ma1auKQT1le1qHY4W/y/2ZfhLjOjv+6wrfo9+hQiFZ5TKZn8aWtpxM2JCUo+KQGyaYOjArCm4nO13DmK5KySPbJuPZe7xlLRNniDPDJnannRUbkDGwo7LcTq34NRRMZRM2Jxs2pPh+WEaIHYxNMFQVlYeTCsQFgqUyLWJTAh2bdf3/rulnBgjC9qsKYldgX0LMI/MU/RrPLyxhvtjNtsNC5eUT73beLQsOGM1nuiOuompiI7vBsdWfm4OwvGd9yYITPG0JVfUWqqswAEqyNnK3x4pit72AjEF0d586Bh/ufokj1aNL4aN+K1BmUWzXna8hYNx7qzKJOdVdN/Fo5KMfiokPEGD/0ogfjzYAoszFFpnpWJ0VK85oNQzGsrQRMhKMXz2YS+AgScGuzsccZzMYcNsCqw+0HpgO52kLtlqEQZftRzSTfsXQ7KKO2V1hj/p+g/zH9kg/LZUngZd5qmtiJRgE8Svq50BASkOEgmkzcgIlUYdggem1a1bn85zCnEA8JJWDH6SrIwTMEIXrmB7iKKz2sgZoN/O88VLOO1G8v2cjxOgYLO6gKHzxF3pxcgqqwZi9F33Et1StB/HKeqPy3GQFtLPz1QQrR632e/N0DZYTAUW43dFm//isEZ6kYx/17wMAo752K5833fe1KBqyNya/cyXD9EsSmkiAWuzCtjjVbnSZx2kVyNoHeAGKTGxJO443uN2TIFhfmcyQk7Ef17TErp8YjF1JQCiqufJjO/GdNi+T4ao/biOJqp7rPFQeYKnIdvzgn+V6nDTirV8aVdUdXoEPkgbj9uT0ei5hILw22d/D5mIUhx9XWmfxJ0a+LNh1aCuVrfnM2bccWohzlKEvUi6OKxMTuA7Wintcl6eCU31NYi/e3kW14gTBzlnHyaeJUVJQHX8Jkxi1lNRy0oZZiQ9Yo2V5OsJRZmzH379LODjKFnW1BUp6KUm/Oa1Uqypnzrlk3h0VeogFit7IzcFxu9FReUNucpQD9YAW4AOiG6iPxtJTVnLCzSh9vosx1WiMu8S0ZcLAn4BdY3Fcnblx02pd0PEBVSTpQHa5QpHjhP59dbfoN+GfqGasDNE3wJ5DS0GIOrEHNwFsZY+W2NULXgn0Vqaraod7dQlFQgtt0T5KHUEJEsp1W/JRey4tRKRR3qaE+8u51ywnFytXF2KGZp3",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.8-flash",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 3783,
+      "input_tokens": 3179,
+      "output_tokens": 385,
+      "thinking_tokens": 362
+    }
+  }
+}

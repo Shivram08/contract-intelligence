@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "latency_ms": 843.4866000316106,
+    "max_tokens": 8000,
+    "message_count": 1,
+    "messages_sha": "7eb61b186cb47a99",
+    "model": "gemini-3.5-flash-lite",
+    "per_message_sha": [
+      "ad039b5940edf747"
+    ],
+    "system_sha": "3bfed045d06116f2",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_15871657831733864313",
+        "input": {},
+        "name": "get_schema",
+        "thought_signature": "EokBCoYBAWkUfRNDGeKi9mMsK3geYYXHnRj8cYskUYnH0kOki8G6ph2MERzyYCTWcxGATQ0iyQdNW1+mZPlsgYLz2dKasA5Wz+mV74iJ59WwtHCmLIdS0yVUPYqbQvERSW1eVJCBtKJ7JbZ8LcU9wlwJfXI0iEPDDxXKScNK0mjd2szUjPZdMZAnL78=",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.5-flash-lite",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "input_tokens": 2313,
+      "output_tokens": 10,
+      "thinking_tokens": 0
+    }
+  }
+}

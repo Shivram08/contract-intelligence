@@ -1,0 +1,179 @@
+{
+  "meta": {
+    "latency_ms": 2191.537399950903,
+    "max_tokens": 8000,
+    "message_count": 15,
+    "messages_sha": "660664743b79b0df",
+    "model": "gemini-3.5-flash-lite",
+    "per_message_sha": [
+      "6240da720eb36220",
+      "b02a44024208945f",
+      "0a3c344b25515ac1",
+      "a8dd31d8361f475f",
+      "0cfea15c91f6a007",
+      "fa98626422af367c",
+      "fde9d3767ca948dc",
+      "b19927d13ea2f63b",
+      "a928b0bf31b76b0e",
+      "f394c2b0ff1ba99b",
+      "2c89aac15db25867",
+      "d03ab4ef8c873c18",
+      "c9a40f6f40575636",
+      "72954312140dc141",
+      "186a0b1ee4058228"
+    ],
+    "system_sha": "3bfed045d06116f2",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_15377988033813715681",
+        "input": {
+          "clauses": [
+            {
+              "clause_type": "governing_law",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 24278,
+                  "char_start": 24122,
+                  "quote": "This Agreement shall be governed by the laws of the State of New York, without giving effect to its principles of conflicts of laws, other than Section 5-1401 of the New York General Obligations Law."
+                }
+              ],
+              "present": true,
+              "raw_text": "This Agreement shall be governed by the laws of the State of New York, without giving effect to its principles of conflicts of laws, other than Section 5-1401 of the New York General Obligations Law.",
+              "value": "US-NY"
+            },
+            {
+              "clause_type": "parties",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 234,
+                  "char_start": 27,
+                  "quote": "AGREEMENT made as of  , 2013, between Freedom Mortgage Corporation, a New Jersey corporation (\"Freedom Mortgage\"), and Cherry Hill Mortgage Investment Corp., a Maryland corporation (\"Cherry Hill\")."
+                }
+              ],
+              "present": true,
+              "raw_text": "Freedom Mortgage Corporation, a New Jersey corporation (\"Freedom Mortgage\"), and Cherry Hill Mortgage Investment Corp., a Maryland corporation (\"Cherry Hill\")",
+              "value": "Freedom Mortgage Corporation (Freedom Mortgage); Cherry Hill Mortgage Investment Corp. (Cherry Hill)"
+            },
+            {
+              "clause_type": "effective_date",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 47,
+                  "char_start": 27,
+                  "quote": "AGREEMENT made as of  , 2013"
+                }
+              ],
+              "present": true,
+              "raw_text": "2013",
+              "value": "2013"
+            },
+            {
+              "clause_type": "expiration_date",
+              "confidence": 0.85,
+              "evidence": [
+                {
+                  "char_end": 19361,
+                  "char_start": 19114,
+                  "quote": "Unless earlier terminated as provided below, this Agreement shall remain in effect until the later to occur of the date that is (x) three (3) years from the date hereof and (y) the date on which an affiliate of Freedom Mortgage is not acting as the external manager of Cherry Hill."
+                }
+              ],
+              "present": true,
+              "raw_text": "Unless earlier terminated as provided below, this Agreement shall remain in effect until the later to occur of the date that is (x) three (3) years from the date hereof and (y) the date on which an affiliate of Freedom Mortgage is not acting as the external manager of Cherry Hill.",
+              "value": "UNSPECIFIED"
+            },
+            {
+              "clause_type": "renewal_term",
+              "confidence": 0.4,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "notice_period_to_terminate_renewal",
+              "confidence": 0.4,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "change_of_control",
+              "confidence": 0.4,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "anti_assignment",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 21501,
+                  "char_start": 21235,
+                  "quote": "This Agreement shall be binding upon and shall inure to the benefit of the Parties and their respective successors and permitted assigns; provided, however, that neither this Agreement nor any of the rights, interests or obligations hereunder shall be assigned by any Party without the prior written consent of the other Party."
+                }
+              ],
+              "present": true,
+              "raw_text": "This Agreement shall be binding upon and shall inure to the benefit of the Parties and their respective successors and permitted assigns; provided, however, that neither this Agreement nor any of the rights, interests or obligations hereunder shall be assigned by any Party without the prior written consent of the other Party.",
+              "value": null
+            },
+            {
+              "clause_type": "cap_on_liability",
+              "confidence": 0.4,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "uncapped_liability",
+              "confidence": 0.4,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "non_compete",
+              "confidence": 0.4,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "exclusivity",
+              "confidence": 0.4,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            }
+          ]
+        },
+        "name": "submit_extraction",
+        "thought_signature": "EokBCoYBAWkUfROO5rliFfnlMNSXCJBG0/URqI9QssKJKA5lF8OZ+9z/yB4by1uXnekZSzKj9rbto92LLcrSH35HbdLeV84c+TB5ThkFzZ5nsn542CEPUBysatdTghc1ari8oWrhOgg6D5Y4fGBzk86iNeypMqItqISjNjCqK8BKnrreBj/7a/iKtao=",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.5-flash-lite",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 16289,
+      "input_tokens": 4802,
+      "output_tokens": 982,
+      "thinking_tokens": 0
+    }
+  }
+}

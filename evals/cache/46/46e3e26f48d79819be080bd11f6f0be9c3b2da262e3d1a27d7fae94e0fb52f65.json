@@ -1,0 +1,193 @@
+{
+  "meta": {
+    "latency_ms": 3068.9781000255607,
+    "max_tokens": 8000,
+    "message_count": 17,
+    "messages_sha": "67b2903f57ddf841",
+    "model": "gemini-3.5-flash-lite",
+    "per_message_sha": [
+      "2337a24ea5e9be11",
+      "93e64d2df95c02c7",
+      "fae3555e564177b6",
+      "17becaec7c305cb1",
+      "a7b5883783a91649",
+      "9053f37f7e501da1",
+      "6e27a3372c97da48",
+      "486c1d6353fffd96",
+      "92403a6f5ed59345",
+      "941c79d2dea8df48",
+      "47c5424161d2e488",
+      "36d984ce92f404d1",
+      "61118a07eb96899d",
+      "53361396d58cf6e1",
+      "f51b3ae4afca0e8c",
+      "374eda927d508bf7",
+      "09d541750ff7fa48"
+    ],
+    "system_sha": "3bfed045d06116f2",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_16718120993075840860",
+        "input": {
+          "clauses": [
+            {
+              "clause_type": "governing_law",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 81766,
+                  "char_start": 81622,
+                  "quote": "THIS AGREEMENT SHALL BE GOVERNED BY AND INTERPRETED IN ACCORDANCE WITH THE LAWS OF THE STATE OF NEW YORK WITHOUT REGARD TO CONFLICTS OF LAW PRINCIPLES"
+                }
+              ],
+              "present": true,
+              "raw_text": "THIS AGREEMENT SHALL BE GOVERNED BY AND INTERPRETED IN ACCORDANCE WITH THE LAWS OF THE STATE OF NEW YORK WITHOUT REGARD TO CONFLICTS OF LAW PRINCIPLES (OTHER THAN SECTION 5-1401 OF THE NEW YORK GENERAL OBLIGATIONS LAW).",
+              "value": "US-NY"
+            },
+            {
+              "clause_type": "parties",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 3882,
+                  "char_start": 3733,
+                  "quote": "BLOOM ENERGY CORPORATION, a Delaware corporation (\"BE\" or, in its capacity as operator hereunder, \"Operator\"), and DIAMOND STATE GENERATION PARTNERS, LLC, a Delaware limited liability company (\"Owner\")"
+                }
+              ],
+              "present": true,
+              "raw_text": "BLOOM ENERGY CORPORATION, a Delaware corporation (\"BE\" or, in its capacity as operator hereunder, \"Operator\"), and DIAMOND STATE GENERATION PARTNERS, LLC, a Delaware limited liability company (\"Owner\")",
+              "value": "Bloom Energy Corporation (Operator); Diamond State Generation Partners, LLC (Owner)"
+            },
+            {
+              "clause_type": "effective_date",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 3728,
+                  "char_start": 3709,
+                  "quote": "April 13, 2012"
+                }
+              ],
+              "present": true,
+              "raw_text": "April 13, 2012",
+              "value": "2012-04-13"
+            },
+            {
+              "clause_type": "expiration_date",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 53365,
+                  "char_start": 53215,
+                  "quote": "terminate on the date that is the last day of the Warranty Period for the last Bloom System to achieve Commencement of Operation"
+                }
+              ],
+              "present": true,
+              "raw_text": "terminate on the date that is the last day of the Warranty Period for the last Bloom System to achieve Commencement of Operation",
+              "value": "UNSPECIFIED"
+            },
+            {
+              "clause_type": "renewal_term",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "notice_period_to_terminate_renewal",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "change_of_control",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "anti_assignment",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 80295,
+                  "char_start": 80016,
+                  "quote": "neither this Agreement nor any of the rights, interests or obligations hereunder shall be assigned by any Party, whether by operation of law or otherwise, without the prior written consent of the other Party; provided that either Party may collaterally assign its rights under this Agreement to any party providing debt or equity financing to such Party without the consent of the other Party."
+                }
+              ],
+              "present": true,
+              "raw_text": "neither this Agreement nor any of the rights, interests or obligations hereunder shall be assigned by any Party, whether by operation of law or otherwise, without the prior written consent of the other Party; provided that either Party may collaterally assign its rights under this Agreement to any party providing debt or equity financing to such Party without the consent of the other Party.",
+              "value": null
+            },
+            {
+              "clause_type": "cap_on_liability",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 64911,
+                  "char_start": 64771,
+                  "quote": "in no event shall a Party be liable to the other Party for an aggregate amount in excess of the Maximum Liability"
+                }
+              ],
+              "present": true,
+              "raw_text": "Notwithstanding anything to the contrary in this Agreement, in no event shall a Party be liable to the other Party for an aggregate amount in excess of the Maximum Liability",
+              "value": null
+            },
+            {
+              "clause_type": "uncapped_liability",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 65288,
+                  "char_start": 64929,
+                  "quote": "provided that such limitation of liability shall not apply to any liability that is the result of (i) gross negligence, fraud or willful misconduct of a Party, (ii) a Third Party Claim, (iii) the failure to pay the Service Fees (which amount shall not be included in calculating Owner's Maximum Liability), (iv) a claim of Owner against BE or Operator in the event of any breach, default or misrepresentation of any representation and warranty or covenant set forth in Section 8.2(e) or (v) a claim of Owner against BE or Operator under Section 2.8."
+                }
+              ],
+              "present": true,
+              "raw_text": "provided that such limitation of liability shall not apply to any liability that is the result of (i) gross negligence, fraud or willful misconduct of a Party, (ii) a Third Party Claim, (iii) the failure to pay the Service Fees (which amount shall not be included in calculating Owner's Maximum Liability), (iv) a claim of Owner against BE or Operator in the event of any breach, default or misrepresentation of any representation and warranty or covenant set forth in Section 8.2(e) or (v) a claim of Owner against BE or Operator under Section 2.8.",
+              "value": null
+            },
+            {
+              "clause_type": "non_compete",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "exclusivity",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            }
+          ]
+        },
+        "name": "submit_extraction",
+        "thought_signature": "EokBCoYBAWkUfROunGoEBgkCGzJYbMnp2XR+Q/Jku3tpu17iYjD+YIQJe0YLuGvbDmypAV6zJJyxXMuW0dyaRyQQHIkKjJrJyu5/xo/4EUBwGQpTJYHZPiHJUpcOVAN4HX8i/oxGoHW85M+85zr6QVCWGZG/a5B3HkSW/uvpWO1nV03/Wohd3Me3uCo=",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.5-flash-lite",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 20367,
+      "input_tokens": 3674,
+      "output_tokens": 1330,
+      "thinking_tokens": 0
+    }
+  }
+}

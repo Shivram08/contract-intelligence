@@ -1,0 +1,42 @@
+{
+  "meta": {
+    "latency_ms": 570.8369999774732,
+    "max_tokens": 8000,
+    "message_count": 5,
+    "messages_sha": "ca0272dbb019a3c2",
+    "model": "gemini-3.5-flash-lite",
+    "per_message_sha": [
+      "2337a24ea5e9be11",
+      "93e64d2df95c02c7",
+      "fae3555e564177b6",
+      "17becaec7c305cb1",
+      "a7b5883783a91649"
+    ],
+    "system_sha": "3bfed045d06116f2",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_3004740758053661249",
+        "input": {
+          "query": "MAINTENANCE AGREEMENT this made by and between"
+        },
+        "name": "search_contract",
+        "thought_signature": "EokBCoYBAWkUfROOdpn0SKCliIp1AyODUeGchK6u7GpURRA8EB4f0FZsvgs6S+R9kezAoCJk/iGutKNoT9+r/KJCa0NCXgSMNcLmMNIL18Dk6aaselsQQs1HLuA6aMRRaKTxqkQnDtowuGReyVEqsDjJ+aj7BOq1uljjTnpaF9/lBpCKi2KE5U5CqRk=",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.5-flash-lite",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "input_tokens": 5537,
+      "output_tokens": 25,
+      "thinking_tokens": 0
+    }
+  }
+}

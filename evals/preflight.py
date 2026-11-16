@@ -302,7 +302,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--split", default="golden")
     parser.add_argument("--max-turns", type=int, default=20)
-    parser.add_argument("--model", default="claude-sonnet-5")
+    parser.add_argument("--model", default=get_settings().llm_model)
     parser.add_argument("--prompt", default="extract_v1")
     parser.add_argument("--limit", type=int, default=0)
     parser.add_argument("--sample", type=int, default=0)

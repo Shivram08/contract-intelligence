@@ -293,3 +293,65 @@ class TestReport:
             for ct in list(ClauseType)[:3]
         ]
         assert check_extractions(doc(), clauses).violation_rate == 0.0
+
+
+# ---------------------------------------------------------------------------
+# EDGAR filing artifacts
+# ---------------------------------------------------------------------------
+
+FILED = (
+    "2.4 Restrictive Covenants. Aimmune shall not, either directly or indirectly, "
+    "14\n\nSource: AIMMUNE THERAPEUTICS, INC., 8-K, 2/5/2020\n\n"
+    "Develop, Manufacture, or Commercialize the Product outside the Licensed Field.\n"
+)
+CLEAN_QUOTE = (
+    "Aimmune shall not, either directly or indirectly, Develop, Manufacture, or "
+    "Commercialize the Product outside the Licensed Field."
+)
+
+
+class TestFilingArtifacts:
+    """Page footers that SEC filings embed mid-sentence.
+
+    Found on the dev split: five of six "fabricated" Gemini quotes were real
+    sentences with a ``Source: COMPANY, FORM, DATE`` footer silently dropped.
+    The footer is not contract language, so skipping it is the same kind of
+    tolerance as collapsing whitespace -- but it is reported under its own
+    status, so the strict rate stays computable.
+    """
+
+    def test_quote_with_footer_removed_is_grounded_as_artifact_elided(self) -> None:
+        check = check_evidence(doc(FILED), Evidence(quote=CLEAN_QUOTE, char_start=0, char_end=10))
+        assert check.status is GroundingStatus.ARTIFACT_ELIDED
+        assert check.is_grounded
+        assert not check.status.is_strictly_grounded
+
+    def test_repaired_span_covers_the_raw_text_including_the_footer(self) -> None:
+        check = check_evidence(doc(FILED), Evidence(quote=CLEAN_QUOTE, char_start=0, char_end=10))
+        assert check.repaired is not None
+        raw = FILED[check.repaired.char_start : check.repaired.char_end]
+        assert raw.startswith("Aimmune shall not")
+        assert raw.endswith("Licensed Field.")
+        assert "Source: AIMMUNE" in raw
+
+    def test_footer_tolerance_does_not_admit_changed_words(self) -> None:
+        tampered = CLEAN_QUOTE.replace("outside", "inside")
+        check = check_evidence(doc(FILED), Evidence(quote=tampered, char_start=0, char_end=10))
+        assert check.status is GroundingStatus.NOT_FOUND
+
+    def test_only_a_footer_shaped_gap_is_skipped(self) -> None:
+        """Arbitrary dropped words are still a fabrication."""
+        text = "Aimmune shall not, either directly or indirectly, sell or Develop the Product."
+        quote = "Aimmune shall not, either directly or indirectly, Develop the Product."
+        check = check_evidence(doc(text), Evidence(quote=quote, char_start=0, char_end=10))
+        assert check.status is GroundingStatus.NOT_FOUND
+
+    def test_a_verbatim_quote_including_the_footer_is_simply_relocated(self) -> None:
+        quote = FILED[FILED.index("Aimmune") : FILED.index("Field.") + 6]
+        check = check_evidence(doc(FILED), Evidence(quote=quote, char_start=0, char_end=10))
+        assert check.status is GroundingStatus.RELOCATED
+
+    def test_strict_grounding_excludes_only_artifact_elision(self) -> None:
+        strict = {s for s in GroundingStatus if s.is_strictly_grounded}
+        lenient = {s for s in GroundingStatus if s.is_grounded}
+        assert lenient - strict == {GroundingStatus.ARTIFACT_ELIDED}

@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "latency_ms": 2231.1517000198364,
+    "max_tokens": 8000,
+    "message_count": 7,
+    "messages_sha": "7c03701b66bf9800",
+    "model": "gemini-3.5-flash-lite",
+    "per_message_sha": [
+      "6240da720eb36220",
+      "37283238443e9f23",
+      "1b0abaa9d124df57",
+      "8c1c2bf4aad2cbb4",
+      "f946e7ea129d1661",
+      "3c302955ac17fe3f",
+      "1b3b4feb16f49e24"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_1018716752628350745",
+        "input": {
+          "clauses": [
+            {
+              "clause_type": "governing_law",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 24120,
+                  "char_start": 23956,
+                  "quote": "This Agreement shall be governed by the laws of the State of New York, without giving effect to its principles of conflicts of laws, other than Section 5-1401 of the New York General Obligations Law."
+                }
+              ],
+              "present": true,
+              "raw_text": "This Agreement shall be governed by the laws of the State of New York, without giving effect to its principles of conflicts of laws, other than Section 5-1401 of the New York General Obligations Law.",
+              "value": "US-NY"
+            },
+            {
+              "clause_type": "parties",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 236,
+                  "char_start": 47,
+                  "quote": "Freedom Mortgage Corporation, a New Jersey corporation (\"Freedom Mortgage\"), and Cherry Hill Mortgage Investment Corp., a Maryland corporation (\"Cherry Hill\")."
+                }
+              ],
+              "present": true,
+              "raw_text": "Freedom Mortgage Corporation, a New Jersey corporation (\"Freedom Mortgage\"), and Cherry Hill Mortgage Investment Corp., a Maryland corporation (\"Cherry Hill\").",
+              "value": "Freedom Mortgage Corporation (Freedom Mortgage); Cherry Hill Mortgage Investment Corp. (Cherry Hill)"
+            },
+            {
+              "clause_type": "effective_date",
+              "confidence": 0.8,
+              "evidence": [
+                {
+                  "char_end": 45,
+                  "char_start": 18,
+                  "quote": "AGREEMENT made as of  , 2013"
+                }
+              ],
+              "present": true,
+              "raw_text": "AGREEMENT made as of  , 2013",
+              "value": "2013"
+            },
+            {
+              "clause_type": "expiration_date",
+              "confidence": 0.9,
+              "evidence": [
+                {
+                  "char_end": 19318,
+                  "char_start": 19149,
+                  "quote": "Unless earlier terminated as provided below, this Agreement shall remain in effect until the later to occur of the date that is (x) three (3) years from the date hereof and (y) the date on which an affiliate of Freedom Mortgage is not acting as the external manager of Cherry Hill."
+                }
+              ],
+              "present": true,
+              "raw_text": "Unless earlier terminated as provided below, this Agreement shall remain in effect until the later to occur of the date that is (x) three (3) years from the date hereof and (y) the date on which an affiliate of Freedom Mortgage is not acting as the external manager of Cherry Hill.",
+              "value": "UNSPECIFIED"
+            },
+            {
+              "clause_type": "renewal_term",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "notice_period_to_terminate_renewal",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "change_of_control",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "anti_assignment",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 21199,
+                  "char_start": 20986,
+                  "quote": "provided, however, that neither this Agreement nor any of the rights, interests or obligations hereunder shall be assigned by any Party without the prior written consent of the other Party."
+                }
+              ],
+              "present": true,
+              "raw_text": "provided, however, that neither this Agreement nor any of the rights, interests or obligations hereunder shall be assigned by any Party without the prior written consent of the other Party.",
+              "value": null
+            },
+            {
+              "clause_type": "cap_on_liability",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "uncapped_liability",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "non_compete",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "exclusivity",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            }
+          ]
+        },
+        "name": "submit_extraction",
+        "thought_signature": "EokBCoYBAWkUfRNLFFoIKNk0LF3cX6Dh72T4Clnq3/hs6lUjxJUUyskCpe5us9j9/DQc6hupl9Z3Uw3J6t/hrXU0KZMrBsBS3fMGGmKB9Atdy0bmtV9CwETBn1KmJktvPjUzBiJdXafA+EloOZFGdO00/pv1HxXEAtI6cY4g5Ncahh4hlfRZiTCZZ1Y=",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.5-flash-lite",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 18334,
+      "input_tokens": 4690,
+      "output_tokens": 926,
+      "thinking_tokens": 0
+    }
+  }
+}

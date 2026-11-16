@@ -1,0 +1,205 @@
+{
+  "meta": {
+    "latency_ms": 3582.720000005793,
+    "max_tokens": 8000,
+    "message_count": 17,
+    "messages_sha": "a242411437702ad3",
+    "model": "gemini-3.5-flash-lite",
+    "per_message_sha": [
+      "c88511f286431b54",
+      "e1e319b99e629895",
+      "94521b82ffe6870f",
+      "7c5f854a9a2a5ec2",
+      "83c90a5192bcdaa8",
+      "8fd2674bb741ba27",
+      "931299ae78bf4db8",
+      "2db77bec51dcf23a",
+      "59cd12ccccbdc956",
+      "c4f26b1fb88b1e75",
+      "ee63a9e14fc3d3cd",
+      "58843dbaff2161db",
+      "52534cb0e56a6d9c",
+      "5004162afa8f1472",
+      "5095dc581e3d870e",
+      "9c32d5e800a0cff3",
+      "e2866f8f7007f117"
+    ],
+    "system_sha": "3bfed045d06116f2",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_16938592966914630790",
+        "input": {
+          "clauses": [
+            {
+              "clause_type": "governing_law",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 21303,
+                  "char_start": 21042,
+                  "quote": "This Agreement will be governed and construed in accordance with the laws of the State of California without giving effect to conflict of laws principles."
+                }
+              ],
+              "present": true,
+              "raw_text": "This Agreement will be governed and construed in accordance with the laws of the State of California without giving effect to conflict of laws principles.",
+              "value": "US-CA"
+            },
+            {
+              "clause_type": "parties",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 374,
+                  "char_start": 105,
+                  "quote": "I-ESCROW, INC., with its principal place of business at 1730 S. Amphlett Blvd., Suite 233, San Mateo, California 94402 (\"i-Escrow\"), and 2THEMART.COM, INC. having its principal place of business at 18301 Von Karman Avenue, 7th Floor, Irvine, California 92612 (\"2TheMart\")"
+                }
+              ],
+              "present": true,
+              "raw_text": "I-ESCROW, INC., with its principal place of business at 1730 S. Amphlett Blvd., Suite 233, San Mateo, California 94402 (\"i-Escrow\"), and 2THEMART.COM, INC. having its principal place of business at 18301 Von Karman Avenue, 7th Floor, Irvine, California 92612 (\"2TheMart\")",
+              "value": "i-Escrow, Inc. (i-Escrow); 2TheMart.com, Inc. (2TheMart)"
+            },
+            {
+              "clause_type": "effective_date",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 100,
+                  "char_start": 64,
+                  "quote": "June 21, 1999"
+                }
+              ],
+              "present": true,
+              "raw_text": "June 21, 1999",
+              "value": "1999-06-21"
+            },
+            {
+              "clause_type": "expiration_date",
+              "confidence": 0.9,
+              "evidence": [
+                {
+                  "char_end": 15197,
+                  "char_start": 15065,
+                  "quote": "The term of this Agreement shall continue for one (1) year following the Launch Date, unless earlier terminated as provided herein."
+                }
+              ],
+              "present": true,
+              "raw_text": "The term of this Agreement shall continue for one (1) year following the Launch Date, unless earlier terminated as provided herein.",
+              "value": "UNSPECIFIED"
+            },
+            {
+              "clause_type": "renewal_term",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 15525,
+                  "char_start": 15200,
+                  "quote": "This Agreement may be renewed for any number of successive one (1) year terms by mutual written agreement of the parties prior to the conclusion of the term of this Agreement.  A party wishing to renew this Agreement shall give the other party notice thereof no less than thirty (30) days before the expiration of the term then in effect.  In the event that either party does not give such notice, the term of this Agreement shall be automatically renewed for another one (1) year."
+                }
+              ],
+              "present": true,
+              "raw_text": "This Agreement may be renewed for any number of successive one (1) year terms by mutual written agreement of the parties prior to the conclusion of the term of this Agreement.  A party wishing to renew this Agreement shall give the other party notice thereof no less than thirty (30) days before the expiration of the term then in effect.  In the event that either party does not give such notice, the term of this Agreement shall be automatically renewed for another one (1) year.",
+              "value": "365 recurring"
+            },
+            {
+              "clause_type": "notice_period_to_terminate_renewal",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 15418,
+                  "char_start": 15334,
+                  "quote": "no less than thirty (30) days before the expiration of the term then in effect."
+                }
+              ],
+              "present": true,
+              "raw_text": "thirty (30) days",
+              "value": "30"
+            },
+            {
+              "clause_type": "change_of_control",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 16629,
+                  "char_start": 15785,
+                  "quote": "If a majority of the equity securities of either 2TheMart or i-Escrow, Inc. (except that i-Escrow may sell all or a majority of its equity securities or voting interests to i-Escrow.com, and i-Escrow.com may sell all or a majority of its equity securities or voting interests to i-Escrow's existing shareholders, without triggering the foregoing) are acquired by another company during the term of this Agreement either company may terminate this Agreement, without liability, by giving a thirty (30) days written notice to the other party."
+                }
+              ],
+              "present": true,
+              "raw_text": "If a majority of the equity securities of either 2TheMart or i-Escrow, Inc. (except that i-Escrow may sell all or a majority of its equity securities or voting interests to i-Escrow.com, and i-Escrow.com may sell all or a majority of its equity securities or voting interests to i-Escrow's existing shareholders, without triggering the foregoing) are acquired by another company during the term of this Agreement either company may terminate this Agreement, without liability, by giving a thirty (30) days written notice to the other party.",
+              "value": null
+            },
+            {
+              "clause_type": "anti_assignment",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 12297,
+                  "char_start": 11863,
+                  "quote": "All rights (under any applicable intellectual property right) granted herein are not sublicenseable, transferable or assignable."
+                }
+              ],
+              "present": true,
+              "raw_text": "All rights (under any applicable intellectual property right) granted herein are not sublicenseable, transferable or assignable.",
+              "value": null
+            },
+            {
+              "clause_type": "cap_on_liability",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 20489,
+                  "char_start": 20095,
+                  "quote": "10. LIMITATION ON LIABILITY.  EXCEPT IN THE EVENT OF A BREACH OF SECTION 11, NEITHER PARTY SHALL BE LIABLE FOR SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES OR LOST PROFITS (HOWEVER ARISING, INCLUDING NEGLIGENCE) ARISING OUT OF OR IN CONNECTION WITH THIS AGREEMENT, EVEN IF THE PARTIES ARE AWARE OF THE POSSIBILITY OF SUCH DAMAGES."
+                }
+              ],
+              "present": true,
+              "raw_text": "10. LIMITATION ON LIABILITY.  EXCEPT IN THE EVENT OF A BREACH OF SECTION 11, NEITHER PARTY SHALL BE LIABLE FOR SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES OR LOST PROFITS (HOWEVER ARISING, INCLUDING NEGLIGENCE) ARISING OUT OF OR IN CONNECTION WITH THIS AGREEMENT, EVEN IF THE PARTIES ARE AWARE OF THE POSSIBILITY OF SUCH DAMAGES.",
+              "value": null
+            },
+            {
+              "clause_type": "uncapped_liability",
+              "confidence": 0.9,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "non_compete",
+              "confidence": 0.95,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "exclusivity",
+              "confidence": 0.95,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            }
+          ]
+        },
+        "name": "submit_extraction",
+        "thought_signature": "EokBCoYBAWkUfRNup304g6t6m7jTamyyzJO9ibrDDc62TyIzXL4wRtJQD3iGmkuVEl3b693WbXFIyk+uH0CMl7AEn3ZkhyNNCO6cfzR1JOw2588y4v3A5MTjkkXFLIw78ZCkaW9s1P4tq/9UfQsxDlXQVGzNCe4kXl/Gq5aSwnmwBKJyaQo9bQ5nk1Q=",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.5-flash-lite",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 14232,
+      "input_tokens": 4066,
+      "output_tokens": 1676,
+      "thinking_tokens": 0
+    }
+  }
+}

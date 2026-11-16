@@ -19,7 +19,16 @@ Three things it deliberately does:
    characters, and throwing away a correct quote over arithmetic would inflate
    the hallucination rate with something that is not hallucination.
 
-3. **Reports why, not just whether.** ``GroundingStatus`` distinguishes
+3. **Skips SEC page footers, and says so.** CUAD's text files keep the
+   ``14 Source: COMPANY, 8-K, 2/5/2020`` footers that EDGAR filings carry --
+   3,262 of them across 176 of 510 contracts, often mid-sentence. A model that
+   quotes the sentence without the footer has quoted the contract correctly;
+   rejecting it measured page layout, and was five of the first six Gemini
+   "fabrications". The match may skip a footer between two words, never
+   anything else, and is reported as ``ARTIFACT_ELIDED`` so the strict rate
+   (which counts it as a violation) stays computable.
+
+4. **Reports why, not just whether.** ``GroundingStatus`` distinguishes
    fabrication from offset drift from a truncated document, because the remedy
    differs and an aggregate "grounding violation rate" that mixes them is not
    actionable.
@@ -47,6 +56,7 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass
 from enum import StrEnum
+from typing import Final
 
 from docintel.schemas import ClauseExtraction, Document, Evidence
 from docintel.text import normalize_whitespace
@@ -75,6 +85,11 @@ class GroundingStatus(StrEnum):
     """The quote is in the document, but not where the model said. Offsets are
     repaired; the extraction stands."""
 
+    ARTIFACT_ELIDED = "artifact_elided"
+    """The quote is in the document once SEC page footers between its words are
+    skipped. The repaired span covers the raw text, footer included. Grounded,
+    but not strictly: reported separately so both rates can be stated."""
+
     NOT_FOUND = "not_found"
     """The quote does not appear in the document at all. A fabrication."""
 
@@ -87,6 +102,11 @@ class GroundingStatus(StrEnum):
     @property
     def is_grounded(self) -> bool:
         """Whether the evidence is usable. RELOCATED counts: the quote is real."""
+        return self.is_strictly_grounded or self is GroundingStatus.ARTIFACT_ELIDED
+
+    @property
+    def is_strictly_grounded(self) -> bool:
+        """Grounded with nothing tolerated beyond whitespace."""
         return self in {
             GroundingStatus.EXACT,
             GroundingStatus.NORMALIZED,
@@ -138,9 +158,9 @@ def check_evidence(document: Document, evidence: Evidence) -> EvidenceCheck:
             evidence=evidence,
         )
 
-    start, end, occurrences = located
+    start, end, occurrences, elided = located
     return EvidenceCheck(
-        status=GroundingStatus.RELOCATED,
+        status=GroundingStatus.ARTIFACT_ELIDED if elided else GroundingStatus.RELOCATED,
         evidence=evidence,
         repaired=Evidence(
             quote=text[start:end],
@@ -152,10 +172,20 @@ def check_evidence(document: Document, evidence: Evidence) -> EvidenceCheck:
     )
 
 
-def _locate(text: str, quote: str) -> tuple[int, int, int] | None:
+#: One EDGAR page footer, optionally preceded by its page number:
+#: ``14 Source: AIMMUNE THERAPEUTICS, INC., 8-K, 2/5/2020``. Anchored on the
+#: literal ``Source:`` and a trailing m/d/yyyy date, and confined to one line, so
+#: it cannot swallow contract language.
+_FOOTER: Final = r"(?:\d{1,4}\s+)?Source:[^\S\n]+[^\n]{1,160}?\d{1,2}/\d{1,2}/\d{4}"
+
+#: The gap between two quoted words: whitespace, or whitespace around a footer.
+_ARTIFACT_GAP: Final = rf"(?:\s+{_FOOTER})?\s+"
+
+
+def _locate(text: str, quote: str) -> tuple[int, int, int, bool] | None:
     """Find a quote in the document, tolerating whitespace differences.
 
-    Returns ``(char_start, char_end, occurrence_count)`` or None.
+    Returns ``(char_start, char_end, occurrence_count, footer_elided)`` or None.
 
     The exact search runs first because it is cheap and covers the common case.
     The whitespace-tolerant fallback builds a regex from the quote's tokens
@@ -164,18 +194,24 @@ def _locate(text: str, quote: str) -> tuple[int, int, int] | None:
     """
     index = text.find(quote)
     if index >= 0:
-        return index, index + len(quote), text.count(quote)
+        return index, index + len(quote), text.count(quote), False
 
     tokens = quote.split()
     if not tokens:
         return None
 
     # `\s+` between tokens, so "State of\nDelaware" matches "State of Delaware".
-    pattern = re.compile(r"\s+".join(re.escape(token) for token in tokens))
-    matches = list(pattern.finditer(text))
+    escaped = [re.escape(token) for token in tokens]
+    matches = list(re.finditer(r"\s+".join(escaped), text))
+    if matches:
+        return matches[0].start(), matches[0].end(), len(matches), False
+
+    # Last resort, and only a footer may be skipped. Tried after the plain
+    # search so a quote that is verbatim is never reported as elided.
+    matches = list(re.finditer(_ARTIFACT_GAP.join(escaped), text))
     if not matches:
         return None
-    return matches[0].start(), matches[0].end(), len(matches)
+    return matches[0].start(), matches[0].end(), len(matches), True
 
 
 @dataclass(frozen=True, slots=True)

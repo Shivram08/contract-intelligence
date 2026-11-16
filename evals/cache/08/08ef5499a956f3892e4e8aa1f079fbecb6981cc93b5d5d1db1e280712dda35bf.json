@@ -1,0 +1,40 @@
+{
+  "meta": {
+    "latency_ms": 575.6112999515608,
+    "max_tokens": 8000,
+    "message_count": 3,
+    "messages_sha": "5c5db64c68391bff",
+    "model": "gemini-3.5-flash-lite",
+    "per_message_sha": [
+      "6240da720eb36220",
+      "b02a44024208945f",
+      "0a3c344b25515ac1"
+    ],
+    "system_sha": "3bfed045d06116f2",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_6542533700292670664",
+        "input": {
+          "query": "Strategic Alliance Agreement made and entered into"
+        },
+        "name": "search_contract",
+        "thought_signature": "EokBCoYBAWkUfRNUfFggBy1pmDI+JliujCFTQUiliivhoT4En60WlwCtR8MFxia1KSXK+0DzRgj6f6HTmmTC9WqbEhnvDE/KU+HwJmEDc4CVgC0hgdaU7h/+czd9ZgDP0L+Vnxvvk2KaWGqeFPjaTbuYLJHEDe0fwyVSIheLHsFT0nQv72YrBtZv12c=",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.5-flash-lite",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "input_tokens": 3302,
+      "output_tokens": 22,
+      "thinking_tokens": 0
+    }
+  }
+}

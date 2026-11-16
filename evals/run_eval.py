@@ -27,15 +27,17 @@ from __future__ import annotations
 import argparse
 import json
 import random
+import sys
 import time
 from collections.abc import Sequence
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Final
 
-from docintel.agent.loop import DEFAULT_MODEL, AgentBudget
-from docintel.config import get_settings, resolve_anthropic_api_key
+from docintel.agent.loop import AgentBudget
+from docintel.config import get_settings
 from docintel.ingest.loader import iter_documents
+from docintel.llm import make_client
 from docintel.schemas import ClauseExtraction, Document, RetrievalHit, Tier
 from docintel.text import contract_key
 from docintel.validation.grounding import GroundingStatus
@@ -53,6 +55,7 @@ from evals.runners import (
     RegexBaseline,
     SingleCallBaseline,
 )
+from evals.spend import Ledger, SpendCapError
 
 REPO_ROOT: Final = Path(__file__).resolve().parents[1]
 FROZEN_DIR: Final = REPO_ROOT / "evals" / "baselines"
@@ -127,15 +130,12 @@ def _open_retrieval(fake_embeddings: bool) -> _Retrieval:
     )
 
 
-def _build_client(cache_mode: CacheMode) -> tuple[CachingClient, ResponseCache]:
+def _build_client(cache_mode: CacheMode, model: str) -> tuple[CachingClient, ResponseCache]:
     """A caching client. A live client is only constructed if one is needed."""
     cache = ResponseCache(mode=cache_mode) if cache_mode else cache_from_env()
     live: Any = None
     if cache_mode is not CacheMode.READ_ONLY:
-        import anthropic
-
-        api_key = resolve_anthropic_api_key()
-        live = anthropic.Anthropic(api_key=api_key) if api_key else anthropic.Anthropic()
+        live = make_client(model)
     return CachingClient(client=live, cache=cache), cache
 
 
@@ -152,10 +152,16 @@ def make_baseline(
         return RegexBaseline()
     if name == "2_zeroshot_truncated":
         return SingleCallBaseline(
-            name=name, client=client, truncate_tokens=TRUNCATE_TOKENS, model=model
+            name=name,
+            client=client,
+            truncate_tokens=TRUNCATE_TOKENS,
+            model=model,
+            prompt_name=prompt_name,
         )
     if name == "5_full_context":
-        return SingleCallBaseline(name=name, client=client, truncate_tokens=None, model=model)
+        return SingleCallBaseline(
+            name=name, client=client, truncate_tokens=None, model=model, prompt_name=prompt_name
+        )
     if retrieval is None:
         raise RuntimeError(f"{name} needs retrieval, which was not opened")
     rerank = name == "4_rag_rerank_agent"
@@ -238,6 +244,8 @@ def run_baseline(
         if outcome.grounding is not None:
             summary.grounding_checked += outcome.grounding.total
             summary.grounding_violations += len(outcome.grounding.ungrounded)
+            summary.relocated += outcome.grounding.count(GroundingStatus.RELOCATED)
+            summary.artifact_elided += outcome.grounding.count(GroundingStatus.ARTIFACT_ELIDED)
     return summary, outcomes
 
 
@@ -276,6 +284,7 @@ def score_paired(
             summary.grounding_checked += outcome.grounding.total
             summary.grounding_violations += len(outcome.grounding.ungrounded)
             summary.relocated += outcome.grounding.count(GroundingStatus.RELOCATED)
+            summary.artifact_elided += outcome.grounding.count(GroundingStatus.ARTIFACT_ELIDED)
         summary.retries_used += outcome.retries
     return summary
 
@@ -286,7 +295,7 @@ def print_table(summaries: Sequence[MetricSummary]) -> None:
         return
     header = (
         f"{'baseline':<24}{'done':>10}{'F1':>7}{'triv':>7}{'P':>7}{'R':>7}"
-        f"{'spanF1':>8}{'ground':>8}{'schema':>8}{'rules':>7}"
+        f"{'spanF1':>8}{'ground':>8}{'strict':>8}{'schema':>8}{'rules':>7}"
         f"{'$/doc':>9}{'$p95':>9}{'p50 ms':>9}{'p95 ms':>9}"
     )
     print("\n" + header)
@@ -300,6 +309,7 @@ def print_table(summaries: Sequence[MetricSummary]) -> None:
             f"{overall.precision:>7.3f}{overall.recall:>7.3f}"
             f"{summary.spans.mean:>8.3f}"
             f"{summary.grounding_violation_rate:>8.2%}"
+            f"{summary.strict_grounding_violation_rate:>8.2%}"
             f"{summary.schema_validity_rate:>8.0%}"
             f"{summary.rule_violation_rate:>7.0%}"
             f"{summary.mean_cost_usd:>9.4f}{summary.p95_cost_usd:>9.4f}"
@@ -428,7 +438,7 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         help="Skip the first N of the sample, for running a later batch over the "
         "remainder without re-paying for the first.",
     )
-    parser.add_argument("--model", default=DEFAULT_MODEL)
+    parser.add_argument("--model", default=get_settings().llm_model)
     parser.add_argument("--prompt", default="extract_v1")
     # 20 matches the frozen configuration in docs/ARCHITECTURE.md. The
     # preflight cross-checks this, and caught the two disagreeing.
@@ -517,8 +527,23 @@ def main(argv: Sequence[str] | None = None) -> int:
         else (CacheMode(args.cache_mode) if args.cache_mode else None)
     )
     needs_client = any(name not in FREE_BASELINES for name in args.baselines)
+
+    # The project-wide cap, checked against the worst case before any client
+    # exists. Each baseline stops at --budget, so that times the number of paid
+    # baselines bounds what this run can cost.
+    ledger: Ledger | None = None
+    live = needs_client and (mode or CacheMode.READ_WRITE) is not CacheMode.READ_ONLY
+    if live:
+        ledger = Ledger.load()
+        paid = sum(1 for name in args.baselines if name not in FREE_BASELINES)
+        try:
+            ledger.check(args.budget * paid)
+        except SpendCapError as exc:
+            print(f"refusing to run: {exc}")
+            return 2
+        print(f"spend ledger: ${ledger.spent_usd:.4f} spent, ${ledger.remaining_usd:.2f} left")
     client, cache = (
-        _build_client(mode or CacheMode.READ_WRITE)
+        _build_client(mode or CacheMode.READ_WRITE, args.model)
         if needs_client
         else (CachingClient(client=None, cache=ResponseCache(mode=CacheMode.OFF)), None)
     )
@@ -548,6 +573,18 @@ def main(argv: Sequence[str] | None = None) -> int:
     finally:
         if retrieval is not None:
             retrieval.close()
+        # Recorded even when a baseline crashes mid-run: the money is spent
+        # either way, and a ledger that only counts clean runs understates it.
+        if ledger is not None and cache is not None:
+            ledger.record(
+                cache.stats.live_cost_usd,
+                model=args.model,
+                baselines=list(args.baselines),
+                documents=len(documents),
+                live_calls=cache.stats.live_calls,
+                argv=list(argv) if argv is not None else sys.argv[1:],
+            )
+            print(f"spend ledger: +${cache.stats.live_cost_usd:.4f}, total ${ledger.spent_usd:.4f}")
 
     # A case is scoreable only where every arm completed. Anything else compares
     # arms on different documents.

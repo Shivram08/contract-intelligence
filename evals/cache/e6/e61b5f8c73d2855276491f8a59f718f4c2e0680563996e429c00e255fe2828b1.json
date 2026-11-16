@@ -1,0 +1,52 @@
+{
+  "meta": {
+    "latency_ms": 775.1065000193194,
+    "max_tokens": 8000,
+    "message_count": 15,
+    "messages_sha": "6ee88796eca4095f",
+    "model": "gemini-3.5-flash-lite",
+    "per_message_sha": [
+      "2337a24ea5e9be11",
+      "93e64d2df95c02c7",
+      "fae3555e564177b6",
+      "17becaec7c305cb1",
+      "a7b5883783a91649",
+      "9053f37f7e501da1",
+      "6e27a3372c97da48",
+      "486c1d6353fffd96",
+      "92403a6f5ed59345",
+      "941c79d2dea8df48",
+      "47c5424161d2e488",
+      "36d984ce92f404d1",
+      "61118a07eb96899d",
+      "53361396d58cf6e1",
+      "f51b3ae4afca0e8c"
+    ],
+    "system_sha": "3bfed045d06116f2",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_7761505183507581160",
+        "input": {
+          "query": "non-compete compete competition restrict business geography"
+        },
+        "name": "search_contract",
+        "thought_signature": "EokBCoYBAWkUfRNNMSiM3P7loncGPmCesI0AC+pEzirA1n9yBLkLIZ72LdanCyI5L+FkKsMzvsCyyQZptNwpc51UZUH12W/kDNYNSTD2+KQDNvwFzqQNOoQ7oDLyiHjZJRLKL6iafw9syZ+YQlBUuoEj1TTx3jhjCykL18p5e8cZ5THzdKEUO4UrVYc=",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.5-flash-lite",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 16288,
+      "input_tokens": 4676,
+      "output_tokens": 24,
+      "thinking_tokens": 0
+    }
+  }
+}

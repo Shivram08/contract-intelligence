@@ -1,0 +1,54 @@
+{
+  "meta": {
+    "latency_ms": 3925.4889000440016,
+    "max_tokens": 8000,
+    "message_count": 17,
+    "messages_sha": "7a7326195d7efb62",
+    "model": "gemini-3.8-flash",
+    "per_message_sha": [
+      "061bd41b793c00c6",
+      "19c1a5398a589c57",
+      "add74312f2bf36ae",
+      "4ec237c26305a904",
+      "98086f04469f32ba",
+      "cc4dec3515360b43",
+      "6eaae9355c2c2e53",
+      "87af75fd2dec27cd",
+      "60f70b2664a7ead0",
+      "3d3173af2128f26a",
+      "b653b7c397fcd3af",
+      "a13d68b748b81f6b",
+      "95e9eb73f4bccab2",
+      "2fa17b0cc0ef84e0",
+      "06a537c1b6bb6d58",
+      "04fc36abc0312122",
+      "6e3d0377e61c7d5c"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_11410811072430705888",
+        "input": {
+          "query": "Licensor Licensee"
+        },
+        "name": "search_contract",
+        "thought_signature": "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",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.8-flash",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 15585,
+      "input_tokens": 3439,
+      "output_tokens": 412,
+      "thinking_tokens": 393
+    }
+  }
+}

@@ -67,7 +67,7 @@ def _build_extractor() -> tuple[Any, Any]:
         import psycopg
         from pgvector.psycopg import register_vector
 
-        from docintel.config import get_settings, resolve_anthropic_api_key
+        from docintel.config import get_settings
         from docintel.extract import Extractor
         from docintel.retrieval.embed import BgeEmbedder
         from docintel.retrieval.hybrid import HybridRetriever
@@ -108,15 +108,25 @@ def _build_extractor() -> tuple[Any, Any]:
                 connection,
             )
 
-        api_key = resolve_anthropic_api_key()
-        if not api_key and not os.environ.get("ANTHROPIC_AUTH_TOKEN"):
-            return None, connection
+        from docintel.config import resolve_anthropic_api_key
+        from docintel.llm import is_gemini, make_client
 
-        import anthropic
+        # No credentials means no extractor, reported by /healthz, rather than
+        # a service that fails on the first request.
+        if (
+            not is_gemini(settings.llm_model)
+            and not resolve_anthropic_api_key()
+            and not os.environ.get("ANTHROPIC_AUTH_TOKEN")
+        ):
+            return None, connection
+        try:
+            client = make_client(settings.llm_model)
+        except RuntimeError:
+            return None, connection
 
         return (
             ExtractionService(
-                extractor=Extractor(client=anthropic.Anthropic(api_key=api_key)),
+                extractor=Extractor(client=client, model=settings.llm_model),
                 search=search,
             ),
             connection,

@@ -1,0 +1,40 @@
+{
+  "meta": {
+    "latency_ms": 533.9133000234142,
+    "max_tokens": 8000,
+    "message_count": 3,
+    "messages_sha": "ff71ec77dbe27a3b",
+    "model": "gemini-3.1-flash-lite",
+    "per_message_sha": [
+      "ad039b5940edf747",
+      "88ab52036bb07d44",
+      "d27287cd05a1c639"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_17846282692940671423",
+        "input": {
+          "query": "governing law"
+        },
+        "name": "search_contract",
+        "thought_signature": "EpwBCpkBAWkUfRNp5IP2UoVQDcW3xGumWbU3giDezOKkz53u2QKDtWZhYyCoqb/w6CW2ZdTGaYx9Nzr/QW+obz97/8TdI0o7MoAwR8umXJd2BUtQ7YoqZApEUXwS0Rq7OgnMNQle2mj3NbWy/LiE9sWLWTspCbBIT7WHzldwu0+/ryk1mwGxWWmGF0Brrv2BoXVw1XDlWwoSsZQUOBE/",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.1-flash-lite",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "input_tokens": 3126,
+      "output_tokens": 18,
+      "thinking_tokens": 0
+    }
+  }
+}

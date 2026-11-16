@@ -253,6 +253,16 @@ character (U+00C9) in the other. String equality fails; NFC folding fixes it. Wi
 
 ---
 
+### Addendum (M3, Gemini) — SEC page footers inside sentences
+
+Not one of the five planned checks, and it should have been. The TXT files keep
+EDGAR's page footers: **3,262 `Source: COMPANY, FORM, DATE` lines across 176 of
+510 contracts (35%)**, frequently in the middle of a sentence. They do not
+affect gold offsets, which index the raw text, but they do affect grounding: a
+model that quotes the sentence without the footer has quoted the contract
+correctly and was being scored as a fabrication. See `ARCHITECTURE.md`,
+Amendment 2, for how the verifier now handles it.
+
 ## Bonus — the proposed cross-field rules, scored against gold labels
 
 `CLAUDE.md` section 5 sketches deterministic rules from first principles.

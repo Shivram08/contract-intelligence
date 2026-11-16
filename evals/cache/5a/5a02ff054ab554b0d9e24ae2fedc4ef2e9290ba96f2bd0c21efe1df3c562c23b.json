@@ -1,0 +1,72 @@
+{
+  "meta": {
+    "latency_ms": 1390.0961999897845,
+    "max_tokens": 8000,
+    "message_count": 3,
+    "messages_sha": "bd34a0b9ae301c0c",
+    "model": "gemini-3.5-flash-lite",
+    "per_message_sha": [
+      "365271d115b3a9e5",
+      "204b4a4939308a12",
+      "a2aff70332df7a4b"
+    ],
+    "system_sha": "3bfed045d06116f2",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_1477825534068914877",
+        "input": {
+          "query": "governed by the laws of"
+        },
+        "name": "search_contract",
+        "thought_signature": "EokBCoYBAWkUfRPamxOb9vLvNZcPkCpVtfSA095PlBBgRLgt2pg9N4evSngB7oTQXj/YQROtFxzokxJFJPNG41qymf6VI0oCQi0XlYzqQoyJ9N7AryzUcIsCRg9kkhMhjBMdBksWyy/uZDbNLI87QdOWrcwwUbGYyv/v61upWWdNi36seYLPJwJM8Wc=",
+        "type": "tool_use"
+      },
+      {
+        "id": "call_1477825534068913080",
+        "input": {
+          "query": "This First Amendment is made and entered into"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "id": "call_1477825534068915379",
+        "input": {
+          "query": "term of this Agreement shall expire"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "id": "call_1477825534068913582",
+        "input": {
+          "query": "renew"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "id": "call_1477825534068915881",
+        "input": {
+          "query": "change of control"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.5-flash-lite",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "input_tokens": 3300,
+      "output_tokens": 99,
+      "thinking_tokens": 0
+    }
+  }
+}

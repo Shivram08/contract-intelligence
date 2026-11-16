@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "latency_ms": 1947.2621000022627,
+    "max_tokens": 8000,
+    "message_count": 21,
+    "messages_sha": "85bc5b75be252499",
+    "model": "gemini-3.8-flash",
+    "per_message_sha": [
+      "061bd41b793c00c6",
+      "19c1a5398a589c57",
+      "add74312f2bf36ae",
+      "4ec237c26305a904",
+      "98086f04469f32ba",
+      "cc4dec3515360b43",
+      "6eaae9355c2c2e53",
+      "87af75fd2dec27cd",
+      "60f70b2664a7ead0",
+      "3d3173af2128f26a",
+      "b653b7c397fcd3af",
+      "a13d68b748b81f6b",
+      "95e9eb73f4bccab2",
+      "2fa17b0cc0ef84e0",
+      "06a537c1b6bb6d58",
+      "04fc36abc0312122",
+      "6e3d0377e61c7d5c",
+      "acd371d49943b180",
+      "8fafde92dab9a9a6",
+      "b695007bcc6594f4",
+      "1db3652f2cf30e8e"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_1397527387939226404",
+        "input": {
+          "query": "merger consolidation sale of all or substantially all"
+        },
+        "name": "search_contract",
+        "thought_signature": "Ev4BCvsBAWkUfROqFyjpUdIgQjPXttw+HNB/s+mjFViB2bhNrZjkrgNsRe1inoTqF8pwQGxrUWv/ednxsf0xddnMr2UBgBcz1JjPaCRgx8yo23iUfY43ci7uK3j+eHzco7BWGcjESOKGWkE8/6ox/kQaFfJNf6TX9ApA88A3Dz5bZmpTj18YVDNt7GxUy79NiqdB1XBwBonI/pd48vZksEPtMhLMbIr1XPYWBvFSdknzfyZlRGyDNcc0eQShRppMYCC10QnoX5fcI57XvR2hylK4zpsSpP4ItWTgqmD5r0v/ykhVzqoMBIq5LshSSfAI4emRgQy1H5Ffu/zTDOpQU7E=",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.8-flash",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 21959,
+      "input_tokens": 3348,
+      "output_tokens": 52,
+      "thinking_tokens": 28
+    }
+  }
+}

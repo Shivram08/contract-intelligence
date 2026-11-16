@@ -450,6 +450,9 @@ class SingleCallBaseline:
     #: retry-used counter shows how often it actually mattered.
     max_retries: int = 1
     jurisdictions: JurisdictionIndex = field(default_factory=load_jurisdictions)
+    #: Same system prompt as the agent arms, so an arm-to-arm difference is not
+    #: a prompt difference.
+    prompt_name: str = "extract_v1"
 
     def _prompt(self, document: Document) -> str:
         text = document.text
@@ -473,7 +476,7 @@ class SingleCallBaseline:
     def run(self, document: Document) -> BaselineOutcome:
         # No wall-clock total: model time comes from capture, so a replayed run
         # reports what the live call actually took.
-        system = load_prompt("extract_v1")
+        system = load_prompt(self.prompt_name)
         tools = [_submit_only_tool()]
         version = prompt_version(system, str([t["name"] for t in tools]))
 

@@ -1,0 +1,203 @@
+{
+  "meta": {
+    "latency_ms": 3489.2021999694407,
+    "max_tokens": 8000,
+    "message_count": 9,
+    "messages_sha": "f932936ce48fe1d1",
+    "model": "gemini-3.1-flash-lite",
+    "per_message_sha": [
+      "ad039b5940edf747",
+      "88ab52036bb07d44",
+      "d27287cd05a1c639",
+      "15faddcbc213364a",
+      "1a393f45a277d25d",
+      "9607473c7f9db967",
+      "7ab9439d8ed2e18d",
+      "becc177771b67fe7",
+      "600365f85d146942"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_7314724983494794380",
+        "input": {
+          "clauses": [
+            {
+              "clause_type": "governing_law",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 14737,
+                  "char_start": 14555,
+                  "quote": "This Agreement shall be construed in accordance with the laws of the State of New York applicable to contracts formed and to be performed entirely within the State of New York"
+                }
+              ],
+              "present": true,
+              "raw_text": "This Agreement shall be construed in accordance with the laws of the State of New York applicable to contracts formed and to be performed entirely within the State of New York, without regard to conflict of laws principles, and in accordance with the applicable provisions of the Investment Fund Act.",
+              "value": "US-NY"
+            },
+            {
+              "clause_type": "parties",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 325,
+                  "char_start": 149,
+                  "quote": "ARCA U.S. TREASURY FUND, a Delaware statutory trust (the \"Fund\"), and ARCA CAPITAL MANAGEMENT, LLC, a Delaware limited liability company (the \"Blockchain Administrator\")"
+                }
+              ],
+              "present": true,
+              "raw_text": "ARCA U.S. TREASURY FUND, a Delaware statutory trust (the \"Fund\"), and ARCA CAPITAL MANAGEMENT, LLC, a Delaware limited liability company (the \"Blockchain Administrator\")",
+              "value": "ARCA U.S. TREASURY FUND (Fund); ARCA CAPITAL MANAGEMENT, LLC (Blockchain Administrator)"
+            },
+            {
+              "clause_type": "effective_date",
+              "confidence": 0.9,
+              "evidence": [
+                {
+                  "char_end": 12608,
+                  "char_start": 12574,
+                  "quote": "effective as of the first date above"
+                }
+              ],
+              "present": true,
+              "raw_text": "This Agreement shall become effective as of the first date above written.",
+              "value": "2020"
+            },
+            {
+              "clause_type": "expiration_date",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 12965,
+                  "char_start": 12911,
+                  "quote": "continue in effect for two years from the date hereof"
+                }
+              ],
+              "present": true,
+              "raw_text": "(b) This Agreement shall continue in effect for two years from the date hereof, and thereafter shall continue automatically for successive annual periods",
+              "value": "2022"
+            },
+            {
+              "clause_type": "renewal_term",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 13013,
+                  "char_start": 12967,
+                  "quote": "thereafter shall continue automatically for successive annual periods"
+                }
+              ],
+              "present": true,
+              "raw_text": "thereafter shall continue automatically for successive annual periods",
+              "value": "365 recurring"
+            },
+            {
+              "clause_type": "notice_period_to_terminate_renewal",
+              "confidence": 0.9,
+              "evidence": [
+                {
+                  "char_end": 12702,
+                  "char_start": 12648,
+                  "quote": "terminated at any time, ... upon 60 days' written notice"
+                }
+              ],
+              "present": true,
+              "raw_text": "This Agreement may be terminated at any time, without the payment of any penalty, upon 60 days' written notice",
+              "value": "60"
+            },
+            {
+              "clause_type": "change_of_control",
+              "confidence": 0.9,
+              "evidence": [
+                {
+                  "char_end": 13217,
+                  "char_start": 13123,
+                  "quote": "This Agreement will automatically terminate in the event of its \"assignment\" (as such term is defined for purposes of Section 15(a) (4) of the Investment Fund Act)."
+                }
+              ],
+              "present": true,
+              "raw_text": "This Agreement will automatically terminate in the event of its \"assignment\" (as such term is defined for purposes of Section 15(a) (4) of the Investment Fund Act).",
+              "value": null
+            },
+            {
+              "clause_type": "anti_assignment",
+              "confidence": 0.9,
+              "evidence": [
+                {
+                  "char_end": 13217,
+                  "char_start": 13123,
+                  "quote": "This Agreement will automatically terminate in the event of its \"assignment\" (as such term is defined for purposes of Section 15(a) (4) of the Investment Fund Act)."
+                }
+              ],
+              "present": true,
+              "raw_text": "This Agreement will automatically terminate in the event of its \"assignment\" (as such term is defined for purposes of Section 15(a) (4) of the Investment Fund Act).",
+              "value": null
+            },
+            {
+              "clause_type": "cap_on_liability",
+              "confidence": 0.4,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "uncapped_liability",
+              "confidence": 0.4,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "non_compete",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 12480,
+                  "char_start": 12399,
+                  "quote": "The services of the Blockchain Administrator to the Fund are not to be deemed to be exclusive, and the Blockchain Administrator and its affiliates are free to render services to others."
+                }
+              ],
+              "present": true,
+              "raw_text": "The services of the Blockchain Administrator to the Fund are not to be deemed to be exclusive, and the Blockchain Administrator and its affiliates are free to render services to others.",
+              "value": null
+            },
+            {
+              "clause_type": "exclusivity",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 12480,
+                  "char_start": 12399,
+                  "quote": "The services of the Blockchain Administrator to the Fund are not to be deemed to be exclusive, and the Blockchain Administrator and its affiliates are free to render services to others."
+                }
+              ],
+              "present": true,
+              "raw_text": "The services of the Blockchain Administrator to the Fund are not to be deemed to be exclusive, and the Blockchain Administrator and its affiliates are free to render services to others.",
+              "value": null
+            }
+          ]
+        },
+        "name": "submit_extraction",
+        "thought_signature": "EpwBCpkBAWkUfRMmWvXocT6cxxQzt+1v07V+0ZSimCLsmlUTuSBze6CDOuCY2oaxdTRNizE9J6DYiLn+9l+L3vsRVDSk1oUjnaIyMg4NV9mzxafAgzlPqLgRoVHbvQT37OSYxkyLaDRBsikXCtNiVBWdbrDpPxXpHLm5RbOnvs6K8UVgWHyRXnSD4QvPVnrMz/6qaC7SgwqRYUWF8Cld",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.1-flash-lite",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 6087,
+      "input_tokens": 3712,
+      "output_tokens": 1287,
+      "thinking_tokens": 0
+    }
+  }
+}

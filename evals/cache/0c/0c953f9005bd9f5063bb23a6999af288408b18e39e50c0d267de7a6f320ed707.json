@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "latency_ms": 749.4875999982469,
+    "max_tokens": 8000,
+    "message_count": 13,
+    "messages_sha": "39d258c53625e1a8",
+    "model": "gemini-3.5-flash-lite",
+    "per_message_sha": [
+      "365271d115b3a9e5",
+      "1e012b4701b74294",
+      "b503abc9b74fc8bb",
+      "a60ee69b051b5a56",
+      "478f3de9a9f063ff",
+      "76be50ae7efac982",
+      "20916ca299cc993b",
+      "9ac89b72673ae052",
+      "639c22e9a6b3f2ca",
+      "1d1f0d66b44b9c18",
+      "2aa525a64c95699e",
+      "729bb673712a117e",
+      "16432ccac5147c3e"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_4072223846657492461",
+        "input": {
+          "query": "Cargill, Incorporated"
+        },
+        "name": "search_contract",
+        "thought_signature": "EokBCoYBAWkUfRPM0v1/UL//b07LwP/W8D5CLMKg99CFLvUadOtWrpu0OYS8zMJ/EcBKp1BXXcyKEl394f4Jh60sGsTIO4EKnD0UgOO3UK+9nSeMqWGjksNQXmfU83k95mYpZuqDSIo21y0FAdm9imjDsGLOdFRv6+IyL4SCffbu4CQhqXCssspD2Q4=",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.5-flash-lite",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 12200,
+      "input_tokens": 3491,
+      "output_tokens": 20,
+      "thinking_tokens": 0
+    }
+  }
+}

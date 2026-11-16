@@ -1,0 +1,40 @@
+{
+  "meta": {
+    "latency_ms": 645.7124999724329,
+    "max_tokens": 8000,
+    "message_count": 3,
+    "messages_sha": "3a7811fdd1b39b09",
+    "model": "gemini-3.5-flash-lite",
+    "per_message_sha": [
+      "365271d115b3a9e5",
+      "1e012b4701b74294",
+      "b503abc9b74fc8bb"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_6760290645004254560",
+        "input": {
+          "query": "First Amendment to Development Agreement"
+        },
+        "name": "search_contract",
+        "thought_signature": "EokBCoYBAWkUfRP+UvPkZQubsnZRFJ706WECUo09Ds4D/kUfyRRzYVqUcbWI/ijyxxfWMEgb7B4PstYlYqvZPSAE4INSSyRQ0JO9ypCKC1o2G855DeUA5EbiABi4QDhi9G4OxQjnrOk9rbZ/025cvU2MPRGc5yqMQ7aOC3Rr9FPsbYgj6CL3C7euZ1U=",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.5-flash-lite",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "input_tokens": 3110,
+      "output_tokens": 20,
+      "thinking_tokens": 0
+    }
+  }
+}

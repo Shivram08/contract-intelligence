@@ -1,0 +1,45 @@
+{
+  "meta": {
+    "latency_ms": 743.8056999817491,
+    "max_tokens": 8000,
+    "message_count": 7,
+    "messages_sha": "6551bbce8f18ebd7",
+    "model": "gemini-3.5-flash-lite",
+    "per_message_sha": [
+      "ad039b5940edf747",
+      "bddae93892f3d236",
+      "ac265fa165507d84",
+      "2f21ac1e9fb0c2d2",
+      "f09894c8604b67cc",
+      "96b21313d3ebcd80",
+      "5c7a453dc8730fd6"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_12884074125040645672",
+        "input": {
+          "query": "ARCA U.S. TREASURY FUND",
+          "top_k": 5
+        },
+        "name": "search_contract",
+        "thought_signature": "EokBCoYBAWkUfRNzmTjYPSYyYxeN4Wgz1HixqsgN5fB407121mcGT1EGCT3p7YR15+eoBfCpFnk/CLmugHNLOBNgHqOWQ3fKdsad3Dq6JdiD9gRIYdjJ9/PGExxNNW1dq8jFhlrz3rQQfQ16K9zfpGvOwIOIr+55bq+HoUvH/7UkrVcZuEB0cXe4wzc=",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.5-flash-lite",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 6088,
+      "input_tokens": 3095,
+      "output_tokens": 31,
+      "thinking_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "meta": {
+    "latency_ms": 3404.66820000438,
+    "max_tokens": 8000,
+    "message_count": 13,
+    "messages_sha": "4bbb5f533688ad09",
+    "model": "gemini-3.5-flash-lite",
+    "per_message_sha": [
+      "c88511f286431b54",
+      "8a4c9f6d28d6d9d8",
+      "2aa90ac705e77ab5",
+      "573d6faf09e5449c",
+      "51681721a176313d",
+      "071623db30507615",
+      "0e321df80aa4e0af",
+      "4447e3bb6bc6069c",
+      "4ba1078d0ef56b92",
+      "9d0858e714c0a2e7",
+      "c9e960f983b8509d",
+      "451eb14809a74e33",
+      "c8f98d0cb6a3dc42"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_11915493488903444053",
+        "input": {
+          "clauses": [
+            {
+              "clause_type": "governing_law",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 22194,
+                  "char_start": 21921,
+                  "quote": "This Agreement will be governed and construed in accordance with the laws of the State of California without giving effect to conflict of laws principles."
+                }
+              ],
+              "present": true,
+              "raw_text": "This Agreement will be governed and construed in accordance with the laws of the State of California without giving effect to conflict of laws principles.",
+              "value": "US-CA"
+            },
+            {
+              "clause_type": "parties",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 375,
+                  "char_start": 105,
+                  "quote": "I-ESCROW, INC., with its principal place of business at 1730 S. Amphlett Blvd., Suite 233, San Mateo, California 94402 (\"i-Escrow\"), and 2THEMART.COM, INC. having its principal place of business at 18301 Von Karman Avenue, 7th Floor, Irvine, California 92612 (\"2TheMart\")"
+                }
+              ],
+              "present": true,
+              "raw_text": "I-ESCROW, INC., with its principal place of business at 1730 S. Amphlett Blvd., Suite 233, San Mateo, California 94402 (\"i-Escrow\"), and 2THEMART.COM, INC. having its principal place of business at 18301 Von Karman Avenue, 7th Floor, Irvine, California 92612 (\"2TheMart\")",
+              "value": "I-ESCROW, INC. (i-Escrow); 2THEMART.COM, INC. (2TheMart)"
+            },
+            {
+              "clause_type": "effective_date",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 87,
+                  "char_start": 45,
+                  "quote": "June 21, 1999 (the \"Effective Date\")"
+                }
+              ],
+              "present": true,
+              "raw_text": "June 21, 1999",
+              "value": "1999-06-21"
+            },
+            {
+              "clause_type": "expiration_date",
+              "confidence": 0.75,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "renewal_term",
+              "confidence": 0.9,
+              "evidence": [
+                {
+                  "char_end": 15712,
+                  "char_start": 15410,
+                  "quote": "This Agreement may be renewed for any number of successive one (1) year terms by mutual written agreement of the parties prior to the conclusion of the term of this Agreement.  A party wishing to renew this Agreement shall give the other party notice thereof no less than thirty (30) days before the expiration of the term then in effect.  In the event that either party does not give such notice, the term of this Agreement shall be automatically renewed for another one (1) year."
+                }
+              ],
+              "present": true,
+              "raw_text": "This Agreement may be renewed for any number of successive one (1) year terms by mutual written agreement of the parties prior to the conclusion of the term of this Agreement.  A party wishing to renew this Agreement shall give the other party notice thereof no less than thirty (30) days before the expiration of the term then in effect.  In the event that either party does not give such notice, the term of this Agreement shall be automatically renewed for another one (1) year.",
+              "value": "365 recurring"
+            },
+            {
+              "clause_type": "notice_period_to_terminate_renewal",
+              "confidence": 0.9,
+              "evidence": [
+                {
+                  "char_end": 15712,
+                  "char_start": 15494,
+                  "quote": "A party wishing to renew this Agreement shall give the other party notice thereof no less than thirty (30) days before the expiration of the term then in effect."
+                }
+              ],
+              "present": true,
+              "raw_text": "A party wishing to renew this Agreement shall give the other party notice thereof no less than thirty (30) days before the expiration of the term then in effect.",
+              "value": "30"
+            },
+            {
+              "clause_type": "change_of_control",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 16771,
+                  "char_start": 16181,
+                  "quote": "8.3 TERMINATION FOR CHANGE IN COMPANY STRUCTURE.  If a majority of the equity securities of either 2TheMart or i-Escrow, Inc. (except that i-Escrow may sell all or a majority of its equity securities or voting interests to i-Escrow.com, and i-Escrow.com may sell all or a majority of its equity securities or voting interests to i-Escrow's existing shareholders, without triggering the foregoing) are acquired by another company during the term of this Agreement either company may terminate this Agreement, without liability, by giving a thirty (30) days written notice to the other party."
+                }
+              ],
+              "present": true,
+              "raw_text": "8.3 TERMINATION FOR CHANGE IN COMPANY STRUCTURE.  If a majority of the equity securities of either 2TheMart or i-Escrow, Inc. (except that i-Escrow may sell all or a majority of its equity securities or voting interests to i-Escrow.com, and i-Escrow.com may sell all or a majority of its equity securities or voting interests to i-Escrow's existing shareholders, without triggering the foregoing) are acquired by another company during the term of this Agreement either company may terminate this Agreement, without liability, by giving a thirty (30) days written notice to the other party.",
+              "value": null
+            },
+            {
+              "clause_type": "anti_assignment",
+              "confidence": 0.8,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "cap_on_liability",
+              "confidence": 0.8,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "uncapped_liability",
+              "confidence": 0.8,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "non_compete",
+              "confidence": 0.8,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "exclusivity",
+              "confidence": 0.9,
+              "evidence": [
+                {
+                  "char_end": 5513,
+                  "char_start": 5236,
+                  "quote": "i-Escrow shall not run banner advertisements on the Co-Branded Site for any of 2TheMart's competitors. 2TheMart shall provide in writing, a list of companies they would like to exclude, including every time they wish to change this list."
+                }
+              ],
+              "present": true,
+              "raw_text": "i-Escrow shall not run banner advertisements on the Co-Branded Site for any of 2TheMart's competitors. 2TheMart shall provide in writing, a list of companies they would like to exclude, including every time they wish to change this list.",
+              "value": null
+            }
+          ]
+        },
+        "name": "submit_extraction",
+        "thought_signature": "EokBCoYBAWkUfRODUBGblVIhj66KxHOBht1jlcayIbfQSOPDVOvfVfmNz9GhFs8cOQrYEvRZnsAhYyFaFWW9f4dYHTR0PI4ugKGNraCs33Z4yGHiOvsjmY+fJc1xS4/zJQH17vKmxjX8NVYkQi/HimwPezvdOQPCrCwQd1pzvaacQWQb6FrTyC2Rjfc=",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.5-flash-lite",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 10153,
+      "input_tokens": 3185,
+      "output_tokens": 1553,
+      "thinking_tokens": 0
+    }
+  }
+}

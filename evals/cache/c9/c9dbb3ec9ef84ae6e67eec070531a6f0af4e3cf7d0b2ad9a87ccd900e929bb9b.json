@@ -1,0 +1,44 @@
+{
+  "meta": {
+    "latency_ms": 653.9906999678351,
+    "max_tokens": 8000,
+    "message_count": 7,
+    "messages_sha": "42b61a7d93033ffc",
+    "model": "gemini-3.5-flash-lite",
+    "per_message_sha": [
+      "73c631735c4001a2",
+      "10c133f47c5f26c0",
+      "b9e53dd9e52951e0",
+      "102985ebceeab018",
+      "dcc039c93972e02c",
+      "b576f75b2e2053c3",
+      "87aed7a7018b4e17"
+    ],
+    "system_sha": "3bfed045d06116f2",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_16609766282996666461",
+        "input": {
+          "query": "assignment assign merge transfer control affiliate"
+        },
+        "name": "search_contract",
+        "thought_signature": "EokBCoYBAWkUfRP9IFtnS6brG+MWdZ/UQTpCgVydbz1Tmspkr9jE+2Ly8CB5KAIg7qT/OTOcgVArD1Y0Qzyd6jdzgPKUnoYi1Eg2DRwA2ayFOz/mJQ9akN1d2x9T6/fUeYmreYaVjf6oCgzL71U1TjbmADogawt+5TrKckkfKzOtxWir6OzV1O4Mm3c=",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.5-flash-lite",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 6091,
+      "input_tokens": 3596,
+      "output_tokens": 21,
+      "thinking_tokens": 0
+    }
+  }
+}

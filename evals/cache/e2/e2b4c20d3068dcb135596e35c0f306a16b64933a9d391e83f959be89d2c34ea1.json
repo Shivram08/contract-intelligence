@@ -1,0 +1,74 @@
+{
+  "meta": {
+    "latency_ms": 846.1494000512175,
+    "max_tokens": 8000,
+    "message_count": 5,
+    "messages_sha": "08438174a36f28ec",
+    "model": "gemini-3.5-flash-lite",
+    "per_message_sha": [
+      "061bd41b793c00c6",
+      "09f2d89ff3e09fc0",
+      "67e791cd26e6567f",
+      "bce43f8db4087379",
+      "e2685f1f0d02a780"
+    ],
+    "system_sha": "3bfed045d06116f2",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_4619850726457526542",
+        "input": {
+          "query": "exclusive dealing"
+        },
+        "name": "search_contract",
+        "thought_signature": "EokBCoYBAWkUfRM9fQztf03cdD8HqgazgiT8Knj5eOd2BF3BSf746BaCtwgh1XuKiX+6X5ZGZzuZtCK6ZvCnLWt89svsfuECeQ5wK3Oj3rzR+j4bYqOMKD7QbG8Q6sF8GvkEWCA7eNjL0RAnqCg2LnUZ6cJvdY7JYwYtpP8qigF6IpR1M0IRahMmTpc=",
+        "type": "tool_use"
+      },
+      {
+        "id": "call_4619850726457526561",
+        "input": {
+          "query": "compete"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "id": "call_4619850726457526580",
+        "input": {
+          "query": "cap on liability"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "id": "call_4619850726457526599",
+        "input": {
+          "query": "liability shall be limited"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "id": "call_4619850726457526618",
+        "input": {
+          "query": "liability shall not be capped"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.5-flash-lite",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "input_tokens": 15541,
+      "output_tokens": 91,
+      "thinking_tokens": 0
+    }
+  }
+}

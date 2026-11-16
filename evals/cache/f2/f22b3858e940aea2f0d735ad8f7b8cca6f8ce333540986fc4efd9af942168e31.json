@@ -1,0 +1,205 @@
+{
+  "meta": {
+    "latency_ms": 2818.48210003227,
+    "max_tokens": 8000,
+    "message_count": 17,
+    "messages_sha": "bd51eb0c9ea4b760",
+    "model": "gemini-3.5-flash-lite",
+    "per_message_sha": [
+      "ad039b5940edf747",
+      "bddae93892f3d236",
+      "ac265fa165507d84",
+      "2f21ac1e9fb0c2d2",
+      "f09894c8604b67cc",
+      "96b21313d3ebcd80",
+      "5c7a453dc8730fd6",
+      "a0e318ea6d585545",
+      "ff9f79b20bbe929b",
+      "ea49788f707d0c06",
+      "277dd049169ed6c6",
+      "28c7543cfc8e2a02",
+      "0c53790ba45472d3",
+      "d8dca49a144ed08b",
+      "97e78b3f43e283b3",
+      "290eeeed58fb7c70",
+      "6fee8d42480bb3a9"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_10077562433119648939",
+        "input": {
+          "clauses": [
+            {
+              "clause_type": "governing_law",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 15000,
+                  "char_start": 14686,
+                  "quote": "This Agreement shall be construed in accordance with the laws of the State of New York applicable to contracts formed and to be performed entirely within the State of New York, without regard to conflict of laws principles, and in accordance with the applicable provisions of the Investment Fund Act."
+                }
+              ],
+              "present": true,
+              "raw_text": "This Agreement shall be construed in accordance with the laws of the State of New York applicable to contracts formed and to be performed entirely within the State of New York, without regard to conflict of laws principles, and in accordance with the applicable provisions of the Investment Fund Act.",
+              "value": "US-NY"
+            },
+            {
+              "clause_type": "parties",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 302,
+                  "char_start": 105,
+                  "quote": "ARCA U.S. TREASURY FUND, a Delaware statutory trust (the \"Fund\"), and ARCA CAPITAL MANAGEMENT, LLC, a Delaware limited liability company (the \"Blockchain Administrator\")"
+                }
+              ],
+              "present": true,
+              "raw_text": "ARCA U.S. TREASURY FUND, a Delaware statutory trust (the \"Fund\"), and ARCA CAPITAL MANAGEMENT, LLC, a Delaware limited liability company (the \"Blockchain Administrator\")",
+              "value": "Arca U.S. Treasury Fund (Fund); Arca Capital Management, LLC (Blockchain Administrator)"
+            },
+            {
+              "clause_type": "effective_date",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 88,
+                  "char_start": 68,
+                  "quote": "2020"
+                }
+              ],
+              "present": true,
+              "raw_text": "2020",
+              "value": "2020"
+            },
+            {
+              "clause_type": "expiration_date",
+              "confidence": 0.8,
+              "evidence": [
+                {
+                  "char_end": 12869,
+                  "char_start": 12781,
+                  "quote": "This Agreement shall continue in effect for two years from the date hereof"
+                }
+              ],
+              "present": true,
+              "raw_text": "This Agreement shall continue in effect for two years from the date hereof, and thereafter shall continue automatically for successive annual periods, provided that such continuance is specifically approved at least annually by (A) the vote of the Board, or by the vote of a majority of the outstanding voting securities of the Fund and (B) the vote of a majority of the Fund's directors who are not parties to this Agreement or \"interested persons\" (as such term is defined in Section 2(a)(19) of the Investment Fund Act) of any such party, in accordance with the requirements of the Investment Fund Act.",
+              "value": "UNSPECIFIED"
+            },
+            {
+              "clause_type": "renewal_term",
+              "confidence": 0.9,
+              "evidence": [
+                {
+                  "char_end": 12869,
+                  "char_start": 12781,
+                  "quote": "This Agreement shall continue in effect for two years from the date hereof, and thereafter shall continue automatically for successive annual periods"
+                }
+              ],
+              "present": true,
+              "raw_text": "thereafter shall continue automatically for successive annual periods",
+              "value": "365 recurring"
+            },
+            {
+              "clause_type": "notice_period_to_terminate_renewal",
+              "confidence": 0.9,
+              "evidence": [
+                {
+                  "char_end": 12294,
+                  "char_start": 12202,
+                  "quote": "This Agreement may be terminated at any time, without the payment of any penalty, upon 60 days' written notice"
+                }
+              ],
+              "present": true,
+              "raw_text": "60 days' written notice",
+              "value": 60
+            },
+            {
+              "clause_type": "change_of_control",
+              "confidence": 0.9,
+              "evidence": [
+                {
+                  "char_end": 13092,
+                  "char_start": 12999,
+                  "quote": "This Agreement will automatically terminate in the event of its \"assignment\" (as such term is defined for purposes of Section 15(a) (4) of the Investment Fund Act)."
+                }
+              ],
+              "present": true,
+              "raw_text": "This Agreement will automatically terminate in the event of its \"assignment\" (as such term is defined for purposes of Section 15(a) (4) of the Investment Fund Act).",
+              "value": null
+            },
+            {
+              "clause_type": "anti_assignment",
+              "confidence": 0.9,
+              "evidence": [
+                {
+                  "char_end": 13092,
+                  "char_start": 12999,
+                  "quote": "This Agreement will automatically terminate in the event of its \"assignment\" (as such term is defined for purposes of Section 15(a) (4) of the Investment Fund Act)."
+                }
+              ],
+              "present": true,
+              "raw_text": "This Agreement will automatically terminate in the event of its \"assignment\" (as such term is defined for purposes of Section 15(a) (4) of the Investment Fund Act).",
+              "value": null
+            },
+            {
+              "clause_type": "cap_on_liability",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "uncapped_liability",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "non_compete",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "exclusivity",
+              "confidence": 0.9,
+              "evidence": [
+                {
+                  "char_end": 10113,
+                  "char_start": 9938,
+                  "quote": "The services of the Blockchain Administrator to the Fund are not to be deemed to be exclusive, and the Blockchain Administrator and its affiliates are free to render services to others."
+                }
+              ],
+              "present": true,
+              "raw_text": "The services of the Blockchain Administrator to the Fund are not to be deemed to be exclusive, and the Blockchain Administrator and its affiliates are free to render services to others.",
+              "value": null
+            }
+          ]
+        },
+        "name": "submit_extraction",
+        "thought_signature": "EokBCoYBAWkUfRN9cpiX+1Rvp7QNgCIOMLrLDwtQ+sglzF6lMAr6S/IN5tfw5RQoedo2+vzbl4NwFeLPRgvF2zgeWpt0QYfNYzsvBU8b/whgB6OuF9ennb6erzmUJmgdSiZidb9g0dzNhqdkKbmquesA1LM0zLSozxqkS973X7bUOEcm7yzfd3+d6mc=",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.5-flash-lite",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 16268,
+      "input_tokens": 2466,
+      "output_tokens": 1297,
+      "thinking_tokens": 0
+    }
+  }
+}

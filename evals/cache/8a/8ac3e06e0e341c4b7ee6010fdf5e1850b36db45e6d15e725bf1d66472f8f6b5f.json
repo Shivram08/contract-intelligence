@@ -1,0 +1,157 @@
+{
+  "meta": {
+    "latency_ms": 1665.9319000318646,
+    "max_tokens": 8000,
+    "message_count": 11,
+    "messages_sha": "814b0a519d8af2ed",
+    "model": "gemini-3.5-flash-lite",
+    "per_message_sha": [
+      "73c631735c4001a2",
+      "9bd0850ddb28fce9",
+      "0a8a6d553db03c86",
+      "56d3c88af29d5c7e",
+      "ee81a29c260a64e8",
+      "b43fbf31446f5fbc",
+      "6f8ef55b5d47c5c4",
+      "271865941b5d41ec",
+      "76847fc9110e734f",
+      "a35c0eea438b46bf",
+      "361c77daee2343b3"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_1954886054021643789",
+        "input": {
+          "clauses": [
+            {
+              "clause_type": "governing_law",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "parties",
+              "confidence": 0.99,
+              "evidence": [
+                {
+                  "char_end": 219,
+                  "char_start": 164,
+                  "quote": "Cerus Corporation (\"Cerus\") and Porex Corporation (\"Porex\")"
+                }
+              ],
+              "present": true,
+              "raw_text": "Cerus Corporation (\"Cerus\") and Porex Corporation (\"Porex\")",
+              "value": "Cerus Corporation (Cerus); Porex Corporation (Porex)"
+            },
+            {
+              "clause_type": "effective_date",
+              "confidence": 0.99,
+              "evidence": [
+                {
+                  "char_end": 256,
+                  "char_start": 235,
+                  "quote": "22 day of June 2018"
+                }
+              ],
+              "present": true,
+              "raw_text": "22 day of June 2018",
+              "value": "2018-06-22"
+            },
+            {
+              "clause_type": "expiration_date",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "renewal_term",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "notice_period_to_terminate_renewal",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "change_of_control",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "anti_assignment",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "cap_on_liability",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "uncapped_liability",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "non_compete",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "exclusivity",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            }
+          ]
+        },
+        "name": "submit_extraction",
+        "thought_signature": "EokBCoYBAWkUfRPEcIHBIRsxrjklvJ/u8CMWBj05SPy5xUPa+YRFpIeXz7I3KpkhFmXFMBpcHAAe+0h6pYTcayjShQlPzI7PI9Eo4QkysyageEihqYA+mQte78hzZp/btfT/CGE9hRUQcnKwx4W4E4VeJH184IwiAjhOdfExV7AB32GUVYy/vQvViOY=",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.5-flash-lite",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 12210,
+      "input_tokens": 4076,
+      "output_tokens": 556,
+      "thinking_tokens": 0
+    }
+  }
+}

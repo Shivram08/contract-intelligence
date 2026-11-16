@@ -1,0 +1,42 @@
+{
+  "meta": {
+    "latency_ms": 644.8042000411078,
+    "max_tokens": 8000,
+    "message_count": 5,
+    "messages_sha": "8b20d2062da1ed21",
+    "model": "gemini-3.5-flash-lite",
+    "per_message_sha": [
+      "c88511f286431b54",
+      "e1e319b99e629895",
+      "94521b82ffe6870f",
+      "7c5f854a9a2a5ec2",
+      "83c90a5192bcdaa8"
+    ],
+    "system_sha": "3bfed045d06116f2",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_8868459166966227117",
+        "input": {
+          "query": "Co-Branding Agreement"
+        },
+        "name": "search_contract",
+        "thought_signature": "EokBCoYBAWkUfRNPsBExCXh4Rt6FMfyHzNbg0Dkwwa3HQAIN5o8zvWqAHreZIrzgra8sI2kgF2B19ePajtJ2pNI6FDeOhcNdKBlpG8M6JhTKgqY/G+bXP/Il1pjbyPZo6wXohFcL8NkdvyNRNl+NChO7/cAYCgvFiltXpF5NKsHbH/N7atbZHh+TnMw=",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.5-flash-lite",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "input_tokens": 5839,
+      "output_tokens": 20,
+      "thinking_tokens": 0
+    }
+  }
+}

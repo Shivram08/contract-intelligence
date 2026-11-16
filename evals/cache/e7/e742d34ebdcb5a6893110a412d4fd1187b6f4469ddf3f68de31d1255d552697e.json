@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "latency_ms": 498.8491000258364,
+    "max_tokens": 8000,
+    "message_count": 13,
+    "messages_sha": "cf8b4b857b2ffa36",
+    "model": "gemini-3.5-flash-lite",
+    "per_message_sha": [
+      "6240da720eb36220",
+      "b02a44024208945f",
+      "0a3c344b25515ac1",
+      "a8dd31d8361f475f",
+      "0cfea15c91f6a007",
+      "fa98626422af367c",
+      "fde9d3767ca948dc",
+      "b19927d13ea2f63b",
+      "a928b0bf31b76b0e",
+      "f394c2b0ff1ba99b",
+      "2c89aac15db25867",
+      "d03ab4ef8c873c18",
+      "c9a40f6f40575636"
+    ],
+    "system_sha": "3bfed045d06116f2",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_14306624230987548176",
+        "input": {
+          "query": "compete"
+        },
+        "name": "search_contract",
+        "thought_signature": "EokBCoYBAWkUfRNbeaUJ0L5f6Wv5wwl596691no2co05zaA32LEwyCCyAm+hYpijmO7iZB4O6kOno0mRNxSgDCHy2rWSmNq900cLbSp0XBumBMGMt34sNwFkkm9pMBTQc0G3ziB9HEVxwGGcFE0rMmttedZhA8H7J8AZfN8v5iTo69BR1PNF9LmobkQ=",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.5-flash-lite",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 14247,
+      "input_tokens": 3898,
+      "output_tokens": 17,
+      "thinking_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "meta": {
+    "latency_ms": 577.0747999777086,
+    "max_tokens": 8000,
+    "message_count": 7,
+    "messages_sha": "fc134a548905ebb5",
+    "model": "gemini-3.5-flash-lite",
+    "per_message_sha": [
+      "c88511f286431b54",
+      "8a4c9f6d28d6d9d8",
+      "2aa90ac705e77ab5",
+      "573d6faf09e5449c",
+      "51681721a176313d",
+      "071623db30507615",
+      "0e321df80aa4e0af"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_7502428780779504668",
+        "input": {
+          "query": "governing law construed in accordance with laws of"
+        },
+        "name": "search_contract",
+        "thought_signature": "EokBCoYBAWkUfRPAfYE1BQhyl45us4/hlg/t746veOupaTRQxSNzYjct6yApdet7qPBpQmH8mqASI+7XPV1f6StpoqW/k6KTJziZZe/VGgr3yTyPh098amoP84neEB/xw0kNgqJG9y6QZom4hohxzNNZx3jNmO87mnX9d3Z6l8/DenRaiHFAVJpWEJc=",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.5-flash-lite",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4050,
+      "input_tokens": 3291,
+      "output_tokens": 24,
+      "thinking_tokens": 0
+    }
+  }
+}

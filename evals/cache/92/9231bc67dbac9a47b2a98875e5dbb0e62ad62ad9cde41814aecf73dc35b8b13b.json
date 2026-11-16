@@ -1,0 +1,44 @@
+{
+  "meta": {
+    "latency_ms": 826.0113999713212,
+    "max_tokens": 8000,
+    "message_count": 7,
+    "messages_sha": "637db4ddc86ef889",
+    "model": "gemini-3.5-flash-lite",
+    "per_message_sha": [
+      "2337a24ea5e9be11",
+      "f902db2da070c20c",
+      "e65e16c4e4e772dd",
+      "6711828e0ff5973a",
+      "bec32bb481b83520",
+      "aba0bee557005be8",
+      "404d8b57fde15b8a"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_9780737147185363300",
+        "input": {
+          "query": "exclusive dealing procurement requirements prohibition licensing selling"
+        },
+        "name": "search_contract",
+        "thought_signature": "EokBCoYBAWkUfROMObaXake04gGCyzgPevs1ba1f2XBIBrvdwg0k38P/7S216hfQNtGAh1jXneHpppUk18uwDs580iE4Dn8AV3L+BzsforBriqdC3VJTOa1CGm+Fm9TLNceZHSvW6qsu/74v/fsnl6nk2N2bvPaLZcq5FTBBVnZpfnN/OUgOkDdOcTs=",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.5-flash-lite",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 14267,
+      "input_tokens": 12846,
+      "output_tokens": 22,
+      "thinking_tokens": 0
+    }
+  }
+}

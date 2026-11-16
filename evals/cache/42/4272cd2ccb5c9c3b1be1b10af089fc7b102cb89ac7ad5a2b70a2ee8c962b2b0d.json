@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "latency_ms": 3764.9489999748766,
+    "max_tokens": 8000,
+    "message_count": 9,
+    "messages_sha": "0450c31023d77270",
+    "model": "gemini-3.8-flash",
+    "per_message_sha": [
+      "ad039b5940edf747",
+      "d186988db076cef1",
+      "cc693975d986522d",
+      "2c73238e15246328",
+      "ceabfc9e4a6e1796",
+      "4493da040a34df7c",
+      "c50fc2b2b975d524",
+      "6d6fb75a2f75b293",
+      "8617daafbb5bbcfd"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_2934473412249962227",
+        "input": {
+          "char_end": 14000,
+          "char_start": 10500
+        },
+        "name": "read_span",
+        "thought_signature": "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",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.8-flash",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 5060,
+      "input_tokens": 2809,
+      "output_tokens": 445,
+      "thinking_tokens": 415
+    }
+  }
+}

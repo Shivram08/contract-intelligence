@@ -1,0 +1,44 @@
+{
+  "meta": {
+    "latency_ms": 482.84270003205165,
+    "max_tokens": 8000,
+    "message_count": 7,
+    "messages_sha": "d1c02a6a3271135b",
+    "model": "gemini-3.5-flash-lite",
+    "per_message_sha": [
+      "6240da720eb36220",
+      "b02a44024208945f",
+      "0a3c344b25515ac1",
+      "a8dd31d8361f475f",
+      "0cfea15c91f6a007",
+      "fa98626422af367c",
+      "fde9d3767ca948dc"
+    ],
+    "system_sha": "3bfed045d06116f2",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_15891367327725926667",
+        "input": {
+          "query": "Section 5. Term; Termination"
+        },
+        "name": "search_contract",
+        "thought_signature": "EokBCoYBAWkUfRPH4ggfT+ALMvHheO2SBZkPmDBTCsbb4ob3N/wJ+sLhlJj6FAllLey+UYPxxt05OzkSRu22iausHsYkBk8Be7ck86qmQX7gEHHeZXNQQvaxR/txlyxVPSmpx2oOyfGDvUFuauJ4u9BBSTMuB5avLZ3r9570VBkSIAMMAInzwE7nuSU=",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.5-flash-lite",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 6088,
+      "input_tokens": 3048,
+      "output_tokens": 22,
+      "thinking_tokens": 0
+    }
+  }
+}

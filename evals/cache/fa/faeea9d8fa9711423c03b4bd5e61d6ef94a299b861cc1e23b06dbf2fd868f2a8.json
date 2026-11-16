@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "latency_ms": 993.5194999561645,
+    "max_tokens": 8000,
+    "message_count": 3,
+    "messages_sha": "3a7a5bb51f989a12",
+    "model": "gemini-3.5-flash-lite",
+    "per_message_sha": [
+      "eae1bdba35e6c666",
+      "8510207743df1377",
+      "038064bf294dc0d3"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_7641740702862733355",
+        "input": {
+          "query": "governed by construed in accordance with laws of"
+        },
+        "name": "search_contract",
+        "thought_signature": "EokBCoYBAWkUfRPWxLWF9RLuu+2+BI122MUPHiUbtMq5YY/oHL82SV2MPHcwU0+rMNWGo8pKCWTKInfh1gkIPRs7yKodEg60GgxQc+i6EU1LFibqEItdVFrFHz4SisgzQnMAykl1sA//+5Ru9hpRGwEBJ2asUidOPgdvQcIrd3En061Kz75Swa+TThY=",
+        "type": "tool_use"
+      },
+      {
+        "id": "call_7641740702862735070",
+        "input": {
+          "query": "This Master Supply Agreement is made and entered into as of"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "id": "call_7641740702862736785",
+        "input": {
+          "query": "term of this Agreement shall commence expiration date initial term"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "id": "call_7641740702862734404",
+        "input": {
+          "query": "renew renewal term extension notice period"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "id": "call_7641740702862736119",
+        "input": {
+          "query": "change of control merger transfer assignment"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "id": "call_7641740702862733738",
+        "input": {
+          "query": "assignment assign consent of the other party"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.5-flash-lite",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "input_tokens": 3109,
+      "output_tokens": 139,
+      "thinking_tokens": 0
+    }
+  }
+}

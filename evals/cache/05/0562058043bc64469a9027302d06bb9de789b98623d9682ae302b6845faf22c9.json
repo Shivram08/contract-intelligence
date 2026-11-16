@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "latency_ms": 623.7022000132129,
+    "max_tokens": 8000,
+    "message_count": 9,
+    "messages_sha": "4e0d3f409b0d84f0",
+    "model": "gemini-3.5-flash-lite",
+    "per_message_sha": [
+      "2337a24ea5e9be11",
+      "f902db2da070c20c",
+      "e65e16c4e4e772dd",
+      "6711828e0ff5973a",
+      "bec32bb481b83520",
+      "aba0bee557005be8",
+      "404d8b57fde15b8a",
+      "578c3c0e91a7b633",
+      "c84465e4cf8c1164"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_6645535931821874416",
+        "input": {
+          "query": "This Master Operation and Maintenance Agreement dated as of"
+        },
+        "name": "search_contract",
+        "thought_signature": "EokBCoYBAWkUfRMrjiTR0soG4w4o0U3vuxSwLq0DDbcrS+qTW1bHb97dzk3zjI7p89SLTzToj3Njk7svby0r9gnq8lvypKP+6OmAPGsTOErTyLIlIn0XIgrF8LArRKdFtfIh/CjiY5VbcnjIHIWJTIu5E7FK4siO+KnISVj5uAWfQEdxdx/EAzIYrUo=",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.5-flash-lite",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 26500,
+      "input_tokens": 3732,
+      "output_tokens": 24,
+      "thinking_tokens": 0
+    }
+  }
+}

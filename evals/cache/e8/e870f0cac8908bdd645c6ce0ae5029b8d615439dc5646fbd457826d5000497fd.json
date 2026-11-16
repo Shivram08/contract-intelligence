@@ -1,0 +1,48 @@
+{
+  "meta": {
+    "latency_ms": 599.299100053031,
+    "max_tokens": 8000,
+    "message_count": 11,
+    "messages_sha": "0027904682206f2b",
+    "model": "gemini-3.5-flash-lite",
+    "per_message_sha": [
+      "2337a24ea5e9be11",
+      "f902db2da070c20c",
+      "e65e16c4e4e772dd",
+      "6711828e0ff5973a",
+      "bec32bb481b83520",
+      "aba0bee557005be8",
+      "404d8b57fde15b8a",
+      "578c3c0e91a7b633",
+      "c84465e4cf8c1164",
+      "7fc03d2905a5c599",
+      "bf05cd5398cc2486"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_1763263700221445289",
+        "input": {
+          "query": "terminate unless extended by mutual agreement"
+        },
+        "name": "search_contract",
+        "thought_signature": "EokBCoYBAWkUfRPrK8hWhl8reOufp7w/xf/6uHNovkCck6c7bQgC6nb/A2rknjUPpbYwFtSy933LIIArltE01+IGd/mMXc06vJe8/mukR1uvRP6X+Ba2KXY+VjbAx4dC7IyIGMUtBpfTrge9gZog4g6MMCstNEP7Z/HYhTOFjSQaPB5/CmO4/KDnVPo=",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.5-flash-lite",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 28545,
+      "input_tokens": 5463,
+      "output_tokens": 21,
+      "thinking_tokens": 0
+    }
+  }
+}

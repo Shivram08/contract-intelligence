@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "latency_ms": 7559.219499991741,
+    "max_tokens": 8000,
+    "message_count": 19,
+    "messages_sha": "e757d3c91b0bf27f",
+    "model": "gemini-3.8-flash",
+    "per_message_sha": [
+      "061bd41b793c00c6",
+      "19c1a5398a589c57",
+      "add74312f2bf36ae",
+      "4ec237c26305a904",
+      "98086f04469f32ba",
+      "cc4dec3515360b43",
+      "6eaae9355c2c2e53",
+      "87af75fd2dec27cd",
+      "60f70b2664a7ead0",
+      "3d3173af2128f26a",
+      "b653b7c397fcd3af",
+      "a13d68b748b81f6b",
+      "95e9eb73f4bccab2",
+      "2fa17b0cc0ef84e0",
+      "06a537c1b6bb6d58",
+      "04fc36abc0312122",
+      "6e3d0377e61c7d5c",
+      "acd371d49943b180",
+      "8fafde92dab9a9a6"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_16326463797274297369",
+        "input": {
+          "query": "\"Change of Control\""
+        },
+        "name": "search_contract",
+        "thought_signature": "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",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.8-flash",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 19032,
+      "input_tokens": 2917,
+      "output_tokens": 1007,
+      "thinking_tokens": 987
+    }
+  }
+}
