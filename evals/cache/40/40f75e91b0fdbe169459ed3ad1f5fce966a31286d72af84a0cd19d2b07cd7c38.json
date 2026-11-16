@@ -1,0 +1,48 @@
+{
+  "meta": {
+    "latency_ms": 795.3416999662295,
+    "max_tokens": 8000,
+    "message_count": 11,
+    "messages_sha": "c10d3dcb13c67e62",
+    "model": "gemini-3.5-flash-lite",
+    "per_message_sha": [
+      "2337a24ea5e9be11",
+      "93e64d2df95c02c7",
+      "fae3555e564177b6",
+      "17becaec7c305cb1",
+      "a7b5883783a91649",
+      "9053f37f7e501da1",
+      "6e27a3372c97da48",
+      "486c1d6353fffd96",
+      "92403a6f5ed59345",
+      "941c79d2dea8df48",
+      "47c5424161d2e488"
+    ],
+    "system_sha": "3bfed045d06116f2",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_10370022390138030524",
+        "input": {
+          "query": "change of control merger transfer assignment"
+        },
+        "name": "search_contract",
+        "thought_signature": "EokBCoYBAWkUfRNtGc1aFec9M+XaPoW7duh0Jpj6rRLB6X4UJkey6qyhFPPwALSgLbtzXoJtLROU7ARh7hZ2ILFfulXVoTm/vhNvhPO7AEhD1ABm9QpvKoaaKWju8ZxQGL0Qr8nbLlo0M12AzLJwYmeshf5jFaos/cfXB7zpA5M1yserE0hAwU4RMvk=",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.5-flash-lite",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 10168,
+      "input_tokens": 4540,
+      "output_tokens": 21,
+      "thinking_tokens": 0
+    }
+  }
+}

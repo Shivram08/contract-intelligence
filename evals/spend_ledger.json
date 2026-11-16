@@ -1,0 +1,110 @@
+{
+  "cap_usd": 25.0,
+  "spent_usd": 0.509254,
+  "entries": [
+    {
+      "at": "2026-11-16T21:15:47+00:00",
+      "cost_usd": 0.051853,
+      "model": "gemini-3.5-flash-lite",
+      "command": "extract",
+      "documents": 3,
+      "live_calls": 28,
+      "argv": [
+        "extract",
+        "--split",
+        "dev",
+        "--limit",
+        "3",
+        "--budget",
+        "0.50",
+        "--model",
+        "gemini-3.5-flash-lite",
+        "--show-turns"
+      ]
+    },
+    {
+      "at": "2026-11-16T21:17:12+00:00",
+      "cost_usd": 0.034213,
+      "model": "gemini-3.1-flash-lite",
+      "command": "extract",
+      "documents": 3,
+      "live_calls": 24,
+      "argv": [
+        "extract",
+        "--split",
+        "dev",
+        "--limit",
+        "3",
+        "--budget",
+        "0.75",
+        "--model",
+        "gemini-3.1-flash-lite"
+      ]
+    },
+    {
+      "at": "2026-11-16T21:21:46+00:00",
+      "cost_usd": 0.204015,
+      "model": "gemini-3.8-flash",
+      "command": "extract",
+      "documents": 3,
+      "live_calls": 36,
+      "argv": [
+        "extract",
+        "--split",
+        "dev",
+        "--limit",
+        "3",
+        "--budget",
+        "0.75",
+        "--model",
+        "gemini-3.8-flash"
+      ]
+    },
+    {
+      "at": "2026-11-16T21:25:28+00:00",
+      "cost_usd": 0.086338,
+      "model": "gemini-3.5-flash-lite",
+      "command": "extract",
+      "documents": 10,
+      "live_calls": 43,
+      "argv": [
+        "extract",
+        "--split",
+        "dev",
+        "--limit",
+        "10",
+        "--budget",
+        "1.00",
+        "--max-turns",
+        "20",
+        "--model",
+        "gemini-3.5-flash-lite",
+        "--prompt",
+        "extract_v1"
+      ]
+    },
+    {
+      "at": "2026-11-16T21:27:20+00:00",
+      "cost_usd": 0.132835,
+      "model": "gemini-3.5-flash-lite",
+      "command": "extract",
+      "documents": 10,
+      "live_calls": 64,
+      "argv": [
+        "extract",
+        "--split",
+        "dev",
+        "--limit",
+        "10",
+        "--budget",
+        "1.00",
+        "--max-turns",
+        "20",
+        "--model",
+        "gemini-3.5-flash-lite",
+        "--prompt",
+        "extract_v3"
+      ]
+    }
+  ]
+}

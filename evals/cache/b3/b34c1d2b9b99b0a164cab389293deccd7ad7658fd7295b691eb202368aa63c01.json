@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "latency_ms": 1921.9136000028811,
+    "max_tokens": 8000,
+    "message_count": 17,
+    "messages_sha": "a6cd4569e341c303",
+    "model": "gemini-3.5-flash-lite",
+    "per_message_sha": [
+      "365271d115b3a9e5",
+      "1e012b4701b74294",
+      "b503abc9b74fc8bb",
+      "a60ee69b051b5a56",
+      "478f3de9a9f063ff",
+      "76be50ae7efac982",
+      "20916ca299cc993b",
+      "9ac89b72673ae052",
+      "639c22e9a6b3f2ca",
+      "1d1f0d66b44b9c18",
+      "2aa525a64c95699e",
+      "729bb673712a117e",
+      "16432ccac5147c3e",
+      "06ec71159bfce8f3",
+      "0d348f7bd7ffe102",
+      "74ead2a8684b83f0",
+      "1c2659824a6497dc"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_7666513821667375955",
+        "input": {
+          "clauses": [
+            {
+              "clause_type": "governing_law",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "parties",
+              "confidence": 0.99,
+              "evidence": [
+                {
+                  "char_end": 219,
+                  "char_start": 105,
+                  "quote": "Cargill, Incorporated through its Bio Technology Development Center, having its principal place of business at 15407 McGinty Road  West, Wayzata, Minnesota 55391 USA (\"Cargill\")"
+                },
+                {
+                  "char_end": 318,
+                  "char_start": 224,
+                  "quote": "BioAmber S.A.S., having a place of business at Route de Bazancourt, F-51110, Pomacle  France (\"BioAmber\")"
+                }
+              ],
+              "present": true,
+              "raw_text": "Cargill, Incorporated through its Bio Technology Development Center, having its principal place of business at 15407 McGinty Road  West, Wayzata, Minnesota 55391 USA (\"Cargill\") and BioAmber S.A.S., having a place of business at Route de Bazancourt, F-51110, Pomacle  France (\"BioAmber\")",
+              "value": "Cargill, Incorporated (Supplier); BioAmber S.A.S. (Customer)"
+            },
+            {
+              "clause_type": "effective_date",
+              "confidence": 0.99,
+              "evidence": [
+                {
+                  "char_end": 407,
+                  "char_start": 320,
+                  "quote": "This First Amendment will be effective as of July 5, 2011, upon the signature of both Cargill and BioAmber."
+                }
+              ],
+              "present": true,
+              "raw_text": "July 5, 2011",
+              "value": "2011-07-05"
+            },
+            {
+              "clause_type": "expiration_date",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "renewal_term",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "notice_period_to_terminate_renewal",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "change_of_control",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "anti_assignment",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "cap_on_liability",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "uncapped_liability",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "non_compete",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "exclusivity",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            }
+          ]
+        },
+        "name": "submit_extraction",
+        "thought_signature": "EokBCoYBAWkUfRPVqAjq5VUrUw7EVrROUkyZedk/M4i30F8g0U/C36rfMAVvv4IGNuoSRoTn91IiizUDbCh40HEjrMq29MA+Dw8mUvUlkRGOfQKDy/aSMJsLf2/FhsYFwOHWBXbf1X4FOwfErIxQ7e5K1nP335EQ1dhcL8gomcy95YD53Mx41XnDWvI=",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.5-flash-lite",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 16266,
+      "input_tokens": 2195,
+      "output_tokens": 723,
+      "thinking_tokens": 0
+    }
+  }
+}

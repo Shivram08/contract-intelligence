@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "latency_ms": 824.884400004521,
+    "max_tokens": 8000,
+    "message_count": 3,
+    "messages_sha": "785d181b816bef9c",
+    "model": "gemini-3.5-flash-lite",
+    "per_message_sha": [
+      "2337a24ea5e9be11",
+      "f902db2da070c20c",
+      "e65e16c4e4e772dd"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_14460552506332544603",
+        "input": {
+          "query": "parties agreement entered into by and between"
+        },
+        "name": "search_contract",
+        "thought_signature": "EokBCoYBAWkUfRMm5Zf3cANp0M0TKrD6QedDvoysRZ/ErJK1GBh7+UuhQLXsBjLV6CGG4ct97QbuhrTVYyMsgAjMysPzDv0AQUhhlj+v1txRTfcUNGGV5mlTN1Jqfur47o18N6SotyhdxaCPWI8DYZg2nohyKgKKc4y/2sfmhkOAJmiDGahPPCUDNfM=",
+        "type": "tool_use"
+      },
+      {
+        "id": "call_14460552506332542196",
+        "input": {
+          "query": "governed by the laws of"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "id": "call_14460552506332543885",
+        "input": {
+          "query": "effective date is"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "id": "call_14460552506332541478",
+        "input": {
+          "query": "initial term expiration date anniversary"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.5-flash-lite",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "input_tokens": 3121,
+      "output_tokens": 81,
+      "thinking_tokens": 0
+    }
+  }
+}

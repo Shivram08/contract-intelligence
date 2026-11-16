@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "latency_ms": 708.8992000208236,
+    "max_tokens": 8000,
+    "message_count": 3,
+    "messages_sha": "0175da769b7eed1c",
+    "model": "gemini-3.5-flash-lite",
+    "per_message_sha": [
+      "ad039b5940edf747",
+      "edf6ed8e979f5c66",
+      "dc7e820b3318fbcf"
+    ],
+    "system_sha": "3bfed045d06116f2",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_4891890119779174792",
+        "input": {
+          "query": "governed by the laws of"
+        },
+        "name": "search_contract",
+        "thought_signature": "EokBCoYBAWkUfRNJBmnReW/cgKFmnzoF6hfbncTbwGQ92RCM/vu0+5fIo5lX7n1jtdalpo5YKVifp2QOS9yDlq6AJYVxgI4ojKOsOLRJ0V62PrS4qCmGo9IRmT0gtBAm3xC2aaxAZQdO/HjBvSJEg8ZoP/Hj62Ih625IQwRnrID4hN4kMMAhKYH3org=",
+        "type": "tool_use"
+      },
+      {
+        "id": "call_4891890119779173337",
+        "input": {
+          "query": "This Agreement is entered into"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "id": "call_4891890119779175978",
+        "input": {
+          "query": "IN WITNESS WHEREOF"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "id": "call_4891890119779174523",
+        "input": {
+          "query": "term of this Agreement"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "id": "call_4891890119779173068",
+        "input": {
+          "query": "assign"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "id": "call_4891890119779175709",
+        "input": {
+          "query": "liability"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.5-flash-lite",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "input_tokens": 3316,
+      "output_tokens": 113,
+      "thinking_tokens": 0
+    }
+  }
+}

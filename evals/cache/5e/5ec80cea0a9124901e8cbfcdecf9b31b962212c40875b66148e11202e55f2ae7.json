@@ -1,0 +1,189 @@
+{
+  "meta": {
+    "latency_ms": 4781.445900036488,
+    "max_tokens": 8000,
+    "message_count": 7,
+    "messages_sha": "a4c3b1e24c075fd1",
+    "model": "gemini-3.5-flash-lite",
+    "per_message_sha": [
+      "061bd41b793c00c6",
+      "09f2d89ff3e09fc0",
+      "67e791cd26e6567f",
+      "bce43f8db4087379",
+      "e2685f1f0d02a780",
+      "d160e338ea571342",
+      "30785f4046d9ead8"
+    ],
+    "system_sha": "3bfed045d06116f2",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_15295499757070573759",
+        "input": {
+          "clauses": [
+            {
+              "clause_type": "governing_law",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 150081,
+                  "char_start": 149422,
+                  "quote": "15.13 Governing Law and Equitable Relief.\n\n15.13.1 Governing Law. This Agreement shall be governed by and construed in accordance with the internal laws of the State of California applicable to agreements made and to be performed entirely within such state, without regard to the conflicts of law principles of such state; provided that any matters relating to the construction or effect of any Patent will be governed by the patent laws of the relevant jurisdiction in which such Patent is granted. This Agreement was prepared in the English language, which language shall govern the interpretation of, and any dispute regarding, the terms of this Agreement."
+                }
+              ],
+              "present": true,
+              "raw_text": "This Agreement shall be governed by and construed in accordance with the internal laws of the State of California applicable to agreements made and to be performed entirely within such state, without regard to the conflicts of law principles of such state",
+              "value": "US-CA"
+            },
+            {
+              "clause_type": "parties",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 1049,
+                  "char_start": 929,
+                  "quote": "This License, Development and Commercialization Agreement (this \"Agreement\"), dated as of February 4, 2020 (the \"Effective Date\"), is made by and between Xencor, Inc. (\"Xencor\"), and Aimmune Therapeutics, Inc. (\"Aimmune\")."
+                }
+              ],
+              "present": true,
+              "raw_text": "This License, Development and Commercialization Agreement (this \"Agreement\"), dated as of February 4, 2020 (the \"Effective Date\"), is made by and between Xencor, Inc. (\"Xencor\"), and Aimmune Therapeutics, Inc. (\"Aimmune\").",
+              "value": "Xencor, Inc. (Xencor); Aimmune Therapeutics, Inc. (Aimmune)"
+            },
+            {
+              "clause_type": "effective_date",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 1049,
+                  "char_start": 929,
+                  "quote": "This License, Development and Commercialization Agreement (this \"Agreement\"), dated as of February 4, 2020 (the \"Effective Date\"), is made by and between Xencor, Inc. (\"Xencor\"), and Aimmune Therapeutics, Inc. (\"Aimmune\")."
+                }
+              ],
+              "present": true,
+              "raw_text": "February 4, 2020",
+              "value": "2020-02-04"
+            },
+            {
+              "clause_type": "expiration_date",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 125065,
+                  "char_start": 124536,
+                  "quote": "ARTICLE 13 TERM AND TERMINATION\n\n13.1 Term. This Agreement shall become effective on the Effective Date and, unless earlier terminated pursuant to this ARTICLE 13, shall remain in effect on a Product-by-Product and country-by-country basis until the expiration of the Royalty Term applicable to such Product and country (the \"Term\"). Upon expiration of this Agreement with respect to a Product in a country, the licenses granted to Aimmune pursuant to this Agreement shall continue in full force and effect on a fully-paid basis."
+                }
+              ],
+              "present": true,
+              "raw_text": "until the expiration of the Royalty Term applicable to such Product and country (the \"Term\")",
+              "value": "PERPETUAL"
+            },
+            {
+              "clause_type": "renewal_term",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "notice_period_to_terminate_renewal",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "change_of_control",
+              "confidence": 0.9,
+              "evidence": [
+                {
+                  "char_end": 145133,
+                  "char_start": 142802,
+                  "quote": "15.6 Assignment. Neither Party may assign or transfer this Agreement or any rights or obligations hereunder without the prior written consent of the other Party, except that a Party may make such an assignment or transfer without the other Party's written consent to (a) any of its Affiliates, in whole or in part, or (b) any Third Party in connection with (i) the acquisition of such Party by or merger or consolidation of such Party with another entity or (ii) a merger, consolidation, sale of stock, sale of all or substantially all of such Party's assets or other similar transaction in which such Third Party either becomes the owner of all or substantially all of the business and assets of (y) such Party or (z) that portion of such Party's business or business unit relating to this Agreement."
+                }
+              ],
+              "present": true,
+              "raw_text": "15.6 Assignment. Neither Party may assign or transfer this Agreement or any rights or obligations hereunder without the prior written consent of the other Party, except that a Party may make such an assignment or transfer without the other Party's written consent to (a) any of its Affiliates, in whole or in part, or (b) any Third Party in connection with (i) the acquisition of such Party by or merger or consolidation of such Party with another entity or (ii) a merger, consolidation, sale of stock, sale of all or substantially all of such Party's assets or other similar transaction in which such Third Party either becomes the owner of all or substantially all of the business and assets of (y) such Party or (z) that portion of such Party's business or business unit relating to this Agreement.",
+              "value": null
+            },
+            {
+              "clause_type": "anti_assignment",
+              "confidence": 0.9,
+              "evidence": [
+                {
+                  "char_end": 145133,
+                  "char_start": 142802,
+                  "quote": "15.6 Assignment. Neither Party may assign or transfer this Agreement or any rights or obligations hereunder without the prior written consent of the other Party, except that a Party may make such an assignment or transfer without the other Party's written consent to (a) any of its Affiliates, in whole or in part, or (b) any Third Party in connection with (i) the acquisition of such Party by or merger or consolidation of such Party with another entity or (ii) a merger, consolidation, sale of stock, sale of all or substantially all of such Party's assets or other similar transaction in which such Third Party either becomes the owner of all or substantially all of the business and assets of (y) such Party or (z) that portion of such Party's business or business unit relating to this Agreement."
+                }
+              ],
+              "present": true,
+              "raw_text": "15.6 Assignment. Neither Party may assign or transfer this Agreement or any rights or obligations hereunder without the prior written consent of the other Party",
+              "value": null
+            },
+            {
+              "clause_type": "cap_on_liability",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "uncapped_liability",
+              "confidence": 0.85,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "non_compete",
+              "confidence": 0.9,
+              "evidence": [
+                {
+                  "char_end": 46496,
+                  "char_start": 44631,
+                  "quote": "2.4 Restrictive Covenants. Aimmune hereby covenants and agrees that it shall not (and shall cause the other Aimmune Agreement Entities not to), either directly or indirectly, Develop, Manufacture, or Commercialize the Product for use outside the Licensed Field. Furthermore, Xencor hereby covenants and agrees that it shall not (and shall cause its Affiliates not to), either directly or through granting a license or other right to, or otherwise facilitating, a Third Party to (a) Develop, Manufacture or Commercialize the Antibody or the Product during the Term, (b) commence any [***] of any [***] that is not the Antibody or a Product and that [***] for use in the Licensed Field, prior to the [***] ([***]t h) anniversary of the Effective Date, or (c) Develop, Manufacture or Commercialize any [***] that is not the Antibody or a Product and that [***] for use in the Aimmune Field during the Term."
+                }
+              ],
+              "present": true,
+              "raw_text": "2.4 Restrictive Covenants. Aimmune hereby covenants and agrees that it shall not (and shall cause the other Aimmune Agreement Entities not to), either directly or indirectly, Develop, Manufacture, or Commercialize the Product for use outside the Licensed Field. Furthermore, Xencor hereby covenants and agrees that it shall not (and shall cause its Affiliates not to), either directly or through granting a license or other right to, or otherwise facilitating, a Third Party to (a) Develop, Manufacture or Commercialize the Antibody or the Product during the Term, (b) commence any [***] of any [***] that is not the Antibody or a Product and that [***] for use in the Licensed Field, prior to the [***] ([***]t h) anniversary of the Effective Date, or (c) Develop, Manufacture or Commercialize any [***] that is not the Antibody or a Product and that [***] for use in the Aimmune Field during the Term.",
+              "value": null
+            },
+            {
+              "clause_type": "exclusivity",
+              "confidence": 0.9,
+              "evidence": [
+                {
+                  "char_end": 46496,
+                  "char_start": 44631,
+                  "quote": "2.4 Restrictive Covenants. Aimmune hereby covenants and agrees that it shall not (and shall cause the other Aimmune Agreement Entities not to), either directly or indirectly, Develop, Manufacture, or Commercialize the Product for use outside the Licensed Field. Furthermore, Xencor hereby covenants and agrees that it shall not (and shall cause its Affiliates not to), either directly or through granting a license or other right to, or otherwise facilitating, a Third Party to (a) Develop, Manufacture or Commercialize the Antibody or the Product during the Term, (b) commence any [***] of any [***] that is not the Antibody or a Product and that [***] for use in the Licensed Field, prior to the [***] ([***]t h) anniversary of the Effective Date, or (c) Develop, Manufacture or Commercialize any [***] that is not the Antibody or a Product and that [***] for use in the Aimmune Field during the Term."
+                }
+              ],
+              "present": true,
+              "raw_text": "Furthermore, Xencor hereby covenants and agrees that it shall not (and shall cause its Affiliates not to), either directly or through granting a license or other right to, or otherwise facilitating, a Third Party to (a) Develop, Manufacture or Commercialize the Antibody or the Product during the Term, (b) commence any [***] of any [***] that is not the Antibody or a Product and that [***] for use in the Licensed Field, prior to the [***] ([***]t h) anniversary of the Effective Date, or (c) Develop, Manufacture or Commercialize any [***] that is not the Antibody or a Product and that [***] for use in the Aimmune Field during the Term.",
+              "value": null
+            }
+          ]
+        },
+        "name": "submit_extraction",
+        "thought_signature": "EokBCoYBAWkUfRNOdgs/WkRKqAna2nNR+xMmC+wP51uO6b2yYorPnYERzkVPIidhaAP1YMonDr7G/gLXH4Z3ditdeqslYs0TvH053PcePpYMvNxbqfSllxujcgETeH+xPF28t7Vze/EsRavQSaA5WfS/u5OsAX7Jc5ehYmWmV+G4ZMj7pE1TlQNmmsU=",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.5-flash-lite",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 14262,
+      "input_tokens": 14132,
+      "output_tokens": 2459,
+      "thinking_tokens": 0
+    }
+  }
+}

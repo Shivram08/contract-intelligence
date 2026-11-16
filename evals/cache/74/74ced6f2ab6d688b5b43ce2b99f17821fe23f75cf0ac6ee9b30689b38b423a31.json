@@ -1,0 +1,201 @@
+{
+  "meta": {
+    "latency_ms": 3156.451599963475,
+    "max_tokens": 8000,
+    "message_count": 7,
+    "messages_sha": "c4723bd44eb9daa6",
+    "model": "gemini-3.5-flash-lite",
+    "per_message_sha": [
+      "eae1bdba35e6c666",
+      "aa8de47f903bf02c",
+      "f3c1b972a9dbe226",
+      "71f753ad402a671a",
+      "e74fbcc791742ad6",
+      "b0b80165f37f175b",
+      "46b70191ab43dae2"
+    ],
+    "system_sha": "3bfed045d06116f2",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_5191326564608384963",
+        "input": {
+          "clauses": [
+            {
+              "clause_type": "governing_law",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 31165,
+                  "char_start": 31114,
+                  "quote": "This Agreement will be governed by the laws of the State of Delaware without regard to its conflicts of law principles."
+                }
+              ],
+              "present": true,
+              "raw_text": "This Agreement will be governed by the laws of the State of Delaware without regard to its conflicts of law principles.",
+              "value": "US-DE"
+            },
+            {
+              "clause_type": "parties",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 388,
+                  "char_start": 215,
+                  "quote": "Premier Nutrition Company, LLC, a Delaware limited liability company with its headquarters located at 1222 67th Street, Suite 210, Emeryville, CA 94608 (\"Buyer\" or \"PNC\"), and Fonterra (USA) Inc., a California corporation with its principal place of business located at 8700 W. Bryn Mawr Avenue, Suite 500N, Chicago, IL 60631 (\"Supplier\" or \"Fonterra\")"
+                }
+              ],
+              "present": true,
+              "raw_text": "Premier Nutrition Company, LLC, a Delaware limited liability company with its headquarters located at 1222 67th Street, Suite 210, Emeryville, CA 94608 (\"Buyer\" or \"PNC\"), and Fonterra (USA) Inc., a California corporation with its principal place of business located at 8700 W. Bryn Mawr Avenue, Suite 500N, Chicago, IL 60631 (\"Supplier\" or \"Fonterra\")",
+              "value": "Premier Nutrition Company, LLC (Buyer); Fonterra (USA) Inc. (Supplier)"
+            },
+            {
+              "clause_type": "effective_date",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 202,
+                  "char_start": 173,
+                  "quote": "31 October 2019 (\"Effective Date\")"
+                }
+              ],
+              "present": true,
+              "raw_text": "31 October 2019",
+              "value": "2019-10-31"
+            },
+            {
+              "clause_type": "expiration_date",
+              "confidence": 0.9,
+              "evidence": [
+                {
+                  "char_end": 21200,
+                  "char_start": 21118,
+                  "quote": "continue for an Initial Term of five (5) years, and will automatically renew for additional periods of five (5) years"
+                }
+              ],
+              "present": true,
+              "raw_text": "Initial Term of five (5) years",
+              "value": "2024-10-31"
+            },
+            {
+              "clause_type": "renewal_term",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 21234,
+                  "char_start": 21104,
+                  "quote": "Initial Term of five (5) years, and will automatically renew for additional periods of five (5) years"
+                }
+              ],
+              "present": true,
+              "raw_text": "additional periods of five (5) years",
+              "value": "1825 recurring"
+            },
+            {
+              "clause_type": "notice_period_to_terminate_renewal",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 21332,
+                  "char_start": 21245,
+                  "quote": "unless one Party notifies the other of its intention not to renew, no less than 12 months prior to the expiration of the then-current term"
+                }
+              ],
+              "present": true,
+              "raw_text": "no less than 12 months",
+              "value": "365"
+            },
+            {
+              "clause_type": "change_of_control",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "anti_assignment",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 31908,
+                  "char_start": 31657,
+                  "quote": "Neither Party may transfer or assign any of its rights or obligations under this Agreement without the prior written consent of the other Party, except that either Party may assign this Agreement to any entity controlled by it, its parents, subsidiaries, or affiliates, or to any purchaser of the business to which this Agreement relates subject to the other Parties consent which will not be unreasonably withheld or delayed."
+                }
+              ],
+              "present": true,
+              "raw_text": "Neither Party may transfer or assign any of its rights or obligations under this Agreement without the prior written consent of the other Party, except that either Party may assign this Agreement to any entity controlled by it, its parents, subsidiaries, or affiliates, or to any purchaser of the business to which this Agreement relates subject to the other Parties consent which will not be unreasonably withheld or delayed.",
+              "value": null
+            },
+            {
+              "clause_type": "cap_on_liability",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 26549,
+                  "char_start": 26431,
+                  "quote": "The maximum liability of one Party to the other Party and its affiliates in relation to this Agreement will be [***] (\"Liability Cap\")"
+                }
+              ],
+              "present": true,
+              "raw_text": "The maximum liability of one Party to the other Party and its affiliates in relation to this Agreement will be [***] (\"Liability Cap\")",
+              "value": null
+            },
+            {
+              "clause_type": "uncapped_liability",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 26613,
+                  "char_start": 26551,
+                  "quote": "provided however that: 9.1.1 The Liability Cap will not apply to any (1) material confidentiality breach under Section 5, and/or (2) indemnification obligations under Section 7.1."
+                }
+              ],
+              "present": true,
+              "raw_text": "provided however that: 9.1.1 The Liability Cap will not apply to any (1) material confidentiality breach under Section 5, and/or (2) indemnification obligations under Section 7.1.",
+              "value": null
+            },
+            {
+              "clause_type": "non_compete",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "exclusivity",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 5068,
+                  "char_start": 4919,
+                  "quote": "This Agreement is nonexclusive and sets forth the terms and conditions under which the Parties will supply and purchase Ingredients from the other Party."
+                }
+              ],
+              "present": true,
+              "raw_text": "This Agreement is nonexclusive and sets forth the terms and conditions under which the Parties will supply and purchase Ingredients from the other Party.",
+              "value": null
+            }
+          ]
+        },
+        "name": "submit_extraction",
+        "thought_signature": "EokBCoYBAWkUfRO3io+gV0HI3FsKyCM6q7XzaVAHo0H7SDSW91VlCvDY4jexvom/raxiKyfGLYouTlX0CfUHsiLZKjao30RznBz5usTeqN4JzZOaafS250ojf4Vu5xxhxqvedz5wQIcZSnVH7Hk+kTqbA4FY/scI/zThCRYTdm720wxC7BU+HwhgOIc=",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.5-flash-lite",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 10169,
+      "input_tokens": 8823,
+      "output_tokens": 1458,
+      "thinking_tokens": 0
+    }
+  }
+}

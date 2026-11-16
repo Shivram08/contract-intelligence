@@ -1,0 +1,195 @@
+{
+  "meta": {
+    "latency_ms": 2831.9776999996975,
+    "max_tokens": 8000,
+    "message_count": 7,
+    "messages_sha": "4e07fdeae08fd313",
+    "model": "gemini-3.5-flash-lite",
+    "per_message_sha": [
+      "eae1bdba35e6c666",
+      "8510207743df1377",
+      "038064bf294dc0d3",
+      "feb7af456eddabdb",
+      "6b652a27a965b22c",
+      "df91b9644eccbd28",
+      "b3abfd657a70ea82"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_15033856394698068347",
+        "input": {
+          "clauses": [
+            {
+              "clause_type": "governing_law",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 31135,
+                  "char_start": 31045,
+                  "quote": "This Agreement will be governed by the laws of the State of Delaware"
+                }
+              ],
+              "present": true,
+              "raw_text": "This Agreement will be governed by the laws of the State of Delaware without regard to its conflicts of law principles.",
+              "value": "US-DE"
+            },
+            {
+              "clause_type": "parties",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 608,
+                  "char_start": 164,
+                  "quote": "Premier Nutrition Company, LLC, a Delaware limited liability company with its headquarters located at 1222 67th Street, Suite 210, Emeryville, CA 94608 (\"Buyer\" or \"PNC\"), and Fonterra (USA) Inc., a California corporation with its principal place of business located at 8700 W. Bryn Mawr Avenue, Suite 500N, Chicago, IL 60631 (\"Supplier\" or \"Fonterra\")"
+                }
+              ],
+              "present": true,
+              "raw_text": "Premier Nutrition Company, LLC (Buyer or PNC); Fonterra (USA) Inc. (Supplier or Fonterra)",
+              "value": "Premier Nutrition Company, LLC (Buyer); Fonterra (USA) Inc. (Supplier)"
+            },
+            {
+              "clause_type": "effective_date",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 181,
+                  "char_start": 135,
+                  "quote": "made as of 31 October 2019 (\"Effective Date\")"
+                }
+              ],
+              "present": true,
+              "raw_text": "31 October 2019",
+              "value": "2019-10-31"
+            },
+            {
+              "clause_type": "expiration_date",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 21199,
+                  "char_start": 21045,
+                  "quote": "This Agreement will commence on the Effective Date and continue for an Initial Term of five (5) years"
+                }
+              ],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "renewal_term",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 21245,
+                  "char_start": 21109,
+                  "quote": "and will automatically renew for additional periods of five (5) years"
+                }
+              ],
+              "present": true,
+              "raw_text": "automatically renew for additional periods of five (5) years",
+              "value": "1825 recurring"
+            },
+            {
+              "clause_type": "notice_period_to_terminate_renewal",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 21334,
+                  "char_start": 21246,
+                  "quote": "unless one Party notifies the other of its intention not to renew, no less than 12 months prior"
+                }
+              ],
+              "present": true,
+              "raw_text": "no less than 12 months prior to the expiration of the then-current term",
+              "value": "365"
+            },
+            {
+              "clause_type": "change_of_control",
+              "confidence": 0.95,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "anti_assignment",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 32096,
+                  "char_start": 31655,
+                  "quote": "Neither Party may transfer or assign any of its rights or obligations under this Agreement without the prior written consent of the other Party, except that either Party may assign this Agreement to any entity controlled by it, its parents, subsidiaries, or affiliates, or to any purchaser of the business to which this Agreement relates subject to the other Parties consent which will not be unreasonably withheld or delayed."
+                }
+              ],
+              "present": true,
+              "raw_text": "Neither Party may transfer or assign any of its rights or obligations under this Agreement without the prior written consent of the other Party, except that either Party may assign this Agreement to any entity controlled by it, its parents, subsidiaries, or affiliates, or to any purchaser of the business to which this Agreement relates subject to the other Parties consent which will not be unreasonably withheld or delayed.",
+              "value": null
+            },
+            {
+              "clause_type": "cap_on_liability",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 28045,
+                  "char_start": 27871,
+                  "quote": "The maximum liability of one Party to the other Party and its affiliates in relation to this Agreement will be [***] (\"Liability Cap\")"
+                }
+              ],
+              "present": true,
+              "raw_text": "The maximum liability of one Party to the other Party and its affiliates in relation to this Agreement will be [***] (\"Liability Cap\"), provided however that:",
+              "value": null
+            },
+            {
+              "clause_type": "uncapped_liability",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 28267,
+                  "char_start": 28092,
+                  "quote": "The Liability Cap will not apply to any (1) material confidentiality breach under Section 5, and/or (2) indemnification obligations under Section 7.1."
+                }
+              ],
+              "present": true,
+              "raw_text": "The Liability Cap will not apply to any (1) material confidentiality breach under Section 5, and/or (2) indemnification obligations under Section 7.1.",
+              "value": null
+            },
+            {
+              "clause_type": "non_compete",
+              "confidence": 0.95,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "exclusivity",
+              "confidence": 0.95,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            }
+          ]
+        },
+        "name": "submit_extraction",
+        "thought_signature": "EokBCoYBAWkUfRPyM7fn5Z91/bvlAXJKr3xQytTR4sMIygi9dzZgqjB9kocau2wUV/ng/Tqv7gZJ4Zc1KPWGDFwEjToGsk7yOUx7Arpde6zE3L6dWLd9JUWH5grB1BllBOPAYfBxo4WQhhIBn3NL+BxShEwU7giqeGoXGMfk9NG19cdLWMpuM8iL33Y=",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.5-flash-lite",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 14239,
+      "input_tokens": 5120,
+      "output_tokens": 1250,
+      "thinking_tokens": 0
+    }
+  }
+}

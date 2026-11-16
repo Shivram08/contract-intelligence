@@ -1,0 +1,66 @@
+{
+  "meta": {
+    "latency_ms": 958.338399999775,
+    "max_tokens": 8000,
+    "message_count": 5,
+    "messages_sha": "75a8a7b9252b353c",
+    "model": "gemini-3.5-flash-lite",
+    "per_message_sha": [
+      "31ef8d3228adf495",
+      "a88b1768b67e682c",
+      "c0ffbb39ac1c3e8f",
+      "4016ac4746d03cdc",
+      "beb231da90298c22"
+    ],
+    "system_sha": "3bfed045d06116f2",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_15047162008950276300",
+        "input": {
+          "query": "governing"
+        },
+        "name": "search_contract",
+        "thought_signature": "EokBCoYBAWkUfRMhfhz0udlLtOUGSP1MpELaPCDuXOu/u3ppYFy45PVXLtBIIQHCERKRXgYlUtLtByDAlujJcOwQU8sVS6m/UwUOs9MnSnHd0T0PtZrikx6wCnBewmIkXV4arKXatHJ8A5NZyq//X4X0EpBvvBQ+BSTlQ6oBaUbvKI8X05WdnXS+QCw=",
+        "type": "tool_use"
+      },
+      {
+        "id": "call_15047162008950276973",
+        "input": {
+          "query": "assign"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "id": "call_15047162008950277646",
+        "input": {
+          "query": "liability"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "id": "call_15047162008950278319",
+        "input": {
+          "query": "compete"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.5-flash-lite",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "input_tokens": 5687,
+      "output_tokens": 66,
+      "thinking_tokens": 0
+    }
+  }
+}

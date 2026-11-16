@@ -1,0 +1,42 @@
+{
+  "meta": {
+    "latency_ms": 575.002100027632,
+    "max_tokens": 8000,
+    "message_count": 5,
+    "messages_sha": "9858361f1b10cc1e",
+    "model": "gemini-3.5-flash-lite",
+    "per_message_sha": [
+      "c88511f286431b54",
+      "8a4c9f6d28d6d9d8",
+      "2aa90ac705e77ab5",
+      "573d6faf09e5449c",
+      "51681721a176313d"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_3891719788560055008",
+        "input": {
+          "query": "term termination expire anniversary renewal"
+        },
+        "name": "search_contract",
+        "thought_signature": "EokBCoYBAWkUfRODZ4WF6KT8txvJwVyl7ZhC0J7WV4wHCb/Q8ans2nnrc7LKE9sK0t2gR0UqSGPbFg4Uje86Q6wwPlOB560zO/WcwnGAJi6XagxoxUP67wpPv7DGnqEUWCcX/kDxdmJ2HmlyFqAUnHyGyS0DB+8GP83lTZAcDKhZ8+gBcgu0n95jaOM=",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.5-flash-lite",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "input_tokens": 5353,
+      "output_tokens": 20,
+      "thinking_tokens": 0
+    }
+  }
+}

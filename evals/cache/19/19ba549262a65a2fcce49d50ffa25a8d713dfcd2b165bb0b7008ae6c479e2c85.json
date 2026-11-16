@@ -1,0 +1,72 @@
+{
+  "meta": {
+    "latency_ms": 768.4138999902643,
+    "max_tokens": 8000,
+    "message_count": 3,
+    "messages_sha": "0d4cd90cb0657ade",
+    "model": "gemini-3.5-flash-lite",
+    "per_message_sha": [
+      "061bd41b793c00c6",
+      "09f2d89ff3e09fc0",
+      "67e791cd26e6567f"
+    ],
+    "system_sha": "3bfed045d06116f2",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_11421993122027206266",
+        "input": {
+          "query": "governed by and construed in accordance with the laws of"
+        },
+        "name": "search_contract",
+        "thought_signature": "EokBCoYBAWkUfRManr3arSY+hl8O9JTT3d65FfAdYlqE1AkruIzt/MJB9c5OlxmwguW9KHBVA7SzRsLp+pEvHQDfGGQto3kA8E3Oj3QPyDnaq1SQWlYSgK8VXTeLvJ+iLAAYkcbwE4omCLPdXNxvJY45nvbax8g9aZcpreCvIFAd8yyGkwkX2TJT2eE=",
+        "type": "tool_use"
+      },
+      {
+        "id": "call_11421993122027208539",
+        "input": {
+          "query": "This Development Agreement is entered into as of"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "id": "call_11421993122027206716",
+        "input": {
+          "query": "term of this Agreement shall expire"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "id": "call_11421993122027204893",
+        "input": {
+          "query": "automatically renew"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "id": "call_11421993122027207166",
+        "input": {
+          "query": "change of control"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.5-flash-lite",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "input_tokens": 3313,
+      "output_tokens": 105,
+      "thinking_tokens": 0
+    }
+  }
+}

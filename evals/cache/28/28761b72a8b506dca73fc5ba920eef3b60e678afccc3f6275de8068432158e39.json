@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "latency_ms": 714.3560000113212,
+    "max_tokens": 8000,
+    "message_count": 3,
+    "messages_sha": "a2d4b82e8b8d1c43",
+    "model": "gemini-3.5-flash-lite",
+    "per_message_sha": [
+      "6240da720eb36220",
+      "37283238443e9f23",
+      "1b0abaa9d124df57"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_11254085843272458888",
+        "input": {
+          "query": "governed by the laws of"
+        },
+        "name": "search_contract",
+        "thought_signature": "EokBCoYBAWkUfRNH0TpESJI9ww2LEHShtrZ4P+Gc3XYSTCx/p85Q1j+tuIw4PJYkNyTKp2VZbDzasLr4RffJTI9EBzzValf0Aw2vN6MyE8LcOjJ0I9gauu72sHJgDGLXYzGqPwnLxFCo2/l1PDitThPcjljZqbLKWU5ItG9NC1qt5oJqhsbL62sYCDc=",
+        "type": "tool_use"
+      },
+      {
+        "id": "call_11254085843272460145",
+        "input": {
+          "query": "Strategic Alliance Agreement dated"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "id": "call_11254085843272461402",
+        "input": {
+          "query": "initial term"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "id": "call_11254085843272458563",
+        "input": {
+          "query": "assignment without consent"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "id": "call_11254085843272459820",
+        "input": {
+          "query": "liability shall be capped"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "id": "call_11254085843272461077",
+        "input": {
+          "query": "exclusive"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.5-flash-lite",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "input_tokens": 3112,
+      "output_tokens": 110,
+      "thinking_tokens": 0
+    }
+  }
+}

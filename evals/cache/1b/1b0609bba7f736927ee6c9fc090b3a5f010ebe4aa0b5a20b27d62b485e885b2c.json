@@ -1,0 +1,159 @@
+{
+  "meta": {
+    "latency_ms": 1507.9615999711677,
+    "max_tokens": 8000,
+    "message_count": 7,
+    "messages_sha": "34092e900658bffe",
+    "model": "gemini-3.5-flash-lite",
+    "per_message_sha": [
+      "31ef8d3228adf495",
+      "d928eb92e4ac048f",
+      "48d86012cb1240e1",
+      "767ea3ae188d39d0",
+      "93f9f121f67934c7",
+      "5dd881f0865b2628",
+      "9f1754a0b9c1a4d2"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_8335245307678994607",
+        "input": {
+          "clauses": [
+            {
+              "clause_type": "governing_law",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "parties",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 147,
+                  "char_start": 107,
+                  "quote": "AstroNutrition.com and deep systems"
+                }
+              ],
+              "present": true,
+              "raw_text": "AstroNutrition.com and deep systems",
+              "value": "AstroNutrition.com (Customer); deep systems (Provider)"
+            },
+            {
+              "clause_type": "effective_date",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 212,
+                  "char_start": 197,
+                  "quote": "March 1, 2005"
+                }
+              ],
+              "present": true,
+              "raw_text": "March 1, 2005",
+              "value": "2005-03-01"
+            },
+            {
+              "clause_type": "expiration_date",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 235,
+                  "char_start": 218,
+                  "quote": "February 28, 2006"
+                }
+              ],
+              "present": true,
+              "raw_text": "February 28, 2006",
+              "value": "2006-02-28"
+            },
+            {
+              "clause_type": "renewal_term",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "notice_period_to_terminate_renewal",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "change_of_control",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "anti_assignment",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "cap_on_liability",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "uncapped_liability",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "non_compete",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "exclusivity",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            }
+          ]
+        },
+        "name": "submit_extraction",
+        "thought_signature": "EokBCoYBAWkUfRO2qHHwqOaRfsNt8Th8q+aLG+sAw9gFkl+mN+ItTwJDUjIB3+FEltiOKgu9ddoFICgb8rSdLymo00yrWrGsku7zJ3o6aeQ/mV8u+h74TgerqNFGlG/TB2PSrOwAxIRGhh+VdvgGV9vj5yVSzuO+XRnFhwb232CDrmElfsq3Cl+u3yY=",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.5-flash-lite",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4031,
+      "input_tokens": 5649,
+      "output_tokens": 580,
+      "thinking_tokens": 0
+    }
+  }
+}

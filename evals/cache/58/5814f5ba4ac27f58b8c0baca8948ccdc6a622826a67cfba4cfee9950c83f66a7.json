@@ -1,0 +1,49 @@
+{
+  "meta": {
+    "latency_ms": 7458.587699977215,
+    "max_tokens": 8000,
+    "message_count": 11,
+    "messages_sha": "8b025bf5aceec87a",
+    "model": "gemini-3.8-flash",
+    "per_message_sha": [
+      "c88511f286431b54",
+      "4a0e40da4b986399",
+      "30731aa51d611158",
+      "927e9c79df954b3a",
+      "7c5d6ac2fecca127",
+      "3e9f0d8411f49978",
+      "15d582d4a6265685",
+      "2982cbdbbc779fc7",
+      "3127eb7cc642aa29",
+      "7ecbb4f2e922ca45",
+      "5fb390a91f5ff2f0"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_6101198139820818012",
+        "input": {
+          "char_end": 22450,
+          "char_start": 21850
+        },
+        "name": "read_span",
+        "thought_signature": "Eu0GCuoGAWkUfROTvqhAAbN/Sggr5i2Zu3UKsqn4buWJRdMXmfyCwZ1mAMcEafbLvYEYFu2B5i1HyqgbtFgC8uLNeo+ifTjmJ41c4XWmLECGRmCgjbb/6+q/p9xecyzszxCP/nKhIWkr/stcYxrRSWHpc0rHr8zoaKas2V/duNb1815Ukbv/ZER58Hi+YeOkKvgWR2KNNDlZLxTVtR+Chn+djlc1oTL4CrX6oSoU4+/1eu/7ZUd0IT2SJJZdPFAskE5VpdPfWdDYD4ZKUFgVDUE8Lir6gdb8xRgu7HPqBGB3DCcikbJcJUc0q2R916YKdM5+Lh0fZ001E82MEHzwVnY0YczhK3xq6X7EowL7ATUjmHg5VT7lNJKyeyr9pyLJHT3+SDysu+ylzFXRrzVFXYaNLItK5JNUKLRYaPUGh3Gv/Grq5Sq/4wn7i2/5tJ/lwiO2tWRLvde1GAlDFXXfcWFZ/+tNioD2CsiiJ3QoZ2Y6OP1v4WWn8/SxONjsJvjzDVb/34+VKnheZkaMyBMSBpefcTmK6LNEXJ9H9s8MD9ToItCieYiomphpivik7Zb1XK9FmEizIzMUq7D5OvuV9jYZQy/uwaFSZSmh/DUIO28JA0ZbcHZeKqY0GReVMjrnXNo7Q3uSyjpBgXl6N25DOYDzo40z4NayUV0d3jU8ENmrMbLnP8+dt0i3FaRK9P0WCNK86Foh2jftEPv5eilOxPYNdgQeeR/O92fKmgwpxpzHRNlhMWWpEBkyEIfIkFQgzqCPtqf+DC4glJOAhtMJ+svVe4JPK6/Px7asYUpiX+keGtEgNa6xaK9qFdemHjiBLBtnDuwFWCH80DP5ksyw1+ARyHko1RiIQgsdCeS08WC1CpzGyz7OUlsKbM/Jm9nrjZ9f2u4B+jZeeWKnnPcoP0XymLaprk5BB3VdfEYcIaHV93/Apje8TvDNcnB7MPvpP+UsBsUCkHYhUIMRpTkH87gvyJiEtYdLjTQCl6+PvRQuB9niLI4A0cshnxsC7Lx+d0u1sv2kS+GxaWeJrQGV4dvNYYzb59yZvF8isR6sIuzWgA3SZ2x/nmDd6IeboP4uoBTUYmk0FvzMncTAFkDvohgjod6npgLk4Qbg4PkKGGBSayuCE8JKiq1FiDsnpwDgmL8zzFGskCcLmkQlWEep/A==",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.8-flash",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 6546,
+      "input_tokens": 2589,
+      "output_tokens": 249,
+      "thinking_tokens": 219
+    }
+  }
+}

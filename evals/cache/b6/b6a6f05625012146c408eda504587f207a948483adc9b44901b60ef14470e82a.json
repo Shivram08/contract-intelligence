@@ -1,0 +1,49 @@
+{
+  "meta": {
+    "latency_ms": 1895.3356000129133,
+    "max_tokens": 8000,
+    "message_count": 11,
+    "messages_sha": "f1777a0c8ab13267",
+    "model": "gemini-3.8-flash",
+    "per_message_sha": [
+      "ad039b5940edf747",
+      "d186988db076cef1",
+      "cc693975d986522d",
+      "2c73238e15246328",
+      "ceabfc9e4a6e1796",
+      "4493da040a34df7c",
+      "c50fc2b2b975d524",
+      "6d6fb75a2f75b293",
+      "8617daafbb5bbcfd",
+      "c50501cf61e43f45",
+      "0e672edb3ee88070"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_8556707237500861724",
+        "input": {
+          "char_end": 15318,
+          "char_start": 13900
+        },
+        "name": "read_span",
+        "thought_signature": "EtEBCs4BAWkUfROSRBRhx0eqr702coO7aFy0HUjUY/Q6l20/lIAEbyKjrV+1Zsg1rJlsbgLUNOVNwiYJ9TRvHx+iR5lZqQq88D2yUWb7LNbYWqW/BHvwpALSx5Y4Ng9FW4+SQVe22CEf00xPffpju7I/RIOWLbl7cw07nktCnXJQF9W7Z0r5K+8ZKWRtMythCxM605zWFSIBqM2f1XjTflsl4nIiti2k4ljIequKlYyEq83R1Zxdrowz2EqDESvTmH2C0jzAYkF9x8YlCAsReGO8Li0=",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.8-flash",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 7143,
+      "input_tokens": 2058,
+      "output_tokens": 57,
+      "thinking_tokens": 27
+    }
+  }
+}

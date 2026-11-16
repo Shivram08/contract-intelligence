@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "latency_ms": 665.263100003358,
+    "max_tokens": 8000,
+    "message_count": 5,
+    "messages_sha": "9dbd31dff9410068",
+    "model": "gemini-3.5-flash-lite",
+    "per_message_sha": [
+      "eae1bdba35e6c666",
+      "8510207743df1377",
+      "038064bf294dc0d3",
+      "feb7af456eddabdb",
+      "6b652a27a965b22c"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_477435384941893984",
+        "input": {
+          "query": "non-compete compete competitive products"
+        },
+        "name": "search_contract",
+        "thought_signature": "EokBCoYBAWkUfRN6PRQbvDoOoFN0Td8YzA8V0Crww7dqB0O8C2q5jK/OfQFT7dyZauVNw1tY0YDFlzVfbMr3RxSKObptj9Qe5eHcSAcrm1Ui6TnhXqf28lzUjLalUuNon6+jvJ6DPBYik8WiHbpnLOpBVHma0dQJ4BjI5h+6ZF9EqN6ehN/KOjZuhPs=",
+        "type": "tool_use"
+      },
+      {
+        "id": "call_477435384941892111",
+        "input": {
+          "query": "exclusive exclusivity requirements sole source"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.5-flash-lite",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "input_tokens": 14731,
+      "output_tokens": 42,
+      "thinking_tokens": 0
+    }
+  }
+}

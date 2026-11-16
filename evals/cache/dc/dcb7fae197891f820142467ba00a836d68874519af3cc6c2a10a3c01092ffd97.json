@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "latency_ms": 801.2250000028871,
+    "max_tokens": 8000,
+    "message_count": 5,
+    "messages_sha": "8a796bffdbebae29",
+    "model": "gemini-3.5-flash-lite",
+    "per_message_sha": [
+      "31ef8d3228adf495",
+      "d928eb92e4ac048f",
+      "48d86012cb1240e1",
+      "767ea3ae188d39d0",
+      "93f9f121f67934c7"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_8941916091218054568",
+        "input": {
+          "query": "renew"
+        },
+        "name": "search_contract",
+        "thought_signature": "EokBCoYBAWkUfRNzEwWkYrICR40eHF0yHGCbgEA0x1MoI1PaLH5TxKJvADHa8+R5TG/y2hh1Z3P46N89YrgC3p0O9hSNhZ13VJ4pzXyK7FsRdma6n3t2DS0nydAuusmyPjfKBfIvXnLAQ6CM92n9JTzmnKeKb+JBrJnYwKtYmCz5CnIESswHUlrLL7I=",
+        "type": "tool_use"
+      },
+      {
+        "id": "call_8941916091218052567",
+        "input": {
+          "query": "terminate expiration notice"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "id": "call_8941916091218054662",
+        "input": {
+          "query": "assign"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "id": "call_8941916091218052661",
+        "input": {
+          "query": "control merger subsidiary"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "id": "call_8941916091218054756",
+        "input": {
+          "query": "liability damages cap limit"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "id": "call_8941916091218052755",
+        "input": {
+          "query": "compete compete with"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "id": "call_8941916091218054850",
+        "input": {
+          "query": "exclusive exclusivity requirements"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.5-flash-lite",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "input_tokens": 5501,
+      "output_tokens": 124,
+      "thinking_tokens": 0
+    }
+  }
+}

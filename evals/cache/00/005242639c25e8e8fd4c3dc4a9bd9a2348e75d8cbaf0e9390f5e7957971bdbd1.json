@@ -1,0 +1,151 @@
+{
+  "meta": {
+    "latency_ms": 1761.216200015042,
+    "max_tokens": 8000,
+    "message_count": 5,
+    "messages_sha": "2ab68f2de1e97a0a",
+    "model": "gemini-3.5-flash-lite",
+    "per_message_sha": [
+      "365271d115b3a9e5",
+      "204b4a4939308a12",
+      "a2aff70332df7a4b",
+      "dce3db325ae303a6",
+      "5178c8b5058413a0"
+    ],
+    "system_sha": "3bfed045d06116f2",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_16327133022704523899",
+        "input": {
+          "clauses": [
+            {
+              "clause_type": "governing_law",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "parties",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 385,
+                  "char_start": 164,
+                  "quote": "Cargill, Incorporated through its Bio Technology Development Center, having its principal place of business at 15407 McGinty Road  West, Wayzata, Minnesota 55391 USA (\"Cargill\") and BioAmber S.A.S., having a place of business at Route de Bazancourt, F-51110, Pomacle  France (\"BioAmber\")"
+                }
+              ],
+              "present": true,
+              "raw_text": "Cargill, Incorporated through its Bio Technology Development Center, having its principal place of business at 15407 McGinty Road  West, Wayzata, Minnesota 55391 USA (\"Cargill\") and BioAmber S.A.S., having a place of business at Route de Bazancourt, F-51110, Pomacle  France (\"BioAmber\")",
+              "value": "Cargill, Incorporated (Cargill); BioAmber S.A.S. (BioAmber)"
+            },
+            {
+              "clause_type": "effective_date",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 478,
+                  "char_start": 399,
+                  "quote": "This First Amendment will be effective as of July 5, 2011"
+                }
+              ],
+              "present": true,
+              "raw_text": "July 5, 2011",
+              "value": "2011-07-05"
+            },
+            {
+              "clause_type": "expiration_date",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "renewal_term",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "notice_period_to_terminate_renewal",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "change_of_control",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "anti_assignment",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "cap_on_liability",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "uncapped_liability",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "non_compete",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "exclusivity",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            }
+          ]
+        },
+        "name": "submit_extraction",
+        "thought_signature": "EokBCoYBAWkUfROoCyVhfQuFeW9kFNttFfuVn+9bdEHLAFXGqdpkxgZLBOC4u77I4y6/aaGYX/i4M8gfTqgkcKoYhhwMlfFiPujKw800+xbxxiixUqUbQr11f3vIkbCXzegY5ZEJeTmFeBuvVMj63DdwS3sgLm82deaJKZOu8WaORSxFb+pAHcOMj5Q=",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.5-flash-lite",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "input_tokens": 15886,
+      "output_tokens": 695,
+      "thinking_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "meta": {
+    "latency_ms": 547.94929997297,
+    "max_tokens": 8000,
+    "message_count": 3,
+    "messages_sha": "9f6301bb74eaa661",
+    "model": "gemini-3.5-flash-lite",
+    "per_message_sha": [
+      "c88511f286431b54",
+      "e1e319b99e629895",
+      "94521b82ffe6870f"
+    ],
+    "system_sha": "3bfed045d06116f2",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_16931589298483474046",
+        "input": {
+          "query": "parties agreement made and entered into"
+        },
+        "name": "search_contract",
+        "thought_signature": "EokBCoYBAWkUfROcICwD0uFCxj1otjgqgDRgnQVAqHMIBC4EAFJcnXXs1jf2Y9kw75L79d27nP5T6BnZ85PqMuSPgliiMSCflPvfqH2gi5x+YKN70eQiyKOUjm4i2uqyI6m0hL6c7J3bXd9qA3MPoNsCJQpG7sMhuO69euhICyqzvEHTnwga7daXE+8=",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.5-flash-lite",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "input_tokens": 3323,
+      "output_tokens": 21,
+      "thinking_tokens": 0
+    }
+  }
+}

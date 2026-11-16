@@ -1,0 +1,44 @@
+{
+  "meta": {
+    "latency_ms": 965.366400021594,
+    "max_tokens": 8000,
+    "message_count": 7,
+    "messages_sha": "56386042fce17a29",
+    "model": "gemini-3.1-flash-lite",
+    "per_message_sha": [
+      "061bd41b793c00c6",
+      "7101e0b35030815d",
+      "bf000c52dec14f03",
+      "72629d5a6327ed34",
+      "8269a34fd80f5df4",
+      "7bcbf6c2c0b76af6",
+      "aab532e9111f68d6"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_3183723659513727293",
+        "input": {
+          "query": "effective date of this Agreement"
+        },
+        "name": "search_contract",
+        "thought_signature": "EpwBCpkBAWkUfRO2hpgtlA4bS2H5sucIHUM5qTBDMU9FHgU1ijbICwgAFwygph9RrOxoaiwQwDdS4HiJM+XTI3i8VOY3kkSEnOSKvhO9Ce6HyY44ikQ0tOangA8PklCyaQ2Ck4TosNJaOcfMG4LAQLhW3zJwdMpk0PJMCG8dvLkOOgZfShSK375lUhGdvDrfuHdBKqXM632VZC9ulfOZ",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.1-flash-lite",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4054,
+      "input_tokens": 3815,
+      "output_tokens": 20,
+      "thinking_tokens": 0
+    }
+  }
+}

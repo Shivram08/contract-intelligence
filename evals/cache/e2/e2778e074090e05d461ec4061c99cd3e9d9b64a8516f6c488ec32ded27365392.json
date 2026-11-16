@@ -1,0 +1,42 @@
+{
+  "meta": {
+    "latency_ms": 574.1806000005454,
+    "max_tokens": 8000,
+    "message_count": 5,
+    "messages_sha": "b7b73c5a317e0f0d",
+    "model": "gemini-3.5-flash-lite",
+    "per_message_sha": [
+      "73c631735c4001a2",
+      "10c133f47c5f26c0",
+      "b9e53dd9e52951e0",
+      "102985ebceeab018",
+      "dcc039c93972e02c"
+    ],
+    "system_sha": "3bfed045d06116f2",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_7720664484963974194",
+        "input": {
+          "query": "parties Cerus Corporation Porex Corporation"
+        },
+        "name": "search_contract",
+        "thought_signature": "EokBCoYBAWkUfRO7eGnMzoI5CqJ3r7fzUUPRXuzzi/LXGUkCfn27TTeDluIHzKPY7hh0v2WP49/yDDzxqln62MbzEsy09AYQ7jLj3WYvHuXvSrUZUoLZLBFVfXVAqXB0p0uDLTVLvk73SKCth+W1kiCFgDXBx8pMdi58B/89Gdn2eeKnJZ57jnpX6xw=",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.5-flash-lite",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "input_tokens": 6577,
+      "output_tokens": 22,
+      "thinking_tokens": 0
+    }
+  }
+}

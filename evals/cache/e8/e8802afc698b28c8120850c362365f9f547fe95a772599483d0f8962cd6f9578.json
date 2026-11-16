@@ -1,0 +1,173 @@
+{
+  "meta": {
+    "latency_ms": 1970.4318000003695,
+    "max_tokens": 8000,
+    "message_count": 27,
+    "messages_sha": "b60124dcdfa31752",
+    "model": "gemini-3.5-flash-lite",
+    "per_message_sha": [
+      "827cd37a2d631b18",
+      "031d453661eda78b",
+      "66b9df742161d7d0",
+      "fa7765c319bfaf77",
+      "a1e1c223ab712bea",
+      "ce1afd29762b1a7c",
+      "198cb2406be90611",
+      "46945a14f5efde99",
+      "0b0e964eee8ed69b",
+      "826402da95812b81",
+      "553989c4fe3d5c9e",
+      "c8cd45594f228ce0",
+      "e2281c9796c96f31",
+      "3e0198fc181eefef",
+      "4dc2c7dca25c06f4",
+      "cd9efdadfd8c3bc2",
+      "68f00ce078b8b9e4",
+      "bf3694f592abd0ec",
+      "fa8282e73ff4b28d",
+      "89d0c886a969dda9",
+      "850f4c2df789d113",
+      "daa15590dc384506",
+      "af7fb3eb9d59d032",
+      "d7ee5d054dd8518f",
+      "5c864ffc0e7e404f",
+      "bddb27dedf9d8705",
+      "0b9fefc3bf45a84f"
+    ],
+    "system_sha": "3bfed045d06116f2",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_1858329041172041029",
+        "input": {
+          "clauses": [
+            {
+              "clause_type": "governing_law",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "parties",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 293,
+                  "char_start": 164,
+                  "quote": "Bank of America, N.A. (\"Bank of America\") and Cardlytics, (\"Supplier\")"
+                }
+              ],
+              "present": true,
+              "raw_text": "Bank of America, N.A. (\"Bank of America\") and Cardlytics, (\"Supplier\")",
+              "value": "Bank of America, N.A. (Customer); Cardlytics (Supplier)"
+            },
+            {
+              "clause_type": "effective_date",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "expiration_date",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "renewal_term",
+              "confidence": 0.95,
+              "evidence": [
+                {
+                  "char_end": 2259,
+                  "char_start": 2124,
+                  "quote": "Thereafter, the Maintenance Term shall automatically renew for successive period, 12 months, on the terms and conditions of this Agreement"
+                }
+              ],
+              "present": true,
+              "raw_text": "Thereafter, the Maintenance Term shall automatically renew for successive period, 12 months, on the terms and conditions of this Agreement",
+              "value": "365 recurring"
+            },
+            {
+              "clause_type": "notice_period_to_terminate_renewal",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "change_of_control",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "anti_assignment",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "cap_on_liability",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "uncapped_liability",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "non_compete",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            },
+            {
+              "clause_type": "exclusivity",
+              "confidence": 0,
+              "evidence": [],
+              "present": false,
+              "raw_text": null,
+              "value": null
+            }
+          ]
+        },
+        "name": "submit_extraction",
+        "thought_signature": "EokBCoYBAWkUfROSup5LAPo4FwB9WddVnjIjk/X9idhm+aZHNIe2vC419quegAyjybQKFz6tOFKSaTLI918UdQ+1yTalkZS7PLKZ8zVaV1qqExBLxcm792jVw3aPn1R3O8Jyw3onao/X+6gh0SbhDiZ9ILcDpYtLTWibBaF5njZc9LheW0ltUe28UBo=",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.5-flash-lite",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 20315,
+      "input_tokens": 2320,
+      "output_tokens": 586,
+      "thinking_tokens": 0
+    }
+  }
+}

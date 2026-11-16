@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "latency_ms": 2599.950700008776,
+    "max_tokens": 8000,
+    "message_count": 9,
+    "messages_sha": "fcda897eec99c929",
+    "model": "gemini-3.8-flash",
+    "per_message_sha": [
+      "061bd41b793c00c6",
+      "19c1a5398a589c57",
+      "add74312f2bf36ae",
+      "4ec237c26305a904",
+      "98086f04469f32ba",
+      "cc4dec3515360b43",
+      "6eaae9355c2c2e53",
+      "87af75fd2dec27cd",
+      "60f70b2664a7ead0"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_4965980771642091177",
+        "input": {
+          "query": "\"Royalty Term\" means"
+        },
+        "name": "search_contract",
+        "thought_signature": "Eu4BCusBAWkUfRPpnQMjYSkYc/GFFm9VQpWuPxGUMN5qErZ4KFo1p5roOFbZgaQ10l3B3E1w4MypiwzmZMBYPwqmrPiInqG0CLb9aJMBC4XM8li1YxGi6AqoSDZwgQDS0u6P1IepURmVxNCZ/n0W5UoFsK+eH43CbrBqu4wYFngFpEt9trQ94KWCeiiCWeZonZK1P36wtsm/fwW22jCH48h564ZfkO55jye0MbSJQ1P8HV6RNM3vEtOjV/F5F16oFOVOJDrmwz2g3OuBj85yTBeZgvApvmOFxF1Dg6tum5I4ISteV2GtpZLKq/CY057sYA==",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.8-flash",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 6976,
+      "input_tokens": 2524,
+      "output_tokens": 48,
+      "thinking_tokens": 27
+    }
+  }
+}

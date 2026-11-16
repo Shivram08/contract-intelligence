@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "latency_ms": 702.0848999964073,
+    "max_tokens": 8000,
+    "message_count": 3,
+    "messages_sha": "8b10a234530b5304",
+    "model": "gemini-3.5-flash-lite",
+    "per_message_sha": [
+      "31ef8d3228adf495",
+      "a88b1768b67e682c",
+      "c0ffbb39ac1c3e8f"
+    ],
+    "system_sha": "3bfed045d06116f2",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_6355300592896185796",
+        "input": {
+          "query": "law of the state of"
+        },
+        "name": "search_contract",
+        "thought_signature": "EokBCoYBAWkUfRO5B0e6bU3tVNR4BCvXMYG1/Mc/uoRFdhsW46C9UwNtGEZwVTA2GGkLbhEQflAXw0bZtYjAASNDy5+T1VCMu4zWb4PTjNfguK4T4kVYU46IGcs3+4YWkVmxFh/stAuMLLAp6gaVBR0rqDqQQ0bwGwLag8gP9FGaCcSwHU73ScqWhiM=",
+        "type": "tool_use"
+      },
+      {
+        "id": "call_6355300592896184535",
+        "input": {
+          "query": "This Agreement is entered into as of"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "id": "call_6355300592896187370",
+        "input": {
+          "query": "Initial Term"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      },
+      {
+        "id": "call_6355300592896186109",
+        "input": {
+          "query": "automatic renewal"
+        },
+        "name": "search_contract",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.5-flash-lite",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "input_tokens": 3293,
+      "output_tokens": 76,
+      "thinking_tokens": 0
+    }
+  }
+}

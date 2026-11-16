@@ -1,0 +1,52 @@
+{
+  "meta": {
+    "latency_ms": 548.0978999985382,
+    "max_tokens": 8000,
+    "message_count": 15,
+    "messages_sha": "737464400858f249",
+    "model": "gemini-3.5-flash-lite",
+    "per_message_sha": [
+      "827cd37a2d631b18",
+      "c3db56df0aa199a2",
+      "0bb06fef754027ef",
+      "b779b54fee1fcb1b",
+      "407864e5da173ff4",
+      "c7995f9c672c12ea",
+      "70cf8c69c9afe73e",
+      "a213c5983f7b77c1",
+      "cf778c87c26d4c07",
+      "f88ac88d02398395",
+      "045ba6e41f4b5af3",
+      "91749deb5df737a1",
+      "f82f62f4818b1265",
+      "c02481049d3ad848",
+      "94d2f0a1a5372de6"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_16625003085296294887",
+        "input": {
+          "query": "Thereafter the Maintenance Term shall automatically renew"
+        },
+        "name": "search_contract",
+        "thought_signature": "EokBCoYBAWkUfRP3tiLbnSdJyXhnL0r+9/y7lcCY9zlPZM2mdFbmF4DPv8gP1Uifgdi48eynW9B3e/ElESs2eaN24tnRVtjqtC8jfV350cbNnkTjjpYPE0U6RkgtVlDshEA61hj5dCA9SYhS/Gbek2BuA2io3d+MLyxccTOzFkEw6vIeUop3Rlb/DVY=",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.5-flash-lite",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 10142,
+      "input_tokens": 2679,
+      "output_tokens": 23,
+      "thinking_tokens": 0
+    }
+  }
+}

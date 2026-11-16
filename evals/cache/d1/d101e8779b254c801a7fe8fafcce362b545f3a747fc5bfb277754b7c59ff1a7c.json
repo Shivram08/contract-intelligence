@@ -1,0 +1,48 @@
+{
+  "meta": {
+    "latency_ms": 622.3224999848753,
+    "max_tokens": 8000,
+    "message_count": 11,
+    "messages_sha": "62ecae569bb92102",
+    "model": "gemini-3.5-flash-lite",
+    "per_message_sha": [
+      "c88511f286431b54",
+      "e1e319b99e629895",
+      "94521b82ffe6870f",
+      "7c5f854a9a2a5ec2",
+      "83c90a5192bcdaa8",
+      "8fd2674bb741ba27",
+      "931299ae78bf4db8",
+      "2db77bec51dcf23a",
+      "59cd12ccccbdc956",
+      "c4f26b1fb88b1e75",
+      "ee63a9e14fc3d3cd"
+    ],
+    "system_sha": "3bfed045d06116f2",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_6287917584632328851",
+        "input": {
+          "query": "assign, assignment, successor, successors"
+        },
+        "name": "search_contract",
+        "thought_signature": "EokBCoYBAWkUfROA7GhPs74BYuyrAys2ANSbgz5i8Wp8/CQpaGOcSkKpEM+UmjeNmOmiMODOxRjdPrGln9XZZCWH3xSfzgJjyIw+azHHcxRxY+92SDR9HR9hN9vs4Xy2aVflis29ES6xZTIOqFtpLdpJCAxioEZA3K8KTWllGSOPOKuLFx7LZ0x+rzg=",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.5-flash-lite",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 8122,
+      "input_tokens": 3973,
+      "output_tokens": 22,
+      "thinking_tokens": 0
+    }
+  }
+}

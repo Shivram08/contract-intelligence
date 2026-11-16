@@ -1,0 +1,61 @@
+{
+  "meta": {
+    "latency_ms": 2650.7480000145733,
+    "max_tokens": 8000,
+    "message_count": 23,
+    "messages_sha": "20aa0c86a03a37ef",
+    "model": "gemini-3.8-flash",
+    "per_message_sha": [
+      "ad039b5940edf747",
+      "d186988db076cef1",
+      "cc693975d986522d",
+      "2c73238e15246328",
+      "ceabfc9e4a6e1796",
+      "4493da040a34df7c",
+      "c50fc2b2b975d524",
+      "6d6fb75a2f75b293",
+      "8617daafbb5bbcfd",
+      "c50501cf61e43f45",
+      "0e672edb3ee88070",
+      "c8c68315df835c63",
+      "da3c94b873c8436c",
+      "2b079f6e190dd00a",
+      "23f6d9a6afb4e90a",
+      "6b662d7718e6afbf",
+      "e27e7c34ce1d4e7a",
+      "133257bfe90d7a95",
+      "f9b0db8093fa196b",
+      "770fa958fefca61c",
+      "d98e52f7d0321f73",
+      "8a919d3203f4a002",
+      "23a952d8f27c9eaa"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_2297540381417157135",
+        "input": {
+          "char_end": 15000,
+          "char_start": 14300
+        },
+        "name": "read_span",
+        "thought_signature": "ErcHCrQHAWkUfRPVxdvUP1vAhZbeFZAqq0feNBftPQbbPnwIyuYB0vXptVLd50fWooKmHQi5JinEUwlpddIJrigiwVLO7OzFVNpM+8OCPa2Andj0ADjgHY73eYCy9nwr4VJHQ6Z7dtq+XvKYLQstoINm3tDtisy0FuU4KY+3Js+ZTNY3gqb6mmaLgC1NA3Fm7yc5bthYb6NadDqzEO7uZUfa8jZZDglN/MG3FzFiKLEUMbLREHvwiFgD0ivXmLXeg+g+ARG1K7uki6WEeUCrAdeSxYQH++IHk9HaVGb61DY/qFSheSboCj2w0EQNKK0ydPKJjf9MxOml8/aosSKhuFCAH/jt0MYbmE9hvXIKS7TS6NlkN1FRiWjb6wJsLliNoH3Te4XFe7vFIxskBaM0h6XYyNMHhxgnVVx5fhT/xvMhMO0AAFi8bq+nyx75t4nOvhWizUoEm/j562chfYRrEYhLk7YCy4JsKqGKTYelP58CXkAIX54OBfG6U709pP+EVGT0KaWchPKr8msCxAOYMGU1v5BnOORofYK7ZaEwJ1TXek+9yUD54ZFOmAln08wiYiGRQt/CzlR7s5CvVXp5vJCUibhwWV/szLK2G9B/Rm92/eZBlNG6/8uQVpgE+hdAsGwqlQNVDRklgr0C+LHkGs78yyBPdIr+rCUtgOrQtk3sVKlyR2EdAGhB8Vdrq8cspKVmx6T8rWFfYFwxQQCjXnEix4ASgZrSh7i4wwSEQIFXZ9bqa8abxKNl8DCKyvNkKfUe/Ppv29IpkhwYVZKX5HFt79wot6hBAHiwyqNx8njcR2cRWHdM4C1zQ3EKp0rAK226JqCycHqMcL6JqgyDj+La/z7NawE81Pc/dgmxWtRRrceyQ20vgORwpzEWTOIVkept85I6YMWspXhDThBtXExNaHh+74mCsjzMwF15jPsrB620IvxAsGf9n8aDCRSNtm5vXSarmh/LBMlpMPi9Csxz9dxlQ94rCg2eJRaAqouc6gJvgRr4Gx2pwhKqJkFdRPYjBuihO0/sgTJ0KdH7n8sLgnqIXChXjUOv8gcAsujpqFJNxmrBIZO7mGI0E1wre1VSs/a5JVRrXXQBrktceIO8SoIF3EnHxrJrTAFv37e/iLo5IwkXdjPUVxkEkrScSTc+7vc/zId5xQKzdQDOaOAw8qCp/71zHXFlIY6vY8CWvxG3AE5ZQLoKSuizNMGi79b13z1nIpcKck4NQ3x/gs4Pd8GjwTrMw4GF6dU4d56dJ1/ImhvqCk1U",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.8-flash",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 31829,
+      "input_tokens": 2510,
+      "output_tokens": 225,
+      "thinking_tokens": 195
+    }
+  }
+}

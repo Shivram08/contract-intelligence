@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "latency_ms": 607.2812999482267,
+    "max_tokens": 8000,
+    "message_count": 9,
+    "messages_sha": "779288a498ef30d9",
+    "model": "gemini-3.5-flash-lite",
+    "per_message_sha": [
+      "827cd37a2d631b18",
+      "c3db56df0aa199a2",
+      "0bb06fef754027ef",
+      "b779b54fee1fcb1b",
+      "407864e5da173ff4",
+      "c7995f9c672c12ea",
+      "70cf8c69c9afe73e",
+      "a213c5983f7b77c1",
+      "cf778c87c26d4c07"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_13783984200598144029",
+        "input": {
+          "query": "renew successive period months"
+        },
+        "name": "search_contract",
+        "thought_signature": "EokBCoYBAWkUfRP7q6L9E73CkVxV8gkw1/DKfSPSPOl9TbGMP0RHvaDfFnjXPXmYqG0WAi4sKQOzkQhJnjGOz27pFFGPf2D8ZhrBSo4J1EQcGk7nry0vA91kEeV2dS214BMO5gi0Nfc89/g5BJUtZ8CFeA8tnPYFwzIfysNzFzJ6DeZDAU01kKXHBpQ=",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.5-flash-lite",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4048,
+      "input_tokens": 3917,
+      "output_tokens": 19,
+      "thinking_tokens": 0
+    }
+  }
+}

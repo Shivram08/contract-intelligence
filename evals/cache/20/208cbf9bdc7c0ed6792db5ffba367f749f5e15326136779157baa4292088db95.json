@@ -1,0 +1,44 @@
+{
+  "meta": {
+    "latency_ms": 610.3508000378497,
+    "max_tokens": 8000,
+    "message_count": 7,
+    "messages_sha": "85e94b7065e39610",
+    "model": "gemini-3.5-flash-lite",
+    "per_message_sha": [
+      "365271d115b3a9e5",
+      "1e012b4701b74294",
+      "b503abc9b74fc8bb",
+      "a60ee69b051b5a56",
+      "478f3de9a9f063ff",
+      "76be50ae7efac982",
+      "20916ca299cc993b"
+    ],
+    "system_sha": "21aa6e403969786e",
+    "temperature": null,
+    "tools_sha": "75d5c8441948c425",
+    "top_p": null
+  },
+  "response": {
+    "content": [
+      {
+        "id": "call_11454121306721180394",
+        "input": {
+          "query": "law"
+        },
+        "name": "search_contract",
+        "thought_signature": "EokBCoYBAWkUfRN6qKpBTZPnA+1Rzfq2UJyMdDhFtEAjlF4lCE5TeOvh5IFC5WraWfk5PC9cW8e3POJw0Ed7wJXdkb9GALRDyY9fAPgkKnmdtstRmWfgkfpYOzfMC4Z7gAyMPrVYa39eOCYtQ1cqKJj2Bkx6I9nvIwmFt45di86Uo9BOOaZKms9Cuao=",
+        "type": "tool_use"
+      }
+    ],
+    "model": "gemini-3.5-flash-lite",
+    "stop_reason": "tool_use",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 4054,
+      "input_tokens": 4092,
+      "output_tokens": 16,
+      "thinking_tokens": 0
+    }
+  }
+}
