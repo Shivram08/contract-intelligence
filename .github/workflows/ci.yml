@@ -53,9 +53,13 @@ jobs:
       # against evals/baselines/. Read-only, so a cache miss is a hard error
       # rather than a silent live call -- no API key exists in CI and none is
       # needed. Fails the build if presence F1 drops more than 2 points or the
-      # grounding violation rate exceeds 1%.
+      # grounding violation rate exceeds 1%. Runs over the vendored golden
+      # corpus (CUAD itself is not in the repo); a contract missing from it is
+      # a refusal (exit 2), never an all-absent score.
       - name: eval gate
-        run: uv run python -m evals.run_eval --gate --quiet --baselines 1_regex
+        run: >-
+          uv run python -m evals.run_eval --gate --quiet --baselines 1_regex
+          --cuad-dir evals/golden/corpus
 
   integration:
     name: integration (postgres + pgvector)

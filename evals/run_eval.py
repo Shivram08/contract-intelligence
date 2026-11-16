@@ -37,6 +37,7 @@ from docintel.agent.loop import DEFAULT_MODEL, AgentBudget
 from docintel.config import get_settings, resolve_anthropic_api_key
 from docintel.ingest.loader import iter_documents
 from docintel.schemas import ClauseExtraction, Document, RetrievalHit, Tier
+from docintel.text import contract_key
 from docintel.validation.grounding import GroundingStatus
 from evals.cache import CacheMode, CachingClient, ResponseCache, cache_from_env
 from evals.cases import DEFAULT_CASES_PATH, GoldenCase, cases_by_document, load_cases
@@ -384,6 +385,18 @@ def gate(summaries: Sequence[MetricSummary], directory: Path = FROZEN_DIR) -> in
     return 0
 
 
+def missing_documents(cuad_dir: Path, document_ids: set[str]) -> set[str]:
+    """Case-set contracts with no text file under ``cuad_dir``.
+
+    Checked before scoring because a missing contract is otherwise
+    indistinguishable from a model that found nothing: the gate once reported
+    F1 0.000 over "150 cases over 0 contracts" and failed CI for a reason that
+    had nothing to do with extraction quality.
+    """
+    present = {contract_key(p.stem) for p in (cuad_dir / "full_contract_txt").glob("*.txt")}
+    return {doc for doc in document_ids if contract_key(doc) not in present}
+
+
 def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(prog="evals.run_eval", description=__doc__)
     parser.add_argument("--cases", type=Path, default=DEFAULT_CASES_PATH)
@@ -447,6 +460,14 @@ def main(argv: Sequence[str] | None = None) -> int:
     grouped = cases_by_document(cases)
     document_ids = set(grouped)
 
+    missing = missing_documents(args.cuad_dir, document_ids)
+    if missing:
+        print(
+            f"refusing to run: {len(missing)} of {len(document_ids)} case-set contracts "
+            f"have no text under {args.cuad_dir / 'full_contract_txt'}, so their cases "
+            "would score as all-absent. CI uses the vendored evals/golden/corpus."
+        )
+        return 2
     documents = list(iter_documents(args.cuad_dir, document_ids))
 
     if args.sample:

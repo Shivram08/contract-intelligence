@@ -5,3 +5,7 @@
 *.png binary
 *.pdf binary
 uv.lock text eol=lf linguist-generated=true
+
+# Vendored CUAD text: byte-exact. Gold spans and cache keys are character
+# offsets into these files, so git must never rewrite them.
+evals/golden/corpus/full_contract_txt/** -text
