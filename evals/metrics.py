@@ -365,6 +365,9 @@ class MetricSummary:
     #: Evidence spans whose offsets were wrong but whose quote was real. Counted
     #: so the grounding recovery path cannot become a silent escape hatch.
     relocated: int = 0
+    #: Spans grounded only by skipping an SEC page footer. Grounded, but the
+    #: strict rate counts them as violations, and both rates are reported.
+    artifact_elided: int = 0
     #: Submissions rejected before one was accepted, summed over scored runs.
     retries_used: int = 0
     #: Per-document cost and latency, for mean and p95.
@@ -397,6 +400,13 @@ class MetricSummary:
         10%, not a wholly failed document.
         """
         return self.grounding_violations / self.grounding_checked if self.grounding_checked else 0.0
+
+    @property
+    def strict_grounding_violation_rate(self) -> float:
+        """The same rate with footer-elided quotes counted as violations."""
+        if not self.grounding_checked:
+            return 0.0
+        return (self.grounding_violations + self.artifact_elided) / self.grounding_checked
 
     @property
     def schema_validity_rate(self) -> float:
@@ -498,6 +508,8 @@ class MetricSummary:
                 "spans_checked": self.grounding_checked,
                 "violations": self.grounding_violations,
                 "relocated": self.relocated,
+                "artifact_elided": self.artifact_elided,
+                "strict_violation_rate": round(self.strict_grounding_violation_rate, 4),
             },
             "schema_validity_rate": round(self.schema_validity_rate, 4),
             "rule_violation_rate": round(self.rule_violation_rate, 4),
