@@ -14,10 +14,11 @@ from datetime import UTC, datetime
 from enum import StrEnum
 from typing import Annotated, Any, Final
 
-from fastapi import APIRouter, Body, Depends, HTTPException, Request, status
+from fastapi import APIRouter, Body, Depends, HTTPException, Query, Request, Response, status
 from pydantic import BaseModel, Field
 
 from docintel.api.telemetry import extraction_span, record_extraction
+from docintel.review.queue import QueueEntry, Resolution, ReviewQueue
 from docintel.schemas import Document, ExtractionResult
 
 __all__ = ["JobState", "router"]
@@ -121,6 +122,41 @@ def get_extractor(request: Request) -> Any:
     return extractor
 
 
+def get_review_queue(request: Request) -> ReviewQueue | None:
+    """The queue on the app's connection, created (and its table) on first use.
+
+    None when the service has no database: extraction still works and the
+    review flag is still on the response, but nothing is persisted.
+    """
+    queue: ReviewQueue | None = getattr(request.app.state, "review_queue", None)
+    if queue is not None:
+        return queue
+    connection = getattr(request.app.state, "connection", None)
+    if connection is None:
+        return None
+    queue = ReviewQueue(connection)
+    queue.ensure_schema()
+    request.app.state.review_queue = queue
+    return queue
+
+
+def require_review_queue(request: Request) -> ReviewQueue:
+    queue = get_review_queue(request)
+    if queue is None:
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail="review queue unavailable: the service has no database",
+        )
+    return queue
+
+
+def _enqueue(queue: ReviewQueue | None, outcome: Any) -> int | None:
+    review = getattr(outcome, "review", None)
+    if queue is None or review is None:
+        return None
+    return queue.enqueue(review)
+
+
 def get_jobs(request: Request) -> JobState:
     jobs: JobState = request.app.state.jobs
     return jobs
@@ -172,6 +208,8 @@ def healthz(request: Request) -> HealthView:
 def extract(
     payload: Annotated[ExtractRequest, Body()],
     extractor: Annotated[Any, Depends(get_extractor)],
+    response: Response,
+    queue: Annotated[ReviewQueue | None, Depends(get_review_queue)],
 ) -> ExtractionResult:
     """Synchronous single-document extraction.
 
@@ -195,6 +233,11 @@ def extract(
             grounding=getattr(outcome, "grounding", None),
             status="completed" if not result.stopped_on_budget else "incomplete",
         )
+    # A flagged result is persisted, not just flagged. The id travels in a
+    # header so the response body stays exactly ExtractionResult.
+    review_id = _enqueue(queue, outcome)
+    if review_id is not None:
+        response.headers["X-Review-Id"] = str(review_id)
     return result
 
 
@@ -218,12 +261,13 @@ def extract_batch(
     """
     job = jobs.create(len(payload.documents))
     documents = [item.to_document() for item in payload.documents]
+    queue = get_review_queue(request)
 
     background = getattr(request.state, "background_tasks", None)
     if background is not None:  # pragma: no cover - exercised via the app
-        background.add_task(_run_job, extractor, jobs, job.job_id, documents)
+        background.add_task(_run_job, extractor, jobs, job.job_id, documents, queue)
     else:
-        _run_job(extractor, jobs, job.job_id, documents)
+        _run_job(extractor, jobs, job.job_id, documents, queue)
 
     return JobAccepted(
         job_id=job.job_id, status=jobs.jobs[job.job_id].status, document_count=job.total
@@ -238,7 +282,13 @@ def get_job(job_id: str, jobs: Annotated[JobState, Depends(get_jobs)]) -> JobVie
     return job
 
 
-def _run_job(extractor: Any, jobs: JobState, job_id: str, documents: list[Document]) -> None:
+def _run_job(
+    extractor: Any,
+    jobs: JobState,
+    job_id: str,
+    documents: list[Document],
+    queue: ReviewQueue | None = None,
+) -> None:
     """Process a batch. One document failing does not fail the job.
 
     A batch where document 40 of 100 raises should return 99 results and one
@@ -252,8 +302,97 @@ def _run_job(extractor: Any, jobs: JobState, job_id: str, documents: list[Docume
                 outcome = extractor.run(document)
             job.results.append(outcome.result)
             record_extraction(outcome.result, grounding=getattr(outcome, "grounding", None))
+            _enqueue(queue, outcome)
         except Exception as exc:
             job.errors[document.document_id] = f"{type(exc).__name__}: {exc}"
         finally:
             job.completed += 1
     job.status = JobStatus.SUCCEEDED if not job.errors else JobStatus.FAILED
+
+
+# --------------------------------------------------------------------------
+# Review queue
+# --------------------------------------------------------------------------
+
+
+class ReviewView(BaseModel):
+    id: int
+    document_id: str
+    reasons: list[str]
+    status: str
+    reviewer: str | None
+    note: str | None
+    created_at: datetime
+    resolved_at: datetime | None
+    result: ExtractionResult
+    correction: ExtractionResult | None
+
+    @classmethod
+    def of(cls, entry: QueueEntry) -> ReviewView:
+        return cls(
+            id=entry.id,
+            document_id=entry.document_id,
+            reasons=entry.reasons,
+            status=entry.status,
+            reviewer=entry.reviewer,
+            note=entry.note,
+            created_at=entry.created_at,
+            resolved_at=entry.resolved_at,
+            result=entry.result,
+            correction=entry.correction,
+        )
+
+
+class ResolveRequest(BaseModel):
+    resolution: Resolution
+    reviewer: str = Field(min_length=1, max_length=200)
+    note: str | None = Field(default=None, max_length=4_000)
+    #: Required when the resolution is "corrected", refused otherwise.
+    correction: ExtractionResult | None = None
+
+
+@router.get("/review", response_model=list[ReviewView], tags=["review"])
+def list_review(
+    queue: Annotated[ReviewQueue, Depends(require_review_queue)],
+    status_filter: Annotated[str, Query(alias="status")] = "open",
+    limit: Annotated[int, Query(ge=1, le=500)] = 50,
+) -> list[ReviewView]:
+    """Items awaiting a person, oldest first."""
+    if status_filter not in {"open", *(r.value for r in Resolution)}:
+        raise HTTPException(status_code=422, detail=f"unknown status {status_filter!r}")
+    return [ReviewView.of(e) for e in queue.items(status_filter, limit)]
+
+
+@router.get("/review/{item_id}", response_model=ReviewView, tags=["review"])
+def get_review(
+    item_id: int, queue: Annotated[ReviewQueue, Depends(require_review_queue)]
+) -> ReviewView:
+    entry = queue.get(item_id)
+    if entry is None:
+        raise HTTPException(status_code=404, detail=f"no review item {item_id}")
+    return ReviewView.of(entry)
+
+
+@router.post("/review/{item_id}/resolve", response_model=ReviewView, tags=["review"])
+def resolve_review(
+    item_id: int,
+    payload: Annotated[ResolveRequest, Body()],
+    queue: Annotated[ReviewQueue, Depends(require_review_queue)],
+) -> ReviewView:
+    """Close an item. 409 if it was already resolved: the first decision stands."""
+    if (payload.resolution is Resolution.CORRECTED) != (payload.correction is not None):
+        raise HTTPException(
+            status_code=422,
+            detail="a correction is required for 'corrected', and only for it",
+        )
+    entry = queue.resolve(
+        item_id, payload.resolution, payload.reviewer, payload.note, payload.correction
+    )
+    if entry is None:
+        existing = queue.get(item_id)
+        if existing is None:
+            raise HTTPException(status_code=404, detail=f"no review item {item_id}")
+        raise HTTPException(
+            status_code=409, detail=f"review item {item_id} is already {existing.status}"
+        )
+    return ReviewView.of(entry)

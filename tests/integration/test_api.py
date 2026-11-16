@@ -380,3 +380,89 @@ class TestMetrics:
             client.post("/extract", json={"document_id": "T", "text": CONTRACT})
             body = client.get("/metrics").text
         assert "docintel_grounding_spans_total" in body
+
+
+class TestReviewQueue:
+    """Flagged results are persisted, listed oldest first, and resolved once."""
+
+    @pytest.fixture(autouse=True)
+    def _empty_queue(self, connection: Any) -> None:
+        from docintel.review.queue import ReviewQueue
+
+        ReviewQueue(connection).ensure_schema()
+        with connection.cursor() as cursor:
+            cursor.execute("DELETE FROM review_items")
+
+    def _flagged(self, client: Any) -> int:
+        response = client.post("/extract", json={"document_id": "FAB", "text": CONTRACT})
+        assert response.json()["needs_review"] is True
+        return int(response.headers["X-Review-Id"])
+
+    def test_a_flagged_result_is_enqueued_with_its_reasons(self, connection: Any) -> None:
+        stub = StubClient(quote="Seller shall not compete in any territory whatsoever")
+        with build_client(connection, stub) as client:
+            review_id = self._flagged(client)
+            listed = client.get("/review").json()
+        assert [item["id"] for item in listed] == [review_id]
+        assert listed[0]["document_id"] == "FAB"
+        assert listed[0]["status"] == "open"
+        assert any("ungrounded" in reason for reason in listed[0]["reasons"])
+
+    def test_header_is_present_exactly_when_review_is_needed(self, connection: Any) -> None:
+        with build_client(connection, StubClient()) as client:
+            response = client.post("/extract", json={"document_id": "T", "text": CONTRACT})
+        assert ("X-Review-Id" in response.headers) == response.json()["needs_review"]
+
+    def test_resolution_is_final(self, connection: Any) -> None:
+        stub = StubClient(quote="Seller shall not compete in any territory whatsoever")
+        with build_client(connection, stub) as client:
+            review_id = self._flagged(client)
+            body = {"resolution": "rejected", "reviewer": "qa"}
+            first = client.post(f"/review/{review_id}/resolve", json=body)
+            second = client.post(
+                f"/review/{review_id}/resolve", json={"resolution": "accepted", "reviewer": "x"}
+            )
+            still_open = client.get("/review").json()
+        assert first.status_code == 200
+        assert first.json()["status"] == "rejected"
+        assert first.json()["resolved_at"] is not None
+        assert second.status_code == 409
+        assert still_open == []
+
+    def test_corrected_requires_a_correction_and_stores_it(self, connection: Any) -> None:
+        stub = StubClient(quote="Seller shall not compete in any territory whatsoever")
+        with build_client(connection, stub) as client:
+            review_id = self._flagged(client)
+            missing = client.post(
+                f"/review/{review_id}/resolve", json={"resolution": "corrected", "reviewer": "qa"}
+            )
+            original = client.get(f"/review/{review_id}").json()["result"]
+            fixed = client.post(
+                f"/review/{review_id}/resolve",
+                json={"resolution": "corrected", "reviewer": "qa", "correction": original},
+            )
+        assert missing.status_code == 422
+        assert fixed.status_code == 200
+        assert fixed.json()["correction"]["document_id"] == "FAB"
+
+    def test_unknown_item_is_404(self, connection: Any) -> None:
+        with build_client(connection, StubClient()) as client:
+            assert client.get("/review/999999").status_code == 404
+            response = client.post(
+                "/review/999999/resolve", json={"resolution": "accepted", "reviewer": "qa"}
+            )
+        assert response.status_code == 404
+
+    def test_without_a_database_the_queue_is_503_not_a_crash(self) -> None:
+        from fastapi.testclient import TestClient
+
+        from docintel.api.main import create_app
+        from docintel.api.routes import JobState
+
+        app = create_app()
+        app.router.lifespan_context = _null_lifespan
+        app.state.extractor = None
+        app.state.connection = None
+        app.state.jobs = JobState()
+        with TestClient(app) as client:
+            assert client.get("/review").status_code == 503
